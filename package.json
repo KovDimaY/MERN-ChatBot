@@ -1,0 +1,38 @@
+{
+  "name": "mern-chatbot",
+  "version": "1.0.0",
+  "description": "This is a small project to practice a MERN stack and to learn how to make a chatbot with the DialogFlow from Google Cloud Platform",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./server/index.js",
+    "dev": "nodemon ./server/index.js",
+    "lint": "eslint --ext .js"
+  },
+  "engines": {
+    "node": "8.11.2",
+    "npm": "5.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KovDimaY/MERN-ChatBot.git"
+  },
+  "author": "Dmytro Kovalenko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KovDimaY/MERN-ChatBot/issues"
+  },
+  "homepage": "https://github.com/KovDimaY/MERN-ChatBot#readme",
+  "dependencies": {
+    "express": "4.16.4"
+  },
+  "devDependencies": {
+    "babel-eslint": "8.2.3",
+    "eslint": "4.9.0",
+    "eslint-config-airbnb": "16.1.0",
+    "eslint-loader": "2.0.0",
+    "eslint-plugin-import": "2.12.0",
+    "eslint-plugin-jsx-a11y": "6.0.2",
+    "eslint-plugin-react": "7.9.1",
+    "nodemon": "1.18.7"
+  }
+}
