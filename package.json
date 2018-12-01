@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node ./server/index.js",
-    "dev": "nodemon ./server/index.js",
-    "lint": "eslint --ext .js"
+    "dev": "GOOGLE_APPLICATION_CREDENTIALS=./server/confidential/DF-private-key.json nodemon ./server/index.js",
+    "lint": "eslint --ext . .js"
   },
   "engines": {
     "node": "8.11.2",
@@ -23,6 +23,8 @@
   },
   "homepage": "https://github.com/KovDimaY/MERN-ChatBot#readme",
   "dependencies": {
+    "body-parser": "1.18.3",
+    "dialogflow": "0.7.0",
     "express": "4.16.4"
   },
   "devDependencies": {
