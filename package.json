@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node ./server/index.js",
-    "dev": "GOOGLE_APPLICATION_CREDENTIALS=./server/confidential/DF-private-key.json nodemon ./server/index.js",
+    "dev": "nodemon ./server/index.js",
     "lint": "eslint --ext . .js"
   },
   "engines": {
