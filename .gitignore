@@ -1,4 +1,5 @@
 confidential
+server/config/dev.js
 
 ### macOS ###
 *.DS_Store

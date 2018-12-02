@@ -1,5 +1,7 @@
-module.exports = {
-  googleProjectID: 'mern-chatbot',
-  dialogFlowSessionID: 'mearn-chatbot-session',
-  dialogFlowSessionLanguageCode: 'en-US',
-};
+/* eslint-disable */
+
+if (process.env.NODE_ENV === 'production') {
+  module.exports = require('./prod');
+} else {
+  module.exports = require('./dev');
+}
