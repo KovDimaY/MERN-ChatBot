@@ -5,7 +5,7 @@ import Header from '../components/Header';
 import Chatbot from '../components/Chatbot';
 
 const Layout = props => (
-  <div>
+  <div className="container">
     <Header />
     <div>
       {props.children}

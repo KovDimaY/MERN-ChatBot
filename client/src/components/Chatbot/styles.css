@@ -1,0 +1,11 @@
+.chatbot-container {
+  height: 400px;
+  width: 400px;
+  float: right;
+}
+
+.chatbot-container .chatbot {
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+}
