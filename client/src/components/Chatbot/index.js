@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
+import Cookies from 'universal-cookie';
 import axios from 'axios';
 import uuid from 'uuid/v4';
 
 import Message from '../Message';
 
 import './styles.css';
+
+const cookies = new Cookies();
 
 class Chatbot extends Component {
   state = {
@@ -13,6 +16,13 @@ class Chatbot extends Component {
   };
 
   componentDidMount() {
+    this.userID = cookies.get('userID');
+
+    if (!this.userID) {
+      this.userID = uuid();
+      cookies.set('userID', this.userID, { path: '/' });
+    }
+
     this.dfEventQuery('Welcome');
   }
 
@@ -47,7 +57,7 @@ class Chatbot extends Component {
 
     this.setState({ messages: [...this.state.messages, userMessage] });
 
-    const res = await axios.post('/api/df/textQuery', { query });
+    const res = await axios.post('/api/df/textQuery', { query, userID: this.userID });
 
     res.data.fulfillmentMessages.forEach((msg) => {
       const botMessage = {
@@ -61,7 +71,7 @@ class Chatbot extends Component {
   }
 
   dfEventQuery = async (query) => {
-    const res = await axios.post('/api/df/eventQuery', { query });
+    const res = await axios.post('/api/df/eventQuery', { query, userID: this.userID });
 
     res.data.fulfillmentMessages.forEach((msg) => {
       const botMessage = {
