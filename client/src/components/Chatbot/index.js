@@ -48,8 +48,38 @@ class Chatbot extends Component {
     }
   }
 
+  saveBotAnswers(messages) {
+    messages.forEach((msg) => {
+      const botMessage = this.getMessage(msg);
+
+      this.setState({ messages: [...this.state.messages, botMessage] });
+    });
+  }
+
+  getMessage = (msg) => {
+    switch (msg.message) {
+      case 'text':
+        return {
+          type: 'text',
+          author: 'bot',
+          id: uuid(),
+          msg: msg.text.text[0],
+        };
+      case 'payload':
+        return {
+          type: 'payload',
+          author: 'bot',
+          id: uuid(),
+          msg: msg.payload.fields.data,
+        };
+      default:
+        return 'Something went wrong...';
+    }
+  }
+
   dfTextQuery = async (query) => {
     const userMessage = {
+      type: 'text',
       author: 'user',
       id: uuid(),
       msg: query,
@@ -59,38 +89,22 @@ class Chatbot extends Component {
 
     const res = await axios.post('/api/df/textQuery', { query, userID: this.userID });
 
-    res.data.fulfillmentMessages.forEach((msg) => {
-      const botMessage = {
-        author: 'bot',
-        id: uuid(),
-        msg: msg.text.text[0],
-      };
-
-      this.setState({ messages: [...this.state.messages, botMessage] });
-    });
+    this.saveBotAnswers(res.data.fulfillmentMessages);
   }
 
   dfEventQuery = async (query) => {
     const res = await axios.post('/api/df/eventQuery', { query, userID: this.userID });
 
-    res.data.fulfillmentMessages.forEach((msg) => {
-      const botMessage = {
-        author: 'bot',
-        id: uuid(),
-        msg: msg.text.text[0],
-      };
-
-      this.setState({ messages: [...this.state.messages, botMessage] });
-    });
+    this.saveBotAnswers(res.data.fulfillmentMessages);
   }
 
   renderMessages() {
     const { messages } = this.state;
 
     if (messages && messages.length) {
-      return messages.map(({ msg, author, id }) => (
-        <Message msg={msg} author={author} key={id} />),
-      );
+      return messages.map(({
+        type, msg, author, id,
+      }) => <Message type={type} msg={msg} author={author} key={id} />);
     }
 
     return null;
