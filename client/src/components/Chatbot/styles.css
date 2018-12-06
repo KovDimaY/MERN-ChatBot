@@ -1,11 +1,21 @@
 .chatbot-container {
-  height: 400px;
+  height: 500px;
   width: 400px;
-  float: right;
+  position: absolute;
+  bottom: 0;
+  left: 50;
+  border: 1px solid gray;
+  box-shadow: 1px 1px 25px gray;
 }
 
-.chatbot-container .chatbot {
-  height: 100%;
+.chatbot-container .messages {
+  height: 390px;
   width: 100%;
   overflow: auto;
+}
+
+.chatbot-container .chatbot-input-wrapper input {
+  margin: 0;
+  padding: 0 25px;
+  width: calc(100% - 50px);
 }

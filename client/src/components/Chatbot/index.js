@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Cookies from 'universal-cookie';
 import axios from 'axios';
 import uuid from 'uuid/v4';
+import stuctjson from '../../utils/stuctjson';
 
 import Message from '../Message';
 
@@ -32,6 +33,30 @@ class Chatbot extends Component {
     }
   }
 
+  getMessage = (msg) => {
+    switch (msg.message) {
+      case 'text':
+        return {
+          type: 'text',
+          author: 'bot',
+          id: uuid(),
+          msg: msg.text.text[0],
+        };
+      case 'payload': {
+        const payload = stuctjson.structProtoToJson(msg.payload.fields.data.structValue);
+
+        return {
+          type: 'payload',
+          author: 'bot',
+          id: uuid(),
+          msg: payload,
+        };
+      }
+      default:
+        return 'Something went wrong...';
+    }
+  }
+
   handleInput = (event) => {
     const query = event.target.value;
 
@@ -54,27 +79,6 @@ class Chatbot extends Component {
 
       this.setState({ messages: [...this.state.messages, botMessage] });
     });
-  }
-
-  getMessage = (msg) => {
-    switch (msg.message) {
-      case 'text':
-        return {
-          type: 'text',
-          author: 'bot',
-          id: uuid(),
-          msg: msg.text.text[0],
-        };
-      case 'payload':
-        return {
-          type: 'payload',
-          author: 'bot',
-          id: uuid(),
-          msg: msg.payload.fields.data,
-        };
-      default:
-        return 'Something went wrong...';
-    }
   }
 
   dfTextQuery = async (query) => {
@@ -113,14 +117,26 @@ class Chatbot extends Component {
   render() {
     return (
       <div className="chatbot-container">
+        <nav>
+          <div className="nav-wrapper">
+            <div className="brand-logo">Messages</div>
+          </div>
+        </nav>
         <form className="chatbot" onSubmit={this.handleSubmit}>
-          <h2>Chat</h2>
+          <div className="messages">
+            { this.renderMessages() }
 
-          { this.renderMessages() }
-
-          <div ref={(element) => { this.messagesEnd = element; }} />
-
-          <input type="text" value={this.state.currentQuery} onChange={this.handleInput} />
+            <div ref={(element) => { this.messagesEnd = element; }} />
+          </div>
+          <div className="chatbot-input-wrapper">
+            <input
+              className="chatbot-input"
+              type="text"
+              placeholder="Enter your message..."
+              value={this.state.currentQuery}
+              onChange={this.handleInput}
+            />
+          </div>
         </form>
       </div>
     );

@@ -1,0 +1,4 @@
+.message-container .cards-row-wrapper {
+  overflow: 'auto';
+  overflow-y: 'scroll';
+}

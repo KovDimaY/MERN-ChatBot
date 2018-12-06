@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 
 import Card from '../Card';
 
+import './styles.css';
+
 const Message = ({ author, msg, type }) => {
   const renderAvatar = name => (
     <div className="col s2">
@@ -18,11 +20,15 @@ const Message = ({ author, msg, type }) => {
     </div>
   );
 
-  const renderCardMessage = () => {
-    if (msg && msg.listValue && msg.listValue.values && msg.listValue.values.length) {
+  const renderCardsMessage = () => {
+    if (msg && msg.value && msg.value.length) {
       return (
         <div className="col s10">
-          {msg.listValue.values.map((data, index) => <Card data={data} key={`key_${index}`} />)}
+          <div className="cards-row-wrapper">
+            <div style={{ width: 220 * msg.value.length }}>
+              {msg.value.map(data => <Card data={data} key={data.id} />)}
+            </div>
+          </div>
         </div>
       );
     }
@@ -40,21 +46,23 @@ const Message = ({ author, msg, type }) => {
       case 'text':
         return renderTextMessage();
       case 'payload':
-        return renderCardMessage();
+        return renderCardsMessage();
       default:
         return renderError();
     }
   };
 
   return (
-    <div className="col s12 m8 offset-m2 offset-l3">
-      <div className="card-panel grey lighten-5 z-depth-1">
-        <div className="row valign-wrapper">
-          { author === 'bot' && renderAvatar('Bot') }
+    <div className="message-container">
+      <div className="col s12 m8 offset-m2 offset-l3">
+        <div className="card-panel grey lighten-5 z-depth-1">
+          <div className="row valign-wrapper">
+            { author === 'bot' && renderAvatar('Bot') }
 
-          {renderMessage()}
+            {renderMessage()}
 
-          { author === 'user' && renderAvatar('Me') }
+            { author === 'user' && renderAvatar('Me') }
+          </div>
         </div>
       </div>
     </div>
