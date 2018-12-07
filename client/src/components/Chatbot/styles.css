@@ -1,10 +1,17 @@
 .chatbot-container {
-  height: 600px;
   width: 450px;
   position: absolute;
   bottom: 1px;
   border: 1px solid gray;
   box-shadow: 1px 1px 25px gray;
+}
+
+.chatbot-container .chat-opened {
+  height: 600px;
+}
+
+.chatbot-container .chat-closed {
+  height: 65px;
 }
 
 .chatbot-container .messages {
@@ -17,4 +24,14 @@
   margin: 0;
   padding: 0 25px;
   width: calc(100% - 50px);
+}
+
+.chatbot-container .collapse-header{
+  cursor: pointer;
+}
+
+.chatbot-container .toggle-show-icon{
+  float: right;
+  margin-right: 25px;
+  font-size: 3rem;
 }

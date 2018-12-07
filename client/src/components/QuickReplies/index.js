@@ -10,8 +10,8 @@ class QuickReplies extends Component {
     answered: false,
   };
 
-  handleReply = (value) => {
-    this.props.onReply(value);
+  handleReply = (type, value) => {
+    this.props.onReply(type, value);
     this.setState({ answered: true });
   }
 

@@ -14,6 +14,7 @@ class Chatbot extends Component {
   state = {
     messages: [],
     currentQuery: '',
+    show: true,
   };
 
   componentDidMount() {
@@ -31,6 +32,10 @@ class Chatbot extends Component {
     if (this.messagesEnd) {
       this.messagesEnd.scrollIntoView({ behavior: 'smooth' });
     }
+  }
+
+  getContainerClass() {
+    return this.state.show ? 'chat-opened' : 'chat-closed';
   }
 
   getMessage = (msg) => {
@@ -61,6 +66,10 @@ class Chatbot extends Component {
     const query = event.target.value;
 
     this.setState({ currentQuery: query });
+  }
+
+  changeShowMessages = () => {
+    this.setState({ show: !this.state.show });
   }
 
   handleSubmit = (event) => {
@@ -102,15 +111,19 @@ class Chatbot extends Component {
     this.saveBotAnswers(res.data.fulfillmentMessages);
   }
 
-  handleReply = (value) => {
+  handleReply = (type, value) => {
     if (value) {
-      this.dfTextQuery(value);
+      switch (type) {
+        case 'trigger':
+          this.dfEventQuery(value);
+          break;
+        default:
+          this.dfTextQuery(value);
+      }
     }
   }
 
-  renderMessages() {
-    const { messages } = this.state;
-
+  renderMessages(messages) {
     if (messages && messages.length) {
       return messages.map(({
         type, msg, author, id,
@@ -120,17 +133,12 @@ class Chatbot extends Component {
     return null;
   }
 
-  render() {
-    return (
-      <div className="chatbot-container">
-        <nav>
-          <div className="nav-wrapper">
-            <div className="brand-logo">Messages</div>
-          </div>
-        </nav>
+  renderChatbot(show, messages) {
+    if (show) {
+      return (
         <div className="chatbot" onSubmit={this.handleSubmit}>
           <div className="messages">
-            { this.renderMessages() }
+            { this.renderMessages(messages) }
 
             <div ref={(element) => { this.messagesEnd = element; }} />
           </div>
@@ -144,6 +152,24 @@ class Chatbot extends Component {
             />
           </form>
         </div>
+      );
+    }
+    return null;
+  }
+
+  render() {
+    const { messages, show } = this.state;
+
+    return (
+      <div className={`chatbot-container ${this.getContainerClass()}`}>
+        <nav className="collapse-header" onClick={this.changeShowMessages}>
+          <div className="nav-wrapper">
+            <div className="brand-logo">Messages</div>
+            <i className="large material-icons toggle-show-icon">{show ? 'arrow_drop_down' : 'arrow_drop_up'}</i>
+          </div>
+        </nav>
+
+        {this.renderChatbot(show, messages)}
       </div>
     );
   }

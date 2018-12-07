@@ -5,7 +5,7 @@ const QuickReply = ({ data, onClick, disabled }) => {
   const { type, text, value } = data;
 
   const handleClick = () => {
-    onClick(value);
+    onClick(type, value);
   };
 
   const renderLink = () => (
@@ -25,6 +25,7 @@ const QuickReply = ({ data, onClick, disabled }) => {
       case 'link':
         return renderLink();
       case 'text':
+      case 'trigger':
         return renderButton();
       default:
         return null;
