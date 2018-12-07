@@ -1,0 +1,10 @@
+.cards-containter {
+  overflow: auto;
+  overflow-y: scroll;
+}
+
+.cards-containter .card-containter {
+  display: inline-block;
+  width: 200px;
+  margin: 0 10px;
+}

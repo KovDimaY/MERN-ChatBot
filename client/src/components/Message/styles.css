@@ -1,4 +1,7 @@
-.message-container .cards-row-wrapper {
-  overflow: 'auto';
-  overflow-y: 'scroll';
+.message-container .no-margin {
+  margin: 0;
+}
+
+.message-container .small-padding {
+  padding: 15px;
 }

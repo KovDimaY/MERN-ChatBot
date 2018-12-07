@@ -102,13 +102,19 @@ class Chatbot extends Component {
     this.saveBotAnswers(res.data.fulfillmentMessages);
   }
 
+  handleReply = (value) => {
+    if (value) {
+      this.dfTextQuery(value);
+    }
+  }
+
   renderMessages() {
     const { messages } = this.state;
 
     if (messages && messages.length) {
       return messages.map(({
         type, msg, author, id,
-      }) => <Message type={type} msg={msg} author={author} key={id} />);
+      }) => <Message type={type} msg={msg} author={author} key={id} onReply={this.handleReply} />);
     }
 
     return null;
@@ -122,13 +128,13 @@ class Chatbot extends Component {
             <div className="brand-logo">Messages</div>
           </div>
         </nav>
-        <form className="chatbot" onSubmit={this.handleSubmit}>
+        <div className="chatbot" onSubmit={this.handleSubmit}>
           <div className="messages">
             { this.renderMessages() }
 
             <div ref={(element) => { this.messagesEnd = element; }} />
           </div>
-          <div className="chatbot-input-wrapper">
+          <form className="chatbot-input-wrapper">
             <input
               className="chatbot-input"
               type="text"
@@ -136,8 +142,8 @@ class Chatbot extends Component {
               value={this.state.currentQuery}
               onChange={this.handleInput}
             />
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
     );
   }
