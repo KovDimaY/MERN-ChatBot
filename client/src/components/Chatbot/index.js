@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { withRouter } from 'react-router-dom';
 import Cookies from 'universal-cookie';
 import axios from 'axios';
 import uuid from 'uuid/v4';
@@ -15,6 +17,7 @@ class Chatbot extends Component {
     messages: [],
     currentQuery: '',
     show: true,
+    visitedRoutes: [],
   };
 
   componentDidMount() {
@@ -26,6 +29,17 @@ class Chatbot extends Component {
     }
 
     this.dfEventQuery('Welcome');
+  }
+
+  async componentWillReceiveProps(nextProps) {
+    const { visitedRoutes } = this.state;
+    const { pathname } = nextProps.location;
+
+    if (!visitedRoutes.includes(pathname)) {
+      await this.delayExecution(500);
+      this.dfEventQuery('Visit');
+      this.setState({ visitedRoutes: [...visitedRoutes, pathname], show: true });
+    }
   }
 
   componentDidUpdate() {
@@ -61,6 +75,10 @@ class Chatbot extends Component {
         return 'Something went wrong...';
     }
   }
+
+  delayExecution = milliseconds => new Promise((resolve) => {
+    setTimeout(() => resolve(), milliseconds);
+  })
 
   handleInput = (event) => {
     const query = event.target.value;
@@ -175,4 +193,8 @@ class Chatbot extends Component {
   }
 }
 
-export default Chatbot;
+Chatbot.propTypes = {
+  location: PropTypes.object.isRequired,
+};
+
+export default withRouter(Chatbot);
