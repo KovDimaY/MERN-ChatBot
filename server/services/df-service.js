@@ -5,6 +5,8 @@ const {
   googleClientEmail, googlePrivateKey,
 } = require('../config/keys');
 
+const { Feedback } = require('../models/Feedback');
+
 const projectID = googleProjectID;
 const credentials = {
   client_email: googleClientEmail,
@@ -55,13 +57,39 @@ module.exports = {
     return result;
   },
   handleRequest: async (request) => {
+    const self = module.exports;
+
     try {
-      const responces = await sessionClient.detectIntent(request);
-      const result = responces[0].queryResult;
+      const responses = await sessionClient.detectIntent(request);
+      const result = responses[0].queryResult;
+
+      switch (result.action) {
+        case 'gettingcontactdata.gettingcontactdata-yes': {
+          if (result.allRequiredParamsPresent) {
+            self.saveToDatabase(result.parameters.fields);
+          }
+          break;
+        }
+        default:
+          break;
+      }
 
       return result;
     } catch (error) {
       return error;
+    }
+  },
+  saveToDatabase: async (data) => {
+    const feedback = new Feedback({
+      name: data.name.stringValue,
+      profession: data.email.stringValue,
+      date: new Date(),
+    });
+
+    try {
+      feedback.save();
+    } catch (error) {
+      console.error(error);
     }
   },
 };
