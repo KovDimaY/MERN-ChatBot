@@ -26,8 +26,10 @@
   },
   "homepage": "https://github.com/KovDimaY/MERN-ChatBot#readme",
   "dependencies": {
+    "actions-on-google": "2.5.0",
     "body-parser": "1.18.3",
     "dialogflow": "0.7.0",
+    "dialogflow-fulfillment": "0.6.1",
     "express": "4.16.4",
     "mongoose": "5.3.15"
   },
