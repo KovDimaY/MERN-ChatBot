@@ -108,6 +108,19 @@ class Chatbot extends Component {
     });
   }
 
+  handleRequestError() {
+    const botMessage = {
+      type: 'text',
+      author: 'bot',
+      id: uuid(),
+      msg: 'I am having troubles, I need to terminate. I\'ll be back.',
+    };
+
+    this.setState({ messages: [...this.state.messages, botMessage] });
+
+    setTimeout(() => this.setState({ show: false }), 2000);
+  }
+
   dfTextQuery = async (query) => {
     const userMessage = {
       type: 'text',
@@ -118,15 +131,23 @@ class Chatbot extends Component {
 
     this.setState({ messages: [...this.state.messages, userMessage] });
 
-    const res = await axios.post('/api/df/textQuery', { query, userID: this.userID });
+    try {
+      const res = await axios.post('/api/df/textQuery', { query, userID: this.userID });
 
-    this.saveBotAnswers(res.data.fulfillmentMessages);
+      this.saveBotAnswers(res.data.fulfillmentMessages);
+    } catch (error) {
+      this.handleRequestError();
+    }
   }
 
   dfEventQuery = async (query) => {
-    const res = await axios.post('/api/df/eventQuery', { query, userID: this.userID });
+    try {
+      const res = await axios.post('/api/df/eventQuery', { query, userID: this.userID });
 
-    this.saveBotAnswers(res.data.fulfillmentMessages);
+      this.saveBotAnswers(res.data.fulfillmentMessages);
+    } catch (error) {
+      this.handleRequestError();
+    }
   }
 
   handleReply = (type, value) => {

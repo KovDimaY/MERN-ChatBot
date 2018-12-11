@@ -4,10 +4,6 @@ const dfService = require('../services/df-service');
 const { Demand } = require('../models/Demand');
 
 module.exports = (app) => {
-  app.get('/', (req, res) => {
-    res.send({ it: 'works' });
-  });
-
   app.post('/api/df/textQuery', async (req, res) => {
     const result = await dfService.textQuery(req.body.query, req.body.params);
 
