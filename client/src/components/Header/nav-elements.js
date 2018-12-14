@@ -10,6 +10,16 @@ export default [
     icon: 'school',
   },
   {
+    label: 'Skills',
+    url: '/skills',
+    icon: 'trending_up',
+  },
+  {
+    label: 'Projects',
+    url: '/projects',
+    icon: 'color_lens',
+  },
+  {
     label: 'Feedback',
     url: '/feedback',
     icon: 'feedback',
