@@ -1,36 +1,40 @@
 .chatbot-container {
+  z-index: 200;
   width: 450px;
   position: absolute;
   bottom: 1px;
   border: 1px solid gray;
   box-shadow: 1px 1px 25px gray;
+  background: white;
 }
-
 .chatbot-container .chat-opened {
   height: 600px;
 }
-
 .chatbot-container .chat-closed {
   height: 65px;
 }
-
 .chatbot-container .messages {
   height: 490px;
   width: 100%;
   overflow: auto;
 }
-
 .chatbot-container .chatbot-input-wrapper input {
   margin: 0;
   padding: 0 25px;
   width: calc(100% - 50px);
 }
-
-.chatbot-container .collapse-header{
+.chatbot-container .collapse-header {
+  height: 45px;
+  line-height: 45px;
+  padding-left: 25px;
   cursor: pointer;
+  color: white;
 }
-
-.chatbot-container .toggle-show-icon{
+.chatbot-container .brand-logo {
+  font-size: 22px;
+  float: left;
+}
+.chatbot-container .toggle-show-icon {
   float: right;
   margin-right: 25px;
   font-size: 3rem;

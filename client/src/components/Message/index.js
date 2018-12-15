@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import Cards from '../Cards';
 import QuickReplies from '../QuickReplies';
 
+import { botAvatar, userAvatar } from '../../images';
+
 import './styles.css';
 
 const Message = (props) => {
@@ -11,11 +13,9 @@ const Message = (props) => {
     author, msg, type, onReply,
   } = props;
 
-  const renderAvatar = name => (
-    <div className="col">
-      <div className="btn-floating btn-large waves-effect waves-light red">
-        {name}
-      </div>
+  const renderAvatar = src => (
+    <div className="col s2">
+      <img src={src} alt="avatar" className="circle responsive-img" />
     </div>
   );
 
@@ -50,13 +50,13 @@ const Message = (props) => {
       <div className="col s12 m8 offset-m2 offset-l3">
         <div className="card-panel grey lighten-5 z-depth-1 small-padding">
           <div className="row valign-wrapper no-margin">
-            { author === 'bot' && renderAvatar('Bot') }
+            { author === 'bot' && renderAvatar(botAvatar) }
 
-            <div className="col s10">
+            <div className={`col s10 ${author}-message`}>
               {renderMessage()}
             </div>
 
-            { author === 'user' && renderAvatar('Me') }
+            { author === 'user' && renderAvatar(userAvatar) }
           </div>
         </div>
       </div>

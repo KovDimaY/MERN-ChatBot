@@ -5,3 +5,7 @@
 .message-container .small-padding {
   padding: 15px;
 }
+
+.message-container .user-message {
+  text-align: right;
+}

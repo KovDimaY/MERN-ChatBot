@@ -201,12 +201,12 @@ class Chatbot extends Component {
 
     return (
       <div className={`chatbot-container ${this.getContainerClass()}`}>
-        <nav className="collapse-header" onClick={this.changeShowMessages}>
+        <div className="collapse-header blue" onClick={this.changeShowMessages}>
           <div className="nav-wrapper">
             <div className="brand-logo">Messages</div>
             <i className="large material-icons toggle-show-icon">{show ? 'arrow_drop_down' : 'arrow_drop_up'}</i>
           </div>
-        </nav>
+        </div>
 
         {this.renderChatbot(show, messages)}
       </div>
