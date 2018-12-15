@@ -2,7 +2,10 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 class PureCanvas extends Component {
-  shouldComponentUpdate() {
+  shouldComponentUpdate({ width, height }) {
+    if (this.props.width !== width || this.props.height !== height) {
+      return true;
+    }
     return false;
   }
 

@@ -12,6 +12,7 @@ class DotsAnimation extends Component {
     this.maxSpeed = 25;
     this.minMouseDistance = 150;
     this.FPS = 60;
+    this.color = 'lime';
 
     const dots = [];
 
@@ -64,8 +65,8 @@ class DotsAnimation extends Component {
 
       return {
         ...dot,
-        x: newX,
-        y: newY,
+        x: newX > width ? width : newX,
+        y: newY > height ? height : newY,
         vx: (newX < 0 || newX > width) ? -dot.vx : dot.vx,
         vy: (newY < 0 || newY > height) ? -dot.vy : dot.vy,
       };
@@ -92,7 +93,7 @@ class DotsAnimation extends Component {
     ctx.globalCompositeOperation = 'lighter';
 
     dots.forEach((dot) => {
-      ctx.fillStyle = '#fff';
+      ctx.fillStyle = this.color;
       ctx.beginPath();
       ctx.arc(dot.x, dot.y, dot.radius, 0, 2 * Math.PI);
       ctx.fill();
@@ -116,7 +117,7 @@ class DotsAnimation extends Component {
     });
 
     ctx.lineWidth = 0.05;
-    ctx.strokeStyle = 'white';
+    ctx.strokeStyle = this.color;
     ctx.stroke();
   }
 
