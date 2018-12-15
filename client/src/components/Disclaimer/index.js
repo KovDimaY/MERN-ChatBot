@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const Disclaimer = () => (
-  <div>
-    This is DISCLAIMER
-  </div>
-);
+import Animation from '../Common/DotsAnimation';
+
+import './styles.css';
+
+class Disclaimer extends Component {
+  render() {
+    return (
+      <div className="discalimer-container">
+        This is DISCLAIMER
+
+        <Animation width={800} height={600} />
+      </div>
+    );
+  }
+}
 
 export default Disclaimer;
