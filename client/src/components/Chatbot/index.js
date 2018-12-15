@@ -7,6 +7,7 @@ import uuid from 'uuid/v4';
 import stuctjson from '../../utils/stuctjson';
 
 import Message from '../Message';
+import { VALID_ROUTES } from '../../constants/routes';
 
 import './styles.css';
 
@@ -35,9 +36,11 @@ class Chatbot extends Component {
     const { visitedRoutes } = this.state;
     const { pathname } = nextProps.location;
 
-    if (!visitedRoutes.includes(pathname)) {
+    if (VALID_ROUTES.includes(pathname) && !visitedRoutes.includes(pathname)) {
       await this.delayExecution(500);
-      this.dfEventQuery('Visit');
+      const event = `${pathname.substring(1, pathname.length)}-visited`;
+
+      this.dfEventQuery(event);
       this.setState({ visitedRoutes: [...visitedRoutes, pathname], show: true });
     }
   }

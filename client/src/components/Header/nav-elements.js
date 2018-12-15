@@ -1,27 +1,32 @@
+import {
+  EXPERIENCE, EDUCATION, SKILLS,
+  PROJECTS, FEEDBACK,
+} from '../../constants/routes';
+
 export default [
   {
     label: 'Experience',
-    url: '/experience',
+    url: EXPERIENCE,
     icon: 'business_center',
   },
   {
     label: 'Education',
-    url: '/education',
+    url: EDUCATION,
     icon: 'school',
   },
   {
     label: 'Skills',
-    url: '/skills',
+    url: SKILLS,
     icon: 'trending_up',
   },
   {
     label: 'Projects',
-    url: '/projects',
+    url: PROJECTS,
     icon: 'color_lens',
   },
   {
     label: 'Feedback',
-    url: '/feedback',
+    url: FEEDBACK,
     icon: 'feedback',
   },
 ];
