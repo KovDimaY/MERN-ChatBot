@@ -1,0 +1,10 @@
+@font-face {
+  font-family: Android;
+  src: url(./fonts/AndroidAssassin.ttf);
+  font-style: normal;
+}
+@font-face {
+  font-family: Android;
+  src: url(./fonts/AndroidAssassinItalic.ttf);
+  font-style: italic;
+}

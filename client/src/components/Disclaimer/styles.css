@@ -1,11 +1,70 @@
 .discalimer-container {
   width: 100%;
   height: 100vh;
-  background: black;
+  padding-bottom: 150px;
+  background-image: url("./bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: scroll;
 }
 
 .discalimer-container .pure-canvas {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.discalimer-container .title {
+  font-family: Android;
+  text-align: center;
+  padding: 50px 0;
+  font-size: 5rem;
+  font-weight: bold;
+  position: relative;
+  opacity: 1;
+  z-index: 100;
+  text-shadow: 1px 1px 30px white;
+}
+
+.discalimer-container .description {
+  max-width: 800px;
+  width: 80%;
+  margin: 0 auto 50px auto;
+  background: rgba(0, 0, 0, 0.75);
+  text-shadow: 1px 1px 10px black;
+  position: relative;
+  border-radius: 10px;
+  color: white;
+  padding: 35px 25px;
+  text-align: justify;
+}
+
+.discalimer-container .post-scriptum {
+  text-shadow: 1px 1px 10px lightblue;
+  font-size: 18px;
+}
+
+.discalimer-container .gohome-button {
+  text-align: center;
+}
+
+@media (max-width: 650px) {
+  .discalimer-container .title {
+    padding: 50px 0;
+    font-size: 3rem;
+  }
+
+  .discalimer-container .description {
+    max-width: 800px;
+    width: 80%;
+    margin: 0 auto 50px auto;
+    background: rgba(0, 0, 0, 0.75);
+    text-shadow: 1px 1px 10px black;
+    position: relative;
+    border-radius: 10px;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+  }
 }

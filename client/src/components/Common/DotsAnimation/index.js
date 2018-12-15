@@ -7,12 +7,12 @@ class DotsAnimation extends Component {
   constructor(props) {
     super(props);
 
-    this.dotsCount = 100;
+    this.dotsCount = 150;
     this.radius = 3;
-    this.maxSpeed = 25;
+    this.maxSpeed = 50;
     this.minMouseDistance = 150;
     this.FPS = 60;
-    this.color = 'lime';
+    this.color = 'white';
 
     const dots = [];
 
@@ -35,17 +35,13 @@ class DotsAnimation extends Component {
   componentDidMount() {
     this.rAF = requestAnimationFrame(this.updateAnimationState);
 
-    if (this.animation) {
-      this.animation.ctx.canvas.addEventListener('mousemove', this.handleMouseMove);
-    }
+    document.addEventListener('mousemove', this.handleMouseMove);
   }
 
   componentWillUnmount() {
     cancelAnimationFrame(this.rAF);
 
-    if (this.animation) {
-      this.animation.ctx.canvas.removeEventListener('mousemove', this.handleMouseMove);
-    }
+    document.removeEventListener('mousemove', this.handleMouseMove);
   }
 
   distance = (a, b) => {
@@ -125,12 +121,7 @@ class DotsAnimation extends Component {
     const { width, height } = this.props;
 
     return (
-      <Canvas
-        draw={this.handleDraw}
-        width={width}
-        height={height}
-        ref={(element) => { this.animation = element; }}
-      />
+      <Canvas draw={this.handleDraw} width={width} height={height} />
     );
   }
 }
