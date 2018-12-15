@@ -7,7 +7,7 @@ class DotsAnimation extends Component {
   constructor(props) {
     super(props);
 
-    this.dotsCount = 150;
+    this.dotsCount = this.getOptimalNumberOfDots(window.innerWidth);
     this.radius = 3;
     this.maxSpeed = 50;
     this.minMouseDistance = 150;
@@ -42,6 +42,15 @@ class DotsAnimation extends Component {
     cancelAnimationFrame(this.rAF);
 
     document.removeEventListener('mousemove', this.handleMouseMove);
+  }
+
+  getOptimalNumberOfDots = (width) => {
+    if (width < 500) {
+      return 50;
+    } else if (width < 1200) {
+      return 100;
+    }
+    return 150;
   }
 
   distance = (a, b) => {
