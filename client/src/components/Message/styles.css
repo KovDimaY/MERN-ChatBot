@@ -1,11 +1,18 @@
 .message-container .no-margin {
   margin: 0;
+  color: #212121;
 }
-
 .message-container .small-padding {
   padding: 15px;
 }
-
 .message-container .user-message {
   text-align: right;
+  font-family: Handwriting;
+  font-size: 16px;
+}
+.message-container .bot-message {
+  text-align: left;
+  font-family: Pixel;
+  font-size: 28px;
+  line-height: 22px;
 }

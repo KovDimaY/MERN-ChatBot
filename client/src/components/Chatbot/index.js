@@ -192,6 +192,9 @@ class Chatbot extends Component {
               value={this.state.currentQuery}
               onChange={this.handleInput}
             />
+            <button className="btn waves-effect waves-light blue" type="submit" name="send-message">
+              <i className="material-icons">send</i>
+            </button>
           </form>
         </div>
       );
