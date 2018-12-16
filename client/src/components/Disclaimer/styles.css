@@ -28,7 +28,8 @@
 }
 
 .discalimer-container .description {
-  max-width: 800px;
+  text-indent: 25px;
+  max-width: 850px;
   width: 80%;
   margin: 0 auto 50px auto;
   background: rgba(0, 0, 0, 0.75);
@@ -41,7 +42,6 @@
 }
 
 .discalimer-container .post-scriptum {
-  text-shadow: 1px 1px 10px lightblue;
   font-size: 18px;
 }
 

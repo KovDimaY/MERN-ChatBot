@@ -1,20 +1,18 @@
 .chatbot-container {
   z-index: 200;
-  width: 450px;
+  max-width: 450px;
   position: absolute;
   bottom: 1px;
   border: 1px solid gray;
   box-shadow: 1px 1px 25px gray;
   background: white;
 }
-.chatbot-container .chat-opened {
-  height: 600px;
-}
 .chatbot-container .chat-closed {
   height: 65px;
 }
 .chatbot-container .messages {
-  height: 490px;
+  height: calc(80vh - 100px);
+  max-height: 500px;
   width: 100%;
   overflow: auto;
 }
@@ -38,4 +36,10 @@
   float: right;
   margin-right: 25px;
   font-size: 3rem;
+}
+
+@media (max-width: 600px) {
+  .chatbot-container {
+    max-width: unset;
+  }
 }

@@ -203,7 +203,7 @@ class Chatbot extends Component {
     const { messages, show } = this.state;
 
     return (
-      <div className={`chatbot-container ${this.getContainerClass()}`}>
+      <div className={`container chatbot-container ${this.getContainerClass()}`}>
         <div className="collapse-header blue" onClick={this.changeShowMessages}>
           <div className="nav-wrapper">
             <div className="brand-logo">Messages</div>

@@ -51,14 +51,13 @@ class Disclaimer extends Component {
               {' Jana Bergant '}
             </a>
             I have learned many different functionalities
-            (I definitelly recommend her courses if you want to learn about chatbots)
-            and almost all of them were focused on
-            selling or describing things.
-            As I have nothing to sell but still I wanted to practice all the
+            and I definitelly recommend her courses if you want to learn about chatbots.
+            Almost all the functionalities were focused on
+            selling or describing things and
+            as I have nothing to sell but still I wanted to practice all the
             functionalities, I decided that it would be meaningfull and interesting to
-            make an interactive CV (also it is a bit similar to selling
-            - is like I am selling myself).
-            This is how I came up with this project. <span role="img" aria-label="innocent">🤗</span>
+            make an interactive CV. In the end it is quite similar to selling
+            - is like I am selling myself. This is how I came up with this project.
           </p>
 
           <p>
@@ -68,12 +67,12 @@ class Disclaimer extends Component {
 
           <p className="post-scriptum">
             PS: As always, I would be happy to get a feedback
-            which could help me to improve. Thank you in advance! <span role="img" aria-label="innocent">😇</span>
+            which could help me to improve. Thank you in advance!
           </p>
         </div>
 
         <div className="gohome-button">
-          <Link className="waves-effect waves-light btn-large red accent-2 pulse" to={HOME}><i className="material-icons left">android</i>Go to ChatBot</Link>
+          <Link className="waves-effect waves-light btn-large red accent-2" to={HOME}><i className="material-icons left">android</i>Go to ChatBot</Link>
         </div>
       </div>
     );

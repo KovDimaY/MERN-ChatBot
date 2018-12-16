@@ -4,6 +4,7 @@ import { Sidenav } from 'materialize-css';
 
 import './styles.css';
 import { background, userAvatar } from '../../images';
+import { HOME } from '../../constants/routes';
 
 import NavElements from './nav-elements';
 
@@ -57,7 +58,7 @@ class Header extends Component {
     return (
       <nav className="header-container">
         <div className="nav-wrapper">
-          <Link to="/" className="brand-logo">CV-Bot</Link>
+          <Link to={HOME} className="brand-logo">CV-Bot</Link>
 
           <ul className="right hide-on-med-and-down">
             {this.renderNavigation(false)}
