@@ -5,7 +5,7 @@ const { Schema } = mongoose;
 const feedbackSchema = new Schema({
   name: String,
   date: Date,
-  profession: String,
+  feedback: String,
 });
 
 const Feedback = mongoose.model('feedback', feedbackSchema);

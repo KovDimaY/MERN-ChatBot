@@ -24,8 +24,10 @@ class Header extends Component {
   renderNavigation = withIcon => (
     <React.Fragment>
       {
-        NavElements.map(({ label, url, icon }) => (
-          <li>
+        NavElements.map(({
+          label, url, icon, id,
+        }) => (
+          <li key={id}>
             <Link to={url}>{withIcon && <i className="material-icons">{icon}</i>} {label}</Link>
           </li>
         ))

@@ -64,7 +64,7 @@ module.exports = {
       const result = responses[0].queryResult;
 
       switch (result.action) {
-        case 'gettingcontactdata.gettingcontactdata-yes': {
+        case 'page-visited-feedback-yes': {
           if (result.allRequiredParamsPresent) {
             self.saveToDatabase(result.parameters.fields);
           }
@@ -82,7 +82,7 @@ module.exports = {
   saveToDatabase: async (data) => {
     const feedback = new Feedback({
       name: data.name.stringValue,
-      profession: data.email.stringValue,
+      feedback: data.feedback.stringValue,
       date: new Date(),
     });
 
