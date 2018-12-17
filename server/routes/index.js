@@ -2,6 +2,7 @@ const { WebhookClient } = require('dialogflow-fulfillment');
 const dfService = require('../services/df-service');
 
 const { Demand } = require('../models/Demand');
+const { Feedback } = require('../models/Feedback');
 
 module.exports = (app) => {
   app.post('/api/df/textQuery', async (req, res) => {
@@ -14,6 +15,15 @@ module.exports = (app) => {
     const result = await dfService.eventQuery(req.body.query, req.body.params);
 
     res.send(result);
+  });
+
+  app.get('/api/feedback', (req, res) => {
+    Feedback.find({}, (err, document) => {
+      if (err) {
+        return res.status(400).send(err);
+      }
+      return res.status(200).send(document);
+    });
   });
 
   app.post('/api/df/fullfilment', async (req, res) => {

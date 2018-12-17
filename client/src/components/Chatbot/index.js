@@ -84,7 +84,7 @@ class Chatbot extends Component {
   })
 
   handleInput = (event) => {
-    const query = event.target.value;
+    const query = event.target.value.substring(0, 200);
 
     this.setState({ currentQuery: query });
   }
