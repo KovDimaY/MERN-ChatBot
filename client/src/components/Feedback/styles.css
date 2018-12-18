@@ -1,0 +1,17 @@
+.feedbacks-container {
+  padding: 20px 20px 50px 20px;
+}
+.feedbacks-container .card-title-custom {
+  line-height: 32px;
+  font-size: 24px;
+  font-weight: 300;
+  margin: 0;
+}
+.feedbacks-container p.card-date {
+  margin-bottom: 5px;
+  font-size: 12px;
+  font-style: italic;
+}
+.feedbacks-container .card-comment {
+  text-align: justify;
+}

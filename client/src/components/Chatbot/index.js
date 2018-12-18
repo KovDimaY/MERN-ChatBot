@@ -14,12 +14,18 @@ import './styles.css';
 const cookies = new Cookies();
 
 class Chatbot extends Component {
-  state = {
-    messages: [],
-    currentQuery: '',
-    show: true,
-    visitedRoutes: [],
-  };
+  constructor(props) {
+    super(props);
+
+    const currentLocation = this.props.location.pathname;
+
+    this.state = {
+      messages: [],
+      currentQuery: '',
+      show: true,
+      visitedRoutes: [currentLocation],
+    };
+  }
 
   componentDidMount() {
     this.userID = cookies.get('userID');

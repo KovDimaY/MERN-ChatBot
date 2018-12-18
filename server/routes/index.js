@@ -17,7 +17,7 @@ module.exports = (app) => {
     res.send(result);
   });
 
-  app.get('/api/feedback', (req, res) => {
+  app.get('/api/feedbacks', (req, res) => {
     Feedback.find({}, (err, document) => {
       if (err) {
         return res.status(400).send(err);

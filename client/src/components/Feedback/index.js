@@ -1,4 +1,9 @@
 import React, { Component } from 'react';
+import moment from 'moment';
+
+import { getRandomInteger } from '../../utils/common';
+
+import './styles.css';
 
 class Feedback extends Component {
   state = {
@@ -6,23 +11,40 @@ class Feedback extends Component {
   };
 
   componentDidMount() {
-    fetch('/api/feedback')
+    fetch('/api/feedbacks')
       .then(response => response.json())
-      .then(result => this.setState({ feedbacks: result }));
+      .then(result => this.setState({ feedbacks: result.reverse() }));
+  }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    return nextState.feedbacks.length !== this.state.feedbacks.length;
   }
 
   renderFeedbackItem = item => (
-    <div key={item._id}>
-      <span>{item.name}</span>
-      <p>{item.feedback}</p>
+    <div className={`card blue-grey darken-${getRandomInteger(1, 3)}`} key={item._id}>
+      <div className="card-content white-text">
+        <div className="card-title-custom">{item.name}</div>
+        <p className="card-date">{moment(item.date).format('H:mm - MMMM Do, YYYY')}</p>
+        <p className="card-comment">{item.feedback}</p>
+      </div>
     </div>
   )
 
   render() {
+    const { feedbacks } = this.state;
+    const getEven = (el, idx) => idx % 2 === 0;
+    const getOdd = (el, idx) => idx % 2 !== 0;
+
     return (
-      <div>
-        This is FEEDBACK
-        {this.state.feedbacks.map(this.renderFeedbackItem)}
+      <div className="feedbacks-container">
+        <div className="row">
+          <div className="col s12 m6">
+            {feedbacks.filter(getEven).map(this.renderFeedbackItem)}
+          </div>
+          <div className="col s12 m6">
+            {feedbacks.filter(getOdd).map(this.renderFeedbackItem)}
+          </div>
+        </div>
       </div>
     );
   }

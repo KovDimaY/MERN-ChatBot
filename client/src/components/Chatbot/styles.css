@@ -1,7 +1,7 @@
 .chatbot-container {
   z-index: 200;
   max-width: 450px;
-  position: absolute;
+  position: fixed;
   bottom: 1px;
   border: 1px solid gray;
   box-shadow: 1px 1px 25px gray;
