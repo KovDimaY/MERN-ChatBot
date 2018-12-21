@@ -1,8 +1,10 @@
 import React from 'react';
 
+import EmptyView from '../Common/EmptyView';
+
 const Projects = () => (
   <div>
-    This is PROJECTS
+    <EmptyView section="projects" />
   </div>
 );
 

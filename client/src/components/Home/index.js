@@ -1,8 +1,14 @@
 import React from 'react';
 
+import EmptyView from '../Common/EmptyView';
+
+const DESCRIPTION = `
+  This is home
+`;
+
 const Home = () => (
   <div>
-    This is HOME
+    <EmptyView description={DESCRIPTION} />
   </div>
 );
 

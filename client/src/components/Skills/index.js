@@ -1,8 +1,10 @@
 import React from 'react';
 
+import EmptyView from '../Common/EmptyView';
+
 const Skills = () => (
   <div>
-    This is SKILLS
+    <EmptyView section="skills" />
   </div>
 );
 
