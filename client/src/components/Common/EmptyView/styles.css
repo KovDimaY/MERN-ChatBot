@@ -1,0 +1,32 @@
+.empty-view-container {
+  max-width: 720px;
+  margin: auto;
+  text-align: center;
+  font-size: 22px;
+  padding: 25px;
+  color: #757575;
+}
+.empty-view-container p:first-child {
+  font-size: 26px;
+}
+
+@media (max-width: 750px) {
+  .empty-view-container {
+    max-width: 450px;
+    font-size: 18px;
+    padding: 15px;
+  }
+  .empty-view-container p:first-child {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 500px) {
+  .empty-view-container {
+    max-width: 300px;
+    font-size: 14px;
+  }
+  .empty-view-container p:first-child {
+    font-size: 18px;
+  }
+}
