@@ -7,13 +7,13 @@ import {
   FEEDBACK,
 } from '../../constants/routes';
 
-import Disclaimer from '../Disclaimer';
-import Home from '../Home';
-import Education from '../Education';
-import Experience from '../Experience';
-import Skills from '../Skills';
-import Projects from '../Projects';
-import Feedback from '../Feedback';
+import Disclaimer from '../Pages/Disclaimer';
+import Home from '../Pages/Home';
+import Education from '../Pages/Education';
+import Experience from '../Pages/Experience';
+import Skills from '../Pages/Skills';
+import Projects from '../Pages/Projects';
+import Feedback from '../Pages/Feedback';
 
 import Layout from '../../hoc/layout';
 

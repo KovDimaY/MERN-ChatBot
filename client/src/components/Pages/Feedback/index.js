@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import moment from 'moment';
 
-import { getRandomInteger } from '../../utils/common';
+import { getRandomInteger } from '../../../utils/common';
 
 import './styles.css';
 
