@@ -8,24 +8,32 @@ import { HOME } from '../../constants/routes';
 import './styles.css';
 
 class Disclaimer extends Component {
-  state = {
-    width: window.innerWidth,
-    height: window.innerHeight,
-  };
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      width: window.innerWidth,
+      height: window.innerHeight,
+    };
+  }
 
   componentDidMount() {
+    this.mounted = true;
     window.addEventListener('resize', debounce(this.updateDimentions, 500));
   }
 
   componentWillUnmount() {
+    this.mounted = false;
     window.removeEventListener('resize', debounce(this.updateDimentions, 500));
   }
 
   updateDimentions = () => {
-    this.setState({
-      width: window.innerWidth,
-      height: window.innerHeight,
-    });
+    if (this.mounted) {
+      this.setState({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    }
   }
 
   render() {
