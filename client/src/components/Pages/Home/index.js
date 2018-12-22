@@ -10,12 +10,14 @@ const Home = () => {
       </p>
 
       <p>
-        Ask the bot about me and try to recover the website with the info he will provide.
+        Ask questions as you are speaking to me and try to populate
+        the website with the info he will provide.
       </p>
 
       <p>
-        Every page has a progress bar which will indicate how much info you have already recovered
-        so you will know where to stop asking about some particular topic.
+        Every page will have a progress bar which indicates
+        how much info you have already recovered - so you will know
+        where to stop asking about some particular topic.
       </p>
 
       <p>

@@ -3,7 +3,7 @@
   margin: auto;
   text-align: center;
   font-size: 22px;
-  padding: 25px;
+  padding: 25px 25px 100px 25px;
   color: #757575;
 }
 .empty-view-container p:first-child {
