@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/pages/<Disclaimer /> should render component 1`] = `
+<div
+  className="discalimer-container"
+>
+  <Animation
+    height={768}
+    width={1024}
+  />
+  <div
+    className="title"
+  >
+    Disclaimer
+  </div>
+  <div
+    className="description"
+  >
+    <p>
+      This project was created just because I was always curious about how ChatBots are built and how they work from inside. Taking a course on
+      <a
+        href="https://www.udemy.com"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+         Udemy 
+      </a>
+      by
+      <a
+        href="https://www.udemy.com/user/jana-bergant/"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+         Jana Bergant 
+      </a>
+      I have learned many different functionalities and I definitelly recommend her courses if you want to learn about chatbots. Almost all the functionalities were focused on selling or describing things and as I have nothing to sell but still I wanted to practice all the functionalities, I decided that it would be meaningfull and interesting to make an interactive CV. In the end it is quite similar to selling - is like I am selling myself. This is how I came up with this project.
+    </p>
+    <p>
+      So, just to clarify, it is a personal project to learn and practice new skills. I feel pretty happy at my current job and I am not looking for a change.
+    </p>
+    <p
+      className="post-scriptum"
+    >
+      PS: As always, I would be happy to get a feedback which could help me to improve. Thank you in advance!
+    </p>
+  </div>
+  <div
+    className="gohome-button"
+  >
+    <Link
+      className="waves-effect waves-light btn-large red accent-2"
+      to="/home"
+    >
+      <i
+        className="material-icons left"
+      >
+        android
+      </i>
+      Go to ChatBot
+    </Link>
+  </div>
+</div>
+`;

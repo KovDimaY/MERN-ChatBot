@@ -13,11 +13,15 @@ class Feedback extends Component {
   componentDidMount() {
     fetch('/api/feedbacks')
       .then(response => response.json())
-      .then(result => this.setState({ feedbacks: result.reverse() }));
+      .then(this.handleResponse);
   }
 
   shouldComponentUpdate(nextProps, nextState) {
     return nextState.feedbacks.length !== this.state.feedbacks.length;
+  }
+
+  handleResponse = (result) => {
+    this.setState({ feedbacks: result.reverse() });
   }
 
   renderFeedbackItem = item => (
