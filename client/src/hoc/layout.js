@@ -7,9 +7,7 @@ import Chatbot from '../components/Chatbot';
 const Layout = props => (
   <div className="container">
     <Header />
-    <div>
-      {props.children}
-    </div>
+    {props.children}
     <Chatbot />
   </div>
 );
