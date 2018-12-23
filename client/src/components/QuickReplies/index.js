@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import QuickRely from './item';
+import QuickRely from './Item';
 
 import './styles.css';
 

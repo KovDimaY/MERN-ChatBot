@@ -1,43 +1,62 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-const QuickReply = ({ data, onClick, disabled }) => {
-  const { type, text, value } = data;
+class QuickReply extends Component {
+  handleClick = () => {
+    const { onClick, data: { type, value } } = this.props;
 
-  const handleClick = () => {
-    onClick(type, value);
-  };
-
-  const renderLink = () => (
-    <a href={value} rel="noopener noreferrer" target="_blank" className="waves-effect waves-light btn light-blue hoverable">
-      {text}
-    </a>
-  );
-
-  const renderButton = () => (
-    <button disabled={disabled} onClick={handleClick} className="waves-effect waves-light btn light-blue hoverable">
-      {text}
-    </button>
-  );
-
-  const renderItem = () => {
-    switch (type) {
-      case 'link':
-        return renderLink();
-      case 'text':
-      case 'trigger':
-        return renderButton();
-      default:
-        return null;
+    if (onClick) {
+      onClick(type, value);
     }
   };
 
-  return (
-    <div className="quick-reply-containter">
-      { renderItem() }
-    </div>
-  );
-};
+  renderLink() {
+    const { text, value } = this.props.data;
+
+    return (
+      <a
+        href={value}
+        rel="noopener noreferrer"
+        target="_blank"
+        className="waves-effect waves-light btn light-blue hoverable"
+      >
+        {text}
+      </a>
+    );
+  }
+
+  renderButton() {
+    return (
+      <button
+        disabled={this.props.disabled}
+        onClick={this.handleClick}
+        className="waves-effect waves-light btn light-blue hoverable"
+      >
+        {this.props.data.text}
+      </button>
+    );
+  }
+
+  renderItem() {
+    switch (this.props.data.type) {
+      case 'link':
+        return this.renderLink();
+      case 'text':
+      case 'trigger':
+        return this.renderButton();
+      default:
+        return null;
+    }
+  }
+
+  render() {
+    return (
+      <div className="quick-reply-containter">
+        { this.renderItem() }
+      </div>
+    );
+  }
+}
 
 QuickReply.propTypes = {
   data: PropTypes.object.isRequired,
@@ -46,7 +65,7 @@ QuickReply.propTypes = {
 };
 
 QuickReply.defaultProps = {
-  onClick: () => {},
+  onClick: null,
   disabled: false,
 };
 

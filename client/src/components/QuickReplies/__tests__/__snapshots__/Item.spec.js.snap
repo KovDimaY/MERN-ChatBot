@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/<QuickReply /> should render component with default type 1`] = `
+<div
+  className="quick-reply-containter"
+/>
+`;
+
+exports[`components/<QuickReply /> should render component with type link 1`] = `
+<div
+  className="quick-reply-containter"
+>
+  <a
+    className="waves-effect waves-light btn light-blue hoverable"
+    href="value-link"
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    test-link
+  </a>
+</div>
+`;
+
+exports[`components/<QuickReply /> should render component with type text 1`] = `
+<div
+  className="quick-reply-containter"
+>
+  <button
+    className="waves-effect waves-light btn light-blue hoverable"
+    disabled={false}
+    onClick={[Function]}
+  >
+    test-text
+  </button>
+</div>
+`;
+
+exports[`components/<QuickReply /> should render component with type trigger 1`] = `
+<div
+  className="quick-reply-containter"
+>
+  <button
+    className="waves-effect waves-light btn light-blue hoverable"
+    disabled={false}
+    onClick={[Function]}
+  >
+    test-trigger
+  </button>
+</div>
+`;
