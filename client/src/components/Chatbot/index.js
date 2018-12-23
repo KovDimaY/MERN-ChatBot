@@ -4,7 +4,7 @@ import { withRouter } from 'react-router-dom';
 import Cookies from 'universal-cookie';
 import axios from 'axios';
 import uuid from 'uuid/v4';
-import stuctjson from '../../utils/stuctjson';
+import structjson from '../../utils/structjson';
 
 import Message from '../Message';
 import { VALID_ROUTES } from '../../constants/routes';
@@ -71,7 +71,7 @@ class Chatbot extends Component {
           msg: msg.text.text[0],
         };
       case 'payload': {
-        const payload = stuctjson.structProtoToJson(msg.payload.fields.data.structValue);
+        const payload = structjson.structProtoToJson(msg.payload.fields.data.structValue);
 
         return {
           type: 'payload',

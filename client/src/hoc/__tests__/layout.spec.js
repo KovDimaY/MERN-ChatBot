@@ -10,7 +10,7 @@ const mockComponent = props => (
   <Layout {...props} />
 );
 
-describe('<Layout />', () => {
+describe('hoc/layout', () => {
   it('should render component', () => {
     const props = {
       children: <div>test</div>,

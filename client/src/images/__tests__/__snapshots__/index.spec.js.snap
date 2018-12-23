@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/<App /> should render background image 1`] = `
+<img
+  alt="test"
+  src="test-file-stub"
+/>
+`;
+
+exports[`components/<App /> should render botAvatar image 1`] = `
+<img
+  alt="test"
+  src="test-file-stub"
+/>
+`;
+
+exports[`components/<App /> should render userAvatar image 1`] = `
+<img
+  alt="test"
+  src="test-file-stub"
+/>
+`;
