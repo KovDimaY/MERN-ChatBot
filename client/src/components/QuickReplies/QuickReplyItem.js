@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-class QuickReply extends Component {
+class QuickReplyItem extends Component {
   handleClick = () => {
     const { onClick, data: { type, value } } = this.props;
 
@@ -58,15 +58,15 @@ class QuickReply extends Component {
   }
 }
 
-QuickReply.propTypes = {
+QuickReplyItem.propTypes = {
   data: PropTypes.object.isRequired,
   onClick: PropTypes.func,
   disabled: PropTypes.bool,
 };
 
-QuickReply.defaultProps = {
+QuickReplyItem.defaultProps = {
   onClick: null,
   disabled: false,
 };
 
-export default QuickReply;
+export default QuickReplyItem;

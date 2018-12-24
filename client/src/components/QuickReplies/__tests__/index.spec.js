@@ -4,7 +4,7 @@ import { mount } from 'enzyme';
 
 import QuickReplies from '../../QuickReplies';
 
-jest.mock('../Item', () => 'QuickRely');
+jest.mock('../QuickReplyItem', () => 'QuickReplyItem');
 
 const mockComponent = props => (
   <QuickReplies {...props} />

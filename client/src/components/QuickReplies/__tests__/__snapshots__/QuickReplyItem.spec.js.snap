@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components/<QuickReply /> should render component with default type 1`] = `
+exports[`components/QuickReplies/<QuickReplyItem /> should render component with default type 1`] = `
 <div
   className="quick-reply-containter"
 />
 `;
 
-exports[`components/<QuickReply /> should render component with type link 1`] = `
+exports[`components/QuickReplies/<QuickReplyItem /> should render component with type link 1`] = `
 <div
   className="quick-reply-containter"
 >
@@ -21,7 +21,7 @@ exports[`components/<QuickReply /> should render component with type link 1`] = 
 </div>
 `;
 
-exports[`components/<QuickReply /> should render component with type text 1`] = `
+exports[`components/QuickReplies/<QuickReplyItem /> should render component with type text 1`] = `
 <div
   className="quick-reply-containter"
 >
@@ -35,7 +35,7 @@ exports[`components/<QuickReply /> should render component with type text 1`] = 
 </div>
 `;
 
-exports[`components/<QuickReply /> should render component with type trigger 1`] = `
+exports[`components/QuickReplies/<QuickReplyItem /> should render component with type trigger 1`] = `
 <div
   className="quick-reply-containter"
 >

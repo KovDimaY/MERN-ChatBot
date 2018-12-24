@@ -1,0 +1,171 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/<Header /> should render component 1`] = `
+<nav
+  className="header-container"
+>
+  <div
+    className="nav-wrapper"
+  >
+    <Link
+      className="brand-logo"
+      to="/home"
+    >
+      CV-Bot
+    </Link>
+    <ul
+      className="right hide-on-med-and-down"
+    >
+      <li>
+        <Link
+          to="/experience"
+        >
+           
+          Experience
+        </Link>
+      </li>
+      <li>
+        <Link
+          to="/education"
+        >
+           
+          Education
+        </Link>
+      </li>
+      <li>
+        <Link
+          to="/skills"
+        >
+           
+          Skills
+        </Link>
+      </li>
+      <li>
+        <Link
+          to="/projects"
+        >
+           
+          Projects
+        </Link>
+      </li>
+      <li>
+        <Link
+          to="/feedback"
+        >
+           
+          Feedback
+        </Link>
+      </li>
+    </ul>
+    <ul
+      className="sidenav"
+      id="nav-mobile"
+    >
+      <li>
+        <div
+          className="user-view"
+        >
+          <div
+            className="background"
+          >
+            <img
+              alt="backround"
+              src="test-file-stub"
+            />
+          </div>
+          <img
+            alt="user-avatar"
+            className="circle"
+            src="test-file-stub"
+          />
+          <span
+            className="white-text name"
+          >
+            Guest User
+          </span>
+          <span
+            className="white-text email"
+          >
+            example@domain.com
+          </span>
+        </div>
+      </li>
+      <li>
+        <Link
+          to="/experience"
+        >
+          <i
+            className="material-icons"
+          >
+            business_center
+          </i>
+           
+          Experience
+        </Link>
+      </li>
+      <li>
+        <Link
+          to="/education"
+        >
+          <i
+            className="material-icons"
+          >
+            school
+          </i>
+           
+          Education
+        </Link>
+      </li>
+      <li>
+        <Link
+          to="/skills"
+        >
+          <i
+            className="material-icons"
+          >
+            trending_up
+          </i>
+           
+          Skills
+        </Link>
+      </li>
+      <li>
+        <Link
+          to="/projects"
+        >
+          <i
+            className="material-icons"
+          >
+            color_lens
+          </i>
+           
+          Projects
+        </Link>
+      </li>
+      <li>
+        <Link
+          to="/feedback"
+        >
+          <i
+            className="material-icons"
+          >
+            feedback
+          </i>
+           
+          Feedback
+        </Link>
+      </li>
+    </ul>
+    <div
+      className="sidenav-trigger hide-on-large-only"
+      data-target="nav-mobile"
+    >
+      <i
+        className="large material-icons"
+      >
+        menu
+      </i>
+    </div>
+  </div>
+</nav>
+`;

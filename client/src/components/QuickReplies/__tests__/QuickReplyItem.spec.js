@@ -2,13 +2,13 @@ import React from 'react';
 import { create } from 'react-test-renderer';
 import { mount } from 'enzyme';
 
-import QuickReply from '../Item';
+import QuickReply from '../QuickReplyItem';
 
 const mockComponent = props => (
   <QuickReply {...props} />
 );
 
-describe('components/<QuickReply />', () => {
+describe('components/QuickReplies/<QuickReplyItem />', () => {
   it('should render component with type link', () => {
     const props = {
       data: {
@@ -90,7 +90,7 @@ describe('components/<QuickReply />', () => {
 
     instance.handleClick(type, value);
 
-    // useless check, I know, but it is needed for coverage... :)
+    // useless check, I know, but it is needed for the coverage... :)
     expect(onClick).not.toHaveBeenCalledWith(type, value);
   });
 });

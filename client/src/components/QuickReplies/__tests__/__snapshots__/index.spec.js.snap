@@ -5,7 +5,7 @@ exports[`components/<QuickReplies /> should render component with data 1`] = `
   className="quick-replies-container"
 >
   <p />
-  <QuickRely
+  <QuickReplyItem
     data={
       Object {
         "id": "id-1",
@@ -14,7 +14,7 @@ exports[`components/<QuickReplies /> should render component with data 1`] = `
     disabled={false}
     onClick={[Function]}
   />
-  <QuickRely
+  <QuickReplyItem
     data={
       Object {
         "id": "id-2",
@@ -23,7 +23,7 @@ exports[`components/<QuickReplies /> should render component with data 1`] = `
     disabled={false}
     onClick={[Function]}
   />
-  <QuickRely
+  <QuickReplyItem
     data={
       Object {
         "id": "id-3",
