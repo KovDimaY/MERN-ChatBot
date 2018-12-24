@@ -36,12 +36,11 @@ const EmptyView = ({ section, children }) => {
 };
 
 EmptyView.propTypes = {
-  section: PropTypes.string,
+  section: PropTypes.string.isRequired,
   children: PropTypes.node,
 };
 
 EmptyView.defaultProps = {
-  section: 'this section',
   children: null,
 };
 
