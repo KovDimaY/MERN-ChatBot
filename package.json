@@ -10,6 +10,10 @@
     "mongo": "~/mongo/bin/mongod --dbpath ~/mongo-data",
     "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
     "lint": "eslint client/src --ext .js && eslint server --ext .js",
+    "test": "npm run test-jest --prefix client",
+    "test:coverage": "npm run test:coverage --prefix client",
+    "test:update": "npm run test:update --prefix client",
+    "coverage:report": "open client/coverage/jest/lcov-report/index.html",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "engines": {

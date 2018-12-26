@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/Pages/<Feedback /> should render component with feedbacks 1`] = `
+<div
+  className="feedbacks-container"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="col s12 m6"
+    >
+      <div
+        className="card blue-grey darken-2"
+      >
+        <div
+          className="card-content white-text"
+        >
+          <div
+            className="card-title-custom"
+          >
+            name1
+          </div>
+          <p
+            className="card-date"
+          >
+            Invalid date
+          </p>
+          <p
+            className="card-comment"
+          >
+            feedback1
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      className="col s12 m6"
+    >
+      <div
+        className="card blue-grey darken-2"
+      >
+        <div
+          className="card-content white-text"
+        >
+          <div
+            className="card-title-custom"
+          >
+            name2
+          </div>
+          <p
+            className="card-date"
+          >
+            Invalid date
+          </p>
+          <p
+            className="card-comment"
+          >
+            feedback2
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`components/Pages/<Feedback /> should render component with no feedbacks 1`] = `
+<div
+  className="feedbacks-container"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="col s12 m6"
+    />
+    <div
+      className="col s12 m6"
+    />
+  </div>
+</div>
+`;

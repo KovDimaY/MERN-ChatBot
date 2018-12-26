@@ -1,5 +1,5 @@
 const dialogflow = require('dialogflow');
-const structjson = require('../utils/stuctjson');
+const structjson = require('../utils/structjson');
 const {
   googleProjectID, dialogFlowSessionID, dialogFlowSessionLanguageCode,
   googleClientEmail, googlePrivateKey,

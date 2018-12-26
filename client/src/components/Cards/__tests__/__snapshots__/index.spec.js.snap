@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/<Cards /> should render component with data 1`] = `
+<div
+  className="cards-containter"
+>
+  <div
+    style={
+      Object {
+        "width": 660,
+      }
+    }
+  >
+    <CardItem
+      data={
+        Object {
+          "id": "id-1",
+        }
+      }
+    />
+    <CardItem
+      data={
+        Object {
+          "id": "id-2",
+        }
+      }
+    />
+    <CardItem
+      data={
+        Object {
+          "id": "id-3c",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`components/<Cards /> should render component with no data 1`] = `
+<span
+  className="red-text"
+>
+  Oops, something went wrong... :(
+</span>
+`;

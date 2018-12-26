@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Card = ({ data }) => {
+const CardItem = ({ data }) => {
   const {
     title, image, description, link,
   } = data;
@@ -14,9 +14,7 @@ const Card = ({ data }) => {
           <span className="card-title">{title}</span>
         </div>
         <div className="card-content">
-          <p>
-            {description}
-          </p>
+          <p>{description}</p>
         </div>
         <div className="card-action">
           <a href={link}>View</a>
@@ -26,8 +24,8 @@ const Card = ({ data }) => {
   );
 };
 
-Card.propTypes = {
+CardItem.propTypes = {
   data: PropTypes.object.isRequired,
 };
 
-export default Card;
+export default CardItem;

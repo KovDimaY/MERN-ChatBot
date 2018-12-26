@@ -2,6 +2,15 @@
   "name": "client",
   "version": "1.0.0",
   "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "test-jest": "NODE_ENV=test jest --no-cache",
+    "test:coverage": "npm run test-jest -- --coverage",
+    "test:update": "npm run test-jest -- --u",
+    "eject": "react-scripts eject"
+  },
   "dependencies": {
     "axios": "0.18.0",
     "http-proxy-middleware": "0.19.1",
@@ -16,11 +25,82 @@
     "universal-cookie": "3.0.7",
     "uuid": "3.3.2"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+  "devDependencies": {
+    "babel-cli": "6.26.0",
+    "babel-core": "6.26.3",
+    "babel-jest": "23.6.0",
+    "babel-loader": "8.0.4",
+    "babel-plugin-transform-runtime": "6.23.0",
+    "babel-polyfill": "6.26.0",
+    "babel-preset-env": "1.7.0",
+    "babel-preset-react": "6.24.1",
+    "babel-preset-stage-0": "6.24.1",
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "1.7.1",
+    "raf": "3.4.1",
+    "react-hot-loader": "4.6.3",
+    "react-test-renderer": "16.7.0"
+  },
+  "jest": {
+    "automock": false,
+    "verbose": true,
+    "moduleFileExtensions": [
+      "js",
+      "json"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!src/index.js",
+      "!src/serviceWorker.js",
+      "!src/setupProxy.js",
+      "!src/utils/structjson.js"
+    ],
+    "testPathIgnorePatterns": [
+      "<rootDir>/(dist|coverage|node_modules)/",
+      "src/config"
+    ],
+    "setupTestFrameworkScriptFile": "<rootDir>/internals/testing/config.js",
+    "moduleNameMapper": {
+      "\\.(css|less|sass|scss)$": "<rootDir>/__mocks__/styleMock.js",
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js"
+    },
+    "roots": [
+      "src"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ],
+    "coverageDirectory": "<rootDir>/coverage/jest",
+    "coverageReporters": [
+      "text",
+      "lcov",
+      "cobertura"
+    ]
+  },
+  "babel": {
+    "plugins": [
+      "transform-runtime",
+      "react-hot-loader/babel"
+    ],
+    "presets": [
+      [
+        "env",
+        {
+          "modules": false
+        }
+      ],
+      "react",
+      "stage-0"
+    ],
+    "env": {
+      "test": {
+        "plugins": [
+          "transform-es2015-modules-commonjs",
+          "dynamic-import-node"
+        ]
+      }
+    }
   },
   "browserslist": [
     ">0.2%",

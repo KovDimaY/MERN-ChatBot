@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/<App /> should render component 1`] = `
+<BrowserRouter>
+  <Switch>
+    <Route
+      component="Disclaimer"
+      exact={true}
+      path="/"
+    />
+    <Layout>
+      <Route
+        component="Home"
+        exact={true}
+        path="/home"
+      />
+      <Route
+        component="Experience"
+        exact={true}
+        path="/experience"
+      />
+      <Route
+        component="Education"
+        exact={true}
+        path="/education"
+      />
+      <Route
+        component="Skills"
+        exact={true}
+        path="/skills"
+      />
+      <Route
+        component="Projects"
+        exact={true}
+        path="/projects"
+      />
+      <Route
+        component="Feedback"
+        exact={true}
+        path="/feedback"
+      />
+    </Layout>
+  </Switch>
+</BrowserRouter>
+`;
