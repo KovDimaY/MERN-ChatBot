@@ -13,7 +13,7 @@ import './styles.css';
 
 const cookies = new Cookies();
 
-class Chatbot extends Component {
+export class Chatbot extends Component {
   constructor(props) {
     super(props);
 
@@ -61,7 +61,7 @@ class Chatbot extends Component {
     return this.state.show ? 'chat-opened' : 'chat-closed';
   }
 
-  getMessage = (msg) => {
+  getBotMessage = (msg) => {
     switch (msg.message) {
       case 'text':
         return {
@@ -85,9 +85,11 @@ class Chatbot extends Component {
     }
   }
 
-  delayExecution = milliseconds => new Promise((resolve) => {
-    setTimeout(() => resolve(), milliseconds);
-  })
+  delayExecution = milliseconds => (
+    new Promise((resolve) => {
+      setTimeout(resolve, milliseconds);
+    })
+  );
 
   handleInput = (event) => {
     const query = event.target.value.substring(0, 200);
@@ -110,14 +112,12 @@ class Chatbot extends Component {
   }
 
   saveBotAnswers(messages) {
-    messages.forEach((msg) => {
-      const botMessage = this.getMessage(msg);
+    const newMessages = messages.map(this.getBotMessage);
 
-      this.setState({ messages: [...this.state.messages, botMessage] });
-    });
+    this.setState({ messages: [...this.state.messages, ...newMessages] });
   }
 
-  handleRequestError() {
+  async handleRequestError() {
     const botMessage = {
       type: 'text',
       author: 'bot',
@@ -126,8 +126,8 @@ class Chatbot extends Component {
     };
 
     this.setState({ messages: [...this.state.messages, botMessage] });
-
-    setTimeout(() => this.setState({ show: false }), 2000);
+    await this.delayExecution(2000);
+    this.setState({ show: false });
   }
 
   dfTextQuery = async (query) => {

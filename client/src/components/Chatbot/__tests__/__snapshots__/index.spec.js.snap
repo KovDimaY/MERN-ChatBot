@@ -1,0 +1,149 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/<Chatbot /> should render component with messages 1`] = `
+<div
+  className="container chatbot-container chat-opened"
+>
+  <div
+    className="collapse-header blue"
+    onClick={[Function]}
+  >
+    <div
+      className="nav-wrapper"
+    >
+      <div
+        className="brand-logo"
+      >
+        Messages
+      </div>
+      <i
+        className="large material-icons toggle-show-icon"
+      >
+        arrow_drop_down
+      </i>
+    </div>
+  </div>
+  <div
+    className="chatbot"
+    onSubmit={[Function]}
+  >
+    <div
+      className="messages"
+    >
+      <Message
+        author="author"
+        msg="msg"
+        onReply={[Function]}
+        type="type"
+      />
+      <div />
+    </div>
+    <form
+      className="chatbot-input-wrapper"
+    >
+      <input
+        className="chatbot-input"
+        onChange={[Function]}
+        placeholder="Enter your message..."
+        type="text"
+        value=""
+      />
+      <button
+        className="btn waves-effect waves-light blue"
+        name="send-message"
+        type="submit"
+      >
+        <i
+          className="material-icons"
+        >
+          send
+        </i>
+      </button>
+    </form>
+  </div>
+</div>
+`;
+
+exports[`components/<Chatbot /> should render component with show=false 1`] = `
+<div
+  className="container chatbot-container chat-closed"
+>
+  <div
+    className="collapse-header blue"
+    onClick={[Function]}
+  >
+    <div
+      className="nav-wrapper"
+    >
+      <div
+        className="brand-logo"
+      >
+        Messages
+      </div>
+      <i
+        className="large material-icons toggle-show-icon"
+      >
+        arrow_drop_up
+      </i>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`components/<Chatbot /> should render component with show=true 1`] = `
+<div
+  className="container chatbot-container chat-opened"
+>
+  <div
+    className="collapse-header blue"
+    onClick={[Function]}
+  >
+    <div
+      className="nav-wrapper"
+    >
+      <div
+        className="brand-logo"
+      >
+        Messages
+      </div>
+      <i
+        className="large material-icons toggle-show-icon"
+      >
+        arrow_drop_down
+      </i>
+    </div>
+  </div>
+  <div
+    className="chatbot"
+    onSubmit={[Function]}
+  >
+    <div
+      className="messages"
+    >
+      <div />
+    </div>
+    <form
+      className="chatbot-input-wrapper"
+    >
+      <input
+        className="chatbot-input"
+        onChange={[Function]}
+        placeholder="Enter your message..."
+        type="text"
+        value=""
+      />
+      <button
+        className="btn waves-effect waves-light blue"
+        name="send-message"
+        type="submit"
+      >
+        <i
+          className="material-icons"
+        >
+          send
+        </i>
+      </button>
+    </form>
+  </div>
+</div>
+`;

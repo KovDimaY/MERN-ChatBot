@@ -4,7 +4,9 @@ exports[`components/pages/<Home /> should render component 1`] = `
 <div
   className="home-page-container"
 >
-  <EmptyView>
+  <EmptyView
+    section="home"
+  >
     <p>
       Welcome to my new personal project!!!
     </p>
