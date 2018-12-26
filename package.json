@@ -15,7 +15,7 @@
     "test:update": "npm run test:update --prefix client",
     "coverage:report": "open client/coverage/jest/lcov-report/index.html",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
-    "ci:coverall": "cat ./client/coverage/jest/lcov.info | ./client/node_modules/coveralls/bin/coveralls.js"
+    "ci:coverall": "cat ./client/coverage/jest/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "engines": {
     "node": "8.11.2",
@@ -40,14 +40,15 @@
     "mongoose": "5.3.15"
   },
   "devDependencies": {
-    "concurrently": "4.1.0",
-    "nodemon": "1.18.7",
     "babel-eslint": "9.0.0",
+    "concurrently": "4.1.0",
+    "coveralls": "3.0.2",
     "eslint": "5.6.0",
     "eslint-config-airbnb": "16.1.0",
     "eslint-loader": "2.0.0",
     "eslint-plugin-import": "2.12.0",
     "eslint-plugin-jsx-a11y": "6.0.2",
-    "eslint-plugin-react": "7.9.1"
+    "eslint-plugin-react": "7.9.1",
+    "nodemon": "1.18.7"
   }
 }
