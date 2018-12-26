@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components/pages/<Education /> should render component 1`] = `
+exports[`components/Pages/<Education /> should render component 1`] = `
 <div>
   <EmptyView
     section="education"

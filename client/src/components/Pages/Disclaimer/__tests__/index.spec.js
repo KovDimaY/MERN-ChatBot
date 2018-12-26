@@ -11,7 +11,7 @@ const mockComponent = props => (
   <Disclaimer {...props} />
 );
 
-describe('components/pages/<Disclaimer />', () => {
+describe('components/Pages/<Disclaimer />', () => {
   it('should render component', () => {
     const tree = create(mockComponent()).toJSON();
 

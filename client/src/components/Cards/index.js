@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Card from './CardItem';
+import CardItem from './CardItem';
 
 import './styles.css';
 
@@ -10,7 +10,7 @@ const Cards = ({ data }) => {
     return (
       <div className="cards-containter">
         <div style={{ width: 220 * data.value.length }}>
-          {data.value.map(item => <Card data={item} key={item.id} />)}
+          {data.value.map(item => <CardItem data={item} key={item.id} />)}
         </div>
       </div>
     );

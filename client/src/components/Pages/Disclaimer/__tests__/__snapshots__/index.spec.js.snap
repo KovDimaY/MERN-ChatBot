@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components/pages/<Disclaimer /> should render component 1`] = `
+exports[`components/Pages/<Disclaimer /> should render component 1`] = `
 <div
   className="discalimer-container"
 >

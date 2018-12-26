@@ -14,7 +14,7 @@ const mockComponent = props => (
   <Feedback {...props} />
 );
 
-describe('components/pages/<Feedback />', () => {
+describe('components/Pages/<Feedback />', () => {
   global.fetch = jest.fn(() => new Promise(resolve => resolve()));
 
   it('should render component with no feedbacks', () => {

@@ -9,7 +9,7 @@ const mockComponent = props => (
   <Education {...props} />
 );
 
-describe('components/pages/<Education />', () => {
+describe('components/Pages/<Education />', () => {
   it('should render component', () => {
     const tree = create(mockComponent()).toJSON();
 

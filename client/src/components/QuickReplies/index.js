@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import QuickRely from './QuickReplyItem';
+import QuickReplyItem from './QuickReplyItem';
 
 import './styles.css';
 
@@ -24,7 +24,7 @@ class QuickReplies extends Component {
         <div className="quick-replies-container">
           <p>{data.message}</p>
           {data.values.map(item => (
-            <QuickRely data={item} key={item.id} onClick={this.handleReply} disabled={answered} />
+            <QuickReplyItem data={item} key={item.id} onClick={this.handleReply} disabled={answered} />
           ))}
         </div>
       );

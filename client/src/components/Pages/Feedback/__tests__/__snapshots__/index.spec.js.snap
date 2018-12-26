@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components/pages/<Feedback /> should render component with feedbacks 1`] = `
+exports[`components/Pages/<Feedback /> should render component with feedbacks 1`] = `
 <div
   className="feedbacks-container"
 >
@@ -65,7 +65,7 @@ exports[`components/pages/<Feedback /> should render component with feedbacks 1`
 </div>
 `;
 
-exports[`components/pages/<Feedback /> should render component with no feedbacks 1`] = `
+exports[`components/Pages/<Feedback /> should render component with no feedbacks 1`] = `
 <div
   className="feedbacks-container"
 >

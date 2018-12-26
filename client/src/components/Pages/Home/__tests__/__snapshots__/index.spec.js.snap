@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components/pages/<Home /> should render component 1`] = `
+exports[`components/Pages/<Home /> should render component 1`] = `
 <div
   className="home-page-container"
 >
