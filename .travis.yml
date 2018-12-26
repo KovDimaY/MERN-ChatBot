@@ -17,7 +17,6 @@ jobs:
     - stage: Produce Coverage
       node_js: 8.11.2
       script: 
-        - npm run lint
-        - npm run test:coverage && cat ./client/coverage/jest/lcov.info | ./client/node_modules/coveralls/bin/coveralls.js
+        - npm run lint && npm run test:coverage && npm run ci:coverall
 
 sudo: false
