@@ -1,0 +1,23 @@
+language: node_js
+node_js:
+  - 8.11.2
+
+cache:
+  directories:
+    - node_modules
+  
+install:
+  - npm install
+  - cd client
+  - npm install
+  - cd ..
+
+jobs:
+  include:
+    - stage: Produce Coverage
+      node_js: 8.11.2
+      script: 
+        - npm run lint
+        - npm run test:coverage && cat ./client/coverage/jest/lcov.info | ./client/node_modules/coveralls/bin/coveralls.js
+
+sudo: false
