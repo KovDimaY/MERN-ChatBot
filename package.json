@@ -1,6 +1,6 @@
 {
   "name": "mern-chatbot",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "This is a small project to practice a MERN stack and to learn how to make a chatbot with the DialogFlow from Google Cloud Platform",
   "main": "index.js",
   "scripts": {
