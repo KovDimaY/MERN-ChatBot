@@ -1,20 +1,22 @@
 # MERN-ChatBot
 
-[![GitHub version](https://img.shields.io/badge/version-1.0.0-yellow.svg)](https://github.com/KovDimaY/MERN-ChatBot/releases)
-[![GitHub demo](https://img.shields.io/badge/demo-available-green.svg)](https://mern-chatbot.herokuapp.com/)
+[![Build Status](https://travis-ci.com/KovDimaY/MERN-ChatBot.svg?branch=master)](https://travis-ci.com/KovDimaY/MERN-ChatBot)
+[![Coverage Status](https://coveralls.io/repos/github/KovDimaY/MERN-ChatBot/badge.svg?branch=master)](https://coveralls.io/github/KovDimaY/MERN-ChatBot?branch=master)
+[![GitHub version](https://img.shields.io/badge/version-1.1.0-yellow.svg)](https://github.com/KovDimaY/MERN-ChatBot/releases)
+[![GitHub demo](https://img.shields.io/badge/demo-available-ff3399.svg)](https://mern-chatbot.herokuapp.com/)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/KovDimaY/MERN-ChatBot/blob/master/LICENSE)
 
 This is a small project to practice a MERN stack and to learn how to make a chatbot with the DialogFlow from Google Cloud Platform. It is still under development so more features are coming soon! Stay tuned! :D
 
-The last deployed production version is [**MERN-ChatBot v1.0.0**](https://github.com/KovDimaY/MERN-ChatBot/releases). 
+The last deployed production version is [**MERN-ChatBot v1.1.0**](https://github.com/KovDimaY/MERN-ChatBot/releases). 
 <br>
 <br>
 
-### There is only one environment for the moment:
+### There are two environments with independent databases:
 
-**Production** (MASTER branch): https://trip-reviewer.herokuapp.com
+**Production** (MASTER branch): https://mern-chatbot.herokuapp.com/
 
-PRE-production with a separate database is coming soon.
+**Pre-production** (DEVEL branch): https://mern-chatbot-pre.herokuapp.com/
 
 I will appreciate a lot your feedback and your opinion about the project. Feel free to create an issue or to contact me via LinkedIn, mail or social networks.
 Thank you in advance!
@@ -28,6 +30,8 @@ Thank you in advance!
 2) Mobile:<br>
 ![image](https://user-images.githubusercontent.com/26466644/50377555-c7f53700-061f-11e9-9799-7f7dcf444927.png)
 
+3) Test Coverage:<br>
+![image](https://user-images.githubusercontent.com/26466644/50495436-67079d80-0a29-11e9-9572-372207f5c85b.png)
 <br>
 <br>
 
@@ -73,3 +77,34 @@ npm run dev
 ```
 
 ##### Open your browser at http://localhost:3000/
+
+<br>
+<br>
+
+
+
+### To run test coverage:
+##### In the root of the project run the commands:
+```
+npm run test
+```
+
+##### To run linter (ESLint):
+```
+npm run lint
+```
+
+##### To generate coverage report:
+```
+npm run test:coverage
+```
+
+##### To open visual coverage report in browser:
+```
+npm run coverage:report
+```
+
+##### To update outdated snapshots:
+```
+npm run test:update
+```

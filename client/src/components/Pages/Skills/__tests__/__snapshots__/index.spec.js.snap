@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/Pages/<Skills /> should render component 1`] = `
+<div>
+  <EmptyView
+    section="skills"
+  />
+</div>
+`;

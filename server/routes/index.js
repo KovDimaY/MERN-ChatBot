@@ -38,7 +38,7 @@ module.exports = (app) => {
     const saveDemand = (agentItem) => {
       Demand.findOne({ param: agentItem.parameters['experience-companies'] }, (err, company) => {
         if (company != null) {
-          company.counter += 1;
+          company.counter += 1; // eslint-disable-line no-param-reassign
           company.save();
         } else {
           const newDemand = new Demand({ param: agentItem.parameters['experience-companies'] });

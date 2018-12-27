@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/Common/<DotsAnimation /> should render component 1`] = `
+<Canvas
+  draw={[Function]}
+  height={100}
+  width={100}
+/>
+`;

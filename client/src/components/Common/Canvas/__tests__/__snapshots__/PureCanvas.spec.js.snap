@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/Common/Canvas/<PureCanvas /> should render component 1`] = `
+<canvas
+  className="pure-canvas"
+  height={100}
+  width={100}
+/>
+`;

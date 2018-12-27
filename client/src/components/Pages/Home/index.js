@@ -30,7 +30,7 @@ const Home = () => {
 
   return (
     <div className="home-page-container">
-      <EmptyView>{renderDescription()}</EmptyView>
+      <EmptyView section="home">{renderDescription()}</EmptyView>
     </div>
   );
 };

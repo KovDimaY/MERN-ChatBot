@@ -1,0 +1,190 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/<Message /> should render component of type payload (card) from bot 1`] = `
+<div
+  className="message-container"
+>
+  <div
+    className="col s12 m8 offset-m2 offset-l3"
+  >
+    <div
+      className="card-panel grey lighten-5 z-depth-1 small-padding"
+    >
+      <div
+        className="row valign-wrapper no-margin"
+      >
+        <div
+          className="col s2"
+        >
+          <img
+            alt="avatar"
+            className="circle responsive-img"
+            src="test-file-stub"
+          />
+        </div>
+        <div
+          className="col s10 bot-message"
+        >
+          <Cards
+            data={
+              Object {
+                "type": "cards",
+              }
+            }
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`components/<Message /> should render component of type payload (quick-replies) from bot 1`] = `
+<div
+  className="message-container"
+>
+  <div
+    className="col s12 m8 offset-m2 offset-l3"
+  >
+    <div
+      className="card-panel grey lighten-5 z-depth-1 small-padding"
+    >
+      <div
+        className="row valign-wrapper no-margin"
+      >
+        <div
+          className="col s2"
+        >
+          <img
+            alt="avatar"
+            className="circle responsive-img"
+            src="test-file-stub"
+          />
+        </div>
+        <div
+          className="col s10 bot-message"
+        >
+          <QuickReplies
+            data={
+              Object {
+                "type": "quick-replies",
+              }
+            }
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`components/<Message /> should render component of type payload (wrong) from bot 1`] = `
+<div
+  className="message-container"
+>
+  <div
+    className="col s12 m8 offset-m2 offset-l3"
+  >
+    <div
+      className="card-panel grey lighten-5 z-depth-1 small-padding"
+    >
+      <div
+        className="row valign-wrapper no-margin"
+      >
+        <div
+          className="col s2"
+        >
+          <img
+            alt="avatar"
+            className="circle responsive-img"
+            src="test-file-stub"
+          />
+        </div>
+        <div
+          className="col s10 bot-message"
+        >
+          <span
+            className="red-text"
+          >
+            error message
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`components/<Message /> should render component of type text from user 1`] = `
+<div
+  className="message-container"
+>
+  <div
+    className="col s12 m8 offset-m2 offset-l3"
+  >
+    <div
+      className="card-panel grey lighten-5 z-depth-1 small-padding"
+    >
+      <div
+        className="row valign-wrapper no-margin"
+      >
+        <div
+          className="col s10 user-message"
+        >
+          <span
+            className="black-text"
+          >
+            test
+          </span>
+        </div>
+        <div
+          className="col s2"
+        >
+          <img
+            alt="avatar"
+            className="circle responsive-img"
+            src="test-file-stub"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`components/<Message /> should render component of wrong type from user 1`] = `
+<div
+  className="message-container"
+>
+  <div
+    className="col s12 m8 offset-m2 offset-l3"
+  >
+    <div
+      className="card-panel grey lighten-5 z-depth-1 small-padding"
+    >
+      <div
+        className="row valign-wrapper no-margin"
+      >
+        <div
+          className="col s10 user-message"
+        >
+          <span
+            className="red-text"
+          >
+            test
+          </span>
+        </div>
+        <div
+          className="col s2"
+        >
+          <img
+            alt="avatar"
+            className="circle responsive-img"
+            src="test-file-stub"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
