@@ -1,0 +1,39 @@
+.language-container {
+  max-width: 150px;
+  display: inline-block;
+  margin: 10px;
+  text-align: center;
+}
+.language-container .country-flag {
+  width: 100%;
+  border: 1px solid black;
+  box-shadow: 1px 1px 10px gray;
+}
+.language-container .name {
+  font-size: 18px;
+  font-weight: 500;
+}
+.language-container .level {
+  font-size: 14px;
+  color: gray;
+}
+
+@media (max-width: 750px) {
+  .language-container .name {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .language-container .level {
+    font-size: 12px;
+    color: gray;
+  }
+}
+
+@media (max-width: 500px) {
+  .language-container {
+    max-width: 100px;
+  }
+  .language-container .level {
+    font-size: 10px;
+  }
+}

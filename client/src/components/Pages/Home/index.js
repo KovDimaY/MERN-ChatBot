@@ -1,10 +1,37 @@
 import React from 'react';
 
 import EmptyView from '../../Common/EmptyView';
+import LanguageItem from '../../Common/LanguageItem';
 import { getAgeByBirthdate } from '../../../utils/common';
-import { myProfilePicture } from '../../../images';
+import {
+  myProfilePicture, flagES,
+  flagRU, flagUA, flagUS,
+} from '../../../images';
 
 import './styles.css';
+
+const languages = [
+  {
+    image: flagUA,
+    name: 'Українська',
+    level: 'Native or bilingual proficiency',
+  },
+  {
+    image: flagRU,
+    name: 'Русский',
+    level: 'Native or bilingual proficiency',
+  },
+  {
+    image: flagUS,
+    name: 'English',
+    level: 'Full professional proficiency',
+  },
+  {
+    image: flagES,
+    name: 'Español',
+    level: 'Professional working proficiency',
+  },
+];
 
 const Home = () => {
   const renderDescription = () => (
@@ -31,6 +58,10 @@ const Home = () => {
       </p>
     </React.Fragment>
   );
+
+  const renderLanguages = () => languages.map(item => (
+    <LanguageItem {...item} key={item.id} />
+  ));
 
   const renderInfo = () => (
     <React.Fragment>
@@ -88,13 +119,9 @@ const Home = () => {
 
       <div className="languages-section section">
         <h3 className="section-title">Languages I speak:</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Nunc turpis metus, lacinia dapibus ex non, ultricies ornare quam.
-          Aliquam erat volutpat. Morbi convallis, purus ut vehicula rhoncus,
-          mauris magna condimentum mauris, eget facilisis eros nulla sed justo.
-          Aliquam fermentum eros ut tortor gravida finibus.
-        </p>
+        <div className="languages-wrapper">
+          {renderLanguages()}
+        </div>
       </div>
 
       <div className="hobbies-section section">

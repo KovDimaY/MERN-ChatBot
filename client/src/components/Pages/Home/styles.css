@@ -33,15 +33,21 @@
   color: gray;
   margin: 5px 0 20px 0;
 }
-.home-page-container .summary-section p {
-  text-align: justify;
-  text-indent: 20px;
-}
-
 .home-page-container .section-title {
   font-size: 28px;
   margin: 0;
 }
+.home-page-container .summary-section p {
+  text-align: justify;
+  text-indent: 20px;
+}
+.home-page-container .languages-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 25px;
+}
+
 
 
 @media (max-width: 750px) {
@@ -64,6 +70,10 @@
   }
   .home-page-container .my-profile-photo {
     width: 150px;
+  }
+  .home-page-container .languages-wrapper {
+    align-items: center;
+    flex-flow: wrap;
   }
 }
 
