@@ -1,6 +1,9 @@
 import React from 'react';
 
 import EmptyView from '../../Common/EmptyView';
+import { myProfilePicture } from '../../../images';
+
+import './styles.css';
 
 const Home = () => {
   const renderDescription = () => (
@@ -28,9 +31,63 @@ const Home = () => {
     </React.Fragment>
   );
 
+  const renderInfo = () => (
+    <React.Fragment>
+      <div className="basic-info-section">
+        <div className="left-column">
+          <img src={myProfilePicture} alt="Me" className="my-profile-photo" />
+        </div>
+        <div className="right-column">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Nunc turpis metus, lacinia dapibus ex non, ultricies ornare quam.
+            Aliquam erat volutpat. Morbi convallis, purus ut vehicula rhoncus,
+            mauris magna condimentum mauris, eget facilisis eros nulla sed justo.
+            Aliquam fermentum eros ut tortor gravida finibus.
+          </p>
+        </div>
+      </div>
+
+      <div className="summary-section">
+        <h3>About me:</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Nunc turpis metus, lacinia dapibus ex non, ultricies ornare quam.
+          Aliquam erat volutpat. Morbi convallis, purus ut vehicula rhoncus,
+          mauris magna condimentum mauris, eget facilisis eros nulla sed justo.
+          Aliquam fermentum eros ut tortor gravida finibus.
+        </p>
+      </div>
+
+      <div className="languages-section">
+        <h3>Languages I speak:</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Nunc turpis metus, lacinia dapibus ex non, ultricies ornare quam.
+          Aliquam erat volutpat. Morbi convallis, purus ut vehicula rhoncus,
+          mauris magna condimentum mauris, eget facilisis eros nulla sed justo.
+          Aliquam fermentum eros ut tortor gravida finibus.
+        </p>
+      </div>
+
+      <div className="hobbies-section">
+        <h3>My hobbies:</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Nunc turpis metus, lacinia dapibus ex non, ultricies ornare quam.
+          Aliquam erat volutpat. Morbi convallis, purus ut vehicula rhoncus,
+          mauris magna condimentum mauris, eget facilisis eros nulla sed justo.
+          Aliquam fermentum eros ut tortor gravida finibus.
+        </p>
+      </div>
+      
+    </React.Fragment>
+  );
+
   return (
     <div className="home-page-container">
-      <EmptyView section="home">{renderDescription()}</EmptyView>
+      {false && <EmptyView section="home">{renderDescription()}</EmptyView>}
+      {true && renderInfo()}
     </div>
   );
 };

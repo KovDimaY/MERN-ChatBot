@@ -1,0 +1,32 @@
+.home-page-container .basic-info-section {
+  display: flex;
+  flex-direction: row;
+  padding: 50px 25px 25px 25px;
+}
+
+.home-page-container .basic-info-section .left-column {
+  text-align: center;
+  margin-right: 25px;
+}
+
+.home-page-container .my-profile-photo {
+  width: 250px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px grey;
+}
+
+@media (max-width: 750px) {
+  .home-page-container .my-profile-photo {
+    width: 150px;
+  }
+}
+
+@media (max-width: 500px) {
+  .home-page-container .my-profile-photo {
+    width: 200px;
+  }
+
+  .home-page-container .basic-info-section {
+    flex-direction: column;
+  }
+}
