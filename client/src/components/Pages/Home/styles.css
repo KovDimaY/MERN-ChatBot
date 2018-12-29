@@ -1,14 +1,20 @@
+.home-page-container {
+  padding-bottom: 100px;
+}
 .home-page-container strong {
   font-weight: 600;
 }
 .home-page-container .basic-info-section h4 {
   margin: 20px 0 0 0;
 }
+.home-page-container .section {
+  padding: 25px;
+}
 .home-page-container .basic-info-section {
+  margin-top: 25px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  padding: 50px 25px 25px 25px;
 }
 .home-page-container .basic-info-section .left-column {
   text-align: center;
@@ -26,6 +32,15 @@
   font-size: 20px;
   color: gray;
   margin: 5px 0 20px 0;
+}
+.home-page-container .summary-section p {
+  text-align: justify;
+  text-indent: 20px;
+}
+
+.home-page-container .section-title {
+  font-size: 28px;
+  margin: 0;
 }
 
 
@@ -67,5 +82,9 @@
     text-align: center;
     max-width: none;
     margin-top: 25px;
+  }
+  .home-page-container .section-title {
+    text-align: center;
+    font-size: 24px;
   }
 }

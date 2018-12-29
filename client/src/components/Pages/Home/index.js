@@ -34,7 +34,7 @@ const Home = () => {
 
   const renderInfo = () => (
     <React.Fragment>
-      <div className="basic-info-section">
+      <div className="basic-info-section section">
         <div className="left-column">
           <img src={myProfilePicture} alt="Me" className="my-profile-photo" />
         </div>
@@ -59,8 +59,35 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="summary-section">
-        <h3>About me:</h3>
+      <div className="summary-section section">
+        <h3 className="section-title">About me:</h3>
+        <p>
+          I am a very passionate software developer with a mathematical
+          background who has tried working with many different languages
+          including Pascal, FORTRAN, Python, C/C++, C#, Java and Javascript.
+          Now I am focused on web development
+          with <strong>Node</strong> and <strong>React</strong> and I love it!
+        </p>
+        <p>
+          I am a very methodological and disciplined person,
+          I like when things are done in time and with the best
+          possible quality. I love test coverage, CI and strict
+          ESLint rules but also I like to experiment and to try
+          new approaches when I see that something could be improved.
+          I am very hardworking and a bit crazy about learning - I
+          cannot imagine my life without Coursera, Udemy and GitHub.
+        </p>
+        <p>
+          I believe in productive teamwork and I consider myself a good team
+          player who can have fun and support others but also to be strict and
+          demanding when needed. I am always trying to find something positive
+          to keep an optimistic attitude and to be happy. I use sport and photography
+          when I need to distract and relax.
+        </p>
+      </div>
+
+      <div className="languages-section section">
+        <h3 className="section-title">Languages I speak:</h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           Nunc turpis metus, lacinia dapibus ex non, ultricies ornare quam.
@@ -70,19 +97,8 @@ const Home = () => {
         </p>
       </div>
 
-      <div className="languages-section">
-        <h3>Languages I speak:</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Nunc turpis metus, lacinia dapibus ex non, ultricies ornare quam.
-          Aliquam erat volutpat. Morbi convallis, purus ut vehicula rhoncus,
-          mauris magna condimentum mauris, eget facilisis eros nulla sed justo.
-          Aliquam fermentum eros ut tortor gravida finibus.
-        </p>
-      </div>
-
-      <div className="hobbies-section">
-        <h3>My hobbies:</h3>
+      <div className="hobbies-section section">
+        <h3 className="section-title">My hobbies:</h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           Nunc turpis metus, lacinia dapibus ex non, ultricies ornare quam.
