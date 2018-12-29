@@ -19,8 +19,53 @@ exports[`components/Pages/<Home /> should render component 1`] = `
     <div
       className="right-column"
     >
+      <h4
+        className="name-lastname"
+      >
+        Dmytro Kovalenko
+      </h4>
+      <p
+        className="job-title"
+      >
+        Full Stack JS Developer
+      </p>
+      <p
+        className="location"
+      >
+        <a
+          href="https://www.google.es/maps?q=41.382207,2.140318"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Sants Estació, Barcelona, Spain
+        </a>
+      </p>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc turpis metus, lacinia dapibus ex non, ultricies ornare quam. Aliquam erat volutpat. Morbi convallis, purus ut vehicula rhoncus, mauris magna condimentum mauris, eget facilisis eros nulla sed justo. Aliquam fermentum eros ut tortor gravida finibus.
+        <strong>
+          Contact info: 
+        </strong>
+        Contact me in
+         
+        <a
+          href="https://www.linkedin.com/in/kovalenkodmytro/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          LinkedIn
+        </a>
+      </p>
+      <p>
+        <strong>
+          Age: 
+        </strong>
+        26
+         years old
+      </p>
+      <p>
+        <strong>
+          Civil status: 
+        </strong>
+        Married, no children
       </p>
     </div>
   </div>

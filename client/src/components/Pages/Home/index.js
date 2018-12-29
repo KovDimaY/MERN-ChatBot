@@ -1,6 +1,7 @@
 import React from 'react';
 
 import EmptyView from '../../Common/EmptyView';
+import { getAgeByBirthdate } from '../../../utils/common';
 import { myProfilePicture } from '../../../images';
 
 import './styles.css';
@@ -38,13 +39,23 @@ const Home = () => {
           <img src={myProfilePicture} alt="Me" className="my-profile-photo" />
         </div>
         <div className="right-column">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Nunc turpis metus, lacinia dapibus ex non, ultricies ornare quam.
-            Aliquam erat volutpat. Morbi convallis, purus ut vehicula rhoncus,
-            mauris magna condimentum mauris, eget facilisis eros nulla sed justo.
-            Aliquam fermentum eros ut tortor gravida finibus.
+          <h4 className="name-lastname">Dmytro Kovalenko</h4>
+          <p className="job-title">Full Stack JS Developer</p>
+          <p className="location">
+            <a href="https://www.google.es/maps?q=41.382207,2.140318" target="_blank" rel="noopener noreferrer">
+              Sants Estació, Barcelona, Spain
+            </a>
           </p>
+          <p>
+            <strong>Contact info: </strong>
+            Contact me in
+            {' '}
+            <a href="https://www.linkedin.com/in/kovalenkodmytro/" target="_blank" rel="noopener noreferrer">
+              LinkedIn
+            </a>
+          </p>
+          <p><strong>Age: </strong>{getAgeByBirthdate('1992-05-20')} years old</p>
+          <p><strong>Civil status: </strong>Married, no children</p>
         </div>
       </div>
 
@@ -80,7 +91,6 @@ const Home = () => {
           Aliquam fermentum eros ut tortor gravida finibus.
         </p>
       </div>
-      
     </React.Fragment>
   );
 
