@@ -14,13 +14,9 @@
 }
 .home-page-container .basic-info-section {
   margin-top: 25px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
 }
 .home-page-container .basic-info-section .left-column {
   text-align: center;
-  margin-right: 25px;
 }
 .home-page-container .basic-info-section .right-column {
   max-width: 300px;
@@ -79,7 +75,7 @@
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .home-page-container .basic-info-section {
     flex-direction: column;
     justify-content: center;

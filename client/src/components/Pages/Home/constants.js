@@ -96,7 +96,7 @@ export const hobbies = [
   },
   {
     image: hobbyRubik,
-    name: 'Rubiks',
+    name: 'Puzzles',
     description: `I like different puzzles and particularly I have a big
       interest for Rubik’s cubes. I have a collection of different sizes
       from 2x2 to 10x10 and my dream is to get a cube of 17x17. I do not
