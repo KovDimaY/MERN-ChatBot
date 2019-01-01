@@ -21,4 +21,17 @@ describe('components/Cards/<CardItem />', () => {
 
     expect(tree).toMatchSnapshot();
   });
+
+  it('should render component without link', () => {
+    const props = {
+      data: {
+        title: 'title',
+        image: 'image',
+        description: 'description',
+      },
+    };
+    const tree = create(mockComponent(props)).toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
 });

@@ -5,10 +5,10 @@ exports[`components/Pages/<Home /> should render component 1`] = `
   className="home-page-container"
 >
   <div
-    className="basic-info-section section"
+    className="basic-info-section section row"
   >
     <div
-      className="left-column"
+      className="left-column col s12 m6"
     >
       <img
         alt="Me"
@@ -17,7 +17,7 @@ exports[`components/Pages/<Home /> should render component 1`] = `
       />
     </div>
     <div
-      className="right-column"
+      className="right-column col s12 m6"
     >
       <h4
         className="name-lastname"
@@ -78,21 +78,26 @@ exports[`components/Pages/<Home /> should render component 1`] = `
       About me:
     </h3>
     <p>
-      I am a very passionate software developer with a mathematical background who has tried working with many different languages including Pascal, FORTRAN, Python, C/C++, C#, Java and Javascript. Now I am focused on web development with 
-      <strong>
-        Node
-      </strong>
-       and 
-      <strong>
-        React
-      </strong>
-       and I love it!
+      I am a very passionate software developer with a mathematical
+  background who has tried working with many different languages
+  including Pascal, FORTRAN, Python, C/C++, C#, Java and Javascript.
+  Now I am focused on web development with Node and React and I love it!
     </p>
     <p>
-      I am a very methodological and disciplined person, I like when things are done in time and with the best possible quality. I love test coverage, CI and strict ESLint rules but also I like to experiment and to try new approaches when I see that something could be improved. I am very hardworking and a bit crazy about learning - I cannot imagine my life without Coursera, Udemy and GitHub.
+      I am a very methodological and disciplined person,
+  I like when things are done in time and with the best
+  possible quality. I love test coverage, CI and strict
+  ESLint rules but also I like to experiment and to try
+  new approaches when I see that something could be improved.
+  I am very hardworking and a bit crazy about learning - I
+  cannot imagine my life without Coursera, Udemy and GitHub.
     </p>
     <p>
-      I believe in productive teamwork and I consider myself a good team player who can have fun and support others but also to be strict and demanding when needed. I am always trying to find something positive to keep an optimistic attitude and to be happy. I use sport and photography when I need to distract and relax.
+      I believe in productive teamwork and I consider myself a good team
+  player who can have fun and support others but also to be strict and
+  demanding when needed. I am always trying to find something positive
+  to keep an optimistic attitude and to be happy. I use sport and photography
+  when I need to distract and relax.
     </p>
   </div>
   <div
@@ -103,9 +108,34 @@ exports[`components/Pages/<Home /> should render component 1`] = `
     >
       Languages I speak:
     </h3>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc turpis metus, lacinia dapibus ex non, ultricies ornare quam. Aliquam erat volutpat. Morbi convallis, purus ut vehicula rhoncus, mauris magna condimentum mauris, eget facilisis eros nulla sed justo. Aliquam fermentum eros ut tortor gravida finibus.
-    </p>
+    <div
+      className="languages-wrapper row"
+    >
+      <LanguageItem
+        id="lnguage-1"
+        image="test-file-stub"
+        level="Native or bilingual proficiency"
+        name="Українська"
+      />
+      <LanguageItem
+        id="lnguage-2"
+        image="test-file-stub"
+        level="Native or bilingual proficiency"
+        name="Русский"
+      />
+      <LanguageItem
+        id="lnguage-3"
+        image="test-file-stub"
+        level="Full professional proficiency"
+        name="English"
+      />
+      <LanguageItem
+        id="lnguage-4"
+        image="test-file-stub"
+        level="Professional working proficiency"
+        name="Español"
+      />
+    </div>
   </div>
   <div
     className="hobbies-section section"
@@ -115,9 +145,72 @@ exports[`components/Pages/<Home /> should render component 1`] = `
     >
       My hobbies:
     </h3>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc turpis metus, lacinia dapibus ex non, ultricies ornare quam. Aliquam erat volutpat. Morbi convallis, purus ut vehicula rhoncus, mauris magna condimentum mauris, eget facilisis eros nulla sed justo. Aliquam fermentum eros ut tortor gravida finibus.
-    </p>
+    <div
+      className="hobbies-wrapper"
+    >
+      <HobbyItem
+        description="Even though I am working as a full time programmer,
+      my biggest hobby is still programming. Lastly, I spend most of my
+      free time doing some programming or learning about it. My passion
+      started in the university, where I learned creating different games
+      in C++, C# and Python. Now I enjoy a lot creating different web
+      applications, especially if they can be helpful or interesting
+      for other people. For the moment, the most pleasure I have working
+      with Javascript, more precisely with Node and React."
+        id="hobby-1"
+        image="test-file-stub"
+        name="Programming"
+      />
+      <HobbyItem
+        description="I love doing sports, especially team playing games like
+      football, volleyball or basketball. While studying, I was playing
+      quite seriously - I was even a captain of the faculty team in the
+      university. Also I was very dedicated for several years to
+      bodybuilding and powerlifting and I reached significant results,
+      gaining more than 30 kg of body mass and good strength metrics.
+      Also I enjoy playing table tennis, chess, billiard, running, cycling,
+      swimming and other activities. Sport helps to keep fit my body and mind
+      and also it is a great fun."
+        id="hobby-2"
+        image="test-file-stub"
+        name="Sports"
+      />
+      <HobbyItem
+        description="I like different puzzles and particularly I have a big
+      interest for Rubik’s cubes. I have a collection of different sizes
+      from 2x2 to 10x10 and my dream is to get a cube of 17x17. I do not
+      really like speed cubing, I prefer solving them slowly and without
+      pressure, normally it helps me to relax and to distract my brain from
+      possible stresses. For example, to solve the cube of size 10x10 I normally
+      spend 3-4 hours."
+        id="hobby-3"
+        image="test-file-stub"
+        name="Puzzles"
+      />
+      <HobbyItem
+        description="From a very childhood I like to collect different things
+      and my biggest and the most important collection is my collection of coins.
+      I have around 2000 different coins from different countries and this number
+      is growing every year. Most of them I got while traveling or from my friends.
+      I do not have some super special coins, my idea is just to collect as many
+      different coins and I can."
+        id="hobby-4"
+        image="test-file-stub"
+        name="Numismatics"
+      />
+      <HobbyItem
+        description="I love making pictures and videos. Even though I have never had
+      some big achievements in photography, I enjoy the process of getting a perfect
+      shot, including editing and retouching. My favourite kind of photography
+      is portrait. Making pictures of people is the most enjoyable for me but,
+      also, I like to make pictures of animals and nature. I love when the picture
+      is full of bright colours especially green, blue, yellow and red. I have a dream
+      to make a photo exhibition and to make a short movie some day."
+        id="hobby-5"
+        image="test-file-stub"
+        name="Photography"
+      />
+    </div>
   </div>
 </div>
 `;

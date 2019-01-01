@@ -4,6 +4,8 @@ import { create } from 'react-test-renderer';
 import Home from '../../Home';
 
 jest.mock('../../../Common/EmptyView', () => 'EmptyView');
+jest.mock('../../../Common/LanguageItem', () => 'LanguageItem');
+jest.mock('../../../Common/HobbyItem', () => 'HobbyItem');
 
 const mockComponent = props => (
   <Home {...props} />

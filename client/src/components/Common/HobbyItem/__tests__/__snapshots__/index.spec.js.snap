@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/Common/<HobbyItem /> should render component 1`] = `
+<div
+  className="hobby-container row valign-wrapper"
+>
+  <div
+    className="col s12 m3 visual"
+  >
+    <h5
+      className="name"
+    />
+    <img
+      alt="icon"
+      className="image"
+    />
+  </div>
+  <div
+    className="col s12 m9"
+  >
+    <p
+      className="description"
+    />
+  </div>
+</div>
+`;

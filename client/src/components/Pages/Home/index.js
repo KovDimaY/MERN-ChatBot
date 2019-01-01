@@ -1,12 +1,13 @@
 import React from 'react';
 
-import EmptyView from '../../Common/EmptyView';
+// import EmptyView from '../../Common/EmptyView';
 import LanguageItem from '../../Common/LanguageItem';
 import HobbyItem from '../../Common/HobbyItem';
 import { getAgeByBirthdate } from '../../../utils/common';
 import { myProfilePicture } from '../../../images';
 import {
-  emptyViewDescription, aboutMeDescription,
+  // emptyViewDescription,
+  aboutMeDescription,
   languages, hobbies,
 } from './constants';
 
@@ -79,7 +80,10 @@ const Home = () => {
 
   return (
     <div className="home-page-container">
-      {false && <EmptyView section="home">{renderText(emptyViewDescription)}</EmptyView>}
+      {/*
+        The next line will be needed later, when the hiding logic will be implemented:
+        <EmptyView section="home">{renderText(emptyViewDescription)}</EmptyView>
+      */}
       {true && renderInfo()}
     </div>
   );
