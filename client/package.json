@@ -53,7 +53,8 @@
       "!src/index.js",
       "!src/serviceWorker.js",
       "!src/setupProxy.js",
-      "!src/utils/structjson.js"
+      "!src/utils/structjson.js",
+      "!src/images/*.js"
     ],
     "testPathIgnorePatterns": [
       "<rootDir>/(dist|coverage|node_modules)/",

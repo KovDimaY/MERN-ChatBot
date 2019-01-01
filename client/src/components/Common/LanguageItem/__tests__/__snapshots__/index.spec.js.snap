@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/Common/<LanguageItem /> should render component 1`] = `
+<div
+  className="language-container col s6 m3"
+>
+  <img
+    alt="flag"
+    className="country-flag"
+  />
+  <div
+    className="name"
+  />
+  <div
+    className="level"
+  />
+</div>
+`;

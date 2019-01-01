@@ -1,0 +1,88 @@
+.home-page-container {
+  padding-bottom: 100px;
+  max-width: 800px;
+  margin: auto;
+}
+.home-page-container strong {
+  font-weight: 600;
+}
+.home-page-container .basic-info-section h4 {
+  margin: 20px 0 0 0;
+}
+.home-page-container .section {
+  padding: 10px 25px;
+}
+.home-page-container .basic-info-section {
+  margin-top: 25px;
+}
+.home-page-container .basic-info-section .left-column {
+  text-align: center;
+}
+.home-page-container .basic-info-section .right-column {
+  max-width: 300px;
+}
+.home-page-container .my-profile-photo {
+  width: 250px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px grey;
+}
+.home-page-container .basic-info-section .job-title {
+  font-size: 20px;
+  color: gray;
+  margin: 5px 0 20px 0;
+}
+.home-page-container .section-title {
+  font-size: 28px;
+  margin: 0;
+}
+.home-page-container .summary-section p {
+  text-align: justify;
+  text-indent: 20px;
+}
+.home-page-container .languages-wrapper {
+  margin-top: 25px;
+}
+
+@media (max-width: 750px) {
+  .home-page-container .basic-info-section {
+    font-size: 12px;
+  }
+  .home-page-container .basic-info-section h4 {
+    font-size: 22px;
+    margin: 0;
+    font-weight: 600;
+  }
+  .home-page-container .basic-info-section .job-title {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  .home-page-container .basic-info-section p {
+    font-size: 12px;
+    margin: 5px 0;
+  }
+  .home-page-container .my-profile-photo {
+    width: 150px;
+  }
+}
+
+@media (max-width: 600px) {
+  .home-page-container .basic-info-section {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .home-page-container .basic-info-section .left-column {
+    margin: 0;
+  }
+  .home-page-container .my-profile-photo {
+    width: 200px;
+  }
+  .home-page-container .basic-info-section .right-column {
+    text-align: center;
+    max-width: none;
+    margin-top: 25px;
+  }
+  .home-page-container .section-title {
+    text-align: center;
+    font-size: 24px;
+  }
+}

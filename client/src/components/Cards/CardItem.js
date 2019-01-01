@@ -6,6 +6,17 @@ const CardItem = ({ data }) => {
     title, image, description, link,
   } = data;
 
+  const renderLink = () => {
+    if (link) {
+      return (
+        <div className="card-action">
+          <a href={link}>View</a>
+        </div>
+      );
+    }
+    return null;
+  };
+
   return (
     <div className="card-containter">
       <div className="card">
@@ -16,9 +27,7 @@ const CardItem = ({ data }) => {
         <div className="card-content">
           <p>{description}</p>
         </div>
-        <div className="card-action">
-          <a href={link}>View</a>
-        </div>
+        {renderLink()}
       </div>
     </div>
   );
