@@ -12,7 +12,7 @@ const LanguageItem = ({ image, name, level }) => (
 );
 
 LanguageItem.propTypes = {
-  image: PropTypes.object.isRequired,
+  image: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   level: PropTypes.string.isRequired,
 };
