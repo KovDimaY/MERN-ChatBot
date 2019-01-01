@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import './styles.css';
 
 const LanguageItem = ({ image, name, level }) => (
-  <div className="language-container">
+  <div className="language-container col s6 m3">
     <img src={image} alt="flag" className="country-flag" />
     <div className="name">{name}</div>
     <div className="level">{level}</div>

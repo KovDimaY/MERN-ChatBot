@@ -1,11 +1,12 @@
 .language-container {
-  max-width: 150px;
   display: inline-block;
-  margin: 10px;
+  padding: 10px;
+  margin-bottom: 25px;
   text-align: center;
 }
 .language-container .country-flag {
   width: 100%;
+  max-width: 100px;
   border: 1px solid black;
   box-shadow: 1px 1px 10px gray;
 }
@@ -18,7 +19,7 @@
   color: gray;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 992px) {
   .language-container .name {
     font-size: 14px;
     font-weight: 500;
@@ -29,9 +30,9 @@
   }
 }
 
-@media (max-width: 500px) {
-  .language-container {
-    max-width: 100px;
+@media (max-width: 600px) {
+  .language-container .country-flag {
+    max-width: 75px;
   }
   .language-container .level {
     font-size: 10px;
