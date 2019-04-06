@@ -14,6 +14,12 @@ import hobbyProgramming from './hobby-programming.png';
 import hobbyRubik from './hobby-rubik.png';
 import hobbySports from './hobby-sports.png';
 
+import experienceIcicle from './experience-icicle.png';
+import experienceMBAS from './experience-mbas.jpg';
+import experienceEnixan from './experience-enixan.jpeg';
+import experienceBigfinite from './experience-bigfinite.png';
+import experienceCornerjob from './experience-cornerjob.jpg';
+
 
 export {
   background,
@@ -29,4 +35,9 @@ export {
   hobbyProgramming,
   hobbyRubik,
   hobbySports,
+  experienceIcicle,
+  experienceMBAS,
+  experienceEnixan,
+  experienceBigfinite,
+  experienceCornerjob,
 };

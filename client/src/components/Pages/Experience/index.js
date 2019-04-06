@@ -16,7 +16,7 @@ const Experience = () => {
 
   return (
     <div>
-      <EmptyView section="experience" />
+      { false && <EmptyView section="experience" /> }
       {renderExperiences()}
     </div>
   );
