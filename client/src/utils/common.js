@@ -20,13 +20,16 @@ export const getDuration = (start, end) => {
 
   if (years) {
     if (months) {
-      return (
-        `${years > 1 ? `${years} yrs` : `${years} yr`},
-        ${months > 1 ? `${months} mos` : `${months} mo`}`
-      );
+      const yrs = years > 1 ? `${years} yrs` : `${years} yr`;
+      const mos = months > 1 ? `${months} mos` : `${months} mo`;
+
+      return `${yrs}, ${mos}`;
     }
 
     return years > 1 ? `${years} years` : `${years} year`;
+  } else if (months) {
+    return months > 1 ? `${months} months` : `${months} month`;
   }
-  return months > 1 ? `${months} months` : `${months} month`;
+
+  return 'Less than a month';
 };

@@ -2,6 +2,7 @@ import {
   getRandomElementOfArray,
   getRandomInteger,
   getAgeByBirthdate,
+  getDuration,
 } from '../common';
 
 const TIMES_TO_RUN = 1000;
@@ -62,6 +63,88 @@ describe('utils/common.js', () => {
       const result = getAgeByBirthdate(birthday);
 
       expect(result).toBe(expected);
+    });
+  });
+
+  describe('getDuration()', () => {
+    it('should return correct value for the same date', () => {
+      const start = new Date('1992-05');
+      const end = new Date('1992-05');
+
+      const result = getDuration(start, end);
+      const expected = 'Less than a month';
+
+      expect(result).toEqual(expected);
+    });
+
+    it('should return correct value for the singular months', () => {
+      const start = new Date('1992-05');
+      const end = new Date('1992-06');
+
+      const result = getDuration(start, end);
+      const expected = '1 month';
+
+      expect(result).toEqual(expected);
+    });
+
+    it('should return correct value for the plural months', () => {
+      const start = new Date('1992-05');
+      const end = new Date('1992-10');
+
+      const result = getDuration(start, end);
+      const expected = '5 months';
+
+      expect(result).toEqual(expected);
+    });
+
+    it('should return correct value for the singular years and no months', () => {
+      const start = new Date('1992-05-01');
+      const end = new Date('1993-05-02');
+
+      const result = getDuration(start, end);
+      const expected = '1 year';
+
+      expect(result).toEqual(expected);
+    });
+
+    it('should return correct value for the singular years and singular months', () => {
+      const start = new Date('1992-05');
+      const end = new Date('1993-06');
+
+      const result = getDuration(start, end);
+      const expected = '1 yr, 1 mo';
+
+      expect(result).toEqual(expected);
+    });
+
+    it('should return correct value for the singular years and multiple months', () => {
+      const start = new Date('1992-05');
+      const end = new Date('1993-10');
+
+      const result = getDuration(start, end);
+      const expected = '1 yr, 5 mos';
+
+      expect(result).toEqual(expected);
+    });
+
+    it('should return correct value for the multiple years and no months', () => {
+      const start = new Date('1992-05-01');
+      const end = new Date('1997-05-02');
+
+      const result = getDuration(start, end);
+      const expected = '5 years';
+
+      expect(result).toEqual(expected);
+    });
+
+    it('should return correct value for the multiple years and multiple months', () => {
+      const start = new Date('1992-05');
+      const end = new Date('1997-10');
+
+      const result = getDuration(start, end);
+      const expected = '5 yrs, 5 mos';
+
+      expect(result).toEqual(expected);
     });
   });
 });

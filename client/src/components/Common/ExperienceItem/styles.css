@@ -53,8 +53,8 @@
 
 @media (max-width: 600px) {
   .experience-container {
-    margin: 0 0 10px 0;
-    padding: 0 10px;
+    padding: 15px 0;
+    margin: 0 0 20px 0;
     display: block;
     background: none;
     border-radius: unset;

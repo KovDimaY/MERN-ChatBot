@@ -1,6 +1,5 @@
 import React from 'react';
 
-import EmptyView from '../../Common/EmptyView';
 import ExperienceItem from '../../Common/ExperienceItem';
 
 import {
@@ -16,7 +15,6 @@ const Experience = () => {
 
   return (
     <div className="experiences-section-container">
-      { false && <EmptyView section="experience" /> }
       {renderExperiences()}
     </div>
   );
