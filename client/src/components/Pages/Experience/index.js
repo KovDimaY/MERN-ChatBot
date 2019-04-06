@@ -15,7 +15,7 @@ const Experience = () => {
   );
 
   return (
-    <div>
+    <div className="experiences-section-container">
       { false && <EmptyView section="experience" /> }
       {renderExperiences()}
     </div>

@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 
+import './styles.css';
+
 import { getDuration } from '../../../utils/common';
 
 const ExperienceItem = ({
@@ -13,7 +15,7 @@ const ExperienceItem = ({
     if (responsibilities && responsibilities.length) {
       return (
         <div className="responsibilities">
-          <span>Main responsibilities:</span>
+          <div className="responsibilities-label">Main responsibilities:</div>
           <ul>
             {responsibilities.map(item => <li key={item}>{item}</li>)}
           </ul>
@@ -27,7 +29,8 @@ const ExperienceItem = ({
     if (tools && tools.length) {
       return (
         <div className="tools">
-          <span>Technologies: </span>{tools.join(' | ')}
+          <div className="tools-label">Technologies: </div>
+          <div>{tools.join(' | ')}</div>
         </div>
       );
     }
@@ -48,9 +51,11 @@ const ExperienceItem = ({
   };
 
   return (
-    <div className="hobby-container row valign-wrapper">
+    <div className="experience-container row valign-wrapper">
       <div className="col s12 m3 visual">
-        <img src={image} alt="icon" className="image" />
+        <a href={companyLink}>
+          <img src={image} alt="icon" className="image" />
+        </a>
       </div>
       <div className="col s12 m9">
         <div className="title">
