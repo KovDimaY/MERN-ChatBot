@@ -22,7 +22,6 @@ import experienceCornerjob from './experience-cornerjob.png';
 
 import educationKNU from './education-KNU.jpg';
 
-
 export {
   background,
   botAvatar,
