@@ -1,11 +1,23 @@
 import React from 'react';
 
-import EmptyView from '../../Common/EmptyView';
+import ExperienceItem from '../../Common/ExperienceItem';
 
-const Experience = () => (
-  <div>
-    <EmptyView section="experience" />
-  </div>
-);
+import {
+  experiences,
+} from './constants';
+
+import './styles.css';
+
+const Experience = () => {
+  const renderExperiences = () => (
+    experiences.map(item => <ExperienceItem {...item} key={item.id} />)
+  );
+
+  return (
+    <div className="experiences-section-container">
+      {renderExperiences()}
+    </div>
+  );
+};
 
 export default Experience;

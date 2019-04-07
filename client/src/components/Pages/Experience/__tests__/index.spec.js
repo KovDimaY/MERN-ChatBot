@@ -3,7 +3,7 @@ import { create } from 'react-test-renderer';
 
 import Experience from '../../Experience';
 
-jest.mock('../../../Common/EmptyView', () => 'EmptyView');
+jest.mock('../../../Common/ExperienceItem', () => 'ExperienceItem');
 
 const mockComponent = props => (
   <Experience {...props} />
