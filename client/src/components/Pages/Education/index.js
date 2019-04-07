@@ -1,11 +1,23 @@
 import React from 'react';
 
-import EmptyView from '../../Common/EmptyView';
+import EducationItem from '../../Common/EducationItem';
 
-const Education = () => (
-  <div>
-    <EmptyView section="education" />
-  </div>
-);
+import {
+  educations,
+} from './constants';
+
+// import './styles.css';
+
+const Education = () => {
+  const renderEducations = () => (
+    educations.map(item => <EducationItem {...item} key={item.id} />)
+  );
+
+  return (
+    <div className="experiences-section-container">
+      {renderEducations()}
+    </div>
+  );
+};
 
 export default Education;

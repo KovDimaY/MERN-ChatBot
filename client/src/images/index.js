@@ -20,6 +20,8 @@ import experienceEnixan from './experience-enixan.jpeg';
 import experienceBigfinite from './experience-bigfinite.png';
 import experienceCornerjob from './experience-cornerjob.png';
 
+import educationKNU from './education-KNU.jpg';
+
 
 export {
   background,
@@ -40,4 +42,5 @@ export {
   experienceEnixan,
   experienceBigfinite,
   experienceCornerjob,
+  educationKNU,
 };
