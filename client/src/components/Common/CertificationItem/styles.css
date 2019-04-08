@@ -1,4 +1,9 @@
-.certification-container {
-  padding: 15px;
-  background: lightgray;
+.certification-container .image {
+  width: 100%;
+}
+
+.certification-container .title {
+ text-align: center;
+ font-size: 16px;
+ font-weight: bold;
 }

@@ -8,9 +8,10 @@ const CertificationItem = ({
   license, image, url,
 }) => (
   <div className="certification-container">
-    <div className="image">Image: {image}</div>
-    <div className="title">title: {title}</div>
-    <div className="school">school: {school}</div>
+    <a href={url}>
+      <img className="image" src={image} alt="certificate" />
+    </a>
+    <div className="title">{title}</div>
   </div>
 );
 

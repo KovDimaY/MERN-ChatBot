@@ -1,5 +1,39 @@
 import {
   educationKNU,
+  UC_R7UXWZ3C,
+  UC_LAVISYK1,
+  UC_DNGQKOB0,
+  UC_B6BARC8V,
+  UC_BQ81OBOU,
+  C_11467555,
+  UC_H1HUC3GV,
+  UC_AVLNUEII,
+  UC_0FOZNHTE,
+  UC_OH7XPMOP,
+  GH93LKLL72BR,
+  QYHRQW9NWKE9,
+  AFGWZT2CB22S,
+  Z4Q9VTM8AZ8P,
+  US429DPCXALK,
+  MQ6U87EN8FJU,
+  RTSCG3HHW68L,
+  GRYLEUQ5XCE4,
+  S9BBM5RGGSQF,
+  TPGE89S44JYY,
+  Z7RJCJRBY8TP,
+  NGVHAJRPTPN6,
+  Z59CZM88MUWA,
+  AUK4VB65JL,
+  P4BDJZHA6B,
+  HKX3G4FFBV,
+  C_25YXEW6ZTG,
+  TDX8U42RFD,
+  C_4GLJ6PWR3PPL,
+  C_36Y7SM5XLJ,
+  D79YE6ATRBAK,
+  FGPJG6A7U4,
+  C_7M84NLE5D5TW,
+  ZJ27G8KF97HT,
 } from '../../../images';
 
 export const educations = [
@@ -49,7 +83,7 @@ export const certificates = [
     school: 'Udemy',
     date: '2018-10-14',
     license: 'UC-R7UXWZ3C',
-    image: 'UC-R7UXWZ3C',
+    image: UC_R7UXWZ3C,
     url: 'https://www.udemy.com/certificate/UC-R7UXWZ3C/',
   },
   {
@@ -57,7 +91,7 @@ export const certificates = [
     school: 'Udemy',
     date: '2018-09-30',
     license: 'UC-LAVISYK1',
-    image: 'UC-LAVISYK1',
+    image: UC_LAVISYK1,
     url: 'https://udemy-certificate.s3.amazonaws.com/image/UC-LAVISYK1/',
   },
   {
@@ -65,7 +99,7 @@ export const certificates = [
     school: 'Udemy',
     date: '2018-08-23',
     license: 'UC-DNGQKOB0',
-    image: 'UC-DNGQKOB0',
+    image: UC_DNGQKOB0,
     url: 'https://www.udemy.com/certificate/UC-DNGQKOB0/',
   },
   {
@@ -73,7 +107,7 @@ export const certificates = [
     school: 'Udemy',
     date: '2018-07-29',
     license: 'UC-B6BARC8V',
-    image: 'UC-B6BARC8V',
+    image: UC_B6BARC8V,
     url: 'https://www.udemy.com/certificate/UC-B6BARC8V/',
   },
   {
@@ -81,7 +115,7 @@ export const certificates = [
     school: 'Udemy',
     date: '2018-05-07',
     license: 'UC-BQ81OBOU',
-    image: 'UC-BQ81OBOU',
+    image: UC_BQ81OBOU,
     url: 'https://www.udemy.com/certificate/UC-BQ81OBOU/',
   },
   {
@@ -89,7 +123,7 @@ export const certificates = [
     school: 'Codecademy',
     date: '2018-04-16',
     license: '11467555',
-    image: '11467555',
+    image: C_11467555,
     url: 'https://www.credential.net/e524eujo',
   },
   {
@@ -97,7 +131,7 @@ export const certificates = [
     school: 'Udemy',
     date: '2018-03-24',
     license: 'UC-H1HUC3GV',
-    image: 'UC-H1HUC3GV',
+    image: UC_H1HUC3GV,
     url: 'https://www.udemy.com/certificate/UC-H1HUC3GV/',
   },
   {
@@ -105,7 +139,7 @@ export const certificates = [
     school: 'Udemy',
     date: '2018-02-11',
     license: 'UC-AVLNUEII',
-    image: 'UC-AVLNUEII',
+    image: UC_AVLNUEII,
     url: 'https://www.udemy.com/certificate/UC-AVLNUEII/',
   },
   {
@@ -113,7 +147,7 @@ export const certificates = [
     school: 'Udemy',
     date: '2018-01-18',
     license: 'UC-0FOZNHTE',
-    image: 'UC-0FOZNHTE',
+    image: UC_0FOZNHTE,
     url: 'https://www.udemy.com/certificate/UC-0FOZNHTE/',
   },
   {
@@ -121,7 +155,7 @@ export const certificates = [
     school: 'Udemy',
     date: '2018-01-12',
     license: 'UC-OH7XPMOP',
-    image: 'UC-OH7XPMOP',
+    image: UC_OH7XPMOP,
     url: 'https://www.udemy.com/certificate/UC-OH7XPMOP/',
   },
   {
@@ -129,7 +163,7 @@ export const certificates = [
     school: 'Stanford University',
     date: '2017-06-18',
     license: 'GH93LKLL72BR',
-    image: 'GH93LKLL72BR',
+    image: GH93LKLL72BR,
     url: 'https://www.coursera.org/account/accomplishments/certificate/GH93LKLL72BR',
   },
   {
@@ -137,7 +171,7 @@ export const certificates = [
     school: 'Stanford University',
     date: '2017-05-05',
     license: 'QYHRQW9NWKE9',
-    image: 'QYHRQW9NWKE9',
+    image: QYHRQW9NWKE9,
     url: 'https://www.coursera.org/account/accomplishments/certificate/QYHRQW9NWKE9',
   },
   {
@@ -145,7 +179,7 @@ export const certificates = [
     school: 'Michigan University',
     date: '2016-07-12',
     license: 'AFGWZT2CB22S',
-    image: 'AFGWZT2CB22S',
+    image: AFGWZT2CB22S,
     url: 'https://www.coursera.org/account/accomplishments/certificate/AFGWZT2CB22S',
   },
   {
@@ -153,7 +187,7 @@ export const certificates = [
     school: 'California Institute of the Arts',
     date: '2016-11-29',
     license: 'Z4Q9VTM8AZ8P',
-    image: 'Z4Q9VTM8AZ8P',
+    image: Z4Q9VTM8AZ8P,
     url: 'https://www.coursera.org/account/accomplishments/certificate/Z4Q9VTM8AZ8P',
   },
   {
@@ -161,7 +195,7 @@ export const certificates = [
     school: 'Wharton Online | The Wharton School',
     date: '2016-10-20',
     license: 'US429DPCXALK',
-    image: 'US429DPCXALK',
+    image: US429DPCXALK,
     url: 'https://www.coursera.org/account/accomplishments/certificate/US429DPCXALK',
   },
   {
@@ -169,7 +203,7 @@ export const certificates = [
     school: 'Erasmus University Rotterdam',
     date: '2016-08-06',
     license: 'MQ6U87EN8FJU',
-    image: 'MQ6U87EN8FJU',
+    image: MQ6U87EN8FJU,
     url: 'https://www.coursera.org/account/accomplishments/certificate/MQ6U87EN8FJU',
   },
   {
@@ -177,7 +211,7 @@ export const certificates = [
     school: 'Wharton Online | The Wharton School',
     date: '2016-07-27',
     license: 'RTSCG3HHW68L',
-    image: 'RTSCG3HHW68L',
+    image: RTSCG3HHW68L,
     url: 'https://www.coursera.org/account/accomplishments/certificate/RTSCG3HHW68L',
   },
   {
@@ -185,7 +219,7 @@ export const certificates = [
     school: 'California Institute of the Arts',
     date: '2016-06-19',
     license: 'GRYLEUQ5XCE4',
-    image: 'GRYLEUQ5XCE4',
+    image: GRYLEUQ5XCE4,
     url: 'https://www.coursera.org/account/accomplishments/certificate/GRYLEUQ5XCE4',
   },
   {
@@ -193,7 +227,7 @@ export const certificates = [
     school: 'Michigan State University',
     date: '2016-02-15',
     license: 'S9BBM5RGGSQF',
-    image: 'S9BBM5RGGSQF',
+    image: S9BBM5RGGSQF,
     url: 'https://www.coursera.org/account/accomplishments/certificate/S9BBM5RGGSQF',
   },
   {
@@ -201,7 +235,7 @@ export const certificates = [
     school: 'Michigan State University',
     date: '2015-11-18',
     license: 'TPGE89S44JYY',
-    image: 'TPGE89S44JYY',
+    image: TPGE89S44JYY,
     url: 'https://www.coursera.org/account/accomplishments/certificate/TPGE89S44JYY',
   },
   {
@@ -209,7 +243,7 @@ export const certificates = [
     school: 'Duke University',
     date: '2015-11-18',
     license: 'Z7RJCJRBY8TP',
-    image: 'Z7RJCJRBY8TP',
+    image: Z7RJCJRBY8TP,
     url: 'https://www.coursera.org/account/accomplishments/certificate/Z7RJCJRBY8TP',
   },
   {
@@ -217,7 +251,7 @@ export const certificates = [
     school: 'California Institute of the Arts',
     date: '2015-10-21',
     license: 'NGVHAJRPTPN6',
-    image: 'NGVHAJRPTPN6',
+    image: NGVHAJRPTPN6,
     url: 'https://www.coursera.org/account/accomplishments/certificate/NGVHAJRPTPN6',
   },
   {
@@ -225,7 +259,7 @@ export const certificates = [
     school: 'Michigan State University',
     date: '2015-10-23',
     license: 'Z59CZM88MUWA',
-    image: 'Z59CZM88MUWA',
+    image: Z59CZM88MUWA,
     url: 'https://www.coursera.org/account/accomplishments/certificate/Z59CZM88MUWA',
   },
   {
@@ -233,7 +267,7 @@ export const certificates = [
     school: 'University of Michigan',
     date: '2015-09-22',
     license: 'AUK4VB65JL',
-    image: 'AUK4VB65JL',
+    image: AUK4VB65JL,
     url: 'https://www.coursera.org/account/accomplishments/certificate/AUK4VB65JL',
   },
   {
@@ -241,7 +275,7 @@ export const certificates = [
     school: 'Rice University',
     date: '2015-10-07',
     license: 'P4BDJZHA6B',
-    image: 'P4BDJZHA6B',
+    image: P4BDJZHA6B,
     url: 'https://www.coursera.org/account/accomplishments/certificate/P4BDJZHA6B',
   },
   {
@@ -249,7 +283,7 @@ export const certificates = [
     school: 'Rice University',
     date: '2015-07-17',
     license: 'HKX3G4FFBV',
-    image: 'HKX3G4FFBV',
+    image: HKX3G4FFBV,
     url: 'https://www.coursera.org/account/accomplishments/certificate/HKX3G4FFBV',
   },
   {
@@ -257,7 +291,7 @@ export const certificates = [
     school: 'Rice University',
     date: '2015-05-12',
     license: '25YXEW6ZTG',
-    image: '25YXEW6ZTG',
+    image: C_25YXEW6ZTG,
     url: 'https://www.coursera.org/account/accomplishments/certificate/25YXEW6ZTG',
   },
   {
@@ -265,7 +299,7 @@ export const certificates = [
     school: 'University of Colorado',
     date: '2015-05-25',
     license: 'TDX8U42RFD',
-    image: 'TDX8U42RFD',
+    image: TDX8U42RFD,
     url: 'https://www.coursera.org/account/accomplishments/certificate/TDX8U42RFD',
   },
   {
@@ -273,7 +307,7 @@ export const certificates = [
     school: 'University of California, Irvine Extension',
     date: '2015-05-03',
     license: '4GLJ6PWR3PPL',
-    image: '4GLJ6PWR3PPL',
+    image: C_4GLJ6PWR3PPL,
     url: 'https://www.coursera.org/account/accomplishments/certificate/4GLJ6PWR3PPL',
   },
   {
@@ -281,7 +315,7 @@ export const certificates = [
     school: 'University of Pennsylvania',
     date: '2015-05-02',
     license: '36Y7SM5XLJ',
-    image: '36Y7SM5XLJ',
+    image: C_36Y7SM5XLJ,
     url: 'https://www.coursera.org/account/accomplishments/certificate/36Y7SM5XLJ',
   },
   {
@@ -289,7 +323,7 @@ export const certificates = [
     school: 'University of Michigan',
     date: '2015-05-08',
     license: 'D79YE6ATRBAK',
-    image: 'D79YE6ATRBAK',
+    image: D79YE6ATRBAK,
     url: 'https://www.coursera.org/account/accomplishments/certificate/D79YE6ATRBAK',
   },
   {
@@ -297,7 +331,7 @@ export const certificates = [
     school: 'Rice University',
     date: '2015-04-03',
     license: 'FGPJG6A7U4',
-    image: 'FGPJG6A7U4',
+    image: FGPJG6A7U4,
     url: 'https://www.coursera.org/account/accomplishments/certificate/FGPJG6A7U4',
   },
   {
@@ -305,7 +339,7 @@ export const certificates = [
     school: 'University of California, Irvine Extension',
     date: '2015-04-22',
     license: '7M84NLE5D5TW',
-    image: '7M84NLE5D5TW',
+    image: C_7M84NLE5D5TW,
     url: 'https://www.coursera.org/account/accomplishments/certificate/7M84NLE5D5TW',
   },
   {
@@ -313,7 +347,7 @@ export const certificates = [
     school: 'University of California, Irvine Extension',
     date: '2015-04-09',
     license: 'ZJ27G8KF97HT',
-    image: 'ZJ27G8KF97HT',
+    image: ZJ27G8KF97HT,
     url: 'https://www.coursera.org/account/accomplishments/certificate/ZJ27G8KF97HT',
   },
 ];
