@@ -61,14 +61,9 @@
   }
   .education-container .image {
     max-width: 150px;
+    margin-bottom: 15px;
   }
-  .education-container .degree {
-    font-weight: bold;
-  }
-}
-
-@media (max-width: 450px) {
-  .education-container .degree {
-    display: block;
+  .education-container .title {
+    font-size: 16px;
   }
 }

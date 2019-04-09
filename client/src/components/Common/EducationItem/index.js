@@ -11,11 +11,11 @@ const EducationItem = ({
   degree, start, finish,
   location, description, activities,
 }) => {
-  const renderResponsibilities = () => {
+  const renderActivities = () => {
     if (activities && activities.length) {
       return (
         <div className="activities">
-          <div className="activities-label">Activities:</div>
+          <div className="activities-label"> Roles and activities:</div>
           <ul>
             {activities.map(item => <li key={item}>{item}</li>)}
           </ul>
@@ -48,12 +48,12 @@ const EducationItem = ({
       <div className="col s12 m9">
         <div className="title">
           <div className="degree">{degree}</div>
-          <a href={schoolLink} className="company">{schoolName}</a>
+          <a href={schoolLink} className="school">{schoolName}</a>
         </div>
         { renderDates() }
         <div className="location">{location}</div>
         <p className="description">{description}</p>
-        { renderResponsibilities() }
+        { renderActivities() }
       </div>
     </div>
   );
@@ -65,14 +65,15 @@ EducationItem.propTypes = {
   schoolLink: PropTypes.string.isRequired,
   degree: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
   start: PropTypes.object.isRequired,
   finish: PropTypes.object,
+  description: PropTypes.string,
   activities: PropTypes.array,
 };
 
 EducationItem.defaultProps = {
   finish: undefined,
+  description: undefined,
   activities: null,
 };
 

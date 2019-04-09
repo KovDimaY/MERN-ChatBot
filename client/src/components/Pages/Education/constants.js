@@ -44,14 +44,21 @@ export const educations = [
     schoolLink: 'http://www.univ.kiev.ua/en/',
     degree: 'Mathematics, Master\'s degree',
     description: `
-      I actively took part in a science and a sport life of the university.
-      I was the captain of the main volleyball team of the university,
-      played in basketball competitions, took part in powerlifting,
-      arm-wrestling, triathlon competitions and others.
-      Also I was on different science conferences: in Ukraine, Brazil,
-      Austria, Slovakia, etc. I have two publications in the
-      international science magazine.
+      Taras Shevchenko National University of Kyiv is the third oldest
+      university in Ukraine, it was founded in 1834. During the Soviet Union era,
+      Taras Shevchenko University was one of the top-three universities in the USSR,
+      along with Moscow State University and Leningrad State University. It is ranked
+      as the best university in Ukraine in many rankings.
     `,
+    activities: [
+      'Volleyball teammate of the faculty',
+      'Weight lifting teammate of the faculty',
+      'Arm-wrestling teammate of the faculty',
+      'Zavtra.UA 2013/14 Victor Pinchuk Foundation award',
+      'Publication in the international math magazine (2014)',
+      'Conference in Austria and Slovakia',
+      'Conference in Ukraine',
+    ],
     start: new Date('2013-09'),
     finish: new Date('2015-05'),
     location: 'Kyiv, Ukraine',
@@ -63,14 +70,22 @@ export const educations = [
     schoolLink: 'http://www.univ.kiev.ua/en/',
     degree: 'Mathematics, Bachelor\'s degree',
     description: `
-      I actively took part in a science and a sport life of the university.
-      I was the captain of the main volleyball team of the university,
-      played in basketball competitions, took part in powerlifting,
-      arm-wrestling, triathlon competitions and others.
-      Also I was on different science conferences: in Ukraine, Brazil,
-      Austria, Slovakia, etc. I have two publications in the
-      international science magazine.
+      Taras Shevchenko National University of Kyiv is the third oldest
+      university in Ukraine, it was founded in 1834. During the Soviet Union era,
+      Taras Shevchenko University was one of the top-three universities in the USSR,
+      along with Moscow State University and Leningrad State University. It is ranked
+      as the best university in Ukraine in many rankings.
     `,
+    activities: [
+      'Volleyball teammate of the university',
+      'Captain of the volleyball teammate of the faculty',
+      'Basketball teammate of the faculty',
+      'Triathlon teammate of the faculty',
+      'Zavtra.UA 2012/13 Victor Pinchuk Foundation award',
+      'Publication in the international math magazine (2012)',
+      'Conference in Brazil',
+      'Conference in Ukraine',
+    ],
     start: new Date('2009-09'),
     finish: new Date('2013-05'),
     location: 'Kyiv, Ukraine',
