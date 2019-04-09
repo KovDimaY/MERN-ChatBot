@@ -92,7 +92,7 @@ export const certificates = [
     date: '2018-09-30',
     license: 'UC-LAVISYK1',
     image: UC_LAVISYK1,
-    url: 'https://udemy-certificate.s3.amazonaws.com/image/UC-LAVISYK1/',
+    url: 'https://www.udemy.com/certificate/UC-LAVISYK1/',
   },
   {
     title: 'React vs Angular vs Vue.js by Example',

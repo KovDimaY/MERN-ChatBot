@@ -3,12 +3,9 @@ import PropTypes from 'prop-types';
 
 import './styles.css';
 
-const CertificationItem = ({
-  title, school, date,
-  license, image, url,
-}) => (
+const CertificationItem = ({ title, image, url }) => (
   <div className="certification-container">
-    <a href={url}>
+    <a href={url} className="image-wrapper">
       <img className="image" src={image} alt="certificate" />
     </a>
     <div className="title">{title}</div>
@@ -17,9 +14,6 @@ const CertificationItem = ({
 
 CertificationItem.propTypes = {
   title: PropTypes.string.isRequired,
-  school: PropTypes.string.isRequired,
-  date: PropTypes.string.isRequired,
-  license: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
 };
