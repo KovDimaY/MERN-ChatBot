@@ -67,15 +67,14 @@ EducationItem.propTypes = {
   schoolLink: PropTypes.string.isRequired,
   degree: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
   start: PropTypes.object.isRequired,
   finish: PropTypes.object,
-  description: PropTypes.string,
   activities: PropTypes.array,
 };
 
 EducationItem.defaultProps = {
   finish: undefined,
-  description: undefined,
   activities: null,
 };
 

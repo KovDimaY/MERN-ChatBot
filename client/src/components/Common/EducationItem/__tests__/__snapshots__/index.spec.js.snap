@@ -1,14 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components/Common/<ExperienceItem /> should render component with all the data 1`] = `
+exports[`components/Common/<EducationItem /> should render component with all possible props 1`] = `
 <div
-  className="experience-container row valign-wrapper"
+  className="education-container row valign-wrapper"
 >
   <div
     className="col s12 m3 visual"
   >
     <a
-      href="companyLink"
+      href="schoolLink"
+      rel="noopener noreferrer"
+      target="_blank"
     >
       <img
         alt="icon"
@@ -23,21 +25,18 @@ exports[`components/Common/<ExperienceItem /> should render component with all t
     <div
       className="title"
     >
-      <span
-        className="position"
+      <div
+        className="degree"
       >
-        position
-      </span>
-      <span
-        className="connector"
-      >
-        in
-      </span>
+        degree
+      </div>
       <a
-        className="company"
-        href="companyLink"
+        className="school"
+        href="schoolLink"
+        rel="noopener noreferrer"
+        target="_blank"
       >
-        companyName
+        schoolName
       </a>
     </div>
     <div
@@ -46,9 +45,9 @@ exports[`components/Common/<ExperienceItem /> should render component with all t
       <span
         className="dates"
       >
-        Invalid date
+        Sep 2009
          - 
-        Invalid date
+        May 2015
       </span>
       <span
         className="duration"
@@ -69,50 +68,40 @@ exports[`components/Common/<ExperienceItem /> should render component with all t
       description
     </p>
     <div
-      className="responsibilities"
+      className="activities"
     >
       <div
-        className="responsibilities-label"
+        className="activities-label"
       >
-        Main responsibilities:
+         Roles and activities:
       </div>
       <ul>
         <li>
-          responsibilities1
+          activities1
         </li>
         <li>
-          responsibilities2
+          activities2
         </li>
         <li>
-          responsibilities3
+          activities3
         </li>
       </ul>
-    </div>
-    <div
-      className="tools"
-    >
-      <div
-        className="tools-label"
-      >
-        Technologies: 
-      </div>
-      <div>
-        tools1 | tools2
-      </div>
     </div>
   </div>
 </div>
 `;
 
-exports[`components/Common/<ExperienceItem /> should render component with basic data 1`] = `
+exports[`components/Common/<EducationItem /> should render component with required props 1`] = `
 <div
-  className="experience-container row valign-wrapper"
+  className="education-container row valign-wrapper"
 >
   <div
     className="col s12 m3 visual"
   >
     <a
-      href="companyLink"
+      href="schoolLink"
+      rel="noopener noreferrer"
+      target="_blank"
     >
       <img
         alt="icon"
@@ -127,21 +116,18 @@ exports[`components/Common/<ExperienceItem /> should render component with basic
     <div
       className="title"
     >
-      <span
-        className="position"
+      <div
+        className="degree"
       >
-        position
-      </span>
-      <span
-        className="connector"
-      >
-        in
-      </span>
+        degree
+      </div>
       <a
-        className="company"
-        href="companyLink"
+        className="school"
+        href="schoolLink"
+        rel="noopener noreferrer"
+        target="_blank"
       >
-        companyName
+        schoolName
       </a>
     </div>
     <div
@@ -150,7 +136,7 @@ exports[`components/Common/<ExperienceItem /> should render component with basic
       <span
         className="dates"
       >
-        Invalid date
+        Sep 2009
          - 
         Now
       </span>
@@ -169,9 +155,7 @@ exports[`components/Common/<ExperienceItem /> should render component with basic
     </div>
     <p
       className="description"
-    >
-      description
-    </p>
+    />
   </div>
 </div>
 `;

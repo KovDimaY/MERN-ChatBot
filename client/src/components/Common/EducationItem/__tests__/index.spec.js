@@ -1,44 +1,42 @@
 import React from 'react';
 import { create } from 'react-test-renderer';
 
-import ExperienceItem from '../../ExperienceItem';
+import EducationItem from '../../EducationItem';
 
 jest.mock('../../../../utils/common', () => ({
   getDuration: jest.fn(() => 'getDuration mocked result'),
 }));
 
 const mockComponent = props => (
-  <ExperienceItem {...props} />
+  <EducationItem {...props} />
 );
 
-describe('components/Common/<ExperienceItem />', () => {
-  it('should render component with basic data', () => {
+describe('components/Common/<EducationItem />', () => {
+  it('should render component with required props', () => {
     const props = {
       image: 'image',
-      companyName: 'companyName',
-      companyLink: 'companyLink',
-      position: 'position',
+      schoolName: 'schoolName',
+      schoolLink: 'schoolLink',
+      degree: 'degree',
       location: 'location',
-      description: 'description',
-      start: 'start',
+      start: new Date('2009-09'),
     };
     const tree = create(mockComponent(props)).toJSON();
 
     expect(tree).toMatchSnapshot();
   });
 
-  it('should render component with all the data', () => {
+  it('should render component with all possible props', () => {
     const props = {
       image: 'image',
-      companyName: 'companyName',
-      companyLink: 'companyLink',
-      position: 'position',
+      schoolName: 'schoolName',
+      schoolLink: 'schoolLink',
+      degree: 'degree',
       location: 'location',
+      start: new Date('2009-09'),
+      finish: new Date('2015-05'),
       description: 'description',
-      start: 'start',
-      finish: 'finish',
-      tools: ['tools1', 'tools2'],
-      responsibilities: ['responsibilities1', 'responsibilities2', 'responsibilities3'],
+      activities: ['activities1', 'activities2', 'activities3'],
     };
     const tree = create(mockComponent(props)).toJSON();
 

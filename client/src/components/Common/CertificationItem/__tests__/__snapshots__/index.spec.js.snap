@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/Common/<CertificationItem /> should render component with required props 1`] = `
+<div
+  className="certification-container"
+>
+  <a
+    className="image-wrapper"
+    href="url"
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    <img
+      alt="certificate"
+      className="image"
+      src="image"
+    />
+  </a>
+  <div
+    className="title"
+  >
+    title
+  </div>
+</div>
+`;

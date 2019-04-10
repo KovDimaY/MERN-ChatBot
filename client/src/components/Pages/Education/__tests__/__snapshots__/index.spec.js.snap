@@ -1,9 +1,355 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`components/Pages/<Education /> should render component 1`] = `
-<div>
-  <EmptyView
-    section="education"
-  />
+<div
+  className="education-section-container"
+>
+  <h3
+    className="education-section-title"
+  >
+    Education
+  </h3>
+  <div
+    className="educations-wrapper"
+  >
+    <EducationItem
+      activities={
+        Array [
+          "Volleyball teammate of the faculty",
+          "Weight lifting teammate of the faculty",
+          "Arm-wrestling teammate of the faculty",
+          "Zavtra.UA 2013/14 Victor Pinchuk Foundation award",
+          "Publication in the international math magazine (2014)",
+          "Conference in Austria and Slovakia",
+          "Conference in Ukraine",
+        ]
+      }
+      degree="Mathematics, Master's degree"
+      description="
+      Taras Shevchenko National University of Kyiv is the third oldest
+      university in Ukraine, it was founded in 1834. During the Soviet Union era,
+      Taras Shevchenko University was one of the top-three universities in the USSR,
+      along with Moscow State University and Leningrad State University. It is ranked
+      as the best university in Ukraine in many rankings.
+    "
+      finish={2015-05-01T00:00:00.000Z}
+      id={2}
+      image="test-file-stub"
+      location="Kyiv, Ukraine"
+      schoolLink="http://www.univ.kiev.ua/en/"
+      schoolName="Kyiv National Taras Shevchenko University"
+      start={2013-09-01T00:00:00.000Z}
+    />
+    <EducationItem
+      activities={
+        Array [
+          "Volleyball teammate of the university",
+          "Captain of the volleyball teammate of the faculty",
+          "Basketball teammate of the faculty",
+          "Triathlon teammate of the faculty",
+          "Zavtra.UA 2012/13 Victor Pinchuk Foundation award",
+          "Publication in the international math magazine (2012)",
+          "Conference in Brazil",
+          "Conference in Ukraine",
+        ]
+      }
+      degree="Mathematics, Bachelor's degree"
+      description="
+      Taras Shevchenko National University of Kyiv is the third oldest
+      university in Ukraine, it was founded in 1834. During the Soviet Union era,
+      Taras Shevchenko University was one of the top-three universities in the USSR,
+      along with Moscow State University and Leningrad State University. It is ranked
+      as the best university in Ukraine in many rankings.
+    "
+      finish={2013-05-01T00:00:00.000Z}
+      id={1}
+      image="test-file-stub"
+      location="Kyiv, Ukraine"
+      schoolLink="http://www.univ.kiev.ua/en/"
+      schoolName="Kyiv National Taras Shevchenko University"
+      start={2009-09-01T00:00:00.000Z}
+    />
+  </div>
+  <h3
+    className="education-section-title"
+  >
+    Certifications
+  </h3>
+  <div
+    className="certifications-wrapper"
+  >
+    <CertificationItem
+      date="2018-10-14"
+      image="test-file-stub"
+      license="UC-R7UXWZ3C"
+      school="Udemy"
+      title="The Complete Developers Guide to MongoDB"
+      url="https://www.udemy.com/certificate/UC-R7UXWZ3C/"
+    />
+    <CertificationItem
+      date="2018-09-30"
+      image="test-file-stub"
+      license="UC-LAVISYK1"
+      school="Udemy"
+      title="Master Jenkins CI For DevOps and Developers"
+      url="https://www.udemy.com/certificate/UC-LAVISYK1/"
+    />
+    <CertificationItem
+      date="2018-08-23"
+      image="test-file-stub"
+      license="UC-DNGQKOB0"
+      school="Udemy"
+      title="React vs Angular vs Vue.js by Example"
+      url="https://www.udemy.com/certificate/UC-DNGQKOB0/"
+    />
+    <CertificationItem
+      date="2018-07-29"
+      image="test-file-stub"
+      license="UC-B6BARC8V"
+      school="Udemy"
+      title="Advanced React and Redux: 2018 Edition"
+      url="https://www.udemy.com/certificate/UC-B6BARC8V/"
+    />
+    <CertificationItem
+      date="2018-05-07"
+      image="test-file-stub"
+      license="UC-BQ81OBOU"
+      school="Udemy"
+      title="Modern React with Redux"
+      url="https://www.udemy.com/certificate/UC-BQ81OBOU/"
+    />
+    <CertificationItem
+      date="2018-04-16"
+      image="test-file-stub"
+      license="11467555"
+      school="Codecademy"
+      title="Test-Driven Development"
+      url="https://www.credential.net/e524eujo"
+    />
+    <CertificationItem
+      date="2018-03-24"
+      image="test-file-stub"
+      license="UC-H1HUC3GV"
+      school="Udemy"
+      title="The Complete Node.js Developer Course"
+      url="https://www.udemy.com/certificate/UC-H1HUC3GV/"
+    />
+    <CertificationItem
+      date="2018-02-11"
+      image="test-file-stub"
+      license="UC-AVLNUEII"
+      school="Udemy"
+      title="AWS Essentials"
+      url="https://www.udemy.com/certificate/UC-AVLNUEII/"
+    />
+    <CertificationItem
+      date="2018-01-18"
+      image="test-file-stub"
+      license="UC-0FOZNHTE"
+      school="Udemy"
+      title="Automation Testing using Selenium & Katalon Studio"
+      url="https://www.udemy.com/certificate/UC-0FOZNHTE/"
+    />
+    <CertificationItem
+      date="2018-01-12"
+      image="test-file-stub"
+      license="UC-OH7XPMOP"
+      school="Udemy"
+      title="Test Automation with Katalon Studio"
+      url="https://www.udemy.com/certificate/UC-OH7XPMOP/"
+    />
+    <CertificationItem
+      date="2017-06-18"
+      image="test-file-stub"
+      license="GH93LKLL72BR"
+      school="Stanford University"
+      title="Graph Search, Shortest Paths, and Data Structures"
+      url="https://www.coursera.org/account/accomplishments/certificate/GH93LKLL72BR"
+    />
+    <CertificationItem
+      date="2017-05-05"
+      image="test-file-stub"
+      license="QYHRQW9NWKE9"
+      school="Stanford University"
+      title="Divide and Conquer, Sorting and Searching, and Randomized Algorithms"
+      url="https://www.coursera.org/account/accomplishments/certificate/QYHRQW9NWKE9"
+    />
+    <CertificationItem
+      date="2016-07-12"
+      image="test-file-stub"
+      license="AFGWZT2CB22S"
+      school="Michigan University"
+      title="Game Development for Modern Platforms"
+      url="https://www.coursera.org/account/accomplishments/certificate/AFGWZT2CB22S"
+    />
+    <CertificationItem
+      date="2016-11-29"
+      image="test-file-stub"
+      license="Z4Q9VTM8AZ8P"
+      school="California Institute of the Arts"
+      title="World Design for Video Games"
+      url="https://www.coursera.org/account/accomplishments/certificate/Z4Q9VTM8AZ8P"
+    />
+    <CertificationItem
+      date="2016-10-20"
+      image="test-file-stub"
+      license="US429DPCXALK"
+      school="Wharton Online | The Wharton School"
+      title="Gamification"
+      url="https://www.coursera.org/account/accomplishments/certificate/US429DPCXALK"
+    />
+    <CertificationItem
+      date="2016-08-06"
+      image="test-file-stub"
+      license="MQ6U87EN8FJU"
+      school="Erasmus University Rotterdam"
+      title="Serious Gaming"
+      url="https://www.coursera.org/account/accomplishments/certificate/MQ6U87EN8FJU"
+    />
+    <CertificationItem
+      date="2016-07-27"
+      image="test-file-stub"
+      license="RTSCG3HHW68L"
+      school="Wharton Online | The Wharton School"
+      title="Introduction to Marketing"
+      url="https://www.coursera.org/account/accomplishments/certificate/RTSCG3HHW68L"
+    />
+    <CertificationItem
+      date="2016-06-19"
+      image="test-file-stub"
+      license="GRYLEUQ5XCE4"
+      school="California Institute of the Arts"
+      title="Story and Narrative Development for Video Games"
+      url="https://www.coursera.org/account/accomplishments/certificate/GRYLEUQ5XCE4"
+    />
+    <CertificationItem
+      date="2016-02-15"
+      image="test-file-stub"
+      license="S9BBM5RGGSQF"
+      school="Michigan State University"
+      title="Business of Games and Entrepreneurship"
+      url="https://www.coursera.org/account/accomplishments/certificate/S9BBM5RGGSQF"
+    />
+    <CertificationItem
+      date="2015-11-18"
+      image="test-file-stub"
+      license="TPGE89S44JYY"
+      school="Michigan State University"
+      title="Principles of Game Design"
+      url="https://www.coursera.org/account/accomplishments/certificate/TPGE89S44JYY"
+    />
+    <CertificationItem
+      date="2015-11-18"
+      image="test-file-stub"
+      license="Z7RJCJRBY8TP"
+      school="Duke University"
+      title="Programming and the Web for Beginners"
+      url="https://www.coursera.org/account/accomplishments/certificate/Z7RJCJRBY8TP"
+    />
+    <CertificationItem
+      date="2015-10-21"
+      image="test-file-stub"
+      license="NGVHAJRPTPN6"
+      school="California Institute of the Arts"
+      title="Introduction to Game Design"
+      url="https://www.coursera.org/account/accomplishments/certificate/NGVHAJRPTPN6"
+    />
+    <CertificationItem
+      date="2015-10-23"
+      image="test-file-stub"
+      license="Z59CZM88MUWA"
+      school="Michigan State University"
+      title="Introduction to Game Design"
+      url="https://www.coursera.org/account/accomplishments/certificate/Z59CZM88MUWA"
+    />
+    <CertificationItem
+      date="2015-09-22"
+      image="test-file-stub"
+      license="AUK4VB65JL"
+      school="University of Michigan"
+      title="Introduction to Finance"
+      url="https://www.coursera.org/account/accomplishments/certificate/AUK4VB65JL"
+    />
+    <CertificationItem
+      date="2015-10-07"
+      image="test-file-stub"
+      license="P4BDJZHA6B"
+      school="Rice University"
+      title="Algorithmic Thinking I"
+      url="https://www.coursera.org/account/accomplishments/certificate/P4BDJZHA6B"
+    />
+    <CertificationItem
+      date="2015-07-17"
+      image="test-file-stub"
+      license="HKX3G4FFBV"
+      school="Rice University"
+      title="Principles of Computing I"
+      url="https://www.coursera.org/account/accomplishments/certificate/HKX3G4FFBV"
+    />
+    <CertificationItem
+      date="2015-05-12"
+      image="test-file-stub"
+      license="25YXEW6ZTG"
+      school="Rice University"
+      title="An Introduction to Interactive Programming in Python II"
+      url="https://www.coursera.org/account/accomplishments/certificate/25YXEW6ZTG"
+    />
+    <CertificationItem
+      date="2015-05-25"
+      image="test-file-stub"
+      license="TDX8U42RFD"
+      school="University of Colorado"
+      title="Beginning Game Programming with C#"
+      url="https://www.coursera.org/account/accomplishments/certificate/TDX8U42RFD"
+    />
+    <CertificationItem
+      date="2015-05-03"
+      image="test-file-stub"
+      license="4GLJ6PWR3PPL"
+      school="University of California, Irvine Extension"
+      title="Effective Problem-Solving and Decision-Making"
+      url="https://www.coursera.org/account/accomplishments/certificate/4GLJ6PWR3PPL"
+    />
+    <CertificationItem
+      date="2015-05-02"
+      image="test-file-stub"
+      license="36Y7SM5XLJ"
+      school="University of Pennsylvania"
+      title="Probability"
+      url="https://www.coursera.org/account/accomplishments/certificate/36Y7SM5XLJ"
+    />
+    <CertificationItem
+      date="2015-05-08"
+      image="test-file-stub"
+      license="D79YE6ATRBAK"
+      school="University of Michigan"
+      title="Successful Negotiation: Essential Strategies and Skills"
+      url="https://www.coursera.org/account/accomplishments/certificate/D79YE6ATRBAK"
+    />
+    <CertificationItem
+      date="2015-04-03"
+      image="test-file-stub"
+      license="FGPJG6A7U4"
+      school="Rice University"
+      title="An Introduction to Interactive Programming in Python I"
+      url="https://www.coursera.org/account/accomplishments/certificate/FGPJG6A7U4"
+    />
+    <CertificationItem
+      date="2015-04-22"
+      image="test-file-stub"
+      license="7M84NLE5D5TW"
+      school="University of California, Irvine Extension"
+      title="Project Management: The Basics for Success"
+      url="https://www.coursera.org/account/accomplishments/certificate/7M84NLE5D5TW"
+    />
+    <CertificationItem
+      date="2015-04-09"
+      image="test-file-stub"
+      license="ZJ27G8KF97HT"
+      school="University of California, Irvine Extension"
+      title="Work Smarter, Not Harder: Time Management for Personal & Professional Productivity"
+      url="https://www.coursera.org/account/accomplishments/certificate/ZJ27G8KF97HT"
+    />
+  </div>
 </div>
 `;
