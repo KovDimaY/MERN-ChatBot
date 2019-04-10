@@ -5,7 +5,7 @@ import './styles.css';
 
 const CertificationItem = ({ title, image, url }) => (
   <div className="certification-container">
-    <a href={url} className="image-wrapper">
+    <a href={url} className="image-wrapper" target="_blank" rel="noopener noreferrer">
       <img className="image" src={image} alt="certificate" />
     </a>
     <div className="title">{title}</div>

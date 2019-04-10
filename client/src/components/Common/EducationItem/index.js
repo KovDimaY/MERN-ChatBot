@@ -41,14 +41,16 @@ const EducationItem = ({
   return (
     <div className="education-container row valign-wrapper">
       <div className="col s12 m3 visual">
-        <a href={schoolLink}>
+        <a href={schoolLink} target="_blank" rel="noopener noreferrer">
           <img src={image} alt="icon" className="image" />
         </a>
       </div>
       <div className="col s12 m9">
         <div className="title">
           <div className="degree">{degree}</div>
-          <a href={schoolLink} className="school">{schoolName}</a>
+          <a href={schoolLink} className="school" target="_blank" rel="noopener noreferrer">
+            {schoolName}
+          </a>
         </div>
         { renderDates() }
         <div className="location">{location}</div>
