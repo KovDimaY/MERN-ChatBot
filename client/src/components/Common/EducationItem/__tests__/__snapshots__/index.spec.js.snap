@@ -73,7 +73,7 @@ exports[`components/Common/<EducationItem /> should render component with all po
       <div
         className="activities-label"
       >
-         Roles and activities:
+        Roles and activities:
       </div>
       <ul>
         <li>

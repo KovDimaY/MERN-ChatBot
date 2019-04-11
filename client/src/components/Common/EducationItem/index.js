@@ -15,7 +15,7 @@ const EducationItem = ({
     if (activities && activities.length) {
       return (
         <div className="activities">
-          <div className="activities-label"> Roles and activities:</div>
+          <div className="activities-label">Roles and activities:</div>
           <ul>
             {activities.map(item => <li key={item}>{item}</li>)}
           </ul>
