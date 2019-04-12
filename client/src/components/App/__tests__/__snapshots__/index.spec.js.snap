@@ -25,11 +25,6 @@ exports[`components/<App /> should render component 1`] = `
         path="/education"
       />
       <Route
-        component="Skills"
-        exact={true}
-        path="/skills"
-      />
-      <Route
         component="Projects"
         exact={true}
         path="/projects"

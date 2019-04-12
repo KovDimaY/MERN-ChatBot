@@ -34,14 +34,6 @@ exports[`components/<Header /> should render component 1`] = `
       </li>
       <li>
         <Link
-          to="/skills"
-        >
-           
-          Skills
-        </Link>
-      </li>
-      <li>
-        <Link
           to="/projects"
         >
            
@@ -114,19 +106,6 @@ exports[`components/<Header /> should render component 1`] = `
           </i>
            
           Education
-        </Link>
-      </li>
-      <li>
-        <Link
-          to="/skills"
-        >
-          <i
-            className="material-icons"
-          >
-            trending_up
-          </i>
-           
-          Skills
         </Link>
       </li>
       <li>
