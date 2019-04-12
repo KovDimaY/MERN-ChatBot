@@ -7,7 +7,6 @@ jest.mock('../../Pages/Disclaimer', () => 'Disclaimer');
 jest.mock('../../Pages/Home', () => 'Home');
 jest.mock('../../Pages/Education', () => 'Education');
 jest.mock('../../Pages/Experience', () => 'Experience');
-jest.mock('../../Pages/Skills', () => 'Skills');
 jest.mock('../../Pages/Projects', () => 'Projects');
 jest.mock('../../Pages/Feedback', () => 'Feedback');
 jest.mock('../../../hoc/layout', () => 'Layout');

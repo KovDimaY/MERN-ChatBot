@@ -3,7 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import {
   INIT, HOME, EXPERIENCE,
-  EDUCATION, SKILLS, PROJECTS,
+  EDUCATION, PROJECTS,
   FEEDBACK,
 } from '../../constants/routes';
 
@@ -11,7 +11,6 @@ import Disclaimer from '../Pages/Disclaimer';
 import Home from '../Pages/Home';
 import Education from '../Pages/Education';
 import Experience from '../Pages/Experience';
-import Skills from '../Pages/Skills';
 import Projects from '../Pages/Projects';
 import Feedback from '../Pages/Feedback';
 
@@ -25,7 +24,6 @@ const App = () => (
         <Route path={HOME} exact component={Home} />
         <Route path={EXPERIENCE} exact component={Experience} />
         <Route path={EDUCATION} exact component={Education} />
-        <Route path={SKILLS} exact component={Skills} />
         <Route path={PROJECTS} exact component={Projects} />
         <Route path={FEEDBACK} exact component={Feedback} />
       </Layout>
