@@ -1,0 +1,66 @@
+.project-item-container {
+  margin: 20px 0;
+  display: flex;
+  background: #eeeeee;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 1px 1px 10px grey;
+}
+.project-item-container .visual {
+  text-align: center;
+}
+.project-item-container .image {
+  width: 100%;
+  max-width: 100px;
+}
+.project-item-container .image:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+.project-item-container .title {
+  font-size: 18px;
+}
+.project-item-container .degree {
+  font-weight: bold;
+}
+.project-item-container .dates-wrapper .duration {
+  margin-left: 5px;
+  font-weight: bold;
+  color: darkgray;
+}
+.project-item-container .location {
+  font-size: 16px;
+  color: darkgray;
+}
+.project-item-container .description {
+  text-align: justify;
+  text-indent: 15px;
+}
+.project-item-container .activities .activities-label {
+  font-weight: bold;
+}
+.project-item-container .activities ul {
+  margin: 0;
+  padding-left: 16px;
+}
+.project-item-container .activities li {
+  list-style-type: disc;
+}
+
+@media (max-width: 600px) {
+  .project-item-container {
+    padding: 15px 0;
+    margin: 0 0 20px 0;
+    display: block;
+    background: none;
+    border-radius: unset;
+    box-shadow: none;
+  }
+  .project-item-container .image {
+    max-width: 150px;
+    margin-bottom: 15px;
+  }
+  .project-item-container .title {
+    font-size: 16px;
+  }
+}
