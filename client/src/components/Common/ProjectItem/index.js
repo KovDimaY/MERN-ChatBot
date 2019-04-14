@@ -1,61 +1,40 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import moment from 'moment';
 
 import './styles.css';
 
-import { getDuration } from '../../../utils/common';
-
 const EducationItem = ({
-  image, schoolName, schoolLink,
-  degree, start, finish,
-  location, description, activities,
+  image, name, url,
+  description, tools,
 }) => {
-  const renderActivities = () => {
-    if (activities && activities.length) {
+  const renderTools = () => {
+    if (tools && tools.length) {
       return (
-        <div className="activities">
-          <div className="activities-label">Roles and activities:</div>
-          <ul>
-            {activities.map(item => <li key={item}>{item}</li>)}
-          </ul>
+        <div className="tools">
+          <div className="tools-label">Technologies: </div>
+          <div>{tools.join(' | ')}</div>
         </div>
       );
     }
     return null;
   };
 
-  const renderDates = () => {
-    const startDate = moment(start).format('MMM YYYY');
-    const finishDate = finish ? moment(finish).format('MMM YYYY') : 'Now';
-    const duration = getDuration(start, finish);
-
-    return (
-      <div className="dates-wrapper">
-        <span className="dates">{startDate} - {finishDate}</span>
-        <span className="duration">({duration})</span>
-      </div>
-    );
-  };
-
   return (
-    <div className="education-container row valign-wrapper">
-      <div className="col s12 m3 visual">
-        <a href={schoolLink} target="_blank" rel="noopener noreferrer">
+    <div className="project-item-container row valign-wrapper">
+      <div className="col s12 m6 visual">
+        <a href={url} target="_blank" rel="noopener noreferrer">
           <img src={image} alt="icon" className="image" />
         </a>
       </div>
-      <div className="col s12 m9">
+      <div className="col s12 m6">
         <div className="title">
-          <div className="degree">{degree}</div>
-          <a href={schoolLink} className="school" target="_blank" rel="noopener noreferrer">
-            {schoolName}
+          <div className="degree">{name}</div>
+          <a href={url} className="school" target="_blank" rel="noopener noreferrer">
+            See project
           </a>
         </div>
-        { renderDates() }
-        <div className="location">{location}</div>
         <p className="description">{description}</p>
-        { renderActivities() }
+        { renderTools() }
       </div>
     </div>
   );
@@ -63,19 +42,14 @@ const EducationItem = ({
 
 EducationItem.propTypes = {
   image: PropTypes.string.isRequired,
-  schoolName: PropTypes.string.isRequired,
-  schoolLink: PropTypes.string.isRequired,
-  degree: PropTypes.string.isRequired,
-  location: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  start: PropTypes.object.isRequired,
-  finish: PropTypes.object,
-  activities: PropTypes.array,
+  tools: PropTypes.array,
 };
 
 EducationItem.defaultProps = {
-  finish: undefined,
-  activities: null,
+  tools: null,
 };
 
 export default EducationItem;
