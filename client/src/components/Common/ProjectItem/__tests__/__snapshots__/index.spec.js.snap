@@ -1,0 +1,111 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/Common/<ProjectItem /> should render component with all possible props 1`] = `
+<div
+  className="project-item-container row"
+>
+  <div
+    className="col s12 l6 visual valign-wrapper"
+  >
+    <a
+      className="screenshot-wrapper"
+      href="url"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      <img
+        alt="screenshot"
+        className="image"
+        src="image"
+      />
+    </a>
+  </div>
+  <div
+    className="col s12 чl6"
+  >
+    <div
+      className="title"
+    >
+      <div
+        className="project-name"
+      >
+        name
+      </div>
+      <a
+        className="project-link"
+        href="url"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        See project
+      </a>
+    </div>
+    <p
+      className="description"
+    >
+      description
+    </p>
+    <div
+      className="tools"
+    >
+      <div
+        className="tools-label"
+      >
+        Technologies:
+      </div>
+      <div>
+        tool1 | tool2 | tool3
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`components/Common/<ProjectItem /> should render component with required props 1`] = `
+<div
+  className="project-item-container row"
+>
+  <div
+    className="col s12 l6 visual valign-wrapper"
+  >
+    <a
+      className="screenshot-wrapper"
+      href="url"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      <img
+        alt="screenshot"
+        className="image"
+        src="image"
+      />
+    </a>
+  </div>
+  <div
+    className="col s12 чl6"
+  >
+    <div
+      className="title"
+    >
+      <div
+        className="project-name"
+      >
+        name
+      </div>
+      <a
+        className="project-link"
+        href="url"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        See project
+      </a>
+    </div>
+    <p
+      className="description"
+    >
+      description
+    </p>
+  </div>
+</div>
+`;

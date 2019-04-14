@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import './styles.css';
 
-const EducationItem = ({
+const ProjectItem = ({
   image, name, url,
   description, tools,
 }) => {
@@ -40,7 +40,7 @@ const EducationItem = ({
   );
 };
 
-EducationItem.propTypes = {
+ProjectItem.propTypes = {
   image: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
@@ -48,8 +48,8 @@ EducationItem.propTypes = {
   tools: PropTypes.array,
 };
 
-EducationItem.defaultProps = {
+ProjectItem.defaultProps = {
   tools: null,
 };
 
-export default EducationItem;
+export default ProjectItem;
