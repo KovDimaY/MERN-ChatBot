@@ -21,12 +21,12 @@ const ProjectItem = ({
 
   return (
     <div className="project-item-container row">
-      <div className="col s12 l6 visual valign-wrapper">
+      <div className="col s12 l4 visual valign-wrapper">
         <a href={url} className="screenshot-wrapper" target="_blank" rel="noopener noreferrer">
           <img src={image} alt="screenshot" className="image" />
         </a>
       </div>
-      <div className="col s12 чl6">
+      <div className="col s12 l8">
         <div className="title">
           <div className="project-name">{name}</div>
           <a href={url} className="project-link" target="_blank" rel="noopener noreferrer">

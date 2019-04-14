@@ -5,7 +5,7 @@ exports[`components/Common/<ProjectItem /> should render component with all poss
   className="project-item-container row"
 >
   <div
-    className="col s12 l6 visual valign-wrapper"
+    className="col s12 l4 visual valign-wrapper"
   >
     <a
       className="screenshot-wrapper"
@@ -21,7 +21,7 @@ exports[`components/Common/<ProjectItem /> should render component with all poss
     </a>
   </div>
   <div
-    className="col s12 чl6"
+    className="col s12 l8"
   >
     <div
       className="title"
@@ -66,7 +66,7 @@ exports[`components/Common/<ProjectItem /> should render component with required
   className="project-item-container row"
 >
   <div
-    className="col s12 l6 visual valign-wrapper"
+    className="col s12 l4 visual valign-wrapper"
   >
     <a
       className="screenshot-wrapper"
@@ -82,7 +82,7 @@ exports[`components/Common/<ProjectItem /> should render component with required
     </a>
   </div>
   <div
-    className="col s12 чl6"
+    className="col s12 l8"
   >
     <div
       className="title"
