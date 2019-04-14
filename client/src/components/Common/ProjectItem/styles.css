@@ -8,10 +8,13 @@
 }
 .project-item-container .visual {
   text-align: center;
+  padding: 20px;
 }
 .project-item-container .image {
   width: 100%;
-  max-width: 100px;
+  max-width: 400px;
+  border: 1px solid rgba(0,0,0,0.25);
+  border-radius: 3px;
 }
 .project-item-container .image:hover {
   transform: scale(1.05);
@@ -20,47 +23,36 @@
 .project-item-container .title {
   font-size: 18px;
 }
-.project-item-container .degree {
-  font-weight: bold;
-}
-.project-item-container .dates-wrapper .duration {
-  margin-left: 5px;
-  font-weight: bold;
-  color: darkgray;
-}
-.project-item-container .location {
+.project-item-container .project-link {
   font-size: 16px;
-  color: darkgray;
+}
+.project-item-container .project-name {
+  font-weight: bold;
 }
 .project-item-container .description {
   text-align: justify;
   text-indent: 15px;
 }
-.project-item-container .activities .activities-label {
+.project-item-container .tools .tools-label {
   font-weight: bold;
 }
-.project-item-container .activities ul {
-  margin: 0;
-  padding-left: 16px;
-}
-.project-item-container .activities li {
-  list-style-type: disc;
-}
 
-@media (max-width: 600px) {
+@media (max-width: 992px) {
   .project-item-container {
+    flex-direction: column-reverse;
     padding: 15px 0;
-    margin: 0 0 20px 0;
-    display: block;
     background: none;
     border-radius: unset;
     box-shadow: none;
+    margin: 0;
+  }
+  .project-item-container .visual {
+    padding: 20px 10px;
+  }
+  .project-item-container .screenshot-wrapper {
+    margin: auto;
   }
   .project-item-container .image {
-    max-width: 150px;
-    margin-bottom: 15px;
-  }
-  .project-item-container .title {
-    font-size: 16px;
+    max-width: unset;
   }
 }

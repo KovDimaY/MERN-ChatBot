@@ -57,6 +57,13 @@ import FGPJG6A7U4 from './certifications/FGPJG6A7U4.jpg';
 import C_7M84NLE5D5TW from './certifications/7M84NLE5D5TW.jpg';
 import ZJ27G8KF97HT from './certifications/ZJ27G8KF97HT.jpg';
 
+import projectMemoryGame from './project-memoryGame.png';
+import projectKovdimay from './project-kovdimay.png';
+import projectReactHighcharts from './project-reactHighcharts.png';
+import projectSimpleChat from './project-simpleChat.png';
+import projectTravelStories from './project-travelStories.png';
+
+
 export {
   background,
   botAvatar,
@@ -111,4 +118,9 @@ export {
   FGPJG6A7U4,
   C_7M84NLE5D5TW,
   ZJ27G8KF97HT,
+  projectMemoryGame,
+  projectKovdimay,
+  projectReactHighcharts,
+  projectSimpleChat,
+  projectTravelStories,
 };

@@ -1,3 +1,11 @@
+import {
+  projectMemoryGame,
+  projectKovdimay,
+  projectReactHighcharts,
+  projectSimpleChat,
+  projectTravelStories,
+} from '../../../images';
+
 export const projects = [{
   id: 4,
   name: 'TripReviewer',
@@ -16,7 +24,7 @@ export const projects = [{
     implemented for the moment (from both code and organization perspective).
   `,
   tools: ['React', 'Redux', 'Jest', 'Styled Components', 'Node', 'Express', 'MongoDB', 'JWT', 'Firebase'],
-  image: 'image',
+  image: projectTravelStories,
   url: 'https://github.com/KovDimaY/Trip-Reviewer',
 }, {
   id: 3,
@@ -36,7 +44,7 @@ export const projects = [{
     development process.
   `,
   tools: ['Node', 'jQuery', 'Socket.io', 'Mocha'],
-  image: 'image',
+  image: projectSimpleChat,
   url: 'https://github.com/KovDimaY/SimpleChat-Socket.io',
 }, {
   id: 2,
@@ -54,7 +62,7 @@ export const projects = [{
     React to manage all the interactions.
   `,
   tools: ['React', 'Highcharts', 'Webpack'],
-  image: 'image',
+  image: projectReactHighcharts,
   url: 'https://github.com/KovDimaY/React-Highcharts',
 }, {
   id: 5,
@@ -69,7 +77,7 @@ export const projects = [{
     colors and pictures.
   `,
   tools: ['HTML', 'CSS', 'JavaScript'],
-  image: 'image',
+  image: projectMemoryGame,
   url: 'https://github.com/KovDimaY/Memory-Game',
 }, {
   id: 1,
@@ -84,6 +92,6 @@ export const projects = [{
     computers. Hope people will enjoy playing them.
   `,
   tools: ['C#', 'XNA Framework', 'Unity'],
-  image: 'image',
+  image: projectKovdimay,
   url: 'http://kovalenkody.wixsite.com/kovdimay',
 }];

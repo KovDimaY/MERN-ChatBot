@@ -11,7 +11,7 @@ const EducationItem = ({
     if (tools && tools.length) {
       return (
         <div className="tools">
-          <div className="tools-label">Technologies: </div>
+          <div className="tools-label">Technologies:</div>
           <div>{tools.join(' | ')}</div>
         </div>
       );
@@ -20,16 +20,16 @@ const EducationItem = ({
   };
 
   return (
-    <div className="project-item-container row valign-wrapper">
-      <div className="col s12 m6 visual">
-        <a href={url} target="_blank" rel="noopener noreferrer">
-          <img src={image} alt="icon" className="image" />
+    <div className="project-item-container row">
+      <div className="col s12 l6 visual valign-wrapper">
+        <a href={url} className="screenshot-wrapper" target="_blank" rel="noopener noreferrer">
+          <img src={image} alt="screenshot" className="image" />
         </a>
       </div>
-      <div className="col s12 m6">
+      <div className="col s12 чl6">
         <div className="title">
-          <div className="degree">{name}</div>
-          <a href={url} className="school" target="_blank" rel="noopener noreferrer">
+          <div className="project-name">{name}</div>
+          <a href={url} className="project-link" target="_blank" rel="noopener noreferrer">
             See project
           </a>
         </div>
