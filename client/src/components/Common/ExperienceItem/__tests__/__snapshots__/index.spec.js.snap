@@ -9,6 +9,8 @@ exports[`components/Common/<ExperienceItem /> should render component with all t
   >
     <a
       href="companyLink"
+      rel="noopener noreferrer"
+      target="_blank"
     >
       <img
         alt="icon"
@@ -36,6 +38,8 @@ exports[`components/Common/<ExperienceItem /> should render component with all t
       <a
         className="company"
         href="companyLink"
+        rel="noopener noreferrer"
+        target="_blank"
       >
         companyName
       </a>
@@ -113,6 +117,8 @@ exports[`components/Common/<ExperienceItem /> should render component with basic
   >
     <a
       href="companyLink"
+      rel="noopener noreferrer"
+      target="_blank"
     >
       <img
         alt="icon"
@@ -140,6 +146,8 @@ exports[`components/Common/<ExperienceItem /> should render component with basic
       <a
         className="company"
         href="companyLink"
+        rel="noopener noreferrer"
+        target="_blank"
       >
         companyName
       </a>
