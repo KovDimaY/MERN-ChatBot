@@ -40,13 +40,16 @@ class Feedback extends Component {
     const getOdd = (el, idx) => idx % 2 !== 0;
 
     return (
-      <div className="feedbacks-container">
-        <div className="row">
-          <div className="col s12 m6">
-            {feedbacks.filter(getEven).map(this.renderFeedbackItem)}
-          </div>
-          <div className="col s12 m6">
-            {feedbacks.filter(getOdd).map(this.renderFeedbackItem)}
+      <div className="feedbacks-section-container">
+        <h3 className="feedbacks-section-title">Feedback</h3>
+        <div className="feedbacks-wrapper">
+          <div className="row">
+            <div className="col s12 m6">
+              {feedbacks.filter(getEven).map(this.renderFeedbackItem)}
+            </div>
+            <div className="col s12 m6">
+              {feedbacks.filter(getOdd).map(this.renderFeedbackItem)}
+            </div>
           </div>
         </div>
       </div>

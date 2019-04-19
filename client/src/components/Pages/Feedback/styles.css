@@ -1,17 +1,37 @@
-.feedbacks-container {
-  padding: 20px 20px 50px 20px;
+.feedbacks-section-container {
+  padding-bottom: 100px;
 }
-.feedbacks-container .card-title-custom {
+.feedbacks-section-container .feedbacks-wrapper {
+  margin: 0 -0.75rem;
+}
+.feedbacks-section-container .card-title-custom {
   line-height: 32px;
   font-size: 24px;
   font-weight: 300;
   margin: 0;
 }
-.feedbacks-container p.card-date {
+.feedbacks-section-container p.card-date {
   margin-bottom: 5px;
   font-size: 12px;
   font-style: italic;
 }
-.feedbacks-container .card-comment {
+.feedbacks-section-container .card-comment {
   text-align: justify;
+}
+.feedbacks-section-container .feedbacks-section-title {
+  text-align: center;
+  margin: 35px 0;
+}
+
+@media (max-width: 992px) {
+  .feedbacks-section-container .feedbacks-section-title {
+    margin: 25px 0 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .feedbacks-section-container .feedbacks-section-title {
+    font-size: 32px;
+    margin: 25px 0 0 0;
+  }
 }
