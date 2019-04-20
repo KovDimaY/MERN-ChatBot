@@ -1,5 +1,5 @@
 import {
-  EXPERIENCE, EDUCATION, SKILLS,
+  EXPERIENCE, EDUCATION,
   PROJECTS, FEEDBACK,
 } from '../../constants/routes';
 
@@ -17,21 +17,15 @@ export default [
     id: 2,
   },
   {
-    label: 'Skills',
-    url: SKILLS,
-    icon: 'trending_up',
-    id: 3,
-  },
-  {
     label: 'Projects',
     url: PROJECTS,
     icon: 'color_lens',
-    id: 4,
+    id: 3,
   },
   {
     label: 'Feedback',
     url: FEEDBACK,
     icon: 'feedback',
-    id: 5,
+    id: 4,
   },
 ];

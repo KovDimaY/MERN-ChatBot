@@ -1,9 +1,132 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`components/Pages/<Experience /> should render component 1`] = `
-<div>
-  <EmptyView
-    section="experience"
-  />
+<div
+  className="experiences-section-container"
+>
+  <h3
+    className="experiences-section-title"
+  >
+    Experience
+  </h3>
+  <div
+    className="experiences-wrapper"
+  >
+    <ExperienceItem
+      companyLink="https://www.cornerjob.com"
+      companyName="Cornerjob"
+      description="Responsible for the whole FE of the platform,
+      working with Webmanager and BO projects (React/Redux)
+      and SEO-Landing project (Symfony/Twig/jQuery). Paying attention
+      to UT, test coverage and CI/CD with Jest/Enzyme/Jenkins.
+      Using mostly SCRUM methodologies and Kanban for some smaller projects.
+    "
+      id={5}
+      image="test-file-stub"
+      location="Barcelona, Spain"
+      position="JS Full Stack Developer"
+      start={2018-06-11T00:00:00.000Z}
+      tools={
+        Array [
+          "React",
+          "Redux",
+          "Redux-Saga",
+          "Jest",
+          "Styled Components",
+          "Symfony",
+          "Jenkins",
+          "Docker",
+          "AWS",
+          "Node",
+        ]
+      }
+    />
+    <ExperienceItem
+      companyLink="https://www.bigfinite.com/"
+      companyName="Bigfinite Inc"
+      description="I was developing new user-facing features for
+      the big web platform and providing bug-fixing support
+      for already existing ones. Mostly my work was related to
+      data representation of the different numeric and categoric
+      AI and ML models and algorithms or other scientific things.
+    "
+      finish={2018-06-06T00:00:00.000Z}
+      id={4}
+      image="test-file-stub"
+      location="Barcelona, Spain"
+      position="JS Frontend Developer"
+      start={2017-04-18T00:00:00.000Z}
+      tools={
+        Array [
+          "React",
+          "AWS",
+          "Node",
+          "jQuery",
+          "Highcharts",
+        ]
+      }
+    />
+    <ExperienceItem
+      companyLink="http://www.enixan.com/en/"
+      companyName="Enixan Entertainment"
+      description="I have developed a new genre direction in the
+      company (Match-3). There are a game created from my scratch
+      and a prepared background for developing other similar projects
+      with the developed game engine.
+    "
+      finish={2016-07-21T00:00:00.000Z}
+      id={3}
+      image="test-file-stub"
+      location="Kyiv, Ukraine"
+      position="Game Designer"
+      responsibilities={
+        Array [
+          "market analysis of social and mobile games",
+          "development of the concept of games",
+          "development of the setting and narrative of games",
+          "elaboration of the economics (balance) of games",
+          "elaboration of gameplay",
+          "level design",
+          "creation of game design documents",
+          "support of development, testing, consulting",
+        ]
+      }
+      start={2015-09-07T00:00:00.000Z}
+    />
+    <ExperienceItem
+      companyLink="http://www.mbastrategy.ru/"
+      companyName="MBA Strategy"
+      description="Teaching people how to prepare for the quantitative part of the GMAT/GRE.
+
+    "
+      finish={2015-05-01T00:00:00.000Z}
+      id={2}
+      image="test-file-stub"
+      location="Kyiv, Ukraine"
+      position="Math Consultant"
+      responsibilities={
+        Array [
+          "individual lessons and group (4-9 students) lectures",
+          "online lessons via Skype",
+          "develop schemes of work, lesson plans and study materials",
+          "assign and grade class work, homework, tests and assignments",
+          "identify and select different instructional resources and methods to meet students' varying needs",
+          "organize and run educational events",
+        ]
+      }
+      start={2013-01-01T00:00:00.000Z}
+    />
+    <ExperienceItem
+      companyLink="http://www.icicleseafoods.com/"
+      companyName="Icicle Seafoods"
+      description="Work&Travel program which helped me to improve my English and teamwork skills. It made me more organized, more hardworking, more hardy."
+      finish={2012-09-01T00:00:00.000Z}
+      id={1}
+      image="test-file-stub"
+      location="Alaska, USA"
+      position="Cannery Worker"
+      start={2012-05-01T00:00:00.000Z}
+    />
+  </div>
 </div>
 `;

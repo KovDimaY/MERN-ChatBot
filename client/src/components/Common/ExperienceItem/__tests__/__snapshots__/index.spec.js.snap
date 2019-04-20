@@ -1,0 +1,185 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/Common/<ExperienceItem /> should render component with all the data 1`] = `
+<div
+  className="experience-container row valign-wrapper"
+>
+  <div
+    className="col s12 m3 visual"
+  >
+    <a
+      href="companyLink"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      <img
+        alt="icon"
+        className="image"
+        src="image"
+      />
+    </a>
+  </div>
+  <div
+    className="col s12 m9"
+  >
+    <div
+      className="title"
+    >
+      <span
+        className="position"
+      >
+        position
+      </span>
+      <span
+        className="connector"
+      >
+        in
+      </span>
+      <a
+        className="company"
+        href="companyLink"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        companyName
+      </a>
+    </div>
+    <div
+      className="dates-wrapper"
+    >
+      <span
+        className="dates"
+      >
+        Invalid date
+         - 
+        Invalid date
+      </span>
+      <span
+        className="duration"
+      >
+        (
+        getDuration mocked result
+        )
+      </span>
+    </div>
+    <div
+      className="location"
+    >
+      location
+    </div>
+    <p
+      className="description"
+    >
+      description
+    </p>
+    <div
+      className="responsibilities"
+    >
+      <div
+        className="responsibilities-label"
+      >
+        Main responsibilities:
+      </div>
+      <ul>
+        <li>
+          responsibilities1
+        </li>
+        <li>
+          responsibilities2
+        </li>
+        <li>
+          responsibilities3
+        </li>
+      </ul>
+    </div>
+    <div
+      className="tools"
+    >
+      <div
+        className="tools-label"
+      >
+        Technologies: 
+      </div>
+      <div>
+        tools1 | tools2
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`components/Common/<ExperienceItem /> should render component with basic data 1`] = `
+<div
+  className="experience-container row valign-wrapper"
+>
+  <div
+    className="col s12 m3 visual"
+  >
+    <a
+      href="companyLink"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      <img
+        alt="icon"
+        className="image"
+        src="image"
+      />
+    </a>
+  </div>
+  <div
+    className="col s12 m9"
+  >
+    <div
+      className="title"
+    >
+      <span
+        className="position"
+      >
+        position
+      </span>
+      <span
+        className="connector"
+      >
+        in
+      </span>
+      <a
+        className="company"
+        href="companyLink"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        companyName
+      </a>
+    </div>
+    <div
+      className="dates-wrapper"
+    >
+      <span
+        className="dates"
+      >
+        Invalid date
+         - 
+        Now
+      </span>
+      <span
+        className="duration"
+      >
+        (
+        getDuration mocked result
+        )
+      </span>
+    </div>
+    <div
+      className="location"
+    >
+      location
+    </div>
+    <p
+      className="description"
+    >
+      description
+    </p>
+  </div>
+</div>
+`;

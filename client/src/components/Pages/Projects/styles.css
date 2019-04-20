@@ -1,0 +1,20 @@
+.projects-section-container {
+  padding-bottom: 100px;
+}
+.projects-section-container .projects-section-title {
+  text-align: center;
+  margin: 35px 0;
+}
+
+@media (max-width: 992px) {
+  .projects-section-container .projects-section-title {
+    margin: 25px 0 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .projects-section-container .projects-section-title {
+    font-size: 32px;
+    margin: 25px 0 0 0;
+  }
+}
