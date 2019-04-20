@@ -1,12 +1,9 @@
 .projects-section-container {
-  padding-bottom: 50px;
+  padding-bottom: 100px;
 }
 .projects-section-container .projects-section-title {
   text-align: center;
   margin: 35px 0;
-}
-.projects-section-container .projects-wrapper {
-  margin-bottom: 50px;
 }
 
 @media (max-width: 992px) {

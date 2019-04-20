@@ -15,7 +15,10 @@ const Experience = () => {
 
   return (
     <div className="experiences-section-container">
-      {renderExperiences()}
+      <h3 className="experiences-section-title">Experience</h3>
+      <div className="experiences-wrapper">
+        {renderExperiences()}
+      </div>
     </div>
   );
 };

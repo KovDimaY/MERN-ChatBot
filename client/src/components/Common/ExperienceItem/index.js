@@ -53,7 +53,7 @@ const ExperienceItem = ({
   return (
     <div className="experience-container row valign-wrapper">
       <div className="col s12 m3 visual">
-        <a href={companyLink}>
+        <a href={companyLink} target="_blank" rel="noopener noreferrer">
           <img src={image} alt="icon" className="image" />
         </a>
       </div>
@@ -61,7 +61,9 @@ const ExperienceItem = ({
         <div className="title">
           <span className="position">{position}</span>
           <span className="connector">in</span>
-          <a href={companyLink} className="company">{companyName}</a>
+          <a href={companyLink} className="company" target="_blank" rel="noopener noreferrer">
+            {companyName}
+          </a>
         </div>
         { renderDates() }
         <div className="location">{location}</div>
