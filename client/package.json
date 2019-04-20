@@ -9,7 +9,9 @@
     "test-jest": "NODE_ENV=test jest --no-cache",
     "test:coverage": "npm run test-jest -- --coverage",
     "test:update": "npm run test-jest -- --u",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "dependencies": {
     "axios": "0.18.0",
@@ -39,7 +41,10 @@
     "enzyme-adapter-react-16": "1.7.1",
     "raf": "3.4.1",
     "react-hot-loader": "4.6.3",
-    "react-test-renderer": "16.7.0"
+    "react-test-renderer": "16.7.0",
+    "@storybook/react": "^5.0.10",
+    "@storybook/addon-actions": "^5.0.10",
+    "@storybook/addon-links": "^5.0.10"
   },
   "jest": {
     "automock": false,
