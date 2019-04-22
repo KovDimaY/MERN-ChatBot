@@ -44,12 +44,12 @@ const data = {
 
 storiesOf('Cards', module)
   .add('No width limit', () => (
-    <div style={{ padding: '25px' }}>
+    <div style={{ margin: '25px' }}>
       <Cards data={data} />
     </div>
   ))
   .add('Real life example', () => (
-    <div style={{ padding: '25px', maxWidth: '450px' }}>
+    <div style={{ margin: '25px', maxWidth: '450px', border: '1px solid black' }}>
       <Cards data={data} />
     </div>
   ));

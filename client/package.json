@@ -60,7 +60,7 @@
       "!src/setupProxy.js",
       "!src/utils/structjson.js",
       "!src/images/*.js",
-      "!src/**/*.story.{js,jsx}"
+      "!src/**/stories/*.{js,jsx}"
     ],
     "testPathIgnorePatterns": [
       "<rootDir>/(dist|coverage|node_modules)/",
