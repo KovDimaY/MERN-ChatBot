@@ -27,24 +27,14 @@ const data = {
   },
 };
 
+const WrappedComponent = props => (
+  <div style={{ padding: '25px' }}>
+    <LanguageItem {...props} />
+  </div>
+);
+
 storiesOf('Common/LanguageItem', module)
-  .add('Ukrainian', () => (
-    <div style={{ padding: '25px' }}>
-      <LanguageItem {...data.ukrainian} />
-    </div>
-  ))
-  .add('Russian', () => (
-    <div style={{ padding: '25px' }}>
-      <LanguageItem {...data.russian} />
-    </div>
-  ))
-  .add('English', () => (
-    <div style={{ padding: '25px' }}>
-      <LanguageItem {...data.english} />
-    </div>
-  ))
-  .add('Spanish', () => (
-    <div style={{ padding: '25px' }}>
-      <LanguageItem {...data.spanish} />
-    </div>
-  ));
+  .add('Ukrainian', () => WrappedComponent(data.ukrainian))
+  .add('Russian', () => WrappedComponent(data.russian))
+  .add('English', () => WrappedComponent(data.english))
+  .add('Spanish', () => WrappedComponent(data.spanish));
