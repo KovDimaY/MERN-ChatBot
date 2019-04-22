@@ -1,5 +1,7 @@
 import { configure } from '@storybook/react';
 import 'materialize-css/dist/css/materialize.min.css';
+import '../public/css/styles.css';
+import '../public/css/icons.css';
 
 const requireAll = require.context('../src', true, /story\.js$/);
 

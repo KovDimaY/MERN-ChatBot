@@ -59,7 +59,8 @@
       "!src/serviceWorker.js",
       "!src/setupProxy.js",
       "!src/utils/structjson.js",
-      "!src/images/*.js"
+      "!src/images/*.js",
+      "!src/**/*.story.{js,jsx}"
     ],
     "testPathIgnorePatterns": [
       "<rootDir>/(dist|coverage|node_modules)/",
