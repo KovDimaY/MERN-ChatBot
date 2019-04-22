@@ -29,14 +29,22 @@ const data = {
 
 storiesOf('Common/LanguageItem', module)
   .add('Ukrainian', () => (
-    <LanguageItem {...data.ukrainian} />
+    <div style={{ padding: '25px' }}>
+      <LanguageItem {...data.ukrainian} />
+    </div>
   ))
   .add('Russian', () => (
-    <LanguageItem {...data.russian} />
+    <div style={{ padding: '25px' }}>
+      <LanguageItem {...data.russian} />
+    </div>
   ))
   .add('English', () => (
-    <LanguageItem {...data.english} />
+    <div style={{ padding: '25px' }}>
+      <LanguageItem {...data.english} />
+    </div>
   ))
   .add('Spanish', () => (
-    <LanguageItem {...data.spanish} />
+    <div style={{ padding: '25px' }}>
+      <LanguageItem {...data.spanish} />
+    </div>
   ));
