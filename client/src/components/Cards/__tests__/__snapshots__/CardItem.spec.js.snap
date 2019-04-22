@@ -32,6 +32,8 @@ exports[`components/Cards/<CardItem /> should render component 1`] = `
     >
       <a
         href="link"
+        rel="noopener noreferrer"
+        target="_blank"
       >
         View
       </a>

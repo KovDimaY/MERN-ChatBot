@@ -10,7 +10,7 @@ const CardItem = ({ data }) => {
     if (link) {
       return (
         <div className="card-action">
-          <a href={link}>View</a>
+          <a href={link} target="_blank" rel="noopener noreferrer">View</a>
         </div>
       );
     }
