@@ -1,4 +1,4 @@
-import { configure } from '@storybook/react';
+import { configure, addParameters } from '@storybook/react';
 import 'materialize-css/dist/css/materialize.min.css';
 import '../public/css/styles.css';
 import '../public/css/icons.css';
@@ -10,3 +10,4 @@ function loadStories() {
 }
 
 configure(loadStories, module);
+addParameters({ viewport: options });
