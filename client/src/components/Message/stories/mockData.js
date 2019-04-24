@@ -3,13 +3,11 @@ export const data = [
     type: 'text',
     author: 'bot',
     msg: 'This is a text message from the bot',
-    value: 'Value for "This is a text message from the bot"',
   },
   {
     type: 'text',
     author: 'user',
     msg: 'This is a text message from the user',
-    value: 'Value for "This is a text message from the user"',
   },
   {
     type: 'payload',
@@ -47,7 +45,6 @@ export const data = [
         },
       ],
     },
-    value: 'A value for another text',
   },
   {
     type: 'payload',
@@ -83,6 +80,5 @@ export const data = [
     type: 'error',
     author: 'bot',
     msg: 'This is an error message from the bot',
-    value: 'Value for "This is an error message from the bot"',
   },
 ];
