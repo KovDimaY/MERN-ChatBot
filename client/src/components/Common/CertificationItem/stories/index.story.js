@@ -1,17 +1,37 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import { withKnobs, text } from '@storybook/addon-knobs';
 
 import CertificationItem from '..';
-import { data } from './mockData';
-
-const WrappedComponent = props => (
-  <div style={{ maxWidth: '600px', padding: '25px' }}>
-    <CertificationItem {...props} />
-  </div>
-);
+import { UC_B6BARC8V, C_11467555, GH93LKLL72BR } from '../../../../images';
 
 storiesOf('Common/CertificationItem', module)
-  .add('Udemy Certificate', () => WrappedComponent({ ...data.udemy }))
-  .add('Codecademy Certificate', () => WrappedComponent({ ...data.codecademy }))
-  .add('Coursera Sertificate', () => WrappedComponent({ ...data.coursera }));
+  .addDecorator(withKnobs)
+  .add('Udemy Certificate', () => (
+    <div style={{ maxWidth: '600px', padding: '25px' }}>
+      <CertificationItem
+        title={text('Title', 'Advanced React and Redux: 2018 Edition')}
+        image={UC_B6BARC8V}
+        url={text('URL', 'https://www.udemy.com/certificate/UC-B6BARC8V/')}
+      />
+    </div>
+  ))
+  .add('Codecademy Certificate', () => (
+    <div style={{ maxWidth: '600px', padding: '25px' }}>
+      <CertificationItem
+        title={text('Title', 'Test-Driven Development')}
+        image={C_11467555}
+        url={text('URL', 'https://www.credential.net/e524eujo')}
+      />
+    </div>
+  ))
+  .add('Coursera Sertificate', () => (
+    <div style={{ maxWidth: '600px', padding: '25px' }}>
+      <CertificationItem
+        title={text('Title', 'Graph Search, Shortest Paths, and Data Structures')}
+        image={GH93LKLL72BR}
+        url={text('URL', 'https://www.coursera.org/account/accomplishments/certificate/GH93LKLL72BR')}
+      />
+    </div>
+  ));
 
