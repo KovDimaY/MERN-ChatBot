@@ -1,18 +1,54 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import { withKnobs, text } from '@storybook/addon-knobs';
 
 import HobbyItem from '..';
 import { hobbies } from '../../../Pages/Home/constants';
 
-const WrappedComponent = props => (
-  <div style={{ padding: '25px' }}>
-    <HobbyItem {...props} />
-  </div>
-);
-
 storiesOf('Common/HobbyItem', module)
-  .add('Programming', () => WrappedComponent(hobbies[0]))
-  .add('Sports', () => WrappedComponent(hobbies[1]))
-  .add('Puzzles', () => WrappedComponent(hobbies[2]))
-  .add('Numismatics', () => WrappedComponent(hobbies[3]))
-  .add('Photography', () => WrappedComponent(hobbies[4]));
+  .addDecorator(withKnobs)
+  .add('Programming', () => (
+    <div style={{ padding: '25px' }}>
+      <HobbyItem
+        image={hobbies[0].image}
+        name={text('Name', hobbies[0].name)}
+        description={text('Description', hobbies[0].description)}
+      />
+    </div>
+  ))
+  .add('Sports', () => (
+    <div style={{ padding: '25px' }}>
+      <HobbyItem
+        image={hobbies[1].image}
+        name={text('Name', hobbies[1].name)}
+        description={text('Description', hobbies[1].description)}
+      />
+    </div>
+  ))
+  .add('Puzzles', () => (
+    <div style={{ padding: '25px' }}>
+      <HobbyItem
+        image={hobbies[2].image}
+        name={text('Name', hobbies[2].name)}
+        description={text('Description', hobbies[2].description)}
+      />
+    </div>
+  ))
+  .add('Numismatics', () => (
+    <div style={{ padding: '25px' }}>
+      <HobbyItem
+        image={hobbies[3].image}
+        name={text('Name', hobbies[3].name)}
+        description={text('Description', hobbies[3].description)}
+      />
+    </div>
+  ))
+  .add('Photography', () => (
+    <div style={{ padding: '25px' }}>
+      <HobbyItem
+        image={hobbies[4].image}
+        name={text('Name', hobbies[4].name)}
+        description={text('Description', hobbies[4].description)}
+      />
+    </div>
+  ));
