@@ -1,12 +1,14 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import { withKnobs, text } from '@storybook/addon-knobs';
 
 import EmptyView from '..';
 
 storiesOf('Common/EmptyView', module)
-  .add('Experience Section', () => (
+  .addDecorator(withKnobs)
+  .add('Default content', () => (
     <div style={{ padding: '25px' }}>
-      <EmptyView section="Experience" />
+      <EmptyView section={text('Section', 'Experience')} />
     </div>
   ))
   .add('Custom', () => (
