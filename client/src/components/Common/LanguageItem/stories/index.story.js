@@ -1,17 +1,45 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import { withKnobs, text } from '@storybook/addon-knobs';
 
 import LanguageItem from '..';
-import { data } from './mockData';
-
-const WrappedComponent = props => (
-  <div style={{ padding: '25px' }}>
-    <LanguageItem {...props} />
-  </div>
-);
+import { languages } from '../../../Pages/Home/constants';
 
 storiesOf('Common/LanguageItem', module)
-  .add('Ukrainian', () => WrappedComponent(data.ukrainian))
-  .add('Russian', () => WrappedComponent(data.russian))
-  .add('English', () => WrappedComponent(data.english))
-  .add('Spanish', () => WrappedComponent(data.spanish));
+  .addDecorator(withKnobs)
+  .add('Ukrainian', () => (
+    <div style={{ padding: '25px' }}>
+      <LanguageItem
+        image={languages[0].image}
+        name={text('Name', languages[0].name)}
+        level={text('Level', languages[0].level)}
+      />
+    </div>
+  ))
+  .add('Russian', () => (
+    <div style={{ padding: '25px' }}>
+      <LanguageItem
+        image={languages[1].image}
+        name={text('Name', languages[1].name)}
+        level={text('Level', languages[1].level)}
+      />
+    </div>
+  ))
+  .add('English', () => (
+    <div style={{ padding: '25px' }}>
+      <LanguageItem
+        image={languages[2].image}
+        name={text('Name', languages[2].name)}
+        level={text('Level', languages[2].level)}
+      />
+    </div>
+  ))
+  .add('Spanish', () => (
+    <div style={{ padding: '25px' }}>
+      <LanguageItem
+        image={languages[3].image}
+        name={text('Name', languages[3].name)}
+        level={text('Level', languages[3].level)}
+      />
+    </div>
+  ));
