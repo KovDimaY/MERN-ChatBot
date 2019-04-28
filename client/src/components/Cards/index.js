@@ -10,7 +10,17 @@ const Cards = ({ data }) => {
     return (
       <div className="cards-containter">
         <div style={{ width: 220 * data.value.length }}>
-          {data.value.map(item => <CardItem data={item} key={item.id} />)}
+          {
+            data.value.map(item => (
+              <CardItem
+                title={item.title}
+                image={item.image}
+                description={item.description}
+                link={item.link}
+                key={item.id}
+              />
+            ))
+          }
         </div>
       </div>
     );

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 class QuickReplyItem extends Component {
   handleClick = () => {
-    const { onClick, data: { type, value } } = this.props;
+    const { onClick, type, value } = this.props;
 
     if (onClick) {
       onClick(type, value);
@@ -11,7 +11,7 @@ class QuickReplyItem extends Component {
   };
 
   renderLink() {
-    const { text, value } = this.props.data;
+    const { text, value } = this.props;
 
     return (
       <a
@@ -32,13 +32,13 @@ class QuickReplyItem extends Component {
         onClick={this.handleClick}
         className="waves-effect waves-light btn light-blue hoverable"
       >
-        {this.props.data.text}
+        {this.props.text}
       </button>
     );
   }
 
   renderItem() {
-    switch (this.props.data.type) {
+    switch (this.props.type) {
       case 'link':
         return this.renderLink();
       case 'text':
@@ -59,7 +59,9 @@ class QuickReplyItem extends Component {
 }
 
 QuickReplyItem.propTypes = {
-  data: PropTypes.object.isRequired,
+  type: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
   onClick: PropTypes.func,
   disabled: PropTypes.bool,
 };
