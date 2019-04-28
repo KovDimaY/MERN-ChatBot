@@ -6,7 +6,7 @@ exports[`components/<Chatbot /> should render component with messages 1`] = `
 >
   <div
     className="collapse-header blue"
-    onClick={[Function]}
+    onClick={[MockFunction]}
   >
     <div
       className="nav-wrapper"
@@ -31,10 +31,10 @@ exports[`components/<Chatbot /> should render component with messages 1`] = `
       className="messages"
     >
       <Message
-        author="author"
-        msg="msg"
-        onReply={[Function]}
-        type="type"
+        onReply={[MockFunction]}
+      />
+      <Message
+        onReply={[MockFunction]}
       />
       <div />
     </div>
@@ -64,13 +64,13 @@ exports[`components/<Chatbot /> should render component with messages 1`] = `
 </div>
 `;
 
-exports[`components/<Chatbot /> should render component with show=false 1`] = `
+exports[`components/<Chatbot /> should render component with no show 1`] = `
 <div
   className="container chatbot-container chat-closed"
 >
   <div
     className="collapse-header blue"
-    onClick={[Function]}
+    onClick={[MockFunction]}
   >
     <div
       className="nav-wrapper"
@@ -90,13 +90,13 @@ exports[`components/<Chatbot /> should render component with show=false 1`] = `
 </div>
 `;
 
-exports[`components/<Chatbot /> should render component with show=true 1`] = `
+exports[`components/<Chatbot /> should render component without messages 1`] = `
 <div
   className="container chatbot-container chat-opened"
 >
   <div
     className="collapse-header blue"
-    onClick={[Function]}
+    onClick={[MockFunction]}
   >
     <div
       className="nav-wrapper"

@@ -8,6 +8,6 @@ exports[`hoc/layout should render component 1`] = `
   <div>
     test
   </div>
-  <Footer />
+  <ChatBot />
 </div>
 `;
