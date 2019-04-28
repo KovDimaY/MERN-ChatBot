@@ -7,8 +7,8 @@ const renderLink = (url, text) => (
   </a>
 );
 
-storiesOf('MERN Chatbot', module)
-  .add('Welcome Story', () => (
+storiesOf('Welcome Story', module)
+  .add('MERN Chatbot', () => (
     <div style={{ padding: '25px' }}>
       <h4>MERN Chatbot Storybook</h4>
 
