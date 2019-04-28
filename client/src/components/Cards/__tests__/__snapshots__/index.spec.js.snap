@@ -11,27 +11,9 @@ exports[`components/<Cards /> should render component with data 1`] = `
       }
     }
   >
-    <CardItem
-      data={
-        Object {
-          "id": "id-1",
-        }
-      }
-    />
-    <CardItem
-      data={
-        Object {
-          "id": "id-2",
-        }
-      }
-    />
-    <CardItem
-      data={
-        Object {
-          "id": "id-3c",
-        }
-      }
-    />
+    <CardItem />
+    <CardItem />
+    <CardItem />
   </div>
 </div>
 `;

@@ -10,12 +10,10 @@ const mockComponent = props => (
 describe('components/Cards/<CardItem />', () => {
   it('should render component', () => {
     const props = {
-      data: {
-        title: 'title',
-        image: 'image',
-        description: 'description',
-        link: 'link',
-      },
+      title: 'title',
+      image: 'image',
+      description: 'description',
+      link: 'link',
     };
     const tree = create(mockComponent(props)).toJSON();
 
@@ -24,11 +22,9 @@ describe('components/Cards/<CardItem />', () => {
 
   it('should render component without link', () => {
     const props = {
-      data: {
-        title: 'title',
-        image: 'image',
-        description: 'description',
-      },
+      title: 'title',
+      image: 'image',
+      description: 'description',
     };
     const tree = create(mockComponent(props)).toJSON();
 
