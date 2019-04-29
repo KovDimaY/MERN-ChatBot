@@ -1,23 +1,10 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { withKnobs, text } from '@storybook/addon-knobs';
+import { withKnobs, text, object } from '@storybook/addon-knobs';
 
 import QuickReplies from '..';
 import { data } from './mockData';
-
-const WrappedComponent = props => (
-  <div style={{ padding: '25px' }}>
-    <h5>No limits:</h5>
-    <div style={{ margin: '25px' }}>
-      <QuickReplies {...props} onReply={action('onReply clicked')} />
-    </div>
-    <h5>Real life scenario:</h5>
-    <div style={{ margin: '25px', maxWidth: '450px', border: '1px solid black' }}>
-      <QuickReplies {...props} onReply={action('onReply clicked')} />
-    </div>
-  </div>
-);
 
 storiesOf('Message', module)
   .addDecorator(withKnobs)
@@ -65,8 +52,50 @@ storiesOf('Message', module)
       </div>
     </div>
   ))
-  .add('Cards message from the bot', () => WrappedComponent(data[2]))
-  .add('Quick reply message from the bot', () => WrappedComponent(data[3]))
+  .add('Cards message from the bot', () => (
+    <div style={{ padding: '25px' }}>
+      <h5>No limits:</h5>
+      <div style={{ margin: '25px' }}>
+        <QuickReplies
+          type={data[2].type}
+          author={data[2].author}
+          msg={object('Message', data[2].msg)}
+          onReply={action('onReply clicked')}
+        />
+      </div>
+      <h5>Real life scenario:</h5>
+      <div style={{ margin: '25px', maxWidth: '450px', border: '1px solid black' }}>
+        <QuickReplies
+          type={data[2].type}
+          author={data[2].author}
+          msg={object('Message', data[2].msg)}
+          onReply={action('onReply clicked')}
+        />
+      </div>
+    </div>
+  ))
+  .add('Quick reply message from the bot', () => (
+    <div style={{ padding: '25px' }}>
+      <h5>No limits:</h5>
+      <div style={{ margin: '25px' }}>
+        <QuickReplies
+          type={data[3].type}
+          author={data[3].author}
+          msg={object('Message', data[3].msg)}
+          onReply={action('onReply clicked')}
+        />
+      </div>
+      <h5>Real life scenario:</h5>
+      <div style={{ margin: '25px', maxWidth: '450px', border: '1px solid black' }}>
+        <QuickReplies
+          type={data[3].type}
+          author={data[3].author}
+          msg={object('Message', data[3].msg)}
+          onReply={action('onReply clicked')}
+        />
+      </div>
+    </div>
+  ))
   .add('Error message from the bot', () => (
     <div style={{ padding: '25px' }}>
       <h5>No limits:</h5>

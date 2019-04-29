@@ -12,9 +12,9 @@ storiesOf('Chatbot', module)
     <div style={{ padding: '25px' }}>
       <Chatbot
         show={boolean('Show', false)}
-        onToggleShow={action('onToggleShow clicked')}
-        onSubmitMessage={action('onToggleShow clicked')}
-        onReply={action('onToggleShow clicked')}
+        onToggleShow={action('onToggleShow actioned')}
+        onSubmitMessage={action('onSubmitMessage actioned')}
+        onReply={action('onReply actioned')}
       />
     </div>
   ))
@@ -22,9 +22,9 @@ storiesOf('Chatbot', module)
     <div style={{ padding: '25px' }}>
       <Chatbot
         show={boolean('Show', true)}
-        onToggleShow={action('onToggleShow clicked')}
-        onSubmitMessage={action('onToggleShow clicked')}
-        onReply={action('onToggleShow clicked')}
+        onToggleShow={action('onToggleShow actioned')}
+        onSubmitMessage={action('onSubmitMessage actioned')}
+        onReply={action('onReply actioned')}
       />
     </div>
   ))
@@ -32,9 +32,9 @@ storiesOf('Chatbot', module)
     <div style={{ padding: '25px' }}>
       <Chatbot
         show={boolean('Show', true)}
-        onToggleShow={action('onToggleShow clicked')}
-        onSubmitMessage={action('onToggleShow clicked')}
-        onReply={action('onToggleShow clicked')}
+        onToggleShow={action('onToggleShow actioned')}
+        onSubmitMessage={action('onSubmitMessage actioned')}
+        onReply={action('onReply actioned')}
         messages={object('Messages', textMessages)}
       />
     </div>
@@ -43,9 +43,9 @@ storiesOf('Chatbot', module)
     <div style={{ padding: '25px' }}>
       <Chatbot
         show={boolean('Show', true)}
-        onToggleShow={action('onToggleShow clicked')}
-        onSubmitMessage={action('onToggleShow clicked')}
-        onReply={action('onToggleShow clicked')}
+        onToggleShow={action('onToggleShow actioned')}
+        onSubmitMessage={action('onSubmitMessage actioned')}
+        onReply={action('onReply actioned')}
         messages={object('Messages', quickRepliesMessages)}
       />
     </div>
@@ -54,9 +54,9 @@ storiesOf('Chatbot', module)
     <div style={{ padding: '25px' }}>
       <Chatbot
         show={boolean('Show', true)}
-        onToggleShow={action('onToggleShow clicked')}
-        onSubmitMessage={action('onToggleShow clicked')}
-        onReply={action('onToggleShow clicked')}
+        onToggleShow={action('onToggleShow actioned')}
+        onSubmitMessage={action('onSubmitMessage actioned')}
+        onReply={action('onReply actioned')}
         messages={object('Messages', cardsMessages)}
       />
     </div>
