@@ -64,6 +64,7 @@
       "!src/setupProxy.js",
       "!src/utils/structjson.js",
       "!src/images/*.js",
+      "!src/constants/*.js",
       "!src/**/stories/*.{js,jsx}"
     ],
     "testPathIgnorePatterns": [
