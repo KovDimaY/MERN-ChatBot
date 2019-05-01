@@ -2,13 +2,15 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, text, array, date } from '@storybook/addon-knobs';
 
+import { paddingSize } from '../../../../constants/storybook';
+
 import ExperienceItem from '..';
 import { experiences } from '../../../Pages/Experience/constants';
 
 storiesOf('Common/ExperienceItem', module)
   .addDecorator(withKnobs)
   .add('Cornerjob', () => (
-    <div style={{ padding: '25px' }}>
+    <div style={{ padding: paddingSize }}>
       <ExperienceItem
         image={experiences[0].image}
         companyName={text('Company name', experiences[0].companyName)}
@@ -22,7 +24,7 @@ storiesOf('Common/ExperienceItem', module)
     </div>
   ))
   .add('Bigfinite Inc', () => (
-    <div style={{ padding: '25px' }}>
+    <div style={{ padding: paddingSize }}>
       <ExperienceItem
         image={experiences[1].image}
         companyName={text('Company name', experiences[1].companyName)}
@@ -37,7 +39,7 @@ storiesOf('Common/ExperienceItem', module)
     </div>
   ))
   .add('Enixan Entertainment', () => (
-    <div style={{ padding: '25px' }}>
+    <div style={{ padding: paddingSize }}>
       <ExperienceItem
         image={experiences[2].image}
         companyName={text('Company name', experiences[2].companyName)}
@@ -52,7 +54,7 @@ storiesOf('Common/ExperienceItem', module)
     </div>
   ))
   .add('MBA Strategy', () => (
-    <div style={{ padding: '25px' }}>
+    <div style={{ padding: paddingSize }}>
       <ExperienceItem
         image={experiences[3].image}
         companyName={text('Company name', experiences[3].companyName)}
@@ -67,7 +69,7 @@ storiesOf('Common/ExperienceItem', module)
     </div>
   ))
   .add('Icicle Seafoods', () => (
-    <div style={{ padding: '25px' }}>
+    <div style={{ padding: paddingSize }}>
       <ExperienceItem
         image={experiences[4].image}
         companyName={text('Company name', experiences[4].companyName)}

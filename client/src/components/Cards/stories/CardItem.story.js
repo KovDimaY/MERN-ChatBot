@@ -2,13 +2,15 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, text } from '@storybook/addon-knobs';
 
+import { paddingSize } from '../../../constants/storybook';
+
 import CardItem from '../CardItem';
 import { cardItemData as data } from './mockData';
 
 storiesOf('Cards/CardItem', module)
   .addDecorator(withKnobs)
   .add('No width limit', () => (
-    <div style={{ padding: '25px' }}>
+    <div style={{ padding: paddingSize }}>
       <CardItem
         title={text('Title', data.title)}
         image={text('Image', data.image)}
@@ -18,7 +20,7 @@ storiesOf('Cards/CardItem', module)
     </div>
   ))
   .add('Natural', () => (
-    <div style={{ padding: '25px', maxWidth: '350px' }}>
+    <div style={{ padding: paddingSize, maxWidth: '350px' }}>
       <CardItem
         title={text('Title', data.title)}
         image={text('Image', data.image)}

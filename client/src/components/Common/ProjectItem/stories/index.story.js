@@ -2,13 +2,15 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, text, array } from '@storybook/addon-knobs';
 
+import { paddingSize } from '../../../../constants/storybook';
+
 import ProjectItem from '..';
 import { projects } from '../../../Pages/Projects/constants';
 
 storiesOf('Common/ProjectItem', module)
   .addDecorator(withKnobs)
   .add('TripReviewer', () => (
-    <div style={{ padding: '25px' }}>
+    <div style={{ padding: paddingSize }}>
       <ProjectItem
         image={projects[0].image}
         name={text('Name', projects[0].name)}
@@ -19,7 +21,7 @@ storiesOf('Common/ProjectItem', module)
     </div>
   ))
   .add('SimpleChat', () => (
-    <div style={{ padding: '25px' }}>
+    <div style={{ padding: paddingSize }}>
       <ProjectItem
         image={projects[1].image}
         name={text('Name', projects[1].name)}
@@ -30,7 +32,7 @@ storiesOf('Common/ProjectItem', module)
     </div>
   ))
   .add('React-Highcharts Playground', () => (
-    <div style={{ padding: '25px' }}>
+    <div style={{ padding: paddingSize }}>
       <ProjectItem
         image={projects[2].image}
         name={text('Name', projects[2].name)}
@@ -41,7 +43,7 @@ storiesOf('Common/ProjectItem', module)
     </div>
   ))
   .add('Memory Game', () => (
-    <div style={{ padding: '25px' }}>
+    <div style={{ padding: paddingSize }}>
       <ProjectItem
         image={projects[3].image}
         name={text('Name', projects[3].name)}
@@ -52,7 +54,7 @@ storiesOf('Common/ProjectItem', module)
     </div>
   ))
   .add('KovDimaY', () => (
-    <div style={{ padding: '25px' }}>
+    <div style={{ padding: paddingSize }}>
       <ProjectItem
         image={projects[0].image}
         name={text('Name', projects[4].name)}

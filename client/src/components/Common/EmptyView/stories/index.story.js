@@ -2,17 +2,19 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, text } from '@storybook/addon-knobs';
 
+import { paddingSize } from '../../../../constants/storybook';
+
 import EmptyView from '..';
 
 storiesOf('Common/EmptyView', module)
   .addDecorator(withKnobs)
   .add('Default content', () => (
-    <div style={{ padding: '25px' }}>
+    <div style={{ padding: paddingSize }}>
       <EmptyView section={text('Section', 'Experience')} />
     </div>
   ))
   .add('Custom', () => (
-    <div style={{ padding: '25px' }}>
+    <div style={{ padding: paddingSize }}>
       <EmptyView>
         Any custom content can be added to the Empty view component
         <br />

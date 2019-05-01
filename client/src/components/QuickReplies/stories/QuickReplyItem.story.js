@@ -3,13 +3,15 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { withKnobs, text } from '@storybook/addon-knobs';
 
+import { paddingSize } from '../../../constants/storybook';
+
 import QuickReplyItem from '../QuickReplyItem';
 import { quickReplyItemData as data } from './mockData';
 
 storiesOf('QuickReplies/QuickReplyItem', module)
   .addDecorator(withKnobs)
   .add('Link', () => (
-    <div style={{ padding: '25px' }}>
+    <div style={{ padding: paddingSize }}>
       <QuickReplyItem
         type={text('Type', data[0].type)}
         text={text('Text', data[0].text)}
@@ -19,7 +21,7 @@ storiesOf('QuickReplies/QuickReplyItem', module)
     </div>
   ))
   .add('Text', () => (
-    <div style={{ padding: '25px' }}>
+    <div style={{ padding: paddingSize }}>
       <QuickReplyItem
         type={text('Type', data[1].type)}
         text={text('Text', data[1].text)}
@@ -29,7 +31,7 @@ storiesOf('QuickReplies/QuickReplyItem', module)
     </div>
   ))
   .add('Trigger', () => (
-    <div style={{ padding: '25px' }}>
+    <div style={{ padding: paddingSize }}>
       <QuickReplyItem
         type={text('Type', data[2].type)}
         text={text('Text', data[2].text)}
@@ -39,7 +41,7 @@ storiesOf('QuickReplies/QuickReplyItem', module)
     </div>
   ))
   .add('Disabled', () => (
-    <div style={{ padding: '25px' }}>
+    <div style={{ padding: paddingSize }}>
       <QuickReplyItem
         type={text('Type', data[3].type)}
         text={text('Text', data[3].text)}

@@ -2,13 +2,15 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, text, array, date } from '@storybook/addon-knobs';
 
+import { paddingSize } from '../../../../constants/storybook';
+
 import EducationItem from '..';
 import { educations } from '../../../Pages/Education/constants';
 
 storiesOf('Common/EducationItem', module)
   .addDecorator(withKnobs)
   .add('Master\'s degree', () => (
-    <div style={{ padding: '25px' }}>
+    <div style={{ padding: paddingSize }}>
       <EducationItem
         image={educations[0].image}
         schoolName={text('School name', educations[0].schoolName)}
@@ -23,7 +25,7 @@ storiesOf('Common/EducationItem', module)
     </div>
   ))
   .add('Bachelor\'s degree', () => (
-    <div style={{ padding: '25px' }}>
+    <div style={{ padding: paddingSize }}>
       <EducationItem
         image={educations[0].image}
         schoolName={text('School name', educations[1].schoolName)}
