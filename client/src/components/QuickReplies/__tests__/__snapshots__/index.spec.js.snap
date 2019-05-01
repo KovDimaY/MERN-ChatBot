@@ -8,14 +8,23 @@ exports[`components/<QuickReplies /> should render component with data 1`] = `
   <QuickReplyItem
     disabled={false}
     onClick={[Function]}
+    text="test-link"
+    type="link"
+    value="value-link"
   />
   <QuickReplyItem
     disabled={false}
     onClick={[Function]}
+    text="test-text"
+    type="text"
+    value="value-text"
   />
   <QuickReplyItem
     disabled={false}
     onClick={[Function]}
+    text="test-trigger"
+    type="trigger"
+    value="value-trigger"
   />
 </div>
 `;

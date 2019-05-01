@@ -80,11 +80,11 @@ export class Chatbot extends Component {
   }
 
   render() {
-    const { messages, show } = this.props;
+    const { messages, show, onToggleShow } = this.props;
 
     return (
       <div className={`container chatbot-container ${this.getContainerClass()}`}>
-        <div className="collapse-header blue" onClick={this.props.onToggleShow}>
+        <div className="collapse-header blue" onClick={onToggleShow}>
           <div className="nav-wrapper">
             <div className="brand-logo">Messages</div>
             <i className="large material-icons toggle-show-icon">{show ? 'arrow_drop_down' : 'arrow_drop_up'}</i>

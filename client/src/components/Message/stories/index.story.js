@@ -16,7 +16,7 @@ storiesOf('Message', module)
           type={data[0].type}
           author={data[0].author}
           msg={text('Message', data[0].msg)}
-          onReply={action('onReply clicked')}
+          onReply={action('onReply actioned')}
         />
       </div>
       <h5>Real life scenario:</h5>
@@ -25,7 +25,7 @@ storiesOf('Message', module)
           type={data[0].type}
           author={data[0].author}
           msg={text('Message', data[0].msg)}
-          onReply={action('onReply clicked')}
+          onReply={action('onReply actioned')}
         />
       </div>
     </div>
@@ -38,7 +38,7 @@ storiesOf('Message', module)
           type={data[1].type}
           author={data[1].author}
           msg={text('Message', data[1].msg)}
-          onReply={action('onReply clicked')}
+          onReply={action('onReply actioned')}
         />
       </div>
       <h5>Real life scenario:</h5>
@@ -47,7 +47,7 @@ storiesOf('Message', module)
           type={data[1].type}
           author={data[1].author}
           msg={text('Message', data[1].msg)}
-          onReply={action('onReply clicked')}
+          onReply={action('onReply actioned')}
         />
       </div>
     </div>
@@ -60,7 +60,7 @@ storiesOf('Message', module)
           type={data[2].type}
           author={data[2].author}
           msg={object('Message', data[2].msg)}
-          onReply={action('onReply clicked')}
+          onReply={action('onReply actioned')}
         />
       </div>
       <h5>Real life scenario:</h5>
@@ -69,7 +69,7 @@ storiesOf('Message', module)
           type={data[2].type}
           author={data[2].author}
           msg={object('Message', data[2].msg)}
-          onReply={action('onReply clicked')}
+          onReply={action('onReply actioned')}
         />
       </div>
     </div>
@@ -82,7 +82,7 @@ storiesOf('Message', module)
           type={data[3].type}
           author={data[3].author}
           msg={object('Message', data[3].msg)}
-          onReply={action('onReply clicked')}
+          onReply={action('onReply actioned')}
         />
       </div>
       <h5>Real life scenario:</h5>
@@ -91,7 +91,7 @@ storiesOf('Message', module)
           type={data[3].type}
           author={data[3].author}
           msg={object('Message', data[3].msg)}
-          onReply={action('onReply clicked')}
+          onReply={action('onReply actioned')}
         />
       </div>
     </div>
@@ -104,7 +104,7 @@ storiesOf('Message', module)
           type={data[4].type}
           author={data[4].author}
           msg={text('Message', data[4].msg)}
-          onReply={action('onReply clicked')}
+          onReply={action('onReply actioned')}
         />
       </div>
       <h5>Real life scenario:</h5>
@@ -113,7 +113,7 @@ storiesOf('Message', module)
           type={data[4].type}
           author={data[4].author}
           msg={text('Message', data[4].msg)}
-          onReply={action('onReply clicked')}
+          onReply={action('onReply actioned')}
         />
       </div>
     </div>

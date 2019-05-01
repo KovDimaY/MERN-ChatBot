@@ -11,9 +11,24 @@ exports[`components/<Cards /> should render component with data 1`] = `
       }
     }
   >
-    <CardItem />
-    <CardItem />
-    <CardItem />
+    <CardItem
+      description="description-1"
+      image="image-1"
+      link="link-1"
+      title="title-1"
+    />
+    <CardItem
+      description="description-2"
+      image="image-2"
+      link="link-2"
+      title="title-2"
+    />
+    <CardItem
+      description="description-3"
+      image="image-3"
+      link="link-3"
+      title="title-3"
+    />
   </div>
 </div>
 `;
