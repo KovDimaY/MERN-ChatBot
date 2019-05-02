@@ -4,10 +4,10 @@ import { withRouter } from 'react-router-dom';
 import Cookies from 'universal-cookie';
 import axios from 'axios';
 import uuid from 'uuid/v4';
-import structjson from '../../utils/structjson';
+import structjson from 'utils/structjson';
 
-import ChatBot from '../../components/Chatbot';
-import { VALID_ROUTES } from '../../constants/routes';
+import ChatBot from 'components/Chatbot';
+import { VALID_ROUTES } from 'constants/routes';
 
 const cookies = new Cookies();
 

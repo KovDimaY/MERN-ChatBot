@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { withKnobs, boolean, object } from '@storybook/addon-knobs';
 
-import { paddingSize } from '../../../constants/storybook';
+import { paddingSize } from 'constants/storybook';
 
 import { Chatbot } from '..';
 import { textMessages, quickRepliesMessages, cardsMessages } from './mockData';

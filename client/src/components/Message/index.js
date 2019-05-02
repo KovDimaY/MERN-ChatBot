@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { botAvatar, userAvatar } from 'images';
+
 import Cards from '../Cards';
 import QuickReplies from '../QuickReplies';
-
-import { botAvatar, userAvatar } from '../../images';
 
 import './styles.css';
 

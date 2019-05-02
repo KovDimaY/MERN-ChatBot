@@ -5,7 +5,7 @@ import { mount } from 'enzyme';
 import Disclaimer from '../../Disclaimer';
 
 jest.mock('react-router-dom', () => ({ Link: 'Link' }));
-jest.mock('../../../Common/DotsAnimation', () => 'Animation');
+jest.mock('components/Common/DotsAnimation', () => 'Animation');
 
 const mockComponent = props => (
   <Disclaimer {...props} />

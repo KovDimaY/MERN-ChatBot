@@ -9,7 +9,7 @@ jest.mock('../../Pages/Education', () => 'Education');
 jest.mock('../../Pages/Experience', () => 'Experience');
 jest.mock('../../Pages/Projects', () => 'Projects');
 jest.mock('../../Pages/Feedback', () => 'Feedback');
-jest.mock('../../../hoc/layout', () => 'Layout');
+jest.mock('hoc/layout', () => 'Layout');
 jest.mock('react-router-dom', () => ({
   Switch: 'Switch',
   Route: 'Route',

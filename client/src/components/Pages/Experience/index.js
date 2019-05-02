@@ -2,9 +2,7 @@ import React from 'react';
 
 import ExperienceItem from '../../Common/ExperienceItem';
 
-import {
-  experiences,
-} from './constants';
+import { experiences } from './constants';
 
 import './styles.css';
 

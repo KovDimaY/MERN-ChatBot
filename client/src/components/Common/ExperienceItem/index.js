@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 
-import './styles.css';
+import { getDuration } from 'utils/common';
 
-import { getDuration } from '../../../utils/common';
+import './styles.css';
 
 const ExperienceItem = ({
   image, companyName, companyLink,

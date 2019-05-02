@@ -2,10 +2,11 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, text, array, date } from '@storybook/addon-knobs';
 
-import { paddingSize } from '../../../../constants/storybook';
+import { paddingSize } from 'constants/storybook';
+
+import { educations } from 'components/Pages/Education/constants';
 
 import EducationItem from '..';
-import { educations } from '../../../Pages/Education/constants';
 
 storiesOf('Common/EducationItem', module)
   .addDecorator(withKnobs)

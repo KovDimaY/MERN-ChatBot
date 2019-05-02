@@ -6,7 +6,7 @@ import {
   hobbyProgramming,
   hobbyRubik,
   hobbySports,
-} from '../../../images';
+} from 'images';
 
 export const emptyViewDescription = [
   'Welcome to my new personal project!!!',

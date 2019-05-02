@@ -3,10 +3,7 @@ import React from 'react';
 import EducationItem from '../../Common/EducationItem';
 import CertificationItem from '../../Common/CertificationItem';
 
-import {
-  educations,
-  certificates,
-} from './constants';
+import { educations, certificates } from './constants';
 
 import './styles.css';
 

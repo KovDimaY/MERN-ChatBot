@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, object } from '@storybook/addon-knobs';
 
-import { marginSize } from '../../../constants/storybook';
+import { marginSize } from 'constants/storybook';
 
 import Cards from '..';
 import { cardsData as data } from './mockData';

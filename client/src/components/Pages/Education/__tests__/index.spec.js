@@ -3,8 +3,8 @@ import { create } from 'react-test-renderer';
 
 import Education from '../../Education';
 
-jest.mock('../../../Common/EducationItem', () => 'EducationItem');
-jest.mock('../../../Common/CertificationItem', () => 'CertificationItem');
+jest.mock('components/Common/EducationItem', () => 'EducationItem');
+jest.mock('components/Common/CertificationItem', () => 'CertificationItem');
 
 const mockComponent = props => (
   <Education {...props} />

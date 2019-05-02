@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Sidenav } from 'materialize-css';
 
-import './styles.css';
-import { background, userAvatar } from '../../images';
-import { HOME } from '../../constants/routes';
+import { background, userAvatar } from 'images';
+import { HOME } from 'constants/routes';
 
 import NavElements from './nav-elements';
+
+import './styles.css';
 
 class Header extends Component {
   componentDidMount() {

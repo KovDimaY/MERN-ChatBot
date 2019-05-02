@@ -7,8 +7,8 @@ import { ChatbotContainer } from '../../ChatBot';
 
 jest.mock('uuid/v4', () => () => 'uuid()');
 jest.mock('axios', () => ({ post: jest.fn() }));
-jest.mock('../../../components/Chatbot', () => 'ChatBot');
-jest.mock('../../../utils/structjson', () => ({
+jest.mock('components/Chatbot', () => 'ChatBot');
+jest.mock('utils/structjson', () => ({
   structProtoToJson: data => data,
 }));
 

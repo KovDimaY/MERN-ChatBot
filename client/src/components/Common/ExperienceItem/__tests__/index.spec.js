@@ -3,7 +3,7 @@ import { create } from 'react-test-renderer';
 
 import ExperienceItem from '../../ExperienceItem';
 
-jest.mock('../../../../utils/common', () => ({
+jest.mock('utils/common', () => ({
   getDuration: jest.fn(() => 'getDuration mocked result'),
 }));
 
