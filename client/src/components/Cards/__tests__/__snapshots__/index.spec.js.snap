@@ -12,25 +12,22 @@ exports[`components/<Cards /> should render component with data 1`] = `
     }
   >
     <CardItem
-      data={
-        Object {
-          "id": "id-1",
-        }
-      }
+      description="description-1"
+      image="image-1"
+      link="link-1"
+      title="title-1"
     />
     <CardItem
-      data={
-        Object {
-          "id": "id-2",
-        }
-      }
+      description="description-2"
+      image="image-2"
+      link="link-2"
+      title="title-2"
     />
     <CardItem
-      data={
-        Object {
-          "id": "id-3c",
-        }
-      }
+      description="description-3"
+      image="image-3"
+      link="link-3"
+      title="title-3"
     />
   </div>
 </div>

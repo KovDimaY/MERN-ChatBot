@@ -7,7 +7,7 @@ class DotsAnimation extends Component {
   constructor(props) {
     super(props);
 
-    this.dotsCount = this.getOptimalNumberOfDots(window.innerWidth);
+    this.dotsCount = this.getOptimalNumberOfDots(props.width);
     this.radius = 3;
     this.maxSpeed = 50;
     this.minMouseDistance = 150;

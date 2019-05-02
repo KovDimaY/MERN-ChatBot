@@ -1,16 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const CardItem = ({ data }) => {
-  const {
-    title, image, description, link,
-  } = data;
-
+const CardItem = ({
+  title, image, description, link,
+}) => {
   const renderLink = () => {
     if (link) {
       return (
         <div className="card-action">
-          <a href={link}>View</a>
+          <a href={link} target="_blank" rel="noopener noreferrer">View</a>
         </div>
       );
     }
@@ -34,7 +32,10 @@ const CardItem = ({ data }) => {
 };
 
 CardItem.propTypes = {
-  data: PropTypes.object.isRequired,
+  title: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired,
 };
 
 export default CardItem;

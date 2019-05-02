@@ -11,11 +11,9 @@ const mockComponent = props => (
 describe('components/QuickReplies/<QuickReplyItem />', () => {
   it('should render component with type link', () => {
     const props = {
-      data: {
-        type: 'link',
-        text: 'test-link',
-        value: 'value-link',
-      },
+      type: 'link',
+      text: 'test-link',
+      value: 'value-link',
     };
     const tree = create(mockComponent(props)).toJSON();
 
@@ -24,11 +22,9 @@ describe('components/QuickReplies/<QuickReplyItem />', () => {
 
   it('should render component with type text', () => {
     const props = {
-      data: {
-        type: 'text',
-        text: 'test-text',
-        value: 'value-text',
-      },
+      type: 'text',
+      text: 'test-text',
+      value: 'value-text',
     };
     const tree = create(mockComponent(props)).toJSON();
 
@@ -37,11 +33,9 @@ describe('components/QuickReplies/<QuickReplyItem />', () => {
 
   it('should render component with type trigger', () => {
     const props = {
-      data: {
-        type: 'trigger',
-        text: 'test-trigger',
-        value: 'value-trigger',
-      },
+      type: 'trigger',
+      text: 'test-trigger',
+      value: 'value-trigger',
     };
     const tree = create(mockComponent(props)).toJSON();
 
@@ -50,11 +44,9 @@ describe('components/QuickReplies/<QuickReplyItem />', () => {
 
   it('should render component with default type', () => {
     const props = {
-      data: {
-        type: 'does-not-exist',
-        text: 'test-does-not-exist',
-        value: 'value-does-not-exist',
-      },
+      type: 'does-not-exist',
+      text: 'test-does-not-exist',
+      value: 'value-does-not-exist',
     };
     const tree = create(mockComponent(props)).toJSON();
 
@@ -65,10 +57,7 @@ describe('components/QuickReplies/<QuickReplyItem />', () => {
     const onClick = jest.fn();
     const type = 'type';
     const value = 'value';
-    const props = {
-      data: { type, value },
-      onClick,
-    };
+    const props = { type, value, onClick };
 
     const instance = mount(mockComponent(props)).instance();
 
@@ -81,10 +70,7 @@ describe('components/QuickReplies/<QuickReplyItem />', () => {
     const onClick = jest.fn();
     const type = 'type';
     const value = 'value';
-    const props = {
-      data: { type, value },
-      onClick: null,
-    };
+    const props = { type, value, onClick: null };
 
     const instance = mount(mockComponent(props)).instance();
 

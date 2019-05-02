@@ -1,0 +1,15 @@
+@font-face {
+  font-family: Android;
+  src: url(./fonts/AndroidAssassin.ttf);
+  font-style: normal;
+}
+@font-face {
+  font-family: Pixel;
+  src: url(./fonts/AtlantisInternational.ttf);
+  font-style: normal;
+}
+@font-face {
+  font-family: Handwriting;
+  src: url(./fonts/TOMATOES.ttf);
+  font-style: normal;
+}

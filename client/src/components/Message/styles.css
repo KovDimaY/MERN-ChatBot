@@ -5,6 +5,13 @@
 .message-container .small-padding {
   padding: 15px;
 }
+.message-container .avatar-wrapper {
+  text-align: center;
+}
+.message-container .user-avatar {
+  width: 100%;
+  max-width: 50px;
+}
 .message-container .user-message {
   text-align: right;
   font-family: Handwriting;

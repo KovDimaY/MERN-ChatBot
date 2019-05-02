@@ -14,11 +14,11 @@ exports[`components/<Message /> should render component of type payload (card) f
         className="row valign-wrapper no-margin"
       >
         <div
-          className="col s2"
+          className="col s2 avatar-wrapper"
         >
           <img
             alt="avatar"
-            className="circle responsive-img"
+            className="circle responsive-img user-avatar"
             src="test-file-stub"
           />
         </div>
@@ -53,11 +53,11 @@ exports[`components/<Message /> should render component of type payload (quick-r
         className="row valign-wrapper no-margin"
       >
         <div
-          className="col s2"
+          className="col s2 avatar-wrapper"
         >
           <img
             alt="avatar"
-            className="circle responsive-img"
+            className="circle responsive-img user-avatar"
             src="test-file-stub"
           />
         </div>
@@ -92,11 +92,11 @@ exports[`components/<Message /> should render component of type payload (wrong) 
         className="row valign-wrapper no-margin"
       >
         <div
-          className="col s2"
+          className="col s2 avatar-wrapper"
         >
           <img
             alt="avatar"
-            className="circle responsive-img"
+            className="circle responsive-img user-avatar"
             src="test-file-stub"
           />
         </div>
@@ -138,11 +138,11 @@ exports[`components/<Message /> should render component of type text from user 1
           </span>
         </div>
         <div
-          className="col s2"
+          className="col s2 avatar-wrapper"
         >
           <img
             alt="avatar"
-            className="circle responsive-img"
+            className="circle responsive-img user-avatar"
             src="test-file-stub"
           />
         </div>
@@ -175,11 +175,11 @@ exports[`components/<Message /> should render component of wrong type from user 
           </span>
         </div>
         <div
-          className="col s2"
+          className="col s2 avatar-wrapper"
         >
           <img
             alt="avatar"
-            className="circle responsive-img"
+            className="circle responsive-img user-avatar"
             src="test-file-stub"
           />
         </div>
