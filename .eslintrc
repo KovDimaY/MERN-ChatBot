@@ -32,5 +32,12 @@
         "components": [ "Link" ],
         "specialLink": [ "to" ]
     }]
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "moduleDirectory": ["node_modules", "src"]
+      }
+    }
   }
 }

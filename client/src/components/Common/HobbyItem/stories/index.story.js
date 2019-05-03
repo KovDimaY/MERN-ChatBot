@@ -2,10 +2,10 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, text } from '@storybook/addon-knobs';
 
-import { paddingSize } from '../../../../constants/storybook';
+import { paddingSize } from 'constants/storybook';
+import { hobbies } from 'components/Pages/Home/constants';
 
 import HobbyItem from '..';
-import { hobbies } from '../../../Pages/Home/constants';
 
 storiesOf('Common/HobbyItem', module)
   .addDecorator(withKnobs)

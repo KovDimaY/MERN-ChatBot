@@ -2,10 +2,10 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, text, array } from '@storybook/addon-knobs';
 
-import { paddingSize } from '../../../../constants/storybook';
+import { paddingSize } from 'constants/storybook';
+import { projects } from 'components/Pages/Projects/constants';
 
 import ProjectItem from '..';
-import { projects } from '../../../Pages/Projects/constants';
 
 storiesOf('Common/ProjectItem', module)
   .addDecorator(withKnobs)

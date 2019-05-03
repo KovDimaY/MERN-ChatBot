@@ -2,10 +2,10 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, text } from '@storybook/addon-knobs';
 
-import { paddingSize } from '../../../../constants/storybook';
+import { paddingSize } from 'constants/storybook';
+import { UC_B6BARC8V, C_11467555, GH93LKLL72BR } from 'images';
 
 import CertificationItem from '..';
-import { UC_B6BARC8V, C_11467555, GH93LKLL72BR } from '../../../../images';
 
 storiesOf('Common/CertificationItem', module)
   .addDecorator(withKnobs)

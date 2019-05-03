@@ -5,7 +5,7 @@ import { mount } from 'enzyme';
 import Feedback from '../../Feedback';
 
 jest.mock('react-router-dom', () => ({ Link: 'Link' }));
-jest.mock('../../../../utils/common', () => ({
+jest.mock('utils/common', () => ({
   getRandomInteger: jest.fn(() => 2),
 }));
 

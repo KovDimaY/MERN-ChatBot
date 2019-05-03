@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import { marginSize, paddingSize } from '../../../constants/storybook';
+import { marginSize, paddingSize } from 'constants/storybook';
 
 const renderLink = (url, text) => (
   <a href={url} target="_blank" rel="noopener noreferrer">

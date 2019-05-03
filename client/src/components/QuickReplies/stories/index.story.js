@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { withKnobs, object } from '@storybook/addon-knobs';
 
-import { marginSize, paddingSize } from '../../../constants/storybook';
+import { marginSize, paddingSize } from 'constants/storybook';
 
 import QuickReplies from '..';
 import { quickRepliesData as data } from './mockData';

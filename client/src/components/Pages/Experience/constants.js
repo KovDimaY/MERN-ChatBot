@@ -4,7 +4,7 @@ import {
   experienceEnixan,
   experienceBigfinite,
   experienceCornerjob,
-} from '../../../images';
+} from 'images';
 
 export const experiences = [
   {

@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import debounce from 'lodash.debounce';
 import { Link } from 'react-router-dom';
 
+import { HOME } from 'constants/routes';
+
 import Animation from '../../Common/DotsAnimation';
-import { HOME } from '../../../constants/routes';
 
 import './styles.css';
 

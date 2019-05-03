@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { withKnobs, text } from '@storybook/addon-knobs';
 
-import { paddingSize } from '../../../constants/storybook';
+import { paddingSize } from 'constants/storybook';
 
 import QuickReplyItem from '../QuickReplyItem';
 import { quickReplyItemData as data } from './mockData';

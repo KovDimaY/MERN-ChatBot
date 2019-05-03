@@ -5,7 +5,9 @@ import {
   INIT, HOME, EXPERIENCE,
   EDUCATION, PROJECTS,
   FEEDBACK,
-} from '../../constants/routes';
+} from 'constants/routes';
+
+import Layout from 'hoc/layout';
 
 import Disclaimer from '../Pages/Disclaimer';
 import Home from '../Pages/Home';
@@ -13,8 +15,6 @@ import Education from '../Pages/Education';
 import Experience from '../Pages/Experience';
 import Projects from '../Pages/Projects';
 import Feedback from '../Pages/Feedback';
-
-import Layout from '../../hoc/layout';
 
 const App = () => (
   <BrowserRouter>

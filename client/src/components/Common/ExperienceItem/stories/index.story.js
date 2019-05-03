@@ -2,10 +2,11 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, text, array, date } from '@storybook/addon-knobs';
 
-import { paddingSize } from '../../../../constants/storybook';
+import { paddingSize } from 'constants/storybook';
+
+import { experiences } from 'components/Pages/Experience/constants';
 
 import ExperienceItem from '..';
-import { experiences } from '../../../Pages/Experience/constants';
 
 storiesOf('Common/ExperienceItem', module)
   .addDecorator(withKnobs)
