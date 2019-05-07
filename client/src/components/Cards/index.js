@@ -5,6 +5,9 @@ import CardItem from './CardItem';
 
 import './styles.css';
 
+/**
+ * General component description in JSDoc format. Markdown is **supported**.
+ */
 const Cards = ({ data }) => {
   if (data && data.value && data.value.length) {
     return (
@@ -29,6 +32,7 @@ const Cards = ({ data }) => {
 };
 
 Cards.propTypes = {
+  /** Description of prop "data". */
   data: PropTypes.object.isRequired,
 };
 
