@@ -11,7 +11,9 @@
     "test:update": "npm run test-jest -- --u",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "styleguide": "styleguidist server --open",
+    "styleguide:build": "styleguidist build"
   },
   "dependencies": {
     "axios": "0.18.0",

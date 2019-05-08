@@ -23,7 +23,7 @@ function getSections() {
 
 module.exports = {
   title: 'MERN-Chatbot Components',
-  serverPort: 4321,
+  serverPort: 4000,
   editorConfig: {
     theme: 'dracula',
   },
@@ -31,6 +31,7 @@ module.exports = {
     resolve('node_modules/materialize-css/dist/css/materialize.min.css'),
     resolve('public/css/styles.css'),
     resolve('public/css/icons.css'),
+    resolve('styleguide/reset-styles.css'),
   ],
   sections: getSections(),
 };
