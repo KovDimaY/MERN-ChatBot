@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import QuickReplyItem from './QuickReplyItem';
-
-import './styles.css';
+import QuickReplyItem from '../Common/QuickReplyItem';
 
 class QuickReplies extends Component {
   state = {

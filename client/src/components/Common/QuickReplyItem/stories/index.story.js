@@ -5,10 +5,10 @@ import { withKnobs, text } from '@storybook/addon-knobs';
 
 import { paddingSize } from 'constants/storybook';
 
-import QuickReplyItem from '../QuickReplyItem';
+import QuickReplyItem from '../../QuickReplyItem';
 import { quickReplyItemData as data } from './mockData';
 
-storiesOf('QuickReplies/QuickReplyItem', module)
+storiesOf('Common/QuickReplyItem', module)
   .addDecorator(withKnobs)
   .add('Link', () => (
     <div style={{ padding: paddingSize }}>

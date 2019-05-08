@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+import './styles.css';
+
 class QuickReplyItem extends Component {
   handleClick = () => {
     const { onClick, type, value } = this.props;

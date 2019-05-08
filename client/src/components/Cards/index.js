@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import CardItem from './CardItem';
+import CardItem from '../Common/CardItem';
 
 import './styles.css';
 

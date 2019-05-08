@@ -2,13 +2,13 @@ import React from 'react';
 import { create } from 'react-test-renderer';
 import { mount } from 'enzyme';
 
-import QuickReply from '../QuickReplyItem';
+import QuickReply from '../../QuickReplyItem';
 
 const mockComponent = props => (
   <QuickReply {...props} />
 );
 
-describe('components/QuickReplies/<QuickReplyItem />', () => {
+describe('components/Common/<QuickReplyItem />', () => {
   it('should render component with type link', () => {
     const props = {
       type: 'link',

@@ -3,7 +3,7 @@ import { create } from 'react-test-renderer';
 
 import Cards from '../../Cards';
 
-jest.mock('../../Cards/CardItem', () => 'CardItem');
+jest.mock('../../Common/CardItem', () => 'CardItem');
 
 const mockComponent = props => (
   <Cards {...props} />
