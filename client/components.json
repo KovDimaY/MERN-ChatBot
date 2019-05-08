@@ -1,10 +1,28 @@
 [
   {
-    "name": "Test",
+    "name": "Common",
+    "subfolders": "/Common",
     "components": [
+      "LanguageItem",
+      "QuickReplyItem",
+      "CertificationItem",
+      "HobbyItem",
+      "EducationItem",
+      "ExperienceItem",
+      "ProjectItem",
+      "CardItem",
+      "DotsAnimation",
+      "EmptyView"
+    ]
+  },
+  {
+    "name": "Global",
+    "components": [
+      "Message",
       "Cards",
+      "QuickReplies",
       "Chatbot",
-      "Message"
+      "Header"
     ]
   }
 ]

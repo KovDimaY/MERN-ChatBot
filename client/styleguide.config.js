@@ -7,13 +7,12 @@ function resolve(...paths) {
 }
 
 function getSections() {
-  return schema.map(({ name, content, components }) => ({
+  return schema.map(({ name, subfolders, components }) => ({
     name,
-    content: content ? resolve('docs', `${content}.md`) : null,
     components() {
       return components.map(componentName => (
         resolve(
-          'src/components',
+          `src/components${subfolders || ''}`,
           componentName,
           'index.js',
         )));
