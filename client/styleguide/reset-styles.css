@@ -1,4 +1,4 @@
-.rsg--root-53 nav {
+.rsg--sidebar-4 nav {
   color: inherit !important;
   background-color: rgba(0, 0, 0, 0) !important;
   width: auto !important;
@@ -7,13 +7,13 @@
   box-shadow: none !important;
 }
 
-.rsg--list-56 {
+.rsg--list-59 {
   margin: 0 !important;
   padding-left: 16px !important;
 }
 
 .rsg--tabButtons-26 button:focus,
-.rsg--controls-47 button:focus,
-.rsg--button-50:focus  {
+.rsg--controls-41 button:focus,
+.rsg--button-33:focus  {
   background-color: unset !important;
 }

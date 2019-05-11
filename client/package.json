@@ -13,7 +13,7 @@
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public",
     "styleguide": "styleguidist server --open",
-    "styleguide:build": "styleguidist build"
+    "build-styleguide": "styleguidist build"
   },
   "dependencies": {
     "axios": "0.18.0",
