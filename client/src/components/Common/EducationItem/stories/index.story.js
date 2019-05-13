@@ -28,7 +28,7 @@ storiesOf('Common/EducationItem', module)
   .add('Bachelor\'s degree', () => (
     <div style={{ padding: paddingSize }}>
       <EducationItem
-        image={educations[0].image}
+        image={educations[1].image}
         schoolName={text('School name', educations[1].schoolName)}
         schoolLink={text('School link', educations[1].schoolLink)}
         degree={text('Degree', educations[1].degree)}
