@@ -31,6 +31,7 @@ const { quickReplyItemData : data } = require('./stories/mockData');
     text={data[3].text}
     value={data[3].value}
     onClick={() => {}}
+    disabled
   />
 </>
 ```

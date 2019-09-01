@@ -3,6 +3,10 @@ import PropTypes from 'prop-types';
 
 import './styles.css';
 
+/**
+ * This component is just a card with the information about one of my hobbies.
+ * It has a title (name of the hobby), image of the hobby and the short desctiption.
+ */
 const HobbyItem = ({ image, name, description }) => (
   <div className="hobby-container row valign-wrapper">
     <div className="col s12 m3 visual">
@@ -16,8 +20,11 @@ const HobbyItem = ({ image, name, description }) => (
 );
 
 HobbyItem.propTypes = {
+  /** The relative or absolute path to the image that represents a hobby. */
   image: PropTypes.string.isRequired,
+  /** A title of the card, short name of the hobby (normally one word). */
   name: PropTypes.string.isRequired,
+  /** A short description of the hobby. Normally a paragraph with 3-5 sentences of text. */
   description: PropTypes.string.isRequired,
 };
 

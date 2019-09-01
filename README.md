@@ -132,3 +132,14 @@ npm run storybook
 ```
 npm run build-storybook
 ```
+
+### Styleguidist:
+##### To run development server for styleguidist:
+```
+npm run styleguide
+```
+
+##### To build it for deployment:
+```
+npm run build-styleguide
+```

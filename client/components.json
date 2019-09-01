@@ -20,9 +20,7 @@
     "components": [
       "Message",
       "Cards",
-      "QuickReplies",
-      "Chatbot",
-      "Header"
+      "QuickReplies"
     ]
   }
 ]
