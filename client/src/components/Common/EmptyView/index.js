@@ -3,6 +3,11 @@ import PropTypes from 'prop-types';
 
 import './styles.css';
 
+/**
+ * This component was created to be shown when the page is not yet discovered at all (0%).
+ * When at least something is discovered on the page it is going to be changed to
+ * another view where some information is opened and some is hidden.
+ */
 const EmptyView = ({ section, children }) => {
   const defaultDescription = (
     <React.Fragment>
@@ -36,7 +41,9 @@ const EmptyView = ({ section, children }) => {
 };
 
 EmptyView.propTypes = {
+  /** Name of the section to be added at the title of the page. */
   section: PropTypes.string.isRequired,
+  /** Custom content of the page to overwrite the default one.  */
   children: PropTypes.node,
 };
 

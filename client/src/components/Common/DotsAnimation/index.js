@@ -3,6 +3,16 @@ import PropTypes from 'prop-types';
 
 import Canvas from '../Canvas';
 
+/**
+ * This component is used as a background on the initial page of the project.
+ * It is resize sensitive so when the user resizes the window,
+ * points recalculate their positions (using props as params).
+ * Also, to create more interactivity, it was added the mousemove listener
+ * that is working as a one more dot to connect with the other ones.
+ * Due to the way how styleguide is implemented, the mouse position is not detected
+ * correctly but with the offset of the margin of the container.
+ * In the normal conditions it is working correctly.
+ */
 class DotsAnimation extends Component {
   constructor(props) {
     super(props);
@@ -136,7 +146,9 @@ class DotsAnimation extends Component {
 }
 
 DotsAnimation.propTypes = {
+  /** Width in pixels of the container with the dots animation. */
   width: PropTypes.number.isRequired,
+  /** Height in pixels of the container with the dots animation. */
   height: PropTypes.number.isRequired,
 };
 
