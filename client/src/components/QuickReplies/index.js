@@ -3,6 +3,12 @@ import PropTypes from 'prop-types';
 
 import QuickReplyItem from '../Common/QuickReplyItem';
 
+/**
+ * This component is used as one of the types of messages of the Bot.
+ * It is a set of multiple QuickReplyItems joined together in one component.
+ * The main goal of the component is to combine multiple quick replies into one
+ * portion and handle the reply of the user.
+ */
 class QuickReplies extends Component {
   state = {
     answered: false,
@@ -42,7 +48,11 @@ class QuickReplies extends Component {
 }
 
 QuickReplies.propTypes = {
+  /** All the information about quick replies for the user.
+   * It contains an array of all the options for the user to chose.
+   */
   data: PropTypes.object.isRequired,
+  /** The function to be called when the user clicks on one of the replies. */
   onReply: PropTypes.func.isRequired,
 };
 

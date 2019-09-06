@@ -6,7 +6,10 @@ import CardItem from '../Common/CardItem';
 import './styles.css';
 
 /**
- * General component description in JSDoc format. Markdown is **supported**.
+ * This component is used as one of the types of messages of the Bot.
+ * It is a set of multiple CardsItems joined together in one component.
+ * Every card has a nice layout with an image, title and description and
+ * it can represent a list of some similar items (projects, experiences, etc).
  */
 const Cards = ({ data }) => {
   if (data && data.value && data.value.length) {
@@ -32,7 +35,7 @@ const Cards = ({ data }) => {
 };
 
 Cards.propTypes = {
-  /** Description of prop "data". */
+  /** This prop contains all the data about the card, including image, title and description. */
   data: PropTypes.object.isRequired,
 };
 
