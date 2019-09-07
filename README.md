@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.com/KovDimaY/MERN-ChatBot.svg?branch=master)](https://travis-ci.com/KovDimaY/MERN-ChatBot)
 [![Coverage Status](https://coveralls.io/repos/github/KovDimaY/MERN-ChatBot/badge.svg?branch=master)](https://coveralls.io/github/KovDimaY/MERN-ChatBot?branch=master)
-[![GitHub version](https://img.shields.io/badge/version-1.2.0-yellow.svg)](https://github.com/KovDimaY/MERN-ChatBot/releases)
+[![GitHub version](https://img.shields.io/badge/version-1.2.1-yellow.svg)](https://github.com/KovDimaY/MERN-ChatBot/releases)
 [![GitHub demo](https://img.shields.io/badge/demo-available-e60000.svg)](https://mern-chatbot.herokuapp.com/)
 [![GitHub docs](https://img.shields.io/badge/docs-storybook-00ccff.svg)](https://mern-chatbot.herokuapp.com/docs/storybook)
 [![GitHub docs](https://img.shields.io/badge/docs-styleguide-e600e6.svg)](https://mern-chatbot.herokuapp.com/docs/styleguide)
@@ -10,7 +10,7 @@
 
 This is a small project to practice a MERN stack and to learn how to make a chatbot with the DialogFlow from Google Cloud Platform. It is still under development so more features are coming soon! Stay tuned! :D
 
-The last deployed production version is [**MERN-ChatBot v1.2.0**](https://github.com/KovDimaY/MERN-ChatBot/releases). 
+The last deployed production version is [**MERN-ChatBot v1.2.1**](https://github.com/KovDimaY/MERN-ChatBot/releases). 
 <br>
 <br>
 
