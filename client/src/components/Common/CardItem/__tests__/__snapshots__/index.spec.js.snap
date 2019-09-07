@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components/Cards/<CardItem /> should render component 1`] = `
+exports[`components/Common/<CardItem /> should render component 1`] = `
 <div
   className="card-containter"
 >
@@ -42,7 +42,7 @@ exports[`components/Cards/<CardItem /> should render component 1`] = `
 </div>
 `;
 
-exports[`components/Cards/<CardItem /> should render component without link 1`] = `
+exports[`components/Common/<CardItem /> should render component without link 1`] = `
 <div
   className="card-containter"
 >

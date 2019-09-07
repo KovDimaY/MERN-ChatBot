@@ -4,10 +4,10 @@ import { withKnobs, text } from '@storybook/addon-knobs';
 
 import { paddingSize } from 'constants/storybook';
 
-import CardItem from '../CardItem';
+import CardItem from '../../CardItem';
 import { cardItemData as data } from './mockData';
 
-storiesOf('Cards/CardItem', module)
+storiesOf('Common/CardItem', module)
   .addDecorator(withKnobs)
   .add('No width limit', () => (
     <div style={{ padding: paddingSize }}>

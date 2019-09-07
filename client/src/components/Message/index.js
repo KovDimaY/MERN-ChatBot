@@ -8,6 +8,12 @@ import QuickReplies from '../QuickReplies';
 
 import './styles.css';
 
+/**
+ * This component contains all the logic of how messages are rendered and interacted.
+ * Depending on the type, it shows the text, cards or quick replies messages.
+ * The main task of this component is to figure out what is the type of the message
+ * and how to render it, passing all the params to its children.
+ */
 const Message = (props) => {
   const {
     author, msg, type, onReply,
@@ -65,9 +71,17 @@ const Message = (props) => {
 };
 
 Message.propTypes = {
+  /** This props indicates who is the author of the message. Can be "user" or "bot". */
   author: PropTypes.string.isRequired,
+  /** Indicats a type of the message.
+   * At the moment only two types are implemented: "text" and "payload".
+   */
   type: PropTypes.string.isRequired,
+  /** The function to be called after the reply of the user
+   * (only for the "quick-replies" messages).
+   */
   onReply: PropTypes.func.isRequired,
+  /** The content of the message. Can be just a text or an object with all the info required. */
   msg: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.object,

@@ -3,6 +3,14 @@ import PropTypes from 'prop-types';
 
 import './styles.css';
 
+/**
+ * This component is just a card with information about my personal project.
+ * Normally, it has image of the project, the name, description of the project,
+ * technologies used in the project and the link to see the project
+ * (GitHub or the deployed version in production).
+ * User can be redirected to the project by both clicking the image or clicking the link
+ * under the title of the card.
+ */
 const ProjectItem = ({
   image, name, url,
   description, tools,
@@ -41,10 +49,15 @@ const ProjectItem = ({
 };
 
 ProjectItem.propTypes = {
+  /** The relative or absolute path to the image that represents the project. */
   image: PropTypes.string.isRequired,
+  /** The title of the card which is the name of the project. */
   name: PropTypes.string.isRequired,
+  /** The link to the Github or the production website of the project. */
   url: PropTypes.string.isRequired,
+  /** A short description of the project. Normally around 5 sentences of text. */
   description: PropTypes.string.isRequired,
+  /** An array of strings. Each element is a tool that I was using at my work. */
   tools: PropTypes.array,
 };
 

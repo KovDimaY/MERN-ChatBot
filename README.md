@@ -3,8 +3,9 @@
 [![Build Status](https://travis-ci.com/KovDimaY/MERN-ChatBot.svg?branch=master)](https://travis-ci.com/KovDimaY/MERN-ChatBot)
 [![Coverage Status](https://coveralls.io/repos/github/KovDimaY/MERN-ChatBot/badge.svg?branch=master)](https://coveralls.io/github/KovDimaY/MERN-ChatBot?branch=master)
 [![GitHub version](https://img.shields.io/badge/version-1.2.0-yellow.svg)](https://github.com/KovDimaY/MERN-ChatBot/releases)
-[![GitHub demo](https://img.shields.io/badge/demo-available-ff3399.svg)](https://mern-chatbot.herokuapp.com/)
+[![GitHub demo](https://img.shields.io/badge/demo-available-e60000.svg)](https://mern-chatbot.herokuapp.com/)
 [![GitHub docs](https://img.shields.io/badge/docs-storybook-00ccff.svg)](https://mern-chatbot.herokuapp.com/docs/storybook)
+[![GitHub docs](https://img.shields.io/badge/docs-styleguide-e600e6.svg)](https://mern-chatbot.herokuapp.com/docs/styleguide)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/KovDimaY/MERN-ChatBot/blob/master/LICENSE)
 
 This is a small project to practice a MERN stack and to learn how to make a chatbot with the DialogFlow from Google Cloud Platform. It is still under development so more features are coming soon! Stay tuned! :D
@@ -21,9 +22,10 @@ The last deployed production version is [**MERN-ChatBot v1.2.0**](https://github
 <br>
 <br>
 
-### Also you can access Storybook Documentation for each environment going to:
+### Also you can access Storybook and Styleguide Documentation for each environment going to:
 ```
 [origin]/docs/storybook
+[origin]/docs/styleguide
 ```
 
 I will appreciate a lot your feedback and your opinion about the project. Feel free to create an issue or to contact me via LinkedIn, mail or social networks.
@@ -132,3 +134,21 @@ npm run storybook
 ```
 npm run build-storybook
 ```
+
+<br>
+<br>
+
+
+
+### Styleguidist:
+##### To run development server for styleguidist:
+```
+npm run styleguide
+```
+
+##### To build it for deployment:
+```
+npm run build-styleguide
+```
+
+Due to the way how Styleguidist is implemented and working, there will be incompatibility if the project has dependencies on the external CSS libraries. In my project I use MaterialCSS and it affects appearance of the styleguide. To remove some of the effects that I do not like to have, I had to create the ```client/styleguide/rereset-styles.css``` file where I put the original styles of Styleguidist which were overwriten by the MaterialCSS library. But the problem is that class names of the styleguide are dynamic and change every time when the new version of the styleguide is compiled. So before deploying the new version of the styleguide, we have to remember to update selectors names to be sure that the layout of styleguide is not broken.

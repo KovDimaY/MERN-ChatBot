@@ -1,13 +1,13 @@
 import React from 'react';
 import { create } from 'react-test-renderer';
 
-import CardItem from '../../Cards/CardItem';
+import CardItem from '../../CardItem';
 
 const mockComponent = props => (
   <CardItem {...props} />
 );
 
-describe('components/Cards/<CardItem />', () => {
+describe('components/Common/<CardItem />', () => {
   it('should render component', () => {
     const props = {
       title: 'title',
