@@ -7,13 +7,14 @@
   box-shadow: none !important;
 }
 
-.rsg--list-59 {
+.rsg--list-48 {
   margin: 0 !important;
   padding-left: 16px !important;
 }
 
 .rsg--tabButtons-26 button:focus,
 .rsg--controls-41 button:focus,
-.rsg--button-33:focus  {
+.rsg--button-32:focus,
+.rsg--copyButton-30  {
   background-color: unset !important;
 }
