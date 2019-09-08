@@ -4,7 +4,7 @@ import { mount } from 'enzyme';
 
 import QuickReplies from '../../QuickReplies';
 
-jest.mock('../QuickReplyItem', () => 'QuickReplyItem');
+jest.mock('../../Common/QuickReplyItem', () => 'QuickReplyItem');
 
 const mockComponent = props => (
   <QuickReplies {...props} />
@@ -22,9 +22,24 @@ describe('components/<QuickReplies />', () => {
     const props = {
       data: {
         values: [
-          { id: 'id-1' },
-          { id: 'id-2' },
-          { id: 'id-3' },
+          {
+            id: 'id-1',
+            type: 'link',
+            text: 'test-link',
+            value: 'value-link',
+          },
+          {
+            id: 'id-2',
+            type: 'text',
+            text: 'test-text',
+            value: 'value-text',
+          },
+          {
+            id: 'id-3',
+            type: 'trigger',
+            text: 'test-trigger',
+            value: 'value-trigger',
+          },
         ],
       },
     };

@@ -1,7 +1,7 @@
 import {
   EXPERIENCE, EDUCATION,
   PROJECTS, FEEDBACK,
-} from '../../constants/routes';
+} from 'constants/routes';
 
 export default [
   {

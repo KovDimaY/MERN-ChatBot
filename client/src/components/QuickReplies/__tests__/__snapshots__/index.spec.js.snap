@@ -6,31 +6,25 @@ exports[`components/<QuickReplies /> should render component with data 1`] = `
 >
   <p />
   <QuickReplyItem
-    data={
-      Object {
-        "id": "id-1",
-      }
-    }
     disabled={false}
     onClick={[Function]}
+    text="test-link"
+    type="link"
+    value="value-link"
   />
   <QuickReplyItem
-    data={
-      Object {
-        "id": "id-2",
-      }
-    }
     disabled={false}
     onClick={[Function]}
+    text="test-text"
+    type="text"
+    value="value-text"
   />
   <QuickReplyItem
-    data={
-      Object {
-        "id": "id-3",
-      }
-    }
     disabled={false}
     onClick={[Function]}
+    text="test-trigger"
+    type="trigger"
+    value="value-trigger"
   />
 </div>
 `;

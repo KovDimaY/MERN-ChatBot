@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/Common/<CardItem /> should render component 1`] = `
+<div
+  className="card-containter"
+>
+  <div
+    className="card"
+  >
+    <div
+      className="card-image"
+    >
+      <img
+        alt="card-pic"
+        src="image"
+      />
+      <span
+        className="card-title"
+      >
+        title
+      </span>
+    </div>
+    <div
+      className="card-content"
+    >
+      <p>
+        description
+      </p>
+    </div>
+    <div
+      className="card-action"
+    >
+      <a
+        href="link"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        View
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`components/Common/<CardItem /> should render component without link 1`] = `
+<div
+  className="card-containter"
+>
+  <div
+    className="card"
+  >
+    <div
+      className="card-image"
+    >
+      <img
+        alt="card-pic"
+        src="image"
+      />
+      <span
+        className="card-title"
+      >
+        title
+      </span>
+    </div>
+    <div
+      className="card-content"
+    >
+      <p>
+        description
+      </p>
+    </div>
+  </div>
+</div>
+`;

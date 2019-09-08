@@ -15,7 +15,11 @@
     "test:update": "npm run test:update --prefix client",
     "coverage:report": "open client/coverage/jest/lcov-report/index.html",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
-    "ci:coverall": "cat ./client/coverage/jest/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
+    "ci:coverall": "cat ./client/coverage/jest/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "storybook": "npm run storybook --prefix client",
+    "build-storybook": "npm run build-storybook --prefix client",
+    "styleguide": "npm run styleguide --prefix client",
+    "build-styleguide": "npm run build-styleguide --prefix client"
   },
   "engines": {
     "node": "8.11.2",

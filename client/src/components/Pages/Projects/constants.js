@@ -4,7 +4,7 @@ import {
   projectReactHighcharts,
   projectSimpleChat,
   projectTravelStories,
-} from '../../../images';
+} from 'images';
 
 export const projects = [{
   id: 4,

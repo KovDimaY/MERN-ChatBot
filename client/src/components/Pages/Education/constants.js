@@ -34,7 +34,7 @@ import {
   FGPJG6A7U4,
   C_7M84NLE5D5TW,
   ZJ27G8KF97HT,
-} from '../../../images';
+} from 'images';
 
 export const educations = [
   {

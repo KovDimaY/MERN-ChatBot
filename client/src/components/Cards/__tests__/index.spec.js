@@ -3,7 +3,7 @@ import { create } from 'react-test-renderer';
 
 import Cards from '../../Cards';
 
-jest.mock('../../Cards/CardItem', () => 'CardItem');
+jest.mock('../../Common/CardItem', () => 'CardItem');
 
 const mockComponent = props => (
   <Cards {...props} />
@@ -20,9 +20,27 @@ describe('components/<Cards />', () => {
     const props = {
       data: {
         value: [
-          { id: 'id-1' },
-          { id: 'id-2' },
-          { id: 'id-3c' },
+          {
+            id: 'id-1',
+            title: 'title-1',
+            image: 'image-1',
+            description: 'description-1',
+            link: 'link-1',
+          },
+          {
+            id: 'id-2',
+            title: 'title-2',
+            image: 'image-2',
+            description: 'description-2',
+            link: 'link-2',
+          },
+          {
+            id: 'id-3',
+            title: 'title-3',
+            image: 'image-3',
+            description: 'description-3',
+            link: 'link-3',
+          },
         ],
       },
     };

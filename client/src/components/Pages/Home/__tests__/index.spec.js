@@ -3,10 +3,10 @@ import { create } from 'react-test-renderer';
 
 import Home from '../../Home';
 
-jest.mock('../../../Common/EmptyView', () => 'EmptyView');
-jest.mock('../../../Common/LanguageItem', () => 'LanguageItem');
-jest.mock('../../../Common/HobbyItem', () => 'HobbyItem');
-jest.mock('../../../../utils/common', () => ({
+jest.mock('components/Common/EmptyView', () => 'EmptyView');
+jest.mock('components/Common/LanguageItem', () => 'LanguageItem');
+jest.mock('components/Common/HobbyItem', () => 'HobbyItem');
+jest.mock('utils/common', () => ({
   getAgeByBirthdate: jest.fn(() => 26),
 }));
 

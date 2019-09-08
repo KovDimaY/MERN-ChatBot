@@ -1,15 +1,16 @@
 import React from 'react';
 
-// import EmptyView from '../../Common/EmptyView';
-import LanguageItem from '../../Common/LanguageItem';
-import HobbyItem from '../../Common/HobbyItem';
-import { getAgeByBirthdate } from '../../../utils/common';
-import { myProfilePicture } from '../../../images';
+import { getAgeByBirthdate } from 'utils/common';
+import { myProfilePicture } from 'images';
 import {
   // emptyViewDescription,
   aboutMeDescription,
   languages, hobbies,
 } from './constants';
+
+// import EmptyView from '../../Common/EmptyView';
+import LanguageItem from '../../Common/LanguageItem';
+import HobbyItem from '../../Common/HobbyItem';
 
 import './styles.css';
 

@@ -4,7 +4,7 @@ import { mount } from 'enzyme';
 
 import DotsAnimation from '../../DotsAnimation';
 
-jest.mock('../../../Common/Canvas', () => 'Canvas');
+jest.mock('components/Common/Canvas', () => 'Canvas');
 
 const mockComponent = props => (
   <DotsAnimation {...props} />

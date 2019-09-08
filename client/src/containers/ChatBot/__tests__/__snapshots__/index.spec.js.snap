@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`containers/<ChatbotContainer /> should render component 1`] = `
+<ChatBot
+  messages={Array []}
+  onReply={[Function]}
+  onSubmitMessage={[Function]}
+  onToggleShow={[Function]}
+  show={true}
+/>
+`;

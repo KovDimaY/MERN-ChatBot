@@ -17,7 +17,17 @@ app.use(bodyParser.json());
 routes(app);
 
 if (process.env.NODE_ENV === 'production') {
+  app.use('/docs/storybook', express.static('client/storybook-static'));
+  app.use('/docs/styleguide', express.static('client/styleguide'));
   app.use(express.static('client/build'));
+
+  app.get('/docs/storybook', (req, res) => {
+    res.sendFile(path.resolve(__dirname, '../client', 'storybook-static', 'index.html'));
+  });
+
+  app.get('/docs/styleguide', (req, res) => {
+    res.sendFile(path.resolve(__dirname, '../client', 'styleguide', 'index.html'));
+  });
 
   app.get('/*', (req, res) => {
     res.sendFile(path.resolve(__dirname, '../client', 'build', 'index.html'));
