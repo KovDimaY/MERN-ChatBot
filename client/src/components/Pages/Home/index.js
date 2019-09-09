@@ -1,31 +1,129 @@
 import React from 'react';
 
-import { getAgeByBirthdate } from 'utils/common';
+import { getAgeByBirthdate, showHiddenText } from 'utils/common';
 import { myProfilePicture } from 'images';
 import {
-  // emptyViewDescription,
+  emptyViewDescription,
   aboutMeDescription,
   languages, hobbies,
 } from './constants';
 
-// import EmptyView from '../../Common/EmptyView';
+import EmptyView from '../../Common/EmptyView';
 import LanguageItem from '../../Common/LanguageItem';
 import HobbyItem from '../../Common/HobbyItem';
 
 import './styles.css';
 
+const temporaryState = {
+  opened: true,
+  name: false,
+  position: false,
+  location: false,
+  contactInfo: false,
+  age: false,
+  nationality: false,
+  aboutMe: false,
+  languages: false,
+  hobbies: {
+    opened: false,
+    programming: false,
+    sports: false,
+    puzzles: false,
+    numismatics: false,
+    photography: false,
+  },
+};
+
 const Home = () => {
-  const renderText = array => (
-    array.map(item => <p key={item}>{item}</p>)
+  const renderText = (array, show = true) => (
+    show
+      ? array.map(item => <p key={item}>{item}</p>)
+      : showHiddenText(array[0], show)
   );
 
   const renderLanguages = () => (
-    languages.map(item => <LanguageItem {...item} key={item.id} />)
+    temporaryState.languages
+      ? languages.map(item => <LanguageItem {...item} key={item.id} discovered />)
+      : <LanguageItem {...languages[0]} key={languages[0].id} discovered={false} />
   );
 
-  const renderHobbies = () => (
-    hobbies.map(item => <HobbyItem {...item} key={item.id} />)
-  );
+  const renderHobbies = () => {
+    if (temporaryState.hobbies.opened) {
+      return hobbies.map(item => (
+        <HobbyItem
+          {...item}
+          key={item.id}
+          discovered
+          discoveredDetails={temporaryState.hobbies[item.storageName]}
+        />
+      ))
+    }
+
+    return (
+      <HobbyItem
+        {...hobbies[0]}
+        key={hobbies[0].id}
+        discovered={false}
+        discoveredDetails={false}
+      />
+    )
+  };
+
+  const renderName = () => {
+    if (temporaryState.name) {
+      return 'Dmytro Kovalenko';
+    }
+
+    return (
+      <React.Fragment>
+        <strong>Name: </strong> { showHiddenText('Dmytro', false) }
+      </React.Fragment>
+    );
+  };
+
+  const renderPosition = () => {
+    if (temporaryState.position) {
+      return 'Full Stack JS Developer';
+    }
+
+    return (
+      <React.Fragment>
+        <strong>Position: </strong> { showHiddenText('JS Developer', false) }
+      </React.Fragment>
+    );
+  };
+
+  const renderLocation = () => {
+    if (temporaryState.location) {
+      return (
+        <a href="https://www.google.es/maps?q=41.382207,2.140318" target="_blank" rel="noopener noreferrer">
+          Sants Estació, Barcelona, Spain
+        </a>
+      );
+    }
+
+    return (
+      <React.Fragment>
+        <strong>Location: </strong> { showHiddenText('Sants Estacio, Barcelona', false) }
+      </React.Fragment>
+    );
+  };
+
+  const renderContactInfo = () => {
+    if (temporaryState.contactInfo) {
+      return (
+        <React.Fragment>
+          Contact me in
+          {' '}
+          <a href="https://www.linkedin.com/in/kovalenkodmytro/" target="_blank" rel="noopener noreferrer">
+            LinkedIn
+          </a>
+        </React.Fragment>
+      );
+    }
+
+    return showHiddenText('Contact me in LinkedIn', false);
+  };
 
   const renderBasicInfo = () => (
     <div className="basic-info-section section row">
@@ -33,23 +131,21 @@ const Home = () => {
         <img src={myProfilePicture} alt="Me" className="my-profile-photo" />
       </div>
       <div className="right-column col s12 m6">
-        <h4 className="name-lastname">Dmytro Kovalenko</h4>
-        <p className="job-title">Full Stack JS Developer</p>
+        <h4 className="name-lastname">
+          { renderName() }
+        </h4>
+        <p className="job-title">
+          { renderPosition() }
+        </p>
         <p className="location">
-          <a href="https://www.google.es/maps?q=41.382207,2.140318" target="_blank" rel="noopener noreferrer">
-            Sants Estació, Barcelona, Spain
-          </a>
+          { renderLocation() }
         </p>
         <p>
           <strong>Contact info: </strong>
-          Contact me in
-          {' '}
-          <a href="https://www.linkedin.com/in/kovalenkodmytro/" target="_blank" rel="noopener noreferrer">
-            LinkedIn
-          </a>
+          { renderContactInfo() }
         </p>
-        <p><strong>Age: </strong>{getAgeByBirthdate('1992-05-20')} years old</p>
-        <p><strong>Civil status: </strong>Married, no children</p>
+        <p><strong>Age: </strong>{ showHiddenText(`${getAgeByBirthdate('1992-05-20')} years old`, temporaryState.age) }</p>
+        <p><strong>Nationality: </strong>{ showHiddenText('Ukraine', temporaryState.nationality) }</p>
       </div>
     </div>
   );
@@ -60,7 +156,7 @@ const Home = () => {
 
       <div className="summary-section section">
         <h3 className="section-title">About me:</h3>
-        {renderText(aboutMeDescription)}
+        {renderText(aboutMeDescription, temporaryState.aboutMe)}
       </div>
 
       <div className="languages-section section">
@@ -81,11 +177,11 @@ const Home = () => {
 
   return (
     <div className="home-page-container">
-      {/*
-        The next line will be needed later, when the hiding logic will be implemented:
-        <EmptyView section="home">{renderText(emptyViewDescription)}</EmptyView>
-      */}
-      {true && renderInfo()}
+      {
+        temporaryState.opened
+          ? renderInfo()
+          : <EmptyView section="home">{renderText(emptyViewDescription)}</EmptyView>
+      }
     </div>
   );
 };

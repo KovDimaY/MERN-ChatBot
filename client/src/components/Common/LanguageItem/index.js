@@ -1,6 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { showHiddenText } from 'utils/common';
+import { hiddenImage } from 'images';
+
 import './styles.css';
 
 /**
@@ -8,11 +11,13 @@ import './styles.css';
  * It consists of a flag image of the country of the origin of the language,
  * name of the language and the level of the proficiency of this language.
  */
-const LanguageItem = ({ image, name, level }) => (
+const LanguageItem = ({
+  image, name, level, discovered,
+}) => (
   <div className="language-container col s6 m3">
-    <img src={image} alt="flag" className="country-flag" />
-    <div className="name">{name}</div>
-    <div className="level">{level}</div>
+    <img src={discovered ? image : hiddenImage} alt="flag" className="country-flag" />
+    <div className="name">{ showHiddenText(name, discovered) }</div>
+    <div className="level">{ showHiddenText(level, discovered) }</div>
   </div>
 );
 
@@ -27,6 +32,8 @@ LanguageItem.propTypes = {
    * Should be provided in English.
    */
   level: PropTypes.string.isRequired,
+  /** This props defines if the info should be hidden or the user can see it. */
+  discovered: PropTypes.bool.isRequired,
 };
 
 export default LanguageItem;

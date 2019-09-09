@@ -2,6 +2,7 @@ import background from './background.jpg';
 import userAvatar from './userAvatar.png';
 import botAvatar from './botAvatar.png';
 import myProfilePicture from './myProfilePicture.jpg';
+import hiddenImage from './question-marks.png';
 
 import flagES from './flag-es.png';
 import flagRU from './flag-ru.png';
@@ -69,6 +70,7 @@ export {
   botAvatar,
   userAvatar,
   myProfilePicture,
+  hiddenImage,
   flagES,
   flagRU,
   flagUA,

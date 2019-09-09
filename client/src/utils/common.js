@@ -33,3 +33,7 @@ export const getDuration = (start, end) => {
 
   return 'Less than a month';
 };
+
+export const showHiddenText = (input, show) => (
+  show ? input : input.split('').map(char => !/[\s]/.test(char) ? '?' : char)
+);

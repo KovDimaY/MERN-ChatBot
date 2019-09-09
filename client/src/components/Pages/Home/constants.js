@@ -11,12 +11,12 @@ import {
 export const emptyViewDescription = [
   'Welcome to my new personal project!!!',
   `Ask questions as you are speaking to me and try to populate
-  the website with the info he will provide.`,
+  the website with the info my bot will provide.`,
   `Every page will have a progress bar which indicates
   how much info you have already recovered - so you will know
   where to stop asking about some particular topic.`,
   `One more time, this project was created to learn about Chatbots
-  and to practice my full stack skills. I am happy at my current job and
+  and to practice my full stack programming skills. I am happy at my current job and
   I am not looking for a change.`,
 ];
 
@@ -79,6 +79,7 @@ export const hobbies = [
       for other people. For the moment, the most pleasure I have working
       with Javascript, more precisely with Node and React.`,
     id: 'hobby-1',
+    storageName: 'programming',
   },
   {
     image: hobbySports,
@@ -93,6 +94,7 @@ export const hobbies = [
       swimming and other activities. Sport helps to keep fit my body and mind
       and also it is a great fun.`,
     id: 'hobby-2',
+    storageName: 'sports',
   },
   {
     image: hobbyRubik,
@@ -105,6 +107,7 @@ export const hobbies = [
       possible stresses. For example, to solve the cube of size 10x10 I normally
       spend 3-4 hours.`,
     id: 'hobby-3',
+    storageName: 'puzzles',
   },
   {
     image: hobbyNumismatics,
@@ -116,6 +119,7 @@ export const hobbies = [
       I do not have some super special coins, my idea is just to collect as many
       different coins and I can.`,
     id: 'hobby-4',
+    storageName: 'numismatics',
   },
   {
     image: hobbyPhotography,
@@ -128,5 +132,6 @@ export const hobbies = [
       is full of bright colours especially green, blue, yellow and red. I have a dream
       to make a photo exhibition and to make a short movie some day.`,
     id: 'hobby-5',
+    storageName: 'photography',
   },
 ];
