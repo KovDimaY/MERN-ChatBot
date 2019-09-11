@@ -14,63 +14,30 @@ import HobbyItem from '../../Common/HobbyItem';
 
 import './styles.css';
 
-const temporaryState = {
-  opened: true,
-  name: false,
-  position: false,
-  location: false,
-  contactInfo: false,
-  age: false,
-  nationality: false,
-  aboutMe: false,
-  languages: false,
-  hobbies: {
-    opened: false,
-    programming: false,
-    sports: false,
-    puzzles: false,
-    numismatics: false,
-    photography: false,
-  },
-};
-
-const Home = () => {
+const Home = (props) => {
   const renderText = (array, show = true) => (
-    show
-      ? array.map(item => <p key={item}>{item}</p>)
-      : showHiddenText(array[0], show)
+    array.map(item => <p key={item}>{showHiddenText(item, show)}</p>)
   );
 
   const renderLanguages = () => (
-    temporaryState.languages
-      ? languages.map(item => <LanguageItem {...item} key={item.id} discovered />)
-      : <LanguageItem {...languages[0]} key={languages[0].id} discovered={false} />
+    languages.map(item => (
+      <LanguageItem {...item} key={item.id} discovered={props.languages} />
+    ))
   );
 
-  const renderHobbies = () => {
-    if (temporaryState.hobbies.opened) {
-      return hobbies.map(item => (
-        <HobbyItem
-          {...item}
-          key={item.id}
-          discovered
-          discoveredDetails={temporaryState.hobbies[item.storageName]}
-        />
-      ))
-    }
-
-    return (
+  const renderHobbies = () => (
+    hobbies.map(item => (
       <HobbyItem
-        {...hobbies[0]}
-        key={hobbies[0].id}
-        discovered={false}
-        discoveredDetails={false}
+        {...item}
+        key={item.id}
+        discovered={props.hobbies.discovered}
+        discoveredDetails={props.hobbies[item.storageName]}
       />
-    )
-  };
+    ))
+  );
 
   const renderName = () => {
-    if (temporaryState.name) {
+    if (props.name) {
       return 'Dmytro Kovalenko';
     }
 
@@ -82,7 +49,7 @@ const Home = () => {
   };
 
   const renderPosition = () => {
-    if (temporaryState.position) {
+    if (props.position) {
       return 'Full Stack JS Developer';
     }
 
@@ -94,7 +61,7 @@ const Home = () => {
   };
 
   const renderLocation = () => {
-    if (temporaryState.location) {
+    if (props.location) {
       return (
         <a href="https://www.google.es/maps?q=41.382207,2.140318" target="_blank" rel="noopener noreferrer">
           Sants Estació, Barcelona, Spain
@@ -110,7 +77,7 @@ const Home = () => {
   };
 
   const renderContactInfo = () => {
-    if (temporaryState.contactInfo) {
+    if (props.contactInfo) {
       return (
         <React.Fragment>
           Contact me in
@@ -144,8 +111,14 @@ const Home = () => {
           <strong>Contact info: </strong>
           { renderContactInfo() }
         </p>
-        <p><strong>Age: </strong>{ showHiddenText(`${getAgeByBirthdate('1992-05-20')} years old`, temporaryState.age) }</p>
-        <p><strong>Nationality: </strong>{ showHiddenText('Ukraine', temporaryState.nationality) }</p>
+        <p>
+          <strong>Age: </strong>
+          { showHiddenText(`${getAgeByBirthdate('1992-05-20')} years old`, props.age) }
+        </p>
+        <p>
+          <strong>Nationality: </strong>
+          { showHiddenText('Ukraine', props.nationality) }
+        </p>
       </div>
     </div>
   );
@@ -156,29 +129,31 @@ const Home = () => {
 
       <div className="summary-section section">
         <h3 className="section-title">About me:</h3>
-        {renderText(aboutMeDescription, temporaryState.aboutMe)}
+        { renderText(aboutMeDescription, props.aboutMe) }
       </div>
 
       <div className="languages-section section">
         <h3 className="section-title">Languages I speak:</h3>
         <div className="languages-wrapper row">
-          {renderLanguages()}
+          { renderLanguages() }
         </div>
       </div>
 
       <div className="hobbies-section section">
         <h3 className="section-title">My hobbies:</h3>
         <div className="hobbies-wrapper">
-          {renderHobbies()}
+          { renderHobbies() }
         </div>
       </div>
     </React.Fragment>
   );
 
+  console.log("Home component props", props);
+
   return (
     <div className="home-page-container">
       {
-        temporaryState.opened
+        props.discovered
           ? renderInfo()
           : <EmptyView section="home">{renderText(emptyViewDescription)}</EmptyView>
       }

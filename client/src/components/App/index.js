@@ -9,8 +9,9 @@ import {
 
 import Layout from 'hoc/layout';
 
+import Home from 'containers/HomePage';
+
 import Disclaimer from '../Pages/Disclaimer';
-import Home from '../Pages/Home';
 import Education from '../Pages/Education';
 import Experience from '../Pages/Experience';
 import Projects from '../Pages/Projects';
@@ -21,7 +22,7 @@ const App = () => (
     <Switch>
       <Route path={INIT} exact component={Disclaimer} />
       <Layout>
-        <Route path={HOME} exact component={Home} />
+        <Route path={HOME} exact component={() => <Home />} />
         <Route path={EXPERIENCE} exact component={Experience} />
         <Route path={EDUCATION} exact component={Education} />
         <Route path={PROJECTS} exact component={Projects} />
