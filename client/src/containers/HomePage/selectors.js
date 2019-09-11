@@ -22,9 +22,9 @@ const selectLocation = () => createSelector(
   homePageDomain => homePageDomain.get('location'),
 );
 
-const selectContactInfo = () => createSelector(
+const selectContacts = () => createSelector(
   selectHomePageDomain(),
-  homePageDomain => homePageDomain.get('contactInfo'),
+  homePageDomain => homePageDomain.get('contacts'),
 );
 
 const selectAge = () => createSelector(
@@ -39,7 +39,7 @@ const selectNationality = () => createSelector(
 
 const selectAboutMe = () => createSelector(
   selectHomePageDomain(),
-  homePageDomain => homePageDomain.get('aboutMe'),
+  homePageDomain => homePageDomain.get('about'),
 );
 
 const selectLanguages = () => createSelector(
@@ -57,7 +57,7 @@ export {
   selectName,
   selectPosition,
   selectLocation,
-  selectContactInfo,
+  selectContacts,
   selectAge,
   selectNationality,
   selectAboutMe,

@@ -12,9 +12,11 @@ export const emptyViewDescription = [
   'Welcome to my new personal project!!!',
   `Ask questions as you are speaking to me and try to populate
   the website with the info my bot will provide.`,
-  `Every page will have a progress bar which indicates
-  how much info you have already recovered - so you will know
-  where to stop asking about some particular topic.`,
+  `For example, "What is your name?" sounds like a good question to start,
+  but it can be something else too, use your imagination ;)`,
+  // `Every page will have a progress bar which indicates
+  // how much info you have already recovered - so you will know
+  // where to stop asking about some particular topic.`,
   `One more time, this project was created to learn about Chatbots
   and to practice my full stack programming skills. I am happy at my current job and
   I am not looking for a change.`,
