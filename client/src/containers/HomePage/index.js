@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
@@ -7,7 +8,7 @@ import HomePage from 'components/Pages/Home';
 import {
   selectDiscovered, selectName,
   selectPosition, selectLocation,
-  selectContactInfo, selectAge,
+  selectContacts, selectAge,
   selectNationality, selectAboutMe,
   selectLanguages, selectHobbies,
 } from './selectors';
@@ -19,7 +20,7 @@ const HomePageContainer = props => (
     name={props.name}
     position={props.position}
     location={props.location}
-    contactInfo={props.contactInfo}
+    contacts={props.contacts}
     age={props.age}
     nationality={props.nationality}
     aboutMe={props.aboutMe}
@@ -33,12 +34,25 @@ const mapStateToProps = createStructuredSelector({
   name: selectName(),
   position: selectPosition(),
   location: selectLocation(),
-  contactInfo: selectContactInfo(),
+  contacts: selectContacts(),
   age: selectAge(),
   nationality: selectNationality(),
   aboutMe: selectAboutMe(),
   languages: selectLanguages(),
   hobbies: selectHobbies(),
 });
+
+HomePageContainer.propTypes = {
+  discovered: PropTypes.bool.isRequired,
+  name: PropTypes.bool.isRequired,
+  position: PropTypes.bool.isRequired,
+  location: PropTypes.bool.isRequired,
+  contacts: PropTypes.bool.isRequired,
+  age: PropTypes.bool.isRequired,
+  nationality: PropTypes.bool.isRequired,
+  aboutMe: PropTypes.bool.isRequired,
+  languages: PropTypes.bool.isRequired,
+  hobbies: PropTypes.object.isRequired,
+};
 
 export default connect(mapStateToProps)(HomePageContainer);

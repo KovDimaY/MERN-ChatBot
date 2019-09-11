@@ -1,4 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
+/* eslint-disable react/no-unused-prop-types */
 
 import { getAgeByBirthdate, showHiddenText } from 'utils/common';
 import { myProfilePicture } from 'images';
@@ -77,7 +80,7 @@ const Home = (props) => {
   };
 
   const renderContactInfo = () => {
-    if (props.contactInfo) {
+    if (props.contacts) {
       return (
         <React.Fragment>
           Contact me in
@@ -148,8 +151,6 @@ const Home = (props) => {
     </React.Fragment>
   );
 
-  console.log("Home component props", props);
-
   return (
     <div className="home-page-container">
       {
@@ -159,6 +160,19 @@ const Home = (props) => {
       }
     </div>
   );
+};
+
+Home.propTypes = {
+  discovered: PropTypes.bool.isRequired,
+  name: PropTypes.bool.isRequired,
+  position: PropTypes.bool.isRequired,
+  location: PropTypes.bool.isRequired,
+  contacts: PropTypes.bool.isRequired,
+  age: PropTypes.bool.isRequired,
+  nationality: PropTypes.bool.isRequired,
+  aboutMe: PropTypes.bool.isRequired,
+  languages: PropTypes.bool.isRequired,
+  hobbies: PropTypes.object.isRequired,
 };
 
 export default Home;

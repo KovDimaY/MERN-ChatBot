@@ -150,8 +150,6 @@ export class ChatbotContainer extends Component {
   render() {
     const { messages, show } = this.state;
 
-    console.log("ChatBot props", this.props)
-
     return (
       <ChatBot
         messages={messages}
