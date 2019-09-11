@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import Cookies from 'universal-cookie';
 import axios from 'axios';
@@ -8,6 +9,7 @@ import structjson from 'utils/structjson';
 
 import ChatBot from 'components/Chatbot';
 import { VALID_ROUTES } from 'constants/routes';
+import { checkDiscovery } from './check-discovery';
 
 const cookies = new Cookies();
 
@@ -105,7 +107,7 @@ export class ChatbotContainer extends Component {
     this.setState({ show: false });
   }
 
-  dfTextQuery = async (query) => {
+  dfTextQuery = (query) => {
     const userMessage = {
       type: 'text',
       author: 'user',
@@ -115,19 +117,18 @@ export class ChatbotContainer extends Component {
 
     this.setState({ messages: [...this.state.messages, userMessage] });
 
-    try {
-      const res = await axios.post('/api/df/textQuery', { query, userID: this.userID });
-
-      this.saveBotAnswers(res.data.fulfillmentMessages);
-    } catch (error) {
-      this.handleRequestError();
-    }
+    this.makeRequest('/api/df/textQuery', query);
   }
 
-  dfEventQuery = async (query) => {
-    try {
-      const res = await axios.post('/api/df/eventQuery', { query, userID: this.userID });
+  dfEventQuery = (query) => {
+    this.makeRequest('/api/df/eventQuery', query);
+  }
 
+  makeRequest = async (url, query) => {
+    try {
+      const res = await axios.post(url, { query, userID: this.userID });
+
+      checkDiscovery(res.data.intent.displayName, this.props.dispatch);
       this.saveBotAnswers(res.data.fulfillmentMessages);
     } catch (error) {
       this.handleRequestError();
@@ -149,6 +150,8 @@ export class ChatbotContainer extends Component {
   render() {
     const { messages, show } = this.state;
 
+    console.log("ChatBot props", this.props)
+
     return (
       <ChatBot
         messages={messages}
@@ -163,6 +166,9 @@ export class ChatbotContainer extends Component {
 
 ChatbotContainer.propTypes = {
   location: PropTypes.object.isRequired,
+  dispatch: PropTypes.func.isRequired,
 };
 
-export default withRouter(ChatbotContainer);
+const ChatbotWithRouter = withRouter(ChatbotContainer);
+
+export default connect()(ChatbotWithRouter);

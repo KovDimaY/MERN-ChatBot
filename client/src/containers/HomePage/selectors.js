@@ -4,52 +4,52 @@ const selectHomePageDomain = () => state => state.get('homePageDomain');
 
 const selectDiscovered = () => createSelector(
   selectHomePageDomain(),
-  applicationDomain => applicationDomain.get('discovered'),
+  homePageDomain => homePageDomain.get('discovered'),
 );
 
 const selectName = () => createSelector(
   selectHomePageDomain(),
-  applicationDomain => applicationDomain.get('name'),
+  homePageDomain => homePageDomain.get('name'),
 );
 
 const selectPosition = () => createSelector(
   selectHomePageDomain(),
-  applicationDomain => applicationDomain.get('position'),
+  homePageDomain => homePageDomain.get('position'),
 );
 
 const selectLocation = () => createSelector(
   selectHomePageDomain(),
-  applicationDomain => applicationDomain.get('location'),
+  homePageDomain => homePageDomain.get('location'),
 );
 
 const selectContactInfo = () => createSelector(
   selectHomePageDomain(),
-  applicationDomain => applicationDomain.get('contactInfo'),
+  homePageDomain => homePageDomain.get('contactInfo'),
 );
 
 const selectAge = () => createSelector(
   selectHomePageDomain(),
-  applicationDomain => applicationDomain.get('age'),
+  homePageDomain => homePageDomain.get('age'),
 );
 
 const selectNationality = () => createSelector(
   selectHomePageDomain(),
-  applicationDomain => applicationDomain.get('nationality'),
+  homePageDomain => homePageDomain.get('nationality'),
 );
 
 const selectAboutMe = () => createSelector(
   selectHomePageDomain(),
-  applicationDomain => applicationDomain.get('aboutMe'),
+  homePageDomain => homePageDomain.get('aboutMe'),
 );
 
 const selectLanguages = () => createSelector(
   selectHomePageDomain(),
-  applicationDomain => applicationDomain.get('languages'),
+  homePageDomain => homePageDomain.get('languages'),
 );
 
 const selectHobbies = () => createSelector(
   selectHomePageDomain(),
-  applicationDomain => applicationDomain.get('hobbies').toJS(),
+  homePageDomain => homePageDomain.get('hobbies').toJS(),
 );
 
 export {

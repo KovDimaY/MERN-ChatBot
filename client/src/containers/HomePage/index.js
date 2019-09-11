@@ -41,6 +41,4 @@ const mapStateToProps = createStructuredSelector({
   hobbies: selectHobbies(),
 });
 
-
-
 export default connect(mapStateToProps)(HomePageContainer);
