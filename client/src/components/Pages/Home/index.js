@@ -55,7 +55,7 @@ const Home = (props) => {
 
     return (
       <React.Fragment>
-        <strong>Position: </strong> { showHiddenText('JS Developer', false) }
+        <strong>Profession: </strong> { showHiddenText('JS Developer', false) }
       </React.Fragment>
     );
   };
