@@ -9,6 +9,10 @@ import './styles.css';
 /**
  * This component is just a card with the information about one of my hobbies.
  * It has a title (name of the hobby), image of the hobby and the short desctiption.
+ * This component has 3 states: Hidden, Partially hidden and discovered. These states
+ * are controlled by two props: discovered and discoveredDetails. If both are false - the
+ * element is completelly hidden. If one of them is true - some part of the card
+ * is available for the user.
  */
 const HobbyItem = ({
   image, name, description, discovered, discoveredDetails,
