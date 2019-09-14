@@ -10,6 +10,8 @@ import './styles.css';
  * This component is a static element which represents a language and the level of its proficiency.
  * It consists of a flag image of the country of the origin of the language,
  * name of the language and the level of the proficiency of this language.
+ * This component has two visual states: hidden and discovered. When the element is hidden
+ * the user cannot see the flag and the text, they are replaced by question marks.
  */
 const LanguageItem = ({
   image, name, level, discovered,
