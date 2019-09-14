@@ -68,6 +68,7 @@
     "collectCoverageFrom": [
       "src/**/*.{js,jsx}",
       "!src/index.js",
+      "!src/index-reducers.js",
       "!src/serviceWorker.js",
       "!src/setupProxy.js",
       "!src/utils/structjson.js",

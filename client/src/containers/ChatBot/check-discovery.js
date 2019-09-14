@@ -1,7 +1,7 @@
 import {
   discoverHomePageSimpleElement,
   discoverHomePageHobbiesElement,
-} from '../../containers/HomePage/actions';
+} from 'containers/HomePage/actions';
 
 const checkHomePageDiscovery = (intentArray, dispatch) => {
   if (intentArray.length === 2) {
@@ -14,7 +14,10 @@ const checkHomePageDiscovery = (intentArray, dispatch) => {
 export const checkDiscovery = (intent, dispatch) => {
   const splitted = intent.split('-');
 
-  if (splitted[0] === 'homepage') {
-    checkHomePageDiscovery(splitted, dispatch);
+  switch (splitted[0]) {
+    case 'homepage':
+      return checkHomePageDiscovery(splitted, dispatch);
+    default:
+      return intent;
   }
 };

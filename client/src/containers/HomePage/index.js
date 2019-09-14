@@ -14,7 +14,7 @@ import {
 } from './selectors';
 
 
-const HomePageContainer = props => (
+export const HomePageContainer = props => (
   <HomePage
     discovered={props.discovered}
     name={props.name}

@@ -35,5 +35,5 @@ export const getDuration = (start, end) => {
 };
 
 export const showHiddenText = (input, show) => (
-  show ? input : input.split('').map(char => !/[\s]/.test(char) ? '?' : char)
+  show ? input : input.split('').map(char => !/[\s]/.test(char) ? '?' : char).join('')
 );

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components/Common/<HobbyItem /> should render component 1`] = `
+exports[`components/Common/<HobbyItem /> should render component with discovered and discoveredDetails 1`] = `
 <div
   className="hobby-container row valign-wrapper"
 >
@@ -9,10 +9,13 @@ exports[`components/Common/<HobbyItem /> should render component 1`] = `
   >
     <h5
       className="name"
-    />
+    >
+      name
+    </h5>
     <img
       alt="icon"
       className="image"
+      src="image"
     />
   </div>
   <div
@@ -20,7 +23,99 @@ exports[`components/Common/<HobbyItem /> should render component 1`] = `
   >
     <p
       className="description"
+    >
+      description
+    </p>
+  </div>
+</div>
+`;
+
+exports[`components/Common/<HobbyItem /> should render component with discovered and no discoveredDetails 1`] = `
+<div
+  className="hobby-container row valign-wrapper"
+>
+  <div
+    className="col s12 m3 visual"
+  >
+    <h5
+      className="name"
+    >
+      name
+    </h5>
+    <img
+      alt="icon"
+      className="image"
+      src="image"
     />
+  </div>
+  <div
+    className="col s12 m9"
+  >
+    <p
+      className="description"
+    >
+      ***
+    </p>
+  </div>
+</div>
+`;
+
+exports[`components/Common/<HobbyItem /> should render component with no discovered and discoveredDetails 1`] = `
+<div
+  className="hobby-container row valign-wrapper"
+>
+  <div
+    className="col s12 m3 visual"
+  >
+    <h5
+      className="name"
+    >
+      ***
+    </h5>
+    <img
+      alt="icon"
+      className="image"
+      src="test-file-stub"
+    />
+  </div>
+  <div
+    className="col s12 m9"
+  >
+    <p
+      className="description"
+    >
+      description
+    </p>
+  </div>
+</div>
+`;
+
+exports[`components/Common/<HobbyItem /> should render component with no discovered and no discoveredDetails 1`] = `
+<div
+  className="hobby-container row valign-wrapper"
+>
+  <div
+    className="col s12 m3 visual"
+  >
+    <h5
+      className="name"
+    >
+      ***
+    </h5>
+    <img
+      alt="icon"
+      className="image"
+      src="test-file-stub"
+    />
+  </div>
+  <div
+    className="col s12 m9"
+  >
+    <p
+      className="description"
+    >
+      ***
+    </p>
   </div>
 </div>
 `;

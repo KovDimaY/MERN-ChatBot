@@ -7,6 +7,8 @@ import axios from 'axios';
 import uuid from 'uuid/v4';
 import structjson from 'utils/structjson';
 
+import Config from 'config';
+
 import ChatBot from 'components/Chatbot';
 import { VALID_ROUTES } from 'constants/routes';
 import { checkDiscovery } from './check-discovery';
@@ -117,11 +119,11 @@ export class ChatbotContainer extends Component {
 
     this.setState({ messages: [...this.state.messages, userMessage] });
 
-    this.makeRequest('/api/df/textQuery', query);
+    this.makeRequest(Config.api.dfTextQuery, query);
   }
 
   dfEventQuery = (query) => {
-    this.makeRequest('/api/df/eventQuery', query);
+    this.makeRequest(Config.api.dfEventQuery, query);
   }
 
   makeRequest = async (url, query) => {

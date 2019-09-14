@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`containers/<HomePage /> should render component 1`] = `
+<Home
+  aboutMe="aboutMe"
+  age="age"
+  contacts="contacts"
+  discovered="discovered"
+  hobbies="hobbies"
+  languages="languages"
+  location="location"
+  name="name"
+  nationality="nationality"
+  position="position"
+/>
+`;
