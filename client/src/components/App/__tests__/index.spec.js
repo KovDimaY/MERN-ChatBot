@@ -1,10 +1,11 @@
 import React from 'react';
 import { create } from 'react-test-renderer';
 
-import App from '../../App';
+import HomePage from 'containers/HomePage';
+import App, { HomeAdapted } from '../../App';
 
+jest.mock('containers/HomePage', () => 'Home');
 jest.mock('../../Pages/Disclaimer', () => 'Disclaimer');
-jest.mock('../../Pages/Home', () => 'Home');
 jest.mock('../../Pages/Education', () => 'Education');
 jest.mock('../../Pages/Experience', () => 'Experience');
 jest.mock('../../Pages/Projects', () => 'Projects');
@@ -25,5 +26,13 @@ describe('components/<App />', () => {
     const tree = create(mockComponent()).toJSON();
 
     expect(tree).toMatchSnapshot();
+  });
+
+  it('should return correct component', () => {
+    const expected = <HomePage />;
+
+    const result = HomeAdapted();
+
+    expect(result).toEqual(expected);
   });
 });

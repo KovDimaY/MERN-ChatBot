@@ -10,7 +10,7 @@ exports[`components/<App /> should render component 1`] = `
     />
     <Layout>
       <Route
-        component="Home"
+        component={[Function]}
         exact={true}
         path="/home"
       />
