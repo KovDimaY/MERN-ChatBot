@@ -3,6 +3,7 @@ import {
   getRandomInteger,
   getAgeByBirthdate,
   getDuration,
+  showHiddenText,
 } from '../common';
 
 const TIMES_TO_RUN = 1000;
@@ -143,6 +144,28 @@ describe('utils/common.js', () => {
 
       const result = getDuration(start, end);
       const expected = '5 yrs, 5 mos';
+
+      expect(result).toEqual(expected);
+    });
+  });
+
+  describe('showHiddenText()', () => {
+    it('should not hide text if the show is true', () => {
+      const input = 'This is some text';
+      const show = true;
+      const expected = input;
+
+      const result = showHiddenText(input, show);
+
+      expect(result).toEqual(expected);
+    });
+
+    it('should hide text if the show is false', () => {
+      const input = 'This is some text';
+      const show = false;
+      const expected = '???? ?? ???? ????';
+
+      const result = showHiddenText(input, show);
 
       expect(result).toEqual(expected);
     });
