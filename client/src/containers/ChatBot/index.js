@@ -169,6 +169,4 @@ ChatbotContainer.propTypes = {
   dispatch: PropTypes.func.isRequired,
 };
 
-const ChatbotWithRouter = withRouter(ChatbotContainer);
-
-export default connect()(ChatbotWithRouter);
+export default withRouter(connect()(ChatbotContainer));
