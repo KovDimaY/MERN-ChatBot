@@ -9,6 +9,7 @@ import {
 export const experiences = [
   {
     id: 5,
+    nameInStore: 'cornerjob',
     image: experienceCornerjob,
     companyName: 'Cornerjob',
     companyLink: 'https://www.cornerjob.com',
@@ -29,6 +30,7 @@ export const experiences = [
   },
   {
     id: 4,
+    nameInStore: 'bigfinite',
     image: experienceBigfinite,
     companyName: 'Bigfinite Inc',
     companyLink: 'https://www.bigfinite.com/',
@@ -46,6 +48,7 @@ export const experiences = [
   },
   {
     id: 3,
+    nameInStore: 'enixan',
     image: experienceEnixan,
     companyName: 'Enixan Entertainment',
     companyLink: 'http://www.enixan.com/en/',
@@ -71,12 +74,13 @@ export const experiences = [
   },
   {
     id: 2,
+    nameInStore: 'mbas',
     image: experienceMBAS,
     companyName: 'MBA Strategy',
     companyLink: 'http://www.mbastrategy.ru/',
     position: 'Math Consultant',
-    description: `Teaching people how to prepare for the quantitative part of the GMAT/GRE.
-
+    description: `Teaching people how to prepare for the
+      quantitative part of the GMAT/GRE.
     `,
     start: new Date('2013-01'),
     finish: new Date('2015-05'),
@@ -92,11 +96,15 @@ export const experiences = [
   },
   {
     id: 1,
+    nameInStore: 'icicle',
     image: experienceIcicle,
     companyName: 'Icicle Seafoods',
     companyLink: 'http://www.icicleseafoods.com/',
     position: 'Cannery Worker',
-    description: 'Work&Travel program which helped me to improve my English and teamwork skills. It made me more organized, more hardworking, more hardy.',
+    description: `Work&Travel program which helped me to improve my
+      English and teamwork skills. It made me more organized, more hardworking,
+      more hardy.
+    `,
     start: new Date('2012-05'),
     finish: new Date('2012-09'),
     location: 'Alaska, USA',
