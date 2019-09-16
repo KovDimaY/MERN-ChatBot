@@ -3,8 +3,8 @@ const dfService = require('../services/df-service');
 
 const { Feedback } = require('../models/Feedback');
 const {
-  handleExperiencePosition,
-} = require('./experience-handlers');
+  handleExperienceFullfilment,
+} = require('./handlers');
 
 
 module.exports = (app) => {
@@ -33,7 +33,11 @@ module.exports = (app) => {
     const agent = new WebhookClient({ request: req, response: res });
     const intentMap = new Map();
 
-    intentMap.set('experience-position', handleExperiencePosition);
+    intentMap.set('experience-position', handleExperienceFullfilment('position'));
+    intentMap.set('experience-duration', handleExperienceFullfilment('duration'));
+    intentMap.set('experience-description', handleExperienceFullfilment('description'));
+    intentMap.set('experience-technologies', handleExperienceFullfilment('technologies'));
+    intentMap.set('experience-responsibilities', handleExperienceFullfilment('responsibilities'));
 
     agent.handleRequest(intentMap);
   });

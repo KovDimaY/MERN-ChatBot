@@ -6,31 +6,31 @@ export const initialState = fromJS({
   discovered: true,
   cornerjob: fromJS({
     position: false,
-    time: false,
+    duration: false,
     description: false,
     technologies: false,
   }),
   bigfinite: fromJS({
     position: false,
-    time: false,
+    duration: false,
     description: false,
     technologies: false,
   }),
   enixan: fromJS({
     position: false,
-    time: false,
+    duration: false,
     description: false,
     responsibilities: false,
   }),
   mbas: fromJS({
     position: false,
-    time: false,
+    duration: false,
     description: false,
     responsibilities: false,
   }),
   icicle: fromJS({
     position: false,
-    time: false,
+    duration: false,
     description: false,
   }),
 });
