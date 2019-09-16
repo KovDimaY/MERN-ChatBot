@@ -130,7 +130,10 @@ export class ChatbotContainer extends Component {
     try {
       const res = await axios.post(url, { query, userID: this.userID });
 
-      checkDiscovery(res.data.intent.displayName, this.props.dispatch);
+      const intent = res.data.intent.displayName;
+      const params = structjson.structProtoToJson(res.data.parameters);
+
+      checkDiscovery(intent, params, this.props.dispatch);
       this.saveBotAnswers(res.data.fulfillmentMessages);
     } catch (error) {
       this.handleRequestError();

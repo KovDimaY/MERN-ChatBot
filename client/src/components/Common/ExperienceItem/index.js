@@ -61,7 +61,7 @@ const ExperienceItem = ({
   };
 
   const renderDates = () => {
-    if (discovered.time) {
+    if (discovered.duration) {
       const startDate = moment(start).format('MMM YYYY');
       const finishDate = finish ? moment(finish).format('MMM YYYY') : 'Now';
       const duration = getDuration(start, finish);
