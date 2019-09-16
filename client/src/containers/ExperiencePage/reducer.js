@@ -3,7 +3,7 @@ import { fromJS } from 'immutable';
 import { actionTypes as at } from './constants';
 
 export const initialState = fromJS({
-  discovered: true,
+  discovered: false,
   cornerjob: fromJS({
     position: false,
     duration: false,
@@ -37,13 +37,15 @@ export const initialState = fromJS({
 
 export default (state = initialState, action) => {
   switch (action.type) {
+    case at.DISCOVER_EXPERIENCE_INIT:
+      return state.set('discovered', true);
     case at.DISCOVER_EXPERIENCE_INFO: {
       return state
         .set('discovered', true)
         .set(
           action.payload.section,
-          state.get('hobbies')
-            .set('discovered', true)
+          state
+            .get(action.payload.section)
             .set(action.payload.data, true),
         );
     }
