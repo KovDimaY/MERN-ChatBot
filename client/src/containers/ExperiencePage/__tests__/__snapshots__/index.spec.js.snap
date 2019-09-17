@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`containers/<ExperiencePage /> should render component 1`] = `
+<ExperiencePage
+  bigfinite={Object {}}
+  cornerjob={Object {}}
+  discovered={true}
+  enixan={Object {}}
+  icicle={Object {}}
+  mbas={Object {}}
+/>
+`;

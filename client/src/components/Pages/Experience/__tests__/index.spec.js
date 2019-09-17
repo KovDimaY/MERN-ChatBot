@@ -10,8 +10,20 @@ const mockComponent = props => (
 );
 
 describe('components/Pages/<Experience />', () => {
-  it('should render component', () => {
-    const tree = create(mockComponent()).toJSON();
+  it('should render component when not discovered', () => {
+    const props = {
+      discovered: false,
+    };
+    const tree = create(mockComponent(props)).toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('should render component when discovered', () => {
+    const props = {
+      discovered: true,
+    };
+    const tree = create(mockComponent(props)).toJSON();
 
     expect(tree).toMatchSnapshot();
   });
