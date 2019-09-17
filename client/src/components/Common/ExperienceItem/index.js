@@ -137,14 +137,23 @@ ExperienceItem.propTypes = {
   tools: PropTypes.array,
   /** An array of strings. Each element is aresponsability that I had at my work. */
   responsibilities: PropTypes.array,
-  /** An object that defines which part of the item is visible for the user. */
-  discovered: PropTypes.object.isRequired,
+  /** An object that defines which part of the item is visible for the user.
+   * By default everything is discovered if nothing else provided.
+  */
+  discovered: PropTypes.object,
 };
 
 ExperienceItem.defaultProps = {
   finish: undefined,
   tools: null,
   responsibilities: null,
+  discovered: {
+    responsibilities: true,
+    technologies: true,
+    duration: true,
+    position: true,
+    description: true,
+  },
 };
 
 export default ExperienceItem;
