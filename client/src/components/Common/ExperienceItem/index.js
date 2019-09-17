@@ -15,7 +15,7 @@ import './styles.css';
  * When the user clicks on the logo of the company one is redirected to the
  * official website of the company.
  * Some part of the information can be hidden for the user if it is not yet
- * discovered. In this case the info will be changed to question marks.
+ * discovered. In this case the info will be replaced by question marks.
  */
 const ExperienceItem = ({
   image, companyName, companyLink,
