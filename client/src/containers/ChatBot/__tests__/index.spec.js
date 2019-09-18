@@ -308,6 +308,7 @@ describe('containers/<ChatbotContainer />', () => {
         data: {
           fulfillmentMessages: 'fulfillmentMessages',
           intent: { displayName: 'displayName' },
+          parameters: 'parameters',
         },
       };
       mockAxios.post.mockImplementation(() => Promise.resolve(responceMock));
@@ -317,7 +318,7 @@ describe('containers/<ChatbotContainer />', () => {
       instance.handleRequestError = handleRequestError;
       await instance.makeRequest('url', query);
 
-      expect(checkDiscovery).toHaveBeenCalledWith('displayName', 'dispatch');
+      expect(checkDiscovery).toHaveBeenCalledWith('displayName', 'parameters', 'dispatch');
       expect(saveBotAnswers).toHaveBeenCalledWith('fulfillmentMessages');
       expect(handleRequestError).not.toHaveBeenCalled();
     });

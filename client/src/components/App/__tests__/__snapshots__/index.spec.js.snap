@@ -15,7 +15,7 @@ exports[`components/<App /> should render component 1`] = `
         path="/home"
       />
       <Route
-        component="Experience"
+        component={[Function]}
         exact={true}
         path="/experience"
       />

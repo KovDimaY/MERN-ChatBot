@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, text, array, date } from '@storybook/addon-knobs';
+import { withKnobs, text, array, date, object } from '@storybook/addon-knobs';
 
 import { paddingSize } from 'constants/storybook';
 
@@ -10,6 +10,47 @@ import ExperienceItem from '..';
 
 storiesOf('Common/ExperienceItem', module)
   .addDecorator(withKnobs)
+  .add('Not discovered technologies', () => (
+    <div style={{ padding: paddingSize }}>
+      <ExperienceItem
+        discovered={object('Discovered fields', {
+          technologies: false,
+          duration: false,
+          position: false,
+          description: false,
+        })}
+        image={experiences[0].image}
+        companyName={text('Company name', experiences[0].companyName)}
+        companyLink={text('Company link', experiences[0].companyLink)}
+        position={text('Position', experiences[0].position)}
+        description={text('Description', experiences[0].description)}
+        tools={array('Tools', experiences[0].tools)}
+        location={text('Location', experiences[0].location)}
+        start={date('Start date', experiences[0].start)}
+      />
+    </div>
+  ))
+  .add('Not discovered responsibilities', () => (
+    <div style={{ padding: paddingSize }}>
+      <ExperienceItem
+        discovered={object('Discovered fields', {
+          responsibilities: false,
+          duration: false,
+          position: false,
+          description: false,
+        })}
+        image={experiences[2].image}
+        companyName={text('Company name', experiences[2].companyName)}
+        companyLink={text('Company link', experiences[2].companyLink)}
+        position={text('Position', experiences[2].position)}
+        description={text('Description', experiences[2].description)}
+        responsibilities={array('Responsibilities', experiences[2].responsibilities)}
+        location={text('Location', experiences[2].location)}
+        start={date('Start date', experiences[2].start)}
+        finish={date('Finish date', experiences[2].finish)}
+      />
+    </div>
+  ))
   .add('Cornerjob', () => (
     <div style={{ padding: paddingSize }}>
       <ExperienceItem

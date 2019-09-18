@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components/Pages/<Experience /> should render component 1`] = `
+exports[`components/Pages/<Experience /> should render component when discovered 1`] = `
 <div
   className="experiences-section-container"
 >
@@ -24,6 +24,7 @@ exports[`components/Pages/<Experience /> should render component 1`] = `
       id={5}
       image="test-file-stub"
       location="Barcelona, Spain"
+      nameInStore="cornerjob"
       position="JS Full Stack Developer"
       start={2018-06-11T00:00:00.000Z}
       tools={
@@ -54,6 +55,7 @@ exports[`components/Pages/<Experience /> should render component 1`] = `
       id={4}
       image="test-file-stub"
       location="Barcelona, Spain"
+      nameInStore="bigfinite"
       position="JS Frontend Developer"
       start={2017-04-18T00:00:00.000Z}
       tools={
@@ -78,6 +80,7 @@ exports[`components/Pages/<Experience /> should render component 1`] = `
       id={3}
       image="test-file-stub"
       location="Kyiv, Ukraine"
+      nameInStore="enixan"
       position="Game Designer"
       responsibilities={
         Array [
@@ -96,13 +99,14 @@ exports[`components/Pages/<Experience /> should render component 1`] = `
     <ExperienceItem
       companyLink="http://www.mbastrategy.ru/"
       companyName="MBA Strategy"
-      description="Teaching people how to prepare for the quantitative part of the GMAT/GRE.
-
+      description="Teaching people how to prepare for the
+      quantitative part of the GMAT/GRE.
     "
       finish={2015-05-01T00:00:00.000Z}
       id={2}
       image="test-file-stub"
       location="Kyiv, Ukraine"
+      nameInStore="mbas"
       position="Math Consultant"
       responsibilities={
         Array [
@@ -119,14 +123,51 @@ exports[`components/Pages/<Experience /> should render component 1`] = `
     <ExperienceItem
       companyLink="http://www.icicleseafoods.com/"
       companyName="Icicle Seafoods"
-      description="Work&Travel program which helped me to improve my English and teamwork skills. It made me more organized, more hardworking, more hardy."
+      description="Work&Travel program which helped me to improve my
+      English and teamwork skills. It made me more organized, more hardworking,
+      more hardy.
+    "
       finish={2012-09-01T00:00:00.000Z}
       id={1}
       image="test-file-stub"
       location="Alaska, USA"
+      nameInStore="icicle"
       position="Cannery Worker"
       start={2012-05-01T00:00:00.000Z}
     />
+  </div>
+</div>
+`;
+
+exports[`components/Pages/<Experience /> should render component when not discovered 1`] = `
+<div
+  className="experiences-section-container"
+>
+  <div
+    className="empty-view-container"
+  >
+    <p>
+      This section is dedicated to the information about my 
+      experience
+      .
+    </p>
+    <p>
+      For the moment you have not discovered anything regarding this topic. To get some info - ask the bot right question. When the bot gives you some related answer - the information will appear on this page. Ask more questions to collect more info! Good luck!
+    </p>
+    <p>
+      If you are lazy and you do not want to play with the bot - here you can find a link to my 
+      <a
+        href="https://www.linkedin.com/in/kovalenkodmytro/"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        LinkedIn
+      </a>
+       profile and see everything at once.
+    </p>
+    <p>
+      Do not hesitate to contact me and share your opinion about this project! I will appreciate a lot any feedback even if it is negative! Thank you in advance! :)
+    </p>
   </div>
 </div>
 `;
