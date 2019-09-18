@@ -119,6 +119,4 @@ const experiences = {
   mbas,
 };
 
-module.exports = {
-  experiences,
-};
+module.exports = { experiences };
