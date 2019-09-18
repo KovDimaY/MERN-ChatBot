@@ -16,7 +16,6 @@ const noInfoPhrases = [
   'I think Dima did not tell me anything about this...',
 ];
 
-
 const getResponse = category => (element, field) => {
   if (category && element && field) {
     const categories = {
@@ -32,7 +31,6 @@ const getResponse = category => (element, field) => {
 
   return getRandomElement(fallbackPhrases);
 };
-
 
 module.exports = {
   getResponse,
