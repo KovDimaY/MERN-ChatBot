@@ -16,11 +16,17 @@ const checkHomePageDiscovery = (intentArray, dispatch) => {
   return dispatch(discoverHomePageHobbiesElement(intentArray[2]));
 };
 
-const checkExperienceDiscovery = (intentArray, params, dispatch) => (
-  intentArray[1] === 'init'
-    ? dispatch(discoverExperiencePageInit())
-    : dispatch(discoverExperiencePageInfo(params['experience-companies'], intentArray[1]))
-);
+const checkExperienceDiscovery = (intentArray, params, dispatch) => {
+  if (intentArray[1] === 'init') {
+    return dispatch(discoverExperiencePageInit());
+  }
+
+  if (params['experience-companies']) {
+    return dispatch(discoverExperiencePageInfo(params['experience-companies'], intentArray[1]));
+  }
+
+  return null;
+};
 
 export const checkDiscovery = (intent, params, dispatch) => {
   const splitted = intent.split('-');
