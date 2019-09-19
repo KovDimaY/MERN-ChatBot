@@ -39,10 +39,12 @@ import {
 export const educations = [
   {
     id: 2,
+    nameInStore: 'master',
     image: educationKNU,
     schoolName: 'Kyiv National Taras Shevchenko University',
     schoolLink: 'http://www.univ.kiev.ua/en/',
-    degree: 'Mathematics, Master\'s degree',
+    topic: 'Mathematics',
+    degree: 'Master\'s degree',
     description: `
       Taras Shevchenko National University of Kyiv is the third oldest
       university in Ukraine, it was founded in 1834. During the Soviet Union era,
@@ -65,10 +67,12 @@ export const educations = [
   },
   {
     id: 1,
+    nameInStore: 'bachelor',
     image: educationKNU,
     schoolName: 'Kyiv National Taras Shevchenko University',
     schoolLink: 'http://www.univ.kiev.ua/en/',
-    degree: 'Mathematics, Bachelor\'s degree',
+    topic: 'Mathematics',
+    degree: 'Bachelor\'s degree',
     description: `
       Taras Shevchenko National University of Kyiv is the third oldest
       university in Ukraine, it was founded in 1834. During the Soviet Union era,
