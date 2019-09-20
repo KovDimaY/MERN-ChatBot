@@ -12,6 +12,9 @@ import './styles.css';
  * signed certificate and the name of the course as a title.
  * Also it has a hover effect and when is clicked - redirects to the
  * official website with the original version of the certificate.
+ * If is not discovered, the images is changed by the image of question marks
+ * and the title also is hidden from the user. Also, when is not discovered,
+ * the link is changed by the usual div so it does not redirect anywhere.
  */
 const CertificationItem = ({
   title, image, url, discovered,
