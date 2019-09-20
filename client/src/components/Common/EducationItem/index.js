@@ -85,7 +85,7 @@ const EducationItem = ({
         { renderDates() }
         <div className="location">{location}</div>
         <p className="description">
-          { showHiddenText(description, discovered.description) }
+          { description }
         </p>
         { renderActivities() }
       </div>

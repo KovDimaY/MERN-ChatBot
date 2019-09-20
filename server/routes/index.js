@@ -4,6 +4,7 @@ const dfService = require('../services/df-service');
 const { Feedback } = require('../models/Feedback');
 const {
   handleExperienceFullfilment,
+  handleEducationFullfilment,
 } = require('./handlers');
 
 
@@ -38,6 +39,11 @@ module.exports = (app) => {
     intentMap.set('experience-description', handleExperienceFullfilment('description'));
     intentMap.set('experience-technologies', handleExperienceFullfilment('technologies'));
     intentMap.set('experience-responsibilities', handleExperienceFullfilment('responsibilities'));
+
+    intentMap.set('education-time', handleEducationFullfilment('time'));
+    intentMap.set('education-topic', handleEducationFullfilment('topic'));
+    intentMap.set('education-description', handleEducationFullfilment('description'));
+    intentMap.set('education-activities', handleEducationFullfilment('activities'));
 
     agent.handleRequest(intentMap);
   });

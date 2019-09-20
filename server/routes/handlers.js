@@ -10,6 +10,15 @@ const handleExperienceFullfilment = item => (agentItem) => {
   agentItem.add(response);
 };
 
+const handleEducationFullfilment = item => (agentItem) => {
+  const companyName = agentItem.parameters['education-degree'];
+  const response = getResponse('educations')(companyName, item);
+
+  saveDemand(companyName);
+  agentItem.add(response);
+};
+
 module.exports = {
   handleExperienceFullfilment,
+  handleEducationFullfilment,
 };

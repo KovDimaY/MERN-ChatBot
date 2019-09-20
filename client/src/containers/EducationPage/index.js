@@ -23,8 +23,8 @@ export const EducationPageContainer = props => (
 const mapStateToProps = createStructuredSelector({
   discovered: selectDiscovered(),
   certificates: selectCertificates(),
-  bachelor: selectMaster(),
-  master: selectBachelor(),
+  bachelor: selectBachelor(),
+  master: selectMaster(),
 
 });
 

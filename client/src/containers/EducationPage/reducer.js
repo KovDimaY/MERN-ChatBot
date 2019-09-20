@@ -3,25 +3,23 @@ import { fromJS } from 'immutable';
 import { actionTypes as at } from './constants';
 
 export const initialState = fromJS({
-  discovered: true,
+  discovered: false,
   certificates: false,
   bachelor: fromJS({
     time: false,
     topic: false,
-    description: false,
     activities: false,
   }),
   master: fromJS({
     time: false,
     topic: false,
-    description: false,
     activities: false,
   }),
 });
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case at.DISCOVER_EXPERIENCE_INIT:
+    case at.DISCOVER_EDUCATION_INIT:
       return state.set('discovered', true);
     case at.DISCOVER_EDUCATION_CERTIFICATES:
       return state
