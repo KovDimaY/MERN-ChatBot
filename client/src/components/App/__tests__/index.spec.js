@@ -3,13 +3,18 @@ import { create } from 'react-test-renderer';
 
 import HomePage from 'containers/HomePage';
 import Experience from 'containers/ExperiencePage';
+import Education from 'containers/EducationPage';
 
-import App, { HomeAdapted, ExperienceAdapted } from '../../App';
+import App, {
+  HomeAdapted,
+  ExperienceAdapted,
+  EducationAdapted,
+} from '../../App';
 
 jest.mock('containers/HomePage', () => 'Home');
 jest.mock('containers/ExperiencePage', () => 'Experience');
+jest.mock('containers/EducationPage', () => 'Education');
 jest.mock('../../Pages/Disclaimer', () => 'Disclaimer');
-jest.mock('../../Pages/Education', () => 'Education');
 jest.mock('../../Pages/Projects', () => 'Projects');
 jest.mock('../../Pages/Feedback', () => 'Feedback');
 jest.mock('hoc/layout', () => 'Layout');
@@ -42,6 +47,14 @@ describe('components/<App />', () => {
     const expected = <Experience />;
 
     const result = ExperienceAdapted();
+
+    expect(result).toEqual(expected);
+  });
+
+  it('should return correct component for EducationPage', () => {
+    const expected = <Education />;
+
+    const result = EducationAdapted();
 
     expect(result).toEqual(expected);
   });

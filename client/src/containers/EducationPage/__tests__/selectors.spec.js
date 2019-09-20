@@ -2,77 +2,53 @@ import { fromJS } from 'immutable';
 
 import {
   selectDiscovered,
-  selectCornerjob,
-  selectBigfinite,
-  selectEnixan,
-  selectMbas,
-  selectIcicle,
+  selectCertificates,
+  selectMaster,
+  selectBachelor,
 } from '../selectors';
 
-describe('containers/ExperiencePage/selectors', () => {
+describe('containers/EducationPage/selectors', () => {
   describe('selectDiscovered', () => {
     it('should select discovered', () => {
       const selector = selectDiscovered();
       const discovered = true;
-      const experiencePageDomain = fromJS({ discovered });
-      const mockedState = fromJS({ experiencePageDomain });
+      const educationPageDomain = fromJS({ discovered });
+      const mockedState = fromJS({ educationPageDomain });
 
       expect(selector(mockedState)).toEqual(discovered);
     });
   });
 
-  describe('selectCornerjob', () => {
-    it('should select cornerjob', () => {
-      const selector = selectCornerjob();
-      const cornerjob = { cornerjob: 'cornerjob' };
-      const experiencePageDomain = fromJS({ cornerjob });
-      const mockedState = fromJS({ experiencePageDomain });
+  describe('selectCertificates', () => {
+    it('should select certificates', () => {
+      const selector = selectCertificates();
+      const certificates = true;
+      const educationPageDomain = fromJS({ certificates });
+      const mockedState = fromJS({ educationPageDomain });
 
-      expect(selector(mockedState)).toEqual(cornerjob);
+      expect(selector(mockedState)).toEqual(certificates);
     });
   });
 
-  describe('selectBigfinite', () => {
-    it('should select bigfinite', () => {
-      const selector = selectBigfinite();
-      const bigfinite = { bigfinite: 'bigfinite' };
-      const experiencePageDomain = fromJS({ bigfinite });
-      const mockedState = fromJS({ experiencePageDomain });
+  describe('selectMaster', () => {
+    it('should select master', () => {
+      const selector = selectMaster();
+      const master = { master: 'master' };
+      const educationPageDomain = fromJS({ master });
+      const mockedState = fromJS({ educationPageDomain });
 
-      expect(selector(mockedState)).toEqual(bigfinite);
+      expect(selector(mockedState)).toEqual(master);
     });
   });
 
-  describe('selectEnixan', () => {
-    it('should select enixan', () => {
-      const selector = selectEnixan();
-      const enixan = { enixan: 'enixan' };
-      const experiencePageDomain = fromJS({ enixan });
-      const mockedState = fromJS({ experiencePageDomain });
+  describe('selectBachelor', () => {
+    it('should select bachelor', () => {
+      const selector = selectBachelor();
+      const bachelor = { bachelor: 'bachelor' };
+      const educationPageDomain = fromJS({ bachelor });
+      const mockedState = fromJS({ educationPageDomain });
 
-      expect(selector(mockedState)).toEqual(enixan);
-    });
-  });
-
-  describe('selectMbas', () => {
-    it('should select mbas', () => {
-      const selector = selectMbas();
-      const mbas = { mbas: 'mbas' };
-      const experiencePageDomain = fromJS({ mbas });
-      const mockedState = fromJS({ experiencePageDomain });
-
-      expect(selector(mockedState)).toEqual(mbas);
-    });
-  });
-
-  describe('selectIcicle', () => {
-    it('should select icicle', () => {
-      const selector = selectIcicle();
-      const icicle = { icicle: 'icicle' };
-      const experiencePageDomain = fromJS({ icicle });
-      const mockedState = fromJS({ experiencePageDomain });
-
-      expect(selector(mockedState)).toEqual(icicle);
+      expect(selector(mockedState)).toEqual(bachelor);
     });
   });
 });
