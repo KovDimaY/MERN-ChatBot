@@ -13,6 +13,8 @@ import './styles.css';
  * of the university and the degree and a list of additional activities.
  * When the user clicks on the logo of the university one is redirected to the
  * official website of the university.
+ * When is not discovered by the user, the topic of the degree, time and activities are hidden
+ * from the user. All the other information is available.
  */
 const EducationItem = ({
   image, schoolName, schoolLink, topic,
