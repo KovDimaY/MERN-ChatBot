@@ -114,13 +114,20 @@ EducationItem.propTypes = {
   finish: PropTypes.object,
   /** An array of strings. Each element is an activity which I was doing during my study. */
   activities: PropTypes.array,
-  /** An object the defines which fields are visible and which are not. */
-  discovered: PropTypes.object.isRequired,
+  /** An object the defines which fields are visible and which are not.
+   * By default everything is discovered if nothing else provided.
+   */
+  discovered: PropTypes.object,
 };
 
 EducationItem.defaultProps = {
   finish: undefined,
   activities: null,
+  discovered: {
+    time: true,
+    topic: true,
+    activities: true,
+  },
 };
 
 export default EducationItem;

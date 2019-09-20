@@ -3,7 +3,7 @@ import { actionTypes as at } from '../constants';
 
 import reducer, { initialState } from '../reducer';
 
-describe('containers/ExperiencePage/reducer', () => {
+describe('containers/EducationPage/reducer', () => {
   it('should return initial state', () => {
     const newState = reducer(undefined, {});
 
@@ -25,13 +25,13 @@ describe('containers/ExperiencePage/reducer', () => {
     expect(newState).toEqual(expected);
   });
 
-  it('handles actions of type DISCOVER_EXPERIENCE_INIT', () => {
+  it('handles actions of type DISCOVER_EDUCATION_INIT', () => {
     const state = fromJS({
       discovered: false,
       test: false,
     });
     const action = {
-      type: at.DISCOVER_EXPERIENCE_INIT,
+      type: at.DISCOVER_EDUCATION_INIT,
     };
     const expected = fromJS({
       discovered: true,
@@ -43,26 +43,48 @@ describe('containers/ExperiencePage/reducer', () => {
     expect(newState).toEqual(expected);
   });
 
-  it('handles actions of type DISCOVER_EXPERIENCE_INFO', () => {
+  it('handles actions of type DISCOVER_EDUCATION_CERTIFICATES', () => {
     const state = fromJS({
       discovered: false,
-      cornerjob: fromJS({
-        position: false,
-        duration: false,
+      certificates: false,
+      other: false,
+    });
+    const action = {
+      type: at.DISCOVER_EDUCATION_CERTIFICATES,
+    };
+    const expected = fromJS({
+      discovered: true,
+      certificates: true,
+      other: false,
+    });
+
+    const newState = reducer(state, action);
+
+    expect(newState).toEqual(expected);
+  });
+
+  it('handles actions of type DISCOVER_EDUCATION_INFO', () => {
+    const state = fromJS({
+      discovered: false,
+      certificates: false,
+      master: fromJS({
+        topic: false,
+        activity: false,
       }),
     });
     const action = {
-      type: at.DISCOVER_EXPERIENCE_INFO,
+      type: at.DISCOVER_EDUCATION_INFO,
       payload: {
-        section: 'cornerjob',
-        data: 'position',
+        section: 'master',
+        data: 'topic',
       },
     };
     const expected = fromJS({
       discovered: true,
-      cornerjob: fromJS({
-        position: true,
-        duration: false,
+      certificates: false,
+      master: fromJS({
+        topic: true,
+        activity: false,
       }),
     });
 

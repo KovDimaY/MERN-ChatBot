@@ -9,6 +9,12 @@ import {
 } from 'containers/ExperiencePage/actions';
 
 import {
+  discoverEducationPageInit,
+  discoverEducationPageCertificates,
+  discoverEducationPageInfo,
+} from 'containers/EducationPage/actions';
+
+import {
   checkDiscovery,
 } from '../check-discovery';
 
@@ -20,6 +26,12 @@ jest.mock('containers/HomePage/actions', () => ({
 jest.mock('containers/ExperiencePage/actions', () => ({
   discoverExperiencePageInit: jest.fn(),
   discoverExperiencePageInfo: jest.fn(),
+}));
+
+jest.mock('containers/EducationPage/actions', () => ({
+  discoverEducationPageInit: jest.fn(),
+  discoverEducationPageCertificates: jest.fn(),
+  discoverEducationPageInfo: jest.fn(),
 }));
 
 describe('containers/Chatbot/check-discovery.js', () => {
@@ -66,6 +78,61 @@ describe('containers/Chatbot/check-discovery.js', () => {
 
       expect(dispatch).toHaveBeenCalled();
       expect(discoverExperiencePageInfo).toHaveBeenCalledWith('test', 'something');
+    });
+
+    it('should not discover anything if there is no experience param', () => {
+      const intent = 'experience-something';
+      const params = {};
+      const dispatch = jest.fn();
+
+      const result = checkDiscovery(intent, params, dispatch);
+
+      expect(dispatch).not.toHaveBeenCalled();
+      expect(result).toEqual(null);
+    });
+
+    it('should check experience discovery with discoverEducationPageInit', () => {
+      const intent = 'education-init';
+      const params = 'params';
+      const dispatch = jest.fn();
+
+      checkDiscovery(intent, params, dispatch);
+
+      expect(dispatch).toHaveBeenCalled();
+      expect(discoverEducationPageInit).toHaveBeenCalled();
+    });
+
+    it('should check experience discovery with discoverEducationPageCertificates', () => {
+      const intent = 'education-certificates';
+      const params = 'params';
+      const dispatch = jest.fn();
+
+      checkDiscovery(intent, params, dispatch);
+
+      expect(dispatch).toHaveBeenCalled();
+      expect(discoverEducationPageCertificates).toHaveBeenCalled();
+    });
+
+    it('should check experience discovery with discoverEducationPageInfo', () => {
+      const intent = 'education-something';
+      const params = { 'education-degree': 'test' };
+      const dispatch = jest.fn();
+
+      checkDiscovery(intent, params, dispatch);
+
+      expect(dispatch).toHaveBeenCalled();
+      expect(discoverEducationPageInfo).toHaveBeenCalledWith('test', 'something');
+    });
+
+    it('should not discover anything if there is no education param', () => {
+      const intent = 'education-something';
+      const params = {};
+      const dispatch = jest.fn();
+
+      const result = checkDiscovery(intent, params, dispatch);
+
+      expect(dispatch).not.toHaveBeenCalled();
+      expect(result).toEqual(null);
     });
 
     it('should return intent if nothing discovered', () => {
