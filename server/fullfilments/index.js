@@ -1,6 +1,7 @@
 const { getRandomElement } = require('../utils/helpers');
 
 const { experiences } = require('./experience');
+const { educations } = require('./education');
 
 const fallbackPhrases = [
   'Sorry, but I think you should check your question and ask it corrected...',
@@ -20,6 +21,7 @@ const getResponse = category => (element, field) => {
   if (category && element && field) {
     const categories = {
       experiences,
+      educations,
     };
 
     const answers = categories[category][element][field];

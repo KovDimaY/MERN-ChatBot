@@ -10,8 +10,6 @@ import { educations, certificates } from './constants';
 import './styles.css';
 
 const Education = (props) => {
-  console.log("Education props", props);
-
   const renderEducations = () => (
     educations.map(item => (
       <EducationItem
