@@ -3,6 +3,7 @@ import { create } from 'react-test-renderer';
 
 import Education from '../../Education';
 
+jest.mock('components/Common/EmptyView', () => 'EmptyView');
 jest.mock('components/Common/EducationItem', () => 'EducationItem');
 jest.mock('components/Common/CertificationItem', () => 'CertificationItem');
 
