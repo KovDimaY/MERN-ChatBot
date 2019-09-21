@@ -1,5 +1,27 @@
-ProjectItem examples
+#### ProjectItem examples
 
+Hidden element
+
+```js
+const { projects } = require('components/Pages/Projects/constants');
+
+<>
+  <ProjectItem
+    discovered={{
+      tools: false,
+      description: false,
+    }}
+    image={projects[0].image}
+    name={projects[0].name}
+    description={projects[0].description}
+    tools={projects[0].tools}
+    url={projects[0].url}
+  />
+</>
+```
+
+
+Everything discovered
 
 ```js
 const { projects } = require('components/Pages/Projects/constants');
