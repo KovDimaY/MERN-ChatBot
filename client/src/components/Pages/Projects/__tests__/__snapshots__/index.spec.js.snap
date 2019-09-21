@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components/Pages/<Projects /> should render component 1`] = `
+exports[`components/Pages/<Projects /> should render component discovered 1`] = `
 <div
   className="projects-section-container"
 >
@@ -30,6 +30,7 @@ exports[`components/Pages/<Projects /> should render component 1`] = `
       id={4}
       image="test-file-stub"
       name="TripReviewer"
+      nameInStore="trips"
       tools={
         Array [
           "React",
@@ -63,6 +64,7 @@ exports[`components/Pages/<Projects /> should render component 1`] = `
       id={3}
       image="test-file-stub"
       name="SimpleChat"
+      nameInStore="chat"
       tools={
         Array [
           "Node",
@@ -89,6 +91,7 @@ exports[`components/Pages/<Projects /> should render component 1`] = `
       id={2}
       image="test-file-stub"
       name="React-Highcharts Playground"
+      nameInStore="charts"
       tools={
         Array [
           "React",
@@ -111,6 +114,7 @@ exports[`components/Pages/<Projects /> should render component 1`] = `
       id={5}
       image="test-file-stub"
       name="Memory Game"
+      nameInStore="memory"
       tools={
         Array [
           "HTML",
@@ -133,6 +137,7 @@ exports[`components/Pages/<Projects /> should render component 1`] = `
       id={1}
       image="test-file-stub"
       name="KovDimaY"
+      nameInStore="kovdimay"
       tools={
         Array [
           "C#",
@@ -143,5 +148,15 @@ exports[`components/Pages/<Projects /> should render component 1`] = `
       url="http://kovalenkody.wixsite.com/kovdimay"
     />
   </div>
+</div>
+`;
+
+exports[`components/Pages/<Projects /> should render component not discovered 1`] = `
+<div
+  className="projects-section-container"
+>
+  <EmptyView
+    section="projects"
+  />
 </div>
 `;

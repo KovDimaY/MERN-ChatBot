@@ -1,46 +1,33 @@
 import { actionTypes as at } from '../constants';
 
 import {
-  discoverEducationPageInit,
-  discoverEducationPageCertificates,
-  discoverEducationPageInfo,
+  discoverProjectsPageInit,
+  discoverProjectsPageInfo,
 } from '../actions';
 
-describe('containers/EducationPage/actions', () => {
-  describe('discoverEducationPageInit', () => {
+describe('containers/ProjectsPage/actions', () => {
+  describe('discoverProjectsPageInit', () => {
     it('should return correct action', () => {
       const expected = {
-        type: at.DISCOVER_EDUCATION_INIT,
+        type: at.DISCOVER_PROJECTS_INIT,
       };
 
-      const result = discoverEducationPageInit();
+      const result = discoverProjectsPageInit();
 
       expect(result).toEqual(expected);
     });
   });
 
-  describe('discoverEducationPageCertificates', () => {
-    it('should return correct action', () => {
-      const expected = {
-        type: at.DISCOVER_EDUCATION_CERTIFICATES,
-      };
-
-      const result = discoverEducationPageCertificates();
-
-      expect(result).toEqual(expected);
-    });
-  });
-
-  describe('discoverEducationPageInfo', () => {
+  describe('discoverProjectsPageInfo', () => {
     it('should return correct action', () => {
       const section = 'section';
       const data = 'data';
       const expected = {
-        type: at.DISCOVER_EDUCATION_INFO,
+        type: at.DISCOVER_PROJECTS_INFO,
         payload: { section, data },
       };
 
-      const result = discoverEducationPageInfo(section, data);
+      const result = discoverProjectsPageInfo(section, data);
 
       expect(result).toEqual(expected);
     });

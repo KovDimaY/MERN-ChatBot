@@ -1,21 +1,23 @@
 import React from 'react';
 import { create } from 'react-test-renderer';
 
-import { EducationPageContainer } from '../../EducationPage';
+import { ProjectsPageContainer } from '../../ProjectsPage';
 
-jest.mock('components/Pages/Education', () => 'EducationPage');
+jest.mock('components/Pages/Projects', () => 'ProjectsPage');
 
 const mockComponent = props => (
-  <EducationPageContainer {...props} />
+  <ProjectsPageContainer {...props} />
 );
 
-describe('containers/<EducationPage />', () => {
+describe('containers/<ProjectsPage />', () => {
   it('should render component', () => {
     const props = {
       discovered: true,
-      certificates: true,
-      bachelor: {},
-      master: {},
+      trips: {},
+      charts: {},
+      chat: {},
+      memory: {},
+      kovdimay: {},
     };
     const tree = create(mockComponent(props)).toJSON();
 

@@ -4,18 +4,20 @@ import { create } from 'react-test-renderer';
 import HomePage from 'containers/HomePage';
 import Experience from 'containers/ExperiencePage';
 import Education from 'containers/EducationPage';
+import Projects from 'containers/ProjectsPage';
 
 import App, {
   HomeAdapted,
   ExperienceAdapted,
   EducationAdapted,
+  ProjectsAdapted,
 } from '../../App';
 
 jest.mock('containers/HomePage', () => 'Home');
 jest.mock('containers/ExperiencePage', () => 'Experience');
 jest.mock('containers/EducationPage', () => 'Education');
+jest.mock('containers/ProjectsPage', () => 'Projects');
 jest.mock('../../Pages/Disclaimer', () => 'Disclaimer');
-jest.mock('../../Pages/Projects', () => 'Projects');
 jest.mock('../../Pages/Feedback', () => 'Feedback');
 jest.mock('hoc/layout', () => 'Layout');
 jest.mock('react-router-dom', () => ({
@@ -55,6 +57,14 @@ describe('components/<App />', () => {
     const expected = <Education />;
 
     const result = EducationAdapted();
+
+    expect(result).toEqual(expected);
+  });
+
+  it('should return correct component for ProjectsPage', () => {
+    const expected = <Projects />;
+
+    const result = ProjectsAdapted();
 
     expect(result).toEqual(expected);
   });
