@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, text } from '@storybook/addon-knobs';
+import { withKnobs, text, boolean } from '@storybook/addon-knobs';
 
 import { paddingSize } from 'constants/storybook';
 import { UC_B6BARC8V, C_11467555, GH93LKLL72BR } from 'images';
@@ -15,6 +15,7 @@ storiesOf('Common/CertificationItem', module)
         title={text('Title', 'This text will be hidden until user discovers it')}
         image={UC_B6BARC8V}
         url={text('URL', 'This url will not be clickable untill user discovers it')}
+        discovered={boolean('Discovered', false)}
       />
     </div>
   ))
@@ -24,7 +25,7 @@ storiesOf('Common/CertificationItem', module)
         title={text('Title', 'Advanced React and Redux: 2018 Edition')}
         image={UC_B6BARC8V}
         url={text('URL', 'https://www.udemy.com/certificate/UC-B6BARC8V/')}
-        discovered
+        discovered={boolean('Discovered', true)}
       />
     </div>
   ))
@@ -34,7 +35,7 @@ storiesOf('Common/CertificationItem', module)
         title={text('Title', 'Test-Driven Development')}
         image={C_11467555}
         url={text('URL', 'https://www.credential.net/e524eujo')}
-        discovered
+        discovered={boolean('Discovered', true)}
       />
     </div>
   ))
@@ -44,7 +45,7 @@ storiesOf('Common/CertificationItem', module)
         title={text('Title', 'Graph Search, Shortest Paths, and Data Structures')}
         image={GH93LKLL72BR}
         url={text('URL', 'https://www.coursera.org/account/accomplishments/certificate/GH93LKLL72BR')}
-        discovered
+        discovered={boolean('Discovered', true)}
       />
     </div>
   ));

@@ -58,11 +58,11 @@ exports[`components/Common/<EducationItem /> should render component with all po
         )
       </span>
     </div>
-    <div
+    <p
       className="location"
     >
       location
-    </div>
+    </p>
     <p
       className="description"
     >
@@ -145,11 +145,11 @@ exports[`components/Common/<EducationItem /> should render component with all po
          ???? - ????
       </span>
     </div>
-    <div
+    <p
       className="location"
     >
       location
-    </div>
+    </p>
     <p
       className="description"
     >
@@ -237,11 +237,11 @@ exports[`components/Common/<EducationItem /> should render component with requir
         )
       </span>
     </div>
-    <div
+    <p
       className="location"
     >
       location
-    </div>
+    </p>
     <p
       className="description"
     />
@@ -302,11 +302,11 @@ exports[`components/Common/<EducationItem /> should render component with requir
          ???? - ????
       </span>
     </div>
-    <div
+    <p
       className="location"
     >
       location
-    </div>
+    </p>
     <p
       className="description"
     />

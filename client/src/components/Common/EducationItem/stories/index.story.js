@@ -34,6 +34,11 @@ storiesOf('Common/EducationItem', module)
   .add('Master\'s degree', () => (
     <div style={{ padding: paddingSize }}>
       <EducationItem
+        discovered={object('Discovered fields', {
+          topic: true,
+          time: true,
+          activities: true,
+        })}
         image={educations[0].image}
         schoolName={text('School name', educations[0].schoolName)}
         schoolLink={text('School link', educations[0].schoolLink)}
@@ -50,6 +55,11 @@ storiesOf('Common/EducationItem', module)
   .add('Bachelor\'s degree', () => (
     <div style={{ padding: paddingSize }}>
       <EducationItem
+        discovered={object('Discovered fields', {
+          topic: true,
+          time: true,
+          activities: true,
+        })}
         image={educations[1].image}
         schoolName={text('School name', educations[1].schoolName)}
         schoolLink={text('School link', educations[1].schoolLink)}
