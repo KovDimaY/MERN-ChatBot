@@ -4,22 +4,22 @@ const selectEducationPageDomain = () => state => state.get('educationPageDomain'
 
 const selectDiscovered = () => createSelector(
   selectEducationPageDomain(),
-  experiencePageDomain => experiencePageDomain.get('discovered'),
+  educationPageDomain => educationPageDomain.get('discovered'),
 );
 
 const selectCertificates = () => createSelector(
   selectEducationPageDomain(),
-  experiencePageDomain => experiencePageDomain.get('certificates'),
+  educationPageDomain => educationPageDomain.get('certificates'),
 );
 
 const selectMaster = () => createSelector(
   selectEducationPageDomain(),
-  experiencePageDomain => experiencePageDomain.get('master').toJS(),
+  educationPageDomain => educationPageDomain.get('master').toJS(),
 );
 
 const selectBachelor = () => createSelector(
   selectEducationPageDomain(),
-  experiencePageDomain => experiencePageDomain.get('bachelor').toJS(),
+  educationPageDomain => educationPageDomain.get('bachelor').toJS(),
 );
 
 export {

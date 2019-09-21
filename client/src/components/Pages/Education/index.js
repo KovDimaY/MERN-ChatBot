@@ -31,7 +31,7 @@ const Education = (props) => {
   );
 
   const renderContent = () => (
-    <div className="education-section-container">
+    <React.Fragment>
       <h3 className="education-section-title">Education</h3>
       <div className="educations-wrapper">
         { renderEducations() }
@@ -40,11 +40,11 @@ const Education = (props) => {
       <div className="certifications-wrapper">
         { renderCertifications() }
       </div>
-    </div>
+    </React.Fragment>
   );
 
   return (
-    <div className="experiences-section-container">
+    <div className="education-section-container">
       {
         props.discovered
           ? renderContent()
