@@ -3,7 +3,7 @@ import { actionTypes as at } from '../constants';
 
 import reducer, { initialState } from '../reducer';
 
-describe('containers/EducationPage/reducer', () => {
+describe('containers/ProjectsPage/reducer', () => {
   it('should return initial state', () => {
     const newState = reducer(undefined, {});
 
@@ -25,13 +25,13 @@ describe('containers/EducationPage/reducer', () => {
     expect(newState).toEqual(expected);
   });
 
-  it('handles actions of type DISCOVER_EDUCATION_INIT', () => {
+  it('handles actions of type DISCOVER_PROJECTS_INIT', () => {
     const state = fromJS({
       discovered: false,
       test: false,
     });
     const action = {
-      type: at.DISCOVER_EDUCATION_INIT,
+      type: at.DISCOVER_PROJECTS_INIT,
     };
     const expected = fromJS({
       discovered: true,
@@ -43,48 +43,26 @@ describe('containers/EducationPage/reducer', () => {
     expect(newState).toEqual(expected);
   });
 
-  it('handles actions of type DISCOVER_EDUCATION_CERTIFICATES', () => {
+  it('handles actions of type DISCOVER_PROJECTS_INFO', () => {
     const state = fromJS({
       discovered: false,
-      certificates: false,
-      other: false,
-    });
-    const action = {
-      type: at.DISCOVER_EDUCATION_CERTIFICATES,
-    };
-    const expected = fromJS({
-      discovered: true,
-      certificates: true,
-      other: false,
-    });
-
-    const newState = reducer(state, action);
-
-    expect(newState).toEqual(expected);
-  });
-
-  it('handles actions of type DISCOVER_EDUCATION_INFO', () => {
-    const state = fromJS({
-      discovered: false,
-      certificates: false,
-      master: fromJS({
+      kovdimay: fromJS({
         topic: false,
-        activity: false,
+        other: false,
       }),
     });
     const action = {
-      type: at.DISCOVER_EDUCATION_INFO,
+      type: at.DISCOVER_PROJECTS_INFO,
       payload: {
-        section: 'master',
+        section: 'kovdimay',
         data: 'topic',
       },
     };
     const expected = fromJS({
       discovered: true,
-      certificates: false,
-      master: fromJS({
+      kovdimay: fromJS({
         topic: true,
-        activity: false,
+        other: false,
       }),
     });
 
