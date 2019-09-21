@@ -1,6 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { showHiddenText } from 'utils/common';
+import { hiddenImage } from 'images';
+
 import './styles.css';
 
 /**
@@ -9,15 +12,38 @@ import './styles.css';
  * signed certificate and the name of the course as a title.
  * Also it has a hover effect and when is clicked - redirects to the
  * official website with the original version of the certificate.
+ * If is not discovered, the images is changed by the image of question marks
+ * and the title also is hidden from the user. Also, when is not discovered,
+ * the link is changed by the usual div so it does not redirect anywhere.
  */
-const CertificationItem = ({ title, image, url }) => (
-  <div className="certification-container">
-    <a href={url} className="image-wrapper" target="_blank" rel="noopener noreferrer">
-      <img className="image" src={image} alt="certificate" />
-    </a>
-    <div className="title">{title}</div>
-  </div>
-);
+const CertificationItem = ({
+  title, image, url, discovered,
+}) => {
+  const renderLink = () => {
+    if (discovered) {
+      return (
+        <a href={url} className="image-wrapper" target="_blank" rel="noopener noreferrer">
+          <img className="image" src={image} alt="certificate" />
+        </a>
+      );
+    }
+
+    return (
+      <div className="image-wrapper">
+        <img className="image" src={hiddenImage} alt="certificate" />
+      </div>
+    );
+  };
+
+  return (
+    <div className="certification-container">
+      { renderLink() }
+      <div className="title">
+        { showHiddenText(title, discovered) }
+      </div>
+    </div>
+  );
+};
 
 CertificationItem.propTypes = {
   /** The official name of the course. */
@@ -26,6 +52,8 @@ CertificationItem.propTypes = {
   image: PropTypes.string.isRequired,
   /** URL of the original version of the certificate (always provided by the course). */
   url: PropTypes.string.isRequired,
+  /** This prop defines if the certificate is visible and the link can be clicked. */
+  discovered: PropTypes.bool.isRequired,
 };
 
 export default CertificationItem;

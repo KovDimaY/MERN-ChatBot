@@ -20,7 +20,7 @@ exports[`components/<App /> should render component 1`] = `
         path="/experience"
       />
       <Route
-        component="Education"
+        component={[Function]}
         exact={true}
         path="/education"
       />

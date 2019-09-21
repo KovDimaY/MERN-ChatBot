@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 
-import { getDuration } from 'utils/common';
+import { getDuration, showHiddenText } from 'utils/common';
 
 import './styles.css';
 
@@ -13,10 +13,12 @@ import './styles.css';
  * of the university and the degree and a list of additional activities.
  * When the user clicks on the logo of the university one is redirected to the
  * official website of the university.
+ * When is not discovered by the user, the topic of the degree, time and activities are hidden
+ * from the user. All the other information is available.
  */
 const EducationItem = ({
-  image, schoolName, schoolLink,
-  degree, start, finish,
+  image, schoolName, schoolLink, topic,
+  degree, start, finish, discovered,
   location, description, activities,
 }) => {
   const renderActivities = () => {
@@ -25,7 +27,13 @@ const EducationItem = ({
         <div className="activities">
           <div className="activities-label">Roles and activities:</div>
           <ul>
-            {activities.map(item => <li key={item}>{item}</li>)}
+            {
+              activities.map(item => (
+                <li key={item}>
+                  { showHiddenText(item, discovered.activities) }
+                </li>
+              ))
+            }
           </ul>
         </div>
       );
@@ -38,13 +46,34 @@ const EducationItem = ({
     const finishDate = finish ? moment(finish).format('MMM YYYY') : 'Now';
     const duration = getDuration(start, finish);
 
+    if (discovered.time) {
+      return (
+        <div className="dates-wrapper">
+          <span className="dates">{startDate} - {finishDate}</span>
+          <span className="duration">({duration})</span>
+        </div>
+      );
+    }
+
     return (
       <div className="dates-wrapper">
-        <span className="dates">{startDate} - {finishDate}</span>
-        <span className="duration">({duration})</span>
+        <span className="dates">
+          <b>When:</b> ???? - ????
+        </span>
       </div>
     );
   };
+
+  const renderTitle = () => (
+    <div className="title">
+      <div className="degree">
+        {showHiddenText(topic, discovered.topic)}, {degree}
+      </div>
+      <a href={schoolLink} className="school" target="_blank" rel="noopener noreferrer">
+        {schoolName}
+      </a>
+    </div>
+  );
 
   return (
     <div className="education-container row valign-wrapper">
@@ -54,14 +83,9 @@ const EducationItem = ({
         </a>
       </div>
       <div className="col s12 m9">
-        <div className="title">
-          <div className="degree">{degree}</div>
-          <a href={schoolLink} className="school" target="_blank" rel="noopener noreferrer">
-            {schoolName}
-          </a>
-        </div>
+        { renderTitle() }
         { renderDates() }
-        <div className="location">{location}</div>
+        <p className="location">{location}</p>
         <p className="description">{description}</p>
         { renderActivities() }
       </div>
@@ -76,7 +100,9 @@ EducationItem.propTypes = {
   schoolName: PropTypes.string.isRequired,
   /** The link to the official website of the university. */
   schoolLink: PropTypes.string.isRequired,
-  /** A string that consists of the field and a level of the degree separated by a comma. */
+  /** A string that consists of the field of studies while getting this education. */
+  topic: PropTypes.string.isRequired,
+  /** A string that consists of the degree obtained after this education. */
   degree: PropTypes.string.isRequired,
   /** A string that consists of City and Country separated by a comma. */
   location: PropTypes.string.isRequired,
@@ -88,11 +114,20 @@ EducationItem.propTypes = {
   finish: PropTypes.object,
   /** An array of strings. Each element is an activity which I was doing during my study. */
   activities: PropTypes.array,
+  /** An object the defines which fields are visible and which are not.
+   * By default everything is discovered if nothing else provided.
+   */
+  discovered: PropTypes.object,
 };
 
 EducationItem.defaultProps = {
   finish: undefined,
   activities: null,
+  discovered: {
+    time: true,
+    topic: true,
+    activities: true,
+  },
 };
 
 export default EducationItem;

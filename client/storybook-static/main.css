@@ -81,7 +81,7 @@
   z-index: 200;
   max-width: 450px;
   position: fixed;
-  bottom: 1px;
+  bottom: 0;
   border: 1px solid gray;
   box-shadow: 1px 1px 25px gray;
   background: #e3f2fd;
@@ -194,6 +194,7 @@
 .education-container .location {
   font-size: 16px;
   color: darkgray;
+  margin: 0;
 }
 .education-container .description {
   text-align: justify;

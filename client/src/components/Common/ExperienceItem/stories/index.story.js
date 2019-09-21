@@ -54,6 +54,12 @@ storiesOf('Common/ExperienceItem', module)
   .add('Cornerjob', () => (
     <div style={{ padding: paddingSize }}>
       <ExperienceItem
+        discovered={object('Discovered fields', {
+          technologies: true,
+          duration: true,
+          position: true,
+          description: true,
+        })}
         image={experiences[0].image}
         companyName={text('Company name', experiences[0].companyName)}
         companyLink={text('Company link', experiences[0].companyLink)}
@@ -68,6 +74,12 @@ storiesOf('Common/ExperienceItem', module)
   .add('Bigfinite Inc', () => (
     <div style={{ padding: paddingSize }}>
       <ExperienceItem
+        discovered={object('Discovered fields', {
+          technologies: true,
+          duration: true,
+          position: true,
+          description: true,
+        })}
         image={experiences[1].image}
         companyName={text('Company name', experiences[1].companyName)}
         companyLink={text('Company link', experiences[1].companyLink)}
@@ -83,6 +95,12 @@ storiesOf('Common/ExperienceItem', module)
   .add('Enixan Entertainment', () => (
     <div style={{ padding: paddingSize }}>
       <ExperienceItem
+        discovered={object('Discovered fields', {
+          responsibilities: true,
+          duration: true,
+          position: true,
+          description: true,
+        })}
         image={experiences[2].image}
         companyName={text('Company name', experiences[2].companyName)}
         companyLink={text('Company link', experiences[2].companyLink)}
@@ -98,6 +116,12 @@ storiesOf('Common/ExperienceItem', module)
   .add('MBA Strategy', () => (
     <div style={{ padding: paddingSize }}>
       <ExperienceItem
+        discovered={object('Discovered fields', {
+          responsibilities: true,
+          duration: true,
+          position: true,
+          description: true,
+        })}
         image={experiences[3].image}
         companyName={text('Company name', experiences[3].companyName)}
         companyLink={text('Company link', experiences[3].companyLink)}
@@ -113,6 +137,11 @@ storiesOf('Common/ExperienceItem', module)
   .add('Icicle Seafoods', () => (
     <div style={{ padding: paddingSize }}>
       <ExperienceItem
+        discovered={object('Discovered fields', {
+          duration: true,
+          position: true,
+          description: true,
+        })}
         image={experiences[4].image}
         companyName={text('Company name', experiences[4].companyName)}
         companyLink={text('Company link', experiences[4].companyLink)}

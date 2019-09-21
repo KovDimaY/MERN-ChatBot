@@ -169,5 +169,15 @@ describe('utils/common.js', () => {
 
       expect(result).toEqual(expected);
     });
+
+    it('works correctly if there is no text provided', () => {
+      let input;
+      const show = false;
+      const expected = '';
+
+      const result = showHiddenText(input, show);
+
+      expect(result).toEqual(expected);
+    });
   });
 });
