@@ -5,6 +5,7 @@ const { Feedback } = require('../models/Feedback');
 const {
   handleExperienceFullfilment,
   handleEducationFullfilment,
+  handleProjectFullfilment,
 } = require('./handlers');
 
 
@@ -44,6 +45,9 @@ module.exports = (app) => {
     intentMap.set('education-topic', handleEducationFullfilment('topic'));
     intentMap.set('education-description', handleEducationFullfilment('description'));
     intentMap.set('education-activities', handleEducationFullfilment('activities'));
+
+    intentMap.set('projects-tools', handleProjectFullfilment('tools'));
+    intentMap.set('projects-description', handleProjectFullfilment('description'));
 
     agent.handleRequest(intentMap);
   });
