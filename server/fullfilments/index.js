@@ -2,6 +2,7 @@ const { getRandomElement } = require('../utils/helpers');
 
 const { experiences } = require('./experience');
 const { educations } = require('./education');
+const { projects } = require('./projects');
 
 const fallbackPhrases = [
   'Sorry, but I think you should check your question and ask it corrected...',
@@ -22,6 +23,7 @@ const getResponse = category => (element, field) => {
     const categories = {
       experiences,
       educations,
+      projects,
     };
 
     const answers = categories[category][element][field];
