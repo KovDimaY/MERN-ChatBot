@@ -85,10 +85,8 @@ const EducationItem = ({
       <div className="col s12 m9">
         { renderTitle() }
         { renderDates() }
-        <div className="location">{location}</div>
-        <p className="description">
-          { description }
-        </p>
+        <p className="location">{location}</p>
+        <p className="description">{description}</p>
         { renderActivities() }
       </div>
     </div>

@@ -194,6 +194,7 @@
 .education-container .location {
   font-size: 16px;
   color: darkgray;
+  margin: 0;
 }
 .education-container .description {
   text-align: justify;

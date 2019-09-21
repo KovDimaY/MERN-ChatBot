@@ -170,7 +170,7 @@ describe('utils/common.js', () => {
       expect(result).toEqual(expected);
     });
 
-    it('work correctly if there is no text provided', () => {
+    it('works correctly if there is no text provided', () => {
       let input;
       const show = false;
       const expected = '';
