@@ -3,7 +3,7 @@ import { fromJS } from 'immutable';
 import { actionTypes as at } from './constants';
 
 export const initialState = fromJS({
-  discovered: true,
+  discovered: false,
   trips: fromJS({
     tools: false,
     description: false,
