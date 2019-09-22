@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import './styles.css';
+
 /**
  * This component is just an image with a title, link and a bit of information.
  * The idea of this card is to be used as an answer of the bot.
