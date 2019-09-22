@@ -12,14 +12,15 @@ import Layout from 'hoc/layout';
 import Home from 'containers/HomePage';
 import Experience from 'containers/ExperiencePage';
 import Education from 'containers/EducationPage';
+import Projects from 'containers/ProjectsPage';
 
 import Disclaimer from '../Pages/Disclaimer';
-import Projects from '../Pages/Projects';
 import Feedback from '../Pages/Feedback';
 
 export const HomeAdapted = () => <Home />;
 export const ExperienceAdapted = () => <Experience />;
 export const EducationAdapted = () => <Education />;
+export const ProjectsAdapted = () => <Projects />;
 
 const App = () => (
   <BrowserRouter>
@@ -29,7 +30,7 @@ const App = () => (
         <Route path={HOME} exact component={HomeAdapted} />
         <Route path={EXPERIENCE} exact component={ExperienceAdapted} />
         <Route path={EDUCATION} exact component={EducationAdapted} />
-        <Route path={PROJECTS} exact component={Projects} />
+        <Route path={PROJECTS} exact component={ProjectsAdapted} />
         <Route path={FEEDBACK} exact component={Feedback} />
       </Layout>
     </Switch>

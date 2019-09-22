@@ -14,6 +14,11 @@ import {
   discoverEducationPageInfo,
 } from 'containers/EducationPage/actions';
 
+import {
+  discoverProjectsPageInit,
+  discoverProjectsPageInfo,
+} from 'containers/ProjectsPage/actions';
+
 const checkHomePageDiscovery = (intentArray, dispatch) => {
   if (intentArray.length === 2) {
     return dispatch(discoverHomePageSimpleElement(intentArray[1]));
@@ -25,12 +30,12 @@ const checkHomePageDiscovery = (intentArray, dispatch) => {
 const checkExperienceDiscovery = (intentArray, params, dispatch) => {
   const companyName = params['experience-companies'];
 
-  if (intentArray[1] === 'init') {
-    return dispatch(discoverExperiencePageInit());
-  }
-
   if (companyName) {
     return dispatch(discoverExperiencePageInfo(companyName, intentArray[1]));
+  }
+
+  if (intentArray[1] === 'init') {
+    return dispatch(discoverExperiencePageInit());
   }
 
   return null;
@@ -53,6 +58,20 @@ const checkEducationDiscovery = (intentArray, params, dispatch) => {
   }
 };
 
+const checkProjectsDiscovery = (intentArray, params, dispatch) => {
+  const projectName = params['projects-project'];
+
+  if (projectName) {
+    return dispatch(discoverProjectsPageInfo(projectName, intentArray[1]));
+  }
+
+  if (intentArray[1] === 'init') {
+    return dispatch(discoverProjectsPageInit());
+  }
+
+  return null;
+};
+
 export const checkDiscovery = (intent, params, dispatch) => {
   const splitted = intent.split('-');
 
@@ -63,6 +82,8 @@ export const checkDiscovery = (intent, params, dispatch) => {
       return checkExperienceDiscovery(splitted, params, dispatch);
     case 'education':
       return checkEducationDiscovery(splitted, params, dispatch);
+    case 'projects':
+      return checkProjectsDiscovery(splitted, params, dispatch);
     default:
       return intent;
   }

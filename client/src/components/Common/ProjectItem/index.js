@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { showHiddenText } from 'utils/common';
+
 import './styles.css';
 
 /**
@@ -10,17 +12,26 @@ import './styles.css';
  * (GitHub or the deployed version in production).
  * User can be redirected to the project by both clicking the image or clicking the link
  * under the title of the card.
+ * Some part of the information can be hidden for the user if it is not yet
+ * discovered. In this case the info will be replaced by question marks.
  */
 const ProjectItem = ({
   image, name, url,
   description, tools,
+  discovered,
 }) => {
   const renderTools = () => {
     if (tools && tools.length) {
       return (
         <div className="tools">
           <div className="tools-label">Technologies:</div>
-          <div>{tools.join(' | ')}</div>
+          <div>
+            {
+              tools
+                .map(item => showHiddenText(item, discovered.tools))
+                .join(' | ')
+            }
+          </div>
         </div>
       );
     }
@@ -41,7 +52,9 @@ const ProjectItem = ({
             See project
           </a>
         </div>
-        <p className="description">{description}</p>
+        <p className="description">
+          { showHiddenText(description, discovered.description) }
+        </p>
         { renderTools() }
       </div>
     </div>
@@ -59,10 +72,18 @@ ProjectItem.propTypes = {
   description: PropTypes.string.isRequired,
   /** An array of strings. Each element is a tool that I was using at my work. */
   tools: PropTypes.array,
+  /** An object that defines which part of the item is visible for the user.
+   * By default everything is discovered if nothing else provided.
+  */
+  discovered: PropTypes.object,
 };
 
 ProjectItem.defaultProps = {
   tools: null,
+  discovered: {
+    tools: true,
+    description: true,
+  },
 };
 
 export default ProjectItem;
