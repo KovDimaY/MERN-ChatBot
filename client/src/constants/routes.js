@@ -4,6 +4,7 @@ export const EXPERIENCE = '/experience';
 export const EDUCATION = '/education';
 export const PROJECTS = '/projects';
 export const FEEDBACK = '/feedback';
+export const HELP = '/help';
 
 export const VALID_ROUTES = [
   EXPERIENCE, EDUCATION, PROJECTS, FEEDBACK,

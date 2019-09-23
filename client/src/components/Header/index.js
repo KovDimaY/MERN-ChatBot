@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Sidenav } from 'materialize-css';
 
 import { background, userAvatar } from 'images';
-import { HOME } from 'constants/routes';
+import { HOME, HELP } from 'constants/routes';
 
 import NavElements from './nav-elements';
 
@@ -33,6 +33,12 @@ class Header extends Component {
           </li>
         ))
       }
+      <li>
+        <Link to={HELP}>
+          <i className="material-icons">help_outline</i>
+          { withIcon && 'Help' }
+        </Link>
+      </li>
     </React.Fragment>
   )
 
