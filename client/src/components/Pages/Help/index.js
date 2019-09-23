@@ -1,8 +1,5 @@
 import React from 'react';
 
-// import { showHiddenText } from 'utils/common';
-// import { hiddenImage } from 'images';
-
 import { questions } from './questions';
 
 import './styles.css';
