@@ -48,6 +48,17 @@ exports[`components/<Header /> should render component 1`] = `
           Feedback
         </Link>
       </li>
+      <li>
+        <Link
+          to="/help"
+        >
+          <i
+            className="material-icons"
+          >
+            help_outline
+          </i>
+        </Link>
+      </li>
     </ul>
     <ul
       className="sidenav"
@@ -132,6 +143,18 @@ exports[`components/<Header /> should render component 1`] = `
           </i>
            
           Feedback
+        </Link>
+      </li>
+      <li>
+        <Link
+          to="/help"
+        >
+          <i
+            className="material-icons"
+          >
+            help_outline
+          </i>
+          Help
         </Link>
       </li>
     </ul>

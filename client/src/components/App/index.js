@@ -4,7 +4,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import {
   INIT, HOME, EXPERIENCE,
   EDUCATION, PROJECTS,
-  FEEDBACK,
+  FEEDBACK, HELP,
 } from 'constants/routes';
 
 import Layout from 'hoc/layout';
@@ -16,6 +16,7 @@ import Projects from 'containers/ProjectsPage';
 
 import Disclaimer from '../Pages/Disclaimer';
 import Feedback from '../Pages/Feedback';
+import Help from '../Pages/Help';
 
 export const HomeAdapted = () => <Home />;
 export const ExperienceAdapted = () => <Experience />;
@@ -32,6 +33,7 @@ const App = () => (
         <Route path={EDUCATION} exact component={EducationAdapted} />
         <Route path={PROJECTS} exact component={ProjectsAdapted} />
         <Route path={FEEDBACK} exact component={Feedback} />
+        <Route path={HELP} exact component={Help} />
       </Layout>
     </Switch>
   </BrowserRouter>

@@ -1,0 +1,205 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/Pages/<Help /> should render component with no feedbacks 1`] = `
+<div
+  className="help-page-container"
+>
+  <h3
+    className="help-section-title"
+  >
+    Help
+  </h3>
+  <p
+    className="text"
+  >
+    If you are completely stuck and you have no idea what question to ask in order to open some data you want to get - here you can see the list of examples for all the questions that you need to open 100% of the information on all the pages. As you can see, it is pretty straightforward and simple to open all the data and you do not need to ask a lot.
+  </p>
+  <p
+    className="text"
+  >
+    Notice, that these questions are only examples and you do not have to ask exactly the same questions. My bot should understand many different ways of asking about these topics. So you are welcome try different variations to see how flexible it is.
+  </p>
+  <p
+    className="text"
+  >
+    Remember, 
+    <b>
+      your feedback is very important
+    </b>
+     to me! If you see that my bot answers in a weird way to a simple question, or if you think that something can be improved in a visual, user experience or architectural way - please, reach me aut and share your opinion! I will appreciate a lot your time and effort to make my project better! Thank you in advance! :D
+  </p>
+  <h4
+    className="help-section-subtitle"
+  >
+    Examples of questions:
+  </h4>
+  <ul
+    className="sections-wrapper"
+  >
+    <li>
+      <span
+        className="section-title"
+      >
+        Home Page
+      </span>
+      <ul
+        className="questions-wrapper"
+      >
+        <li
+          className="question-item"
+        >
+          What is your name?
+        </li>
+        <li
+          className="question-item"
+        >
+          What is your profession?
+        </li>
+        <li
+          className="question-item"
+        >
+          Where do you live?
+        </li>
+        <li
+          className="question-item"
+        >
+          How can I contact you?
+        </li>
+        <li
+          className="question-item"
+        >
+          How old are you?
+        </li>
+        <li
+          className="question-item"
+        >
+          Where are you from?
+        </li>
+        <li
+          className="question-item"
+        >
+          Tell me something about yourself
+        </li>
+        <li
+          className="question-item"
+        >
+          What languages do you speak?
+        </li>
+        <li
+          className="question-item"
+        >
+          What are your hobbies?
+        </li>
+        <li
+          className="question-item"
+        >
+          Tell me more about [programming, sports, puzzles, numismatics, photography]
+        </li>
+      </ul>
+    </li>
+    <li>
+      <span
+        className="section-title"
+      >
+        Experience Page
+      </span>
+      <ul
+        className="questions-wrapper"
+      >
+        <li
+          className="question-item"
+        >
+          Tell me about your working experiences?
+        </li>
+        <li
+          className="question-item"
+        >
+          What is your position in [Cornerjob, Bigfinite, Enixan, MBAS, Icicle]?
+        </li>
+        <li
+          className="question-item"
+        >
+          When did you work in [Cornerjob, Bigfinite, Enixan, MBAS, Icicle]?
+        </li>
+        <li
+          className="question-item"
+        >
+          Describe your work in [Cornerjob, Bigfinite, Enixan, MBAS, Icicle]?
+        </li>
+        <li
+          className="question-item"
+        >
+          What technologies did you use in [Cornerjob, Bigfinite]?
+        </li>
+        <li
+          className="question-item"
+        >
+          What responsibilities did you have in [Enixan, MBAS]?
+        </li>
+      </ul>
+    </li>
+    <li>
+      <span
+        className="section-title"
+      >
+        Education Page
+      </span>
+      <ul
+        className="questions-wrapper"
+      >
+        <li
+          className="question-item"
+        >
+          Tell me about your education?
+        </li>
+        <li
+          className="question-item"
+        >
+          What topic did you study during you [master, bachelor]?
+        </li>
+        <li
+          className="question-item"
+        >
+          When did you get your [master, bachelor]?
+        </li>
+        <li
+          className="question-item"
+        >
+          What [roles, activities] did you have while getting your [master, bachelor]?
+        </li>
+        <li
+          className="question-item"
+        >
+          What additional education do you have?
+        </li>
+      </ul>
+    </li>
+    <li>
+      <span
+        className="section-title"
+      >
+        Projects Page
+      </span>
+      <ul
+        className="questions-wrapper"
+      >
+        <li
+          className="question-item"
+        >
+          Tell me about your projects?
+        </li>
+        <li
+          className="question-item"
+        >
+          I want to know more about [TripReviewer, SimpleChat, Highcharts, Memory Game, KovDimaY]?
+        </li>
+        <li
+          className="question-item"
+        >
+          Which technologies did you use in [TripReviewer, SimpleChat, Highcharts, Memory Game, KovDimaY]?
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+`;

@@ -19,6 +19,7 @@ jest.mock('containers/EducationPage', () => 'Education');
 jest.mock('containers/ProjectsPage', () => 'Projects');
 jest.mock('../../Pages/Disclaimer', () => 'Disclaimer');
 jest.mock('../../Pages/Feedback', () => 'Feedback');
+jest.mock('../../Pages/Help', () => 'Help');
 jest.mock('hoc/layout', () => 'Layout');
 jest.mock('react-router-dom', () => ({
   Switch: 'Switch',

@@ -1,5 +1,7 @@
 .experiences-section-container {
   padding-bottom: 100px;
+  max-width: 800px;
+  margin: auto;
 }
 .experiences-section-container .experiences-section-title {
   text-align: center;
