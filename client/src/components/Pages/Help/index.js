@@ -7,8 +7,8 @@ import './styles.css';
 const HelpPage = () => {
   const renderQuestions = items => (
     items.map(question => (
-      <li key={question.title} className="question-item">
-        { question.title }
+      <li key={question} className="question-item">
+        { question }
       </li>
     ))
   );
@@ -20,7 +20,7 @@ const HelpPage = () => {
           { section.title }
         </span>
         <ul className="questions-wrapper">
-          { renderQuestions(section.children) }
+          { renderQuestions(section.questions) }
         </ul>
       </li>
     ))
