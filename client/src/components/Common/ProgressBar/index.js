@@ -29,6 +29,13 @@ const colors = {
   },
 };
 
+/**
+ * This component is a simple progressbar which shows the progress
+ * of discovery of the content on the page. It consists of a colored bar,
+ * a tooltip with the number of percents discovered and an icon.
+ * This component is never shown if 0% or 100% discovered. For other percentages
+ * this component has different colors and icons.
+ */
 const ProgressBar = ({ percent, margintTop }) => {
   const getColorBasedOnProgress = (progress) => {
     switch (true) {
@@ -61,7 +68,11 @@ const ProgressBar = ({ percent, margintTop }) => {
 };
 
 ProgressBar.propTypes = {
+  /** Number of discovered percents of the information on the page. */
   percent: PropTypes.number.isRequired,
+  /** This is a "workaround" prop to make the progress bar closer to the
+   *  title of the page. It is used for all the pages except the Home page.
+   */
   margintTop: PropTypes.bool,
 };
 
