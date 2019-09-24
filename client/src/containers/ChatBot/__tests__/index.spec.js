@@ -3,7 +3,10 @@ import { create } from 'react-test-renderer';
 import { mount } from 'enzyme';
 import mockAxios from 'axios';
 
+import Config from 'config';
+
 import { ChatbotContainer } from '../../ChatBot';
+import { checkDiscovery } from '../check-discovery';
 
 jest.mock('uuid/v4', () => () => 'uuid()');
 jest.mock('axios', () => ({ post: jest.fn() }));
@@ -11,12 +14,18 @@ jest.mock('components/Chatbot', () => 'ChatBot');
 jest.mock('utils/structjson', () => ({
   structProtoToJson: data => data,
 }));
+jest.mock('../check-discovery', () => ({
+  checkDiscovery: jest.fn(),
+}));
 
 const mockComponent = props => (
   <ChatbotContainer {...props} />
 );
 
-const props = { location: {} };
+const props = {
+  location: {},
+  dispatch: 'dispatch',
+};
 
 describe('containers/<ChatbotContainer />', () => {
   it('should render component', () => {
@@ -250,20 +259,66 @@ describe('containers/<ChatbotContainer />', () => {
   });
 
   describe('dfEventQuery()', () => {
+    it('should call makeRequest', () => {
+      const makeRequest = jest.fn();
+      const query = 'query';
+
+      const instance = mount(mockComponent(props)).instance();
+
+      instance.makeRequest = makeRequest;
+      instance.dfEventQuery(query);
+
+      expect(makeRequest).toHaveBeenCalledWith(Config.api.dfEventQuery, query);
+    });
+  });
+
+  describe('dfTextQuery()', () => {
+    it('should call makeRequest', () => {
+      const setState = jest.fn();
+      const makeRequest = jest.fn();
+      const query = 'query';
+      const messages = ['old'];
+      const userMessage = {
+        type: 'text',
+        author: 'user',
+        id: 'uuid()',
+        msg: query,
+      };
+      const newMessages = ['old', userMessage];
+
+      const instance = mount(mockComponent(props)).instance();
+
+      instance.state = { messages };
+      instance.setState = setState;
+      instance.makeRequest = makeRequest;
+
+      instance.dfTextQuery(query);
+
+      expect(setState).toHaveBeenCalledWith({ messages: newMessages });
+      expect(makeRequest).toHaveBeenCalledWith(Config.api.dfTextQuery, query);
+    });
+  });
+
+  describe('makeRequest()', () => {
     it('should call saveBotAnswers when everything is ok', async () => {
       const saveBotAnswers = jest.fn();
       const handleRequestError = jest.fn();
       const query = 'query';
       const responceMock = {
-        data: { fulfillmentMessages: 'fulfillmentMessages' },
+        data: {
+          fulfillmentMessages: 'fulfillmentMessages',
+          intent: { displayName: 'displayName' },
+          parameters: 'parameters',
+        },
       };
       mockAxios.post.mockImplementation(() => Promise.resolve(responceMock));
       const instance = mount(mockComponent(props)).instance();
 
       instance.saveBotAnswers = saveBotAnswers;
       instance.handleRequestError = handleRequestError;
-      await instance.dfEventQuery(query);
+      await instance.makeRequest('url', query);
 
+      expect(checkDiscovery).toHaveBeenCalledWith('displayName', 'parameters', 'dispatch');
       expect(saveBotAnswers).toHaveBeenCalledWith('fulfillmentMessages');
       expect(handleRequestError).not.toHaveBeenCalled();
     });
@@ -280,70 +335,8 @@ describe('containers/<ChatbotContainer />', () => {
 
       instance.saveBotAnswers = saveBotAnswers;
       instance.handleRequestError = handleRequestError;
-      await instance.dfEventQuery(query);
+      await instance.makeRequest('url', query);
 
-      expect(saveBotAnswers).not.toHaveBeenCalledWith('fulfillmentMessages');
-      expect(handleRequestError).toHaveBeenCalled();
-    });
-  });
-
-  describe('dfTextQuery()', () => {
-    it('should set state and call saveBotAnswers when everything is ok', async () => {
-      const setState = jest.fn();
-      const saveBotAnswers = jest.fn();
-      const handleRequestError = jest.fn();
-      const query = 'query';
-      const messages = ['old'];
-      const userMessage = {
-        type: 'text',
-        author: 'user',
-        id: 'uuid()',
-        msg: query,
-      };
-      const newMessages = ['old', userMessage];
-      const responceMock = {
-        data: { fulfillmentMessages: 'fulfillmentMessages' },
-      };
-      mockAxios.post.mockImplementation(() => Promise.resolve(responceMock));
-      const instance = mount(mockComponent(props)).instance();
-
-      instance.state = { messages };
-      instance.setState = setState;
-      instance.saveBotAnswers = saveBotAnswers;
-      instance.handleRequestError = handleRequestError;
-      await instance.dfTextQuery(query);
-
-      expect(setState).toHaveBeenCalledWith({ messages: newMessages });
-      expect(saveBotAnswers).toHaveBeenCalledWith('fulfillmentMessages');
-      expect(handleRequestError).not.toHaveBeenCalled();
-    });
-
-    it('should set state and call handleRequestError when error happens', async () => {
-      const setState = jest.fn();
-      const saveBotAnswers = jest.fn();
-      const handleRequestError = jest.fn();
-      const query = 'query';
-      const messages = ['old'];
-      const userMessage = {
-        type: 'text',
-        author: 'user',
-        id: 'uuid()',
-        msg: query,
-      };
-      const newMessages = ['old', userMessage];
-      const responceMock = {
-        data: { fulfillmentMessages: 'fulfillmentMessages' },
-      };
-      mockAxios.post.mockImplementation(() => Promise.reject(responceMock));
-      const instance = mount(mockComponent(props)).instance();
-
-      instance.state = { messages };
-      instance.setState = setState;
-      instance.saveBotAnswers = saveBotAnswers;
-      instance.handleRequestError = handleRequestError;
-      await instance.dfTextQuery(query);
-
-      expect(setState).toHaveBeenCalledWith({ messages: newMessages });
       expect(saveBotAnswers).not.toHaveBeenCalledWith('fulfillmentMessages');
       expect(handleRequestError).toHaveBeenCalled();
     });

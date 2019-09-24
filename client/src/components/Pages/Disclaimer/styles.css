@@ -29,7 +29,7 @@
 
 .discalimer-container .description {
   text-indent: 25px;
-  max-width: 850px;
+  max-width: 950px;
   width: 80%;
   margin: 0 auto 50px auto;
   background: rgba(0, 0, 0, 0.75);
@@ -37,12 +37,9 @@
   position: relative;
   border-radius: 10px;
   color: white;
-  padding: 35px 25px;
+  padding: 35px 50px;
   text-align: justify;
-}
-
-.discalimer-container .post-scriptum {
-  font-size: 18px;
+  font-size: 22px;
 }
 
 .discalimer-container .gohome-button {
@@ -57,14 +54,15 @@
 
   .discalimer-container .description {
     max-width: 800px;
-    width: 80%;
+    width: 90%;
     margin: 0 auto 50px auto;
     background: rgba(0, 0, 0, 0.75);
     text-shadow: 1px 1px 10px black;
     position: relative;
     border-radius: 10px;
     color: white;
-    padding: 15px 25px;
+    padding: 15px;
     text-align: center;
+    font-size: 16px;
   }
 }

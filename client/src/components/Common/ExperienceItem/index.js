@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 
-import { getDuration } from 'utils/common';
+import { getDuration, showHiddenText } from 'utils/common';
 
 import './styles.css';
 
@@ -14,10 +14,12 @@ import './styles.css';
  * of my responsbilities and a list of technologies used at work.
  * When the user clicks on the logo of the company one is redirected to the
  * official website of the company.
+ * Some part of the information can be hidden for the user if it is not yet
+ * discovered. In this case the info will be replaced by question marks.
  */
 const ExperienceItem = ({
   image, companyName, companyLink,
-  position, start, finish,
+  position, start, finish, discovered,
   location, description, responsibilities, tools,
 }) => {
   const renderResponsibilities = () => {
@@ -26,7 +28,13 @@ const ExperienceItem = ({
         <div className="responsibilities">
           <div className="responsibilities-label">Main responsibilities:</div>
           <ul>
-            {responsibilities.map(item => <li key={item}>{item}</li>)}
+            {
+              responsibilities.map(item => (
+                <li key={item}>
+                  {showHiddenText(item, discovered.responsibilities)}
+                </li>
+              ))
+            }
           </ul>
         </div>
       );
@@ -39,7 +47,13 @@ const ExperienceItem = ({
       return (
         <div className="tools">
           <div className="tools-label">Technologies: </div>
-          <div>{tools.join(' | ')}</div>
+          <div>
+            {
+              tools
+                .map(item => showHiddenText(item, discovered.technologies))
+                .join(' | ')
+            }
+          </div>
         </div>
       );
     }
@@ -47,17 +61,39 @@ const ExperienceItem = ({
   };
 
   const renderDates = () => {
-    const startDate = moment(start).format('MMM YYYY');
-    const finishDate = finish ? moment(finish).format('MMM YYYY') : 'Now';
-    const duration = getDuration(start, finish);
+    if (discovered.duration) {
+      const startDate = moment(start).format('MMM YYYY');
+      const finishDate = finish ? moment(finish).format('MMM YYYY') : 'Now';
+      const duration = getDuration(start, finish);
+
+      return (
+        <div className="dates-wrapper">
+          <span className="dates">{startDate} - {finishDate}</span>
+          <span className="duration">({duration})</span>
+        </div>
+      );
+    }
 
     return (
       <div className="dates-wrapper">
-        <span className="dates">{startDate} - {finishDate}</span>
-        <span className="duration">({duration})</span>
+        <span className="dates">
+          <strong>Duration:</strong> ???? - ????
+        </span>
       </div>
     );
   };
+
+  const renderTitle = () => (
+    <div className="title">
+      <span className="position">
+        {showHiddenText(position, discovered.position)}
+      </span>
+      <span className="connector">in</span>
+      <a href={companyLink} className="company" target="_blank" rel="noopener noreferrer">
+        {companyName}
+      </a>
+    </div>
+  );
 
   return (
     <div className="experience-container row valign-wrapper">
@@ -67,16 +103,12 @@ const ExperienceItem = ({
         </a>
       </div>
       <div className="col s12 m9">
-        <div className="title">
-          <span className="position">{position}</span>
-          <span className="connector">in</span>
-          <a href={companyLink} className="company" target="_blank" rel="noopener noreferrer">
-            {companyName}
-          </a>
-        </div>
+        { renderTitle() }
         { renderDates() }
         <div className="location">{location}</div>
-        <p className="description">{description}</p>
+        <p className="description">
+          {showHiddenText(description, discovered.description)}
+        </p>
         { renderResponsibilities() }
         { renderTools() }
       </div>
@@ -105,12 +137,23 @@ ExperienceItem.propTypes = {
   tools: PropTypes.array,
   /** An array of strings. Each element is aresponsability that I had at my work. */
   responsibilities: PropTypes.array,
+  /** An object that defines which part of the item is visible for the user.
+   * By default everything is discovered if nothing else provided.
+  */
+  discovered: PropTypes.object,
 };
 
 ExperienceItem.defaultProps = {
   finish: undefined,
   tools: null,
   responsibilities: null,
+  discovered: {
+    responsibilities: true,
+    technologies: true,
+    duration: true,
+    position: true,
+    description: true,
+  },
 };
 
 export default ExperienceItem;

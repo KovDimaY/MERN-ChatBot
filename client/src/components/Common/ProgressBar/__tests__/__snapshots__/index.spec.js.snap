@@ -1,0 +1,133 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/Common/<ProgressBar /> should render component with 15 percents 1`] = `
+<div
+  className="progress-bar-container"
+>
+  <span
+    className="tooltip"
+  >
+    Discovery progress: 
+    15
+    %
+  </span>
+  <Progress
+    percent={15}
+    theme={
+      Object {
+        "active": Object {
+          "color": "#ff9800",
+          "symbol": "🙄",
+          "trailColor": "#ffe0b2",
+        },
+      }
+    }
+  />
+</div>
+`;
+
+exports[`components/Common/<ProgressBar /> should render component with 40 percents 1`] = `
+<div
+  className="progress-bar-container"
+>
+  <span
+    className="tooltip"
+  >
+    Discovery progress: 
+    40
+    %
+  </span>
+  <Progress
+    percent={40}
+    theme={
+      Object {
+        "active": Object {
+          "color": "#ffeb3b",
+          "symbol": "🤔",
+          "trailColor": "#fff9c4",
+        },
+      }
+    }
+  />
+</div>
+`;
+
+exports[`components/Common/<ProgressBar /> should render component with 65 percents 1`] = `
+<div
+  className="progress-bar-container"
+>
+  <span
+    className="tooltip"
+  >
+    Discovery progress: 
+    65
+    %
+  </span>
+  <Progress
+    percent={65}
+    theme={
+      Object {
+        "active": Object {
+          "color": "#cddc39",
+          "symbol": "🤓",
+          "trailColor": "#f0f4c3",
+        },
+      }
+    }
+  />
+</div>
+`;
+
+exports[`components/Common/<ProgressBar /> should render component with 80 percents 1`] = `
+<div
+  className="progress-bar-container"
+>
+  <span
+    className="tooltip"
+  >
+    Discovery progress: 
+    80
+    %
+  </span>
+  <Progress
+    percent={80}
+    theme={
+      Object {
+        "active": Object {
+          "color": "#4caf50",
+          "symbol": "🤗",
+          "trailColor": "#c8e6c9",
+        },
+      }
+    }
+  />
+</div>
+`;
+
+exports[`components/Common/<ProgressBar /> should render component with 100 percents 1`] = `null`;
+
+exports[`components/Common/<ProgressBar /> should render component with margintTop 1`] = `
+<div
+  className="progress-bar-container decrease-margin"
+>
+  <span
+    className="tooltip"
+  >
+    Discovery progress: 
+    50
+    %
+  </span>
+  <Progress
+    percent={50}
+    theme={
+      Object {
+        "active": Object {
+          "color": "#cddc39",
+          "symbol": "🤓",
+          "trailColor": "#f0f4c3",
+        },
+      }
+    }
+  />
+</div>
+`;

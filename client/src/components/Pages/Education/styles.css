@@ -1,5 +1,7 @@
 .education-section-container {
   padding-bottom: 100px;
+  max-width: 800px;
+  margin: auto;
 }
 .education-section-container .education-section-title {
   text-align: center;

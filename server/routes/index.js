@@ -1,8 +1,13 @@
 const { WebhookClient } = require('dialogflow-fulfillment');
-const dfService = require('../services/df-service');
 
-const { Demand } = require('../models/Demand');
+const dfService = require('../services/df-service');
 const { Feedback } = require('../models/Feedback');
+const {
+  handleExperienceFullfilment,
+  handleEducationFullfilment,
+  handleProjectFullfilment,
+} = require('./handlers');
+
 
 module.exports = (app) => {
   app.post('/api/df/textQuery', async (req, res) => {
@@ -30,28 +35,19 @@ module.exports = (app) => {
     const agent = new WebhookClient({ request: req, response: res });
     const intentMap = new Map();
 
-    const fallback = (agentItem) => {
-      agentItem.add('I did not understand CUSTOM!!!');
-      agentItem.add('Repeat CUSTOM!!!');
-    };
+    intentMap.set('experience-position', handleExperienceFullfilment('position'));
+    intentMap.set('experience-duration', handleExperienceFullfilment('duration'));
+    intentMap.set('experience-description', handleExperienceFullfilment('description'));
+    intentMap.set('experience-technologies', handleExperienceFullfilment('technologies'));
+    intentMap.set('experience-responsibilities', handleExperienceFullfilment('responsibilities'));
 
-    const saveDemand = (agentItem) => {
-      Demand.findOne({ param: agentItem.parameters['experience-companies'] }, (err, company) => {
-        if (company != null) {
-          company.counter += 1; // eslint-disable-line no-param-reassign
-          company.save();
-        } else {
-          const newDemand = new Demand({ param: agentItem.parameters['experience-companies'] });
-          newDemand.save();
-        }
-      });
+    intentMap.set('education-time', handleEducationFullfilment('time'));
+    intentMap.set('education-topic', handleEducationFullfilment('topic'));
+    intentMap.set('education-description', handleEducationFullfilment('description'));
+    intentMap.set('education-activities', handleEducationFullfilment('activities'));
 
-      const response = `You were looking for ${agentItem.parameters['experience-companies']}`;
-      agentItem.add(response);
-    };
-
-    intentMap.set('describe-company', saveDemand);
-    intentMap.set('Default Fallback Intent', fallback);
+    intentMap.set('projects-tools', handleProjectFullfilment('tools'));
+    intentMap.set('projects-description', handleProjectFullfilment('description'));
 
     agent.handleRequest(intentMap);
   });

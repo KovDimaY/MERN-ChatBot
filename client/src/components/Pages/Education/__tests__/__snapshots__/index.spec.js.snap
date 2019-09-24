@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components/Pages/<Education /> should render component 1`] = `
+exports[`components/Pages/<Education /> should render component discovered 1`] = `
 <div
   className="education-section-container"
 >
@@ -9,6 +9,10 @@ exports[`components/Pages/<Education /> should render component 1`] = `
   >
     Education
   </h3>
+  <ProgressBar
+    margintTop={true}
+    percent={50}
+  />
   <div
     className="educations-wrapper"
   >
@@ -24,7 +28,7 @@ exports[`components/Pages/<Education /> should render component 1`] = `
           "Conference in Ukraine",
         ]
       }
-      degree="Mathematics, Master's degree"
+      degree="Master's degree"
       description="
       Taras Shevchenko National University of Kyiv is the third oldest
       university in Ukraine, it was founded in 1834. During the Soviet Union era,
@@ -36,9 +40,11 @@ exports[`components/Pages/<Education /> should render component 1`] = `
       id={2}
       image="test-file-stub"
       location="Kyiv, Ukraine"
+      nameInStore="master"
       schoolLink="http://www.univ.kiev.ua/en/"
       schoolName="Kyiv National Taras Shevchenko University"
       start={2013-09-01T00:00:00.000Z}
+      topic="Mathematics"
     />
     <EducationItem
       activities={
@@ -53,7 +59,7 @@ exports[`components/Pages/<Education /> should render component 1`] = `
           "Conference in Ukraine",
         ]
       }
-      degree="Mathematics, Bachelor's degree"
+      degree="Bachelor's degree"
       description="
       Taras Shevchenko National University of Kyiv is the third oldest
       university in Ukraine, it was founded in 1834. During the Soviet Union era,
@@ -65,9 +71,11 @@ exports[`components/Pages/<Education /> should render component 1`] = `
       id={1}
       image="test-file-stub"
       location="Kyiv, Ukraine"
+      nameInStore="bachelor"
       schoolLink="http://www.univ.kiev.ua/en/"
       schoolName="Kyiv National Taras Shevchenko University"
       start={2009-09-01T00:00:00.000Z}
+      topic="Mathematics"
     />
   </div>
   <h3
@@ -351,5 +359,16 @@ exports[`components/Pages/<Education /> should render component 1`] = `
       url="https://www.coursera.org/account/accomplishments/certificate/ZJ27G8KF97HT"
     />
   </div>
+</div>
+`;
+
+exports[`components/Pages/<Education /> should render component not discovered 1`] = `
+<div
+  className="education-section-container"
+>
+  <EmptyView
+    section="education"
+    suggestion="What education do you have?"
+  />
 </div>
 `;

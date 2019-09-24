@@ -1,5 +1,49 @@
-ExperienceItem examples
+#### ExperienceItem examples
 
+Hidden elements
+
+```js
+const { experiences } = require('components/Pages/Experience/constants');
+
+<>
+  <ExperienceItem
+    discovered={{
+      technologies: false,
+      duration: false,
+      position: false,
+      description: false,
+    }}
+    image={experiences[0].image}
+    companyName={experiences[0].companyName}
+    companyLink={experiences[0].companyLink}
+    position={experiences[0].position}
+    description={experiences[0].description}
+    tools={experiences[0].tools}
+    location={experiences[0].location}
+    start={experiences[0].start}
+  />
+
+  <ExperienceItem
+    discovered={{
+      responsibilities: false,
+      duration: false,
+      position: false,
+      description: false,
+    }}
+    image={experiences[2].image}
+    companyName={experiences[2].companyName}
+    companyLink={experiences[2].companyLink}
+    position={experiences[2].position}
+    description={experiences[2].description}
+    responsibilities={experiences[2].responsibilities}
+    location={experiences[2].location}
+    start={experiences[2].start}
+    finish={experiences[2].finish}
+  />
+</>
+```
+
+Everything discovered
 
 ```js
 const { experiences } = require('components/Pages/Experience/constants');

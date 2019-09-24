@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components/Pages/<Experience /> should render component 1`] = `
+exports[`components/Pages/<Experience /> should render component when discovered 1`] = `
 <div
   className="experiences-section-container"
 >
@@ -9,6 +9,10 @@ exports[`components/Pages/<Experience /> should render component 1`] = `
   >
     Experience
   </h3>
+  <ProgressBar
+    margintTop={true}
+    percent={50}
+  />
   <div
     className="experiences-wrapper"
   >
@@ -24,6 +28,7 @@ exports[`components/Pages/<Experience /> should render component 1`] = `
       id={5}
       image="test-file-stub"
       location="Barcelona, Spain"
+      nameInStore="cornerjob"
       position="JS Full Stack Developer"
       start={2018-06-11T00:00:00.000Z}
       tools={
@@ -54,6 +59,7 @@ exports[`components/Pages/<Experience /> should render component 1`] = `
       id={4}
       image="test-file-stub"
       location="Barcelona, Spain"
+      nameInStore="bigfinite"
       position="JS Frontend Developer"
       start={2017-04-18T00:00:00.000Z}
       tools={
@@ -78,6 +84,7 @@ exports[`components/Pages/<Experience /> should render component 1`] = `
       id={3}
       image="test-file-stub"
       location="Kyiv, Ukraine"
+      nameInStore="enixan"
       position="Game Designer"
       responsibilities={
         Array [
@@ -96,13 +103,14 @@ exports[`components/Pages/<Experience /> should render component 1`] = `
     <ExperienceItem
       companyLink="http://www.mbastrategy.ru/"
       companyName="MBA Strategy"
-      description="Teaching people how to prepare for the quantitative part of the GMAT/GRE.
-
+      description="Teaching people how to prepare for the
+      quantitative part of the GMAT/GRE.
     "
       finish={2015-05-01T00:00:00.000Z}
       id={2}
       image="test-file-stub"
       location="Kyiv, Ukraine"
+      nameInStore="mbas"
       position="Math Consultant"
       responsibilities={
         Array [
@@ -119,14 +127,29 @@ exports[`components/Pages/<Experience /> should render component 1`] = `
     <ExperienceItem
       companyLink="http://www.icicleseafoods.com/"
       companyName="Icicle Seafoods"
-      description="Work&Travel program which helped me to improve my English and teamwork skills. It made me more organized, more hardworking, more hardy."
+      description="Work&Travel program which helped me to improve my
+      English and teamwork skills. It made me more organized, more hardworking,
+      more hardy.
+    "
       finish={2012-09-01T00:00:00.000Z}
       id={1}
       image="test-file-stub"
       location="Alaska, USA"
+      nameInStore="icicle"
       position="Cannery Worker"
       start={2012-05-01T00:00:00.000Z}
     />
   </div>
+</div>
+`;
+
+exports[`components/Pages/<Experience /> should render component when not discovered 1`] = `
+<div
+  className="experiences-section-container"
+>
+  <EmptyView
+    section="experience"
+    suggestion="Describe your working experience"
+  />
 </div>
 `;

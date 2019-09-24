@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components/Common/<CertificationItem /> should render component with required props 1`] = `
+exports[`components/Common/<CertificationItem /> should render component with required props when discovered 1`] = `
 <div
   className="certification-container"
 >
@@ -20,6 +20,27 @@ exports[`components/Common/<CertificationItem /> should render component with re
     className="title"
   >
     title
+  </div>
+</div>
+`;
+
+exports[`components/Common/<CertificationItem /> should render component with required props when not discovered 1`] = `
+<div
+  className="certification-container"
+>
+  <div
+    className="image-wrapper"
+  >
+    <img
+      alt="certificate"
+      className="image"
+      src="test-file-stub"
+    />
+  </div>
+  <div
+    className="title"
+  >
+    ?????
   </div>
 </div>
 `;

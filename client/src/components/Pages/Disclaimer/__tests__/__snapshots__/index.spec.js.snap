@@ -17,7 +17,7 @@ exports[`components/Pages/<Disclaimer /> should render component 1`] = `
     className="description"
   >
     <p>
-      This project was created just because I was always curious about how ChatBots are built and how they work from inside. Taking a course on
+      I always was curious about AI and chatbots. Since a long time ago I wanted to know how they work and maybe even create one myself. So when I accidentally came across a course on
       <a
         href="https://www.udemy.com"
         rel="noopener noreferrer"
@@ -33,15 +33,10 @@ exports[`components/Pages/<Disclaimer /> should render component 1`] = `
       >
          Jana Bergant 
       </a>
-      I have learned many different functionalities and I definitelly recommend her courses if you want to learn about chatbots. Almost all the functionalities were focused on selling or describing things and as I have nothing to sell but still I wanted to practice all the functionalities, I decided that it would be meaningfull and interesting to make an interactive CV. In the end it is quite similar to selling - is like I am selling myself. This is how I came up with this project.
+      I immediately realized that it is my chance to accomplish my old childhood dream. So I have finished the course and I liked it a lot! I definitelly recommend her courses to everyone who wants to learn about chatbots.
     </p>
     <p>
-      So, just to clarify, it is a personal project to learn and practice new skills. I feel pretty happy at my current job and I am not looking for a change.
-    </p>
-    <p
-      className="post-scriptum"
-    >
-      PS: As always, I would be happy to get a feedback which could help me to improve. Thank you in advance!
+      Collecting all the knowledge I learned from the course, I came up with this project. I really hope you like it and, as always, I would be very happy to get some feedback from you! Have a nice time playing with it!
     </p>
   </div>
   <div

@@ -37,9 +37,33 @@
   -webkit-font-feature-settings: 'liga';
   -webkit-font-smoothing: antialiased;
 }
+.card-containter .card-title {
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 28px;
+  font-family: Pixel;
+  text-shadow: 
+    0px 0px 5px black,
+    0px 0px 10px black,
+    0px 0px 15px black,
+    0px 0px 20px black,
+    0px 0px 30px black,
+    0px 0px 40px black;
+}
+
+.card-containter .card-content {
+  font-family: Pixel;
+  font-size: 24px;
+  line-height: 20px;
+}
+
 .cards-containter {
   overflow: auto;
   overflow-y: scroll;
+}
+
+.cards-containter .cards-scrollable-wrapper {
+  display: flex;
 }
 
 .cards-containter .card-containter {
@@ -81,7 +105,8 @@
   z-index: 200;
   max-width: 450px;
   position: fixed;
-  bottom: 1px;
+  bottom: 0;
+  left: 50px;
   border: 1px solid gray;
   box-shadow: 1px 1px 25px gray;
   background: #e3f2fd;
@@ -132,6 +157,7 @@
 @media (max-width: 600px) {
   .chatbot-container {
     max-width: unset;
+    left: unset;
   }
 }
 .certification-container .image {
@@ -194,6 +220,7 @@
 .education-container .location {
   font-size: 16px;
   color: darkgray;
+  margin: 0;
 }
 .education-container .description {
   text-align: justify;
@@ -419,6 +446,63 @@
     font-size: 10px;
   }
 }
+.progress-bar-container {
+  position: relative;
+  padding-top: 20px;
+  margin: 20px 0;
+  cursor: help;
+}
+
+.progress-bar-container.decrease-margin {
+  margin-top: -25px;
+}
+
+.progress-bar-container .react-sweet-progress {
+  height: 30px;
+}
+
+.progress-bar-container:hover .tooltip {
+  display: block;
+}
+
+.progress-bar-container:hover .react-sweet-progress-symbol {
+  display: flex;
+}
+
+.progress-bar-container .react-sweet-progress-symbol {
+  display: none;
+  width: auto;
+  height: auto;
+  font-size: 30px;
+}
+
+.progress-bar-container .tooltip {
+  display: none;
+  position: absolute;
+  top: 0;
+}
+
+@media (max-width: 992px) {
+  .progress-bar-container.decrease-margin {
+    margin-top: 0px;
+  }
+}
+
+@media (max-width: 600px) {
+  .progress-bar-container .tooltip {
+    display: block;
+  }
+
+  .progress-bar-container .react-sweet-progress-symbol {
+    display: flex;
+  }
+
+  .progress-bar-container.decrease-margin {
+    margin-top: 20px;
+  }
+}
+
+
 .project-item-container {
   margin: 20px 0;
   display: flex;

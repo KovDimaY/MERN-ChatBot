@@ -9,6 +9,7 @@ import {
 export const projects = [{
   id: 4,
   name: 'TripReviewer',
+  nameInStore: 'trips',
   description: `
     This is a simple blog about traveling written with MERN stack.
     The purpose of the project is to learn and practice a full
@@ -29,6 +30,7 @@ export const projects = [{
 }, {
   id: 3,
   name: 'SimpleChat',
+  nameInStore: 'chat',
   description: `
     This is a simple chat with a support of different rooms
     written with NodeJS and Socket.IO. The purpose of the project
@@ -49,6 +51,7 @@ export const projects = [{
 }, {
   id: 2,
   name: 'React-Highcharts Playground',
+  nameInStore: 'charts',
   description: `
     This project was created to learn and practice my
     knowledge of React.js and to integrate Highcharts as
@@ -67,6 +70,7 @@ export const projects = [{
 }, {
   id: 5,
   name: 'Memory Game',
+  nameInStore: 'memory',
   description: `
     This is a classical Memory Game created with pure
     Javascript to practice DOM manipulations and Local Storage usage.
@@ -82,6 +86,7 @@ export const projects = [{
 }, {
   id: 1,
   name: 'KovDimaY',
+  nameInStore: 'kovdimay',
   description: `
     This project was created to practice my skills in programming,
     game design and game development in general, and also to satisfy

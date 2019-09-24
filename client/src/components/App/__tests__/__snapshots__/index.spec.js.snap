@@ -10,22 +10,22 @@ exports[`components/<App /> should render component 1`] = `
     />
     <Layout>
       <Route
-        component="Home"
+        component={[Function]}
         exact={true}
         path="/home"
       />
       <Route
-        component="Experience"
+        component={[Function]}
         exact={true}
         path="/experience"
       />
       <Route
-        component="Education"
+        component={[Function]}
         exact={true}
         path="/education"
       />
       <Route
-        component="Projects"
+        component={[Function]}
         exact={true}
         path="/projects"
       />
@@ -33,6 +33,11 @@ exports[`components/<App /> should render component 1`] = `
         component="Feedback"
         exact={true}
         path="/feedback"
+      />
+      <Route
+        component="Help"
+        exact={true}
+        path="/help"
       />
     </Layout>
   </Switch>

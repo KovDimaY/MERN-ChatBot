@@ -92,9 +92,10 @@ describe('components/<Chatbot />', () => {
   describe('handleSubmit()', () => {
     it('should preventDefault and call onSubmitMessage if currentQuery is not empty', () => {
       const preventDefault = jest.fn();
+      const stopPropagation = jest.fn();
       const setState = jest.fn();
       const onSubmitMessage = jest.fn();
-      const event = { preventDefault };
+      const event = { preventDefault, stopPropagation };
       const currentQuery = 'currentQuery';
       const props = {
         ...defaultProps,
@@ -107,15 +108,17 @@ describe('components/<Chatbot />', () => {
       instance.handleSubmit(event);
 
       expect(preventDefault).toHaveBeenCalled();
+      expect(stopPropagation).toHaveBeenCalled();
       expect(setState).toHaveBeenCalledWith({ currentQuery: '' });
       expect(onSubmitMessage).toHaveBeenCalledWith(currentQuery);
     });
 
     it('should preventDefault and not call onSubmitMessage if currentQuery is empty', () => {
       const preventDefault = jest.fn();
+      const stopPropagation = jest.fn();
       const setState = jest.fn();
       const onSubmitMessage = jest.fn();
-      const event = { preventDefault };
+      const event = { preventDefault, stopPropagation };
       const currentQuery = '';
       const props = {
         ...defaultProps,
@@ -128,6 +131,7 @@ describe('components/<Chatbot />', () => {
       instance.handleSubmit(event);
 
       expect(preventDefault).toHaveBeenCalled();
+      expect(stopPropagation).toHaveBeenCalled();
       expect(setState).not.toHaveBeenCalledWith({ currentQuery: '' });
       expect(onSubmitMessage).not.toHaveBeenCalledWith(currentQuery);
     });

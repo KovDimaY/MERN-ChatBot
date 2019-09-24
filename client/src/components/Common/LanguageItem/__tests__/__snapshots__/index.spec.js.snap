@@ -1,18 +1,45 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components/Common/<LanguageItem /> should render component 1`] = `
+exports[`components/Common/<LanguageItem /> should render component with discovered 1`] = `
 <div
   className="language-container col s6 m3"
 >
   <img
     alt="flag"
     className="country-flag"
+    src="image"
   />
   <div
     className="name"
-  />
+  >
+    name
+  </div>
   <div
     className="level"
+  >
+    level
+  </div>
+</div>
+`;
+
+exports[`components/Common/<LanguageItem /> should render component with no discovered 1`] = `
+<div
+  className="language-container col s6 m3"
+>
+  <img
+    alt="flag"
+    className="country-flag"
+    src="test-file-stub"
   />
+  <div
+    className="name"
+  >
+    ***
+  </div>
+  <div
+    className="level"
+  >
+    ***
+  </div>
 </div>
 `;

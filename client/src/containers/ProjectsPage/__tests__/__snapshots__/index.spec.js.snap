@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`containers/<ProjectsPage /> should render component 1`] = `
+<ProjectsPage
+  charts={Object {}}
+  chat={Object {}}
+  discovered={true}
+  kovdimay={Object {}}
+  memory={Object {}}
+  trips={Object {}}
+/>
+`;

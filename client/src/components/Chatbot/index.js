@@ -33,6 +33,7 @@ export class Chatbot extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
+    event.stopPropagation();
     const { currentQuery } = this.state;
 
     if (currentQuery) {

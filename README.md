@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.com/KovDimaY/MERN-ChatBot.svg?branch=master)](https://travis-ci.com/KovDimaY/MERN-ChatBot)
 [![Coverage Status](https://coveralls.io/repos/github/KovDimaY/MERN-ChatBot/badge.svg?branch=master)](https://coveralls.io/github/KovDimaY/MERN-ChatBot?branch=master)
-[![GitHub version](https://img.shields.io/badge/version-1.2.1-yellow.svg)](https://github.com/KovDimaY/MERN-ChatBot/releases)
+[![GitHub version](https://img.shields.io/badge/version-2.0.0-yellow.svg)](https://github.com/KovDimaY/MERN-ChatBot/releases)
 [![GitHub demo](https://img.shields.io/badge/demo-available-e60000.svg)](https://mern-chatbot.herokuapp.com/)
 [![GitHub docs](https://img.shields.io/badge/docs-storybook-00ccff.svg)](https://mern-chatbot.herokuapp.com/docs/storybook)
 [![GitHub docs](https://img.shields.io/badge/docs-styleguide-e600e6.svg)](https://mern-chatbot.herokuapp.com/docs/styleguide)
@@ -10,7 +10,7 @@
 
 This is a small project to practice a MERN stack and to learn how to make a chatbot with the DialogFlow from Google Cloud Platform. It is still under development so more features are coming soon! Stay tuned! :D
 
-The last deployed production version is [**MERN-ChatBot v1.2.1**](https://github.com/KovDimaY/MERN-ChatBot/releases). 
+The last deployed production version is [**MERN-ChatBot v2.0.0**](https://github.com/KovDimaY/MERN-ChatBot/releases). 
 <br>
 <br>
 
@@ -22,7 +22,7 @@ The last deployed production version is [**MERN-ChatBot v1.2.1**](https://github
 <br>
 <br>
 
-### Also you can access Storybook and Styleguide Documentation for each environment going to:
+### Also you can access Storybook and Styleguide Documentation for each environment:
 ```
 [origin]/docs/storybook
 [origin]/docs/styleguide
@@ -35,13 +35,13 @@ Thank you in advance!
 
 ### Screenshots:
 1) Desktop:<br>
-![image](https://user-images.githubusercontent.com/26466644/50377510-09d1ad80-061f-11e9-8835-ccd79f75b905.png)
+![image](https://user-images.githubusercontent.com/26466644/65536447-b2d96b80-df03-11e9-922d-d4c8581575b0.png)
 
 2) Mobile:<br>
-![image](https://user-images.githubusercontent.com/26466644/50377555-c7f53700-061f-11e9-9799-7f7dcf444927.png)
+![image](https://user-images.githubusercontent.com/26466644/65536496-d13f6700-df03-11e9-9907-393ed9dec13e.png)
 
 3) Test Coverage:<br>
-![image](https://user-images.githubusercontent.com/26466644/56457413-e293ae80-637a-11e9-8531-c851c73022a8.png)
+![image](https://user-images.githubusercontent.com/26466644/65536658-2a0eff80-df04-11e9-8c44-153fdd0f762c.png)
 <br>
 <br>
 

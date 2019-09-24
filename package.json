@@ -9,6 +9,7 @@
     "frontend": "npm run start --prefix client",
     "mongo": "~/mongo/bin/mongod --dbpath ~/mongo-data",
     "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
+    "ngrok": "./ngrok http 3000",
     "lint": "eslint client/src --ext .js && eslint server --ext .js",
     "test": "npm run test-jest --prefix client",
     "test:coverage": "npm run test:coverage --prefix client",

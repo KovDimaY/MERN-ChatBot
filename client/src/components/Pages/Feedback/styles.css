@@ -1,5 +1,7 @@
 .feedbacks-section-container {
   padding-bottom: 100px;
+  max-width: 800px;
+  margin: auto;
 }
 .feedbacks-section-container .feedbacks-wrapper {
   margin: 0 -0.75rem;
