@@ -62,6 +62,10 @@
   overflow-y: scroll;
 }
 
+.cards-containter .cards-scrollable-wrapper {
+  display: flex;
+}
+
 .cards-containter .card-containter {
   display: inline-block;
   width: 200px;
@@ -102,6 +106,7 @@
   max-width: 450px;
   position: fixed;
   bottom: 0;
+  left: 50px;
   border: 1px solid gray;
   box-shadow: 1px 1px 25px gray;
   background: #e3f2fd;
@@ -152,6 +157,7 @@
 @media (max-width: 600px) {
   .chatbot-container {
     max-width: unset;
+    left: unset;
   }
 }
 .certification-container .image {

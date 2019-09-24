@@ -10,7 +10,10 @@ storiesOf('Common/EmptyView', module)
   .addDecorator(withKnobs)
   .add('Default content', () => (
     <div style={{ padding: paddingSize }}>
-      <EmptyView section={text('Section', 'Experience')} />
+      <EmptyView
+        section={text('Section', 'Experience')}
+        suggestion={text('Suggestion', 'Are you happy?')}
+      />
     </div>
   ))
   .add('Custom', () => (

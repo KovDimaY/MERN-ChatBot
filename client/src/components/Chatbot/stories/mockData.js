@@ -94,7 +94,7 @@ export const cardsMessages = [
         },
         {
           id: 3,
-          title: 'React-Highcharts Playground',
+          title: 'React-Highcharts',
           image: 'https://user-images.githubusercontent.com/26466644/31556335-e6b3d980-b044-11e7-8707-249399c11a3d.png',
           description: 'A project to learn and practice React.js and to integrate Highcharts as react components.',
           link: 'https://github.com/KovDimaY/React-Highcharts',
