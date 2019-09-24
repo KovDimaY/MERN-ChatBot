@@ -368,6 +368,7 @@ exports[`components/Pages/<Education /> should render component not discovered 1
 >
   <EmptyView
     section="education"
+    suggestion="What education do you have?"
   />
 </div>
 `;

@@ -5,6 +5,7 @@ exports[`components/<Cards /> should render component with data 1`] = `
   className="cards-containter"
 >
   <div
+    className="cards-scrollable-wrapper"
     style={
       Object {
         "width": 660,

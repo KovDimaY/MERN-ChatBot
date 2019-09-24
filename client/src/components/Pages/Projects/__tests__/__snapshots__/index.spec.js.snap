@@ -160,7 +160,8 @@ exports[`components/Pages/<Projects /> should render component not discovered 1`
   className="projects-section-container"
 >
   <EmptyView
-    section="projects"
+    section="personal projects"
+    suggestion="Tell me about your projects"
   />
 </div>
 `;

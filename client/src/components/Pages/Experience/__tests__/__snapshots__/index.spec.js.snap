@@ -149,6 +149,7 @@ exports[`components/Pages/<Experience /> should render component when not discov
 >
   <EmptyView
     section="experience"
+    suggestion="Describe your working experience"
   />
 </div>
 `;

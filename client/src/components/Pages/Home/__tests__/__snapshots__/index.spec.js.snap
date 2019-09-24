@@ -195,7 +195,7 @@ exports[`components/Pages/<Home /> should render component with all discovered 1
       I have around 2000 different coins from different countries and this number
       is growing every year. Most of them I got while traveling or from my friends.
       I do not have some super special coins, my idea is just to collect as many
-      different coins and I can."
+      different coins as I can."
         discovered={true}
         discoveredDetails={true}
         id="hobby-4"
@@ -406,7 +406,7 @@ exports[`components/Pages/<Home /> should render component with discovered but a
       I have around 2000 different coins from different countries and this number
       is growing every year. Most of them I got while traveling or from my friends.
       I do not have some super special coins, my idea is just to collect as many
-      different coins and I can."
+      different coins as I can."
         id="hobby-4"
         image="test-file-stub"
         name="Numismatics"
@@ -438,16 +438,19 @@ exports[`components/Pages/<Home /> should render component with empty props 1`] 
     section="home"
   >
     <p>
-      ***
+      Welcome to my new personal project!
     </p>
     <p>
-      ***
+      Ask questions as you are speaking to me and try to populate the website with the info my bot will provide. Every page will have a progress bar which indicates how much info you have already recovered - so you will know where to stop asking about some particular topic.
     </p>
     <p>
-      ***
-    </p>
-    <p>
-      ***
+      For example, 
+      <b>
+        "
+        What is your name?
+        "
+      </b>
+       sounds like a good question to start, but it can be something else too, just use your imagination ;)
     </p>
   </EmptyView>
 </div>
