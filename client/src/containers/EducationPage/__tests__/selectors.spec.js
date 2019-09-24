@@ -5,7 +5,12 @@ import {
   selectCertificates,
   selectMaster,
   selectBachelor,
+  selectDiscoveryPercent,
 } from '../selectors';
+
+jest.mock('utils/common', () => ({
+  getDiscoveryPercentage: () => ({ discovered: 5, total: 10 }),
+}));
 
 describe('containers/EducationPage/selectors', () => {
   describe('selectDiscovered', () => {
@@ -49,6 +54,17 @@ describe('containers/EducationPage/selectors', () => {
       const mockedState = fromJS({ educationPageDomain });
 
       expect(selector(mockedState)).toEqual(bachelor);
+    });
+  });
+
+  describe('selectDiscoveryPercent', () => {
+    it('should select discovery persentage', () => {
+      const selector = selectDiscoveryPercent();
+      const whatever = { whatever: 'whatever' };
+      const educationPageDomain = fromJS({ whatever });
+      const mockedState = fromJS({ educationPageDomain });
+
+      expect(selector(mockedState)).toEqual(50);
     });
   });
 });

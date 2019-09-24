@@ -9,6 +9,10 @@ exports[`components/Pages/<Education /> should render component discovered 1`] =
   >
     Education
   </h3>
+  <ProgressBar
+    margintTop={true}
+    percent={50}
+  />
   <div
     className="educations-wrapper"
   >

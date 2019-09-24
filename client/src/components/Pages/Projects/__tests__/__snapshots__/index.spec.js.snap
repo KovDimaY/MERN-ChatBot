@@ -9,6 +9,10 @@ exports[`components/Pages/<Projects /> should render component discovered 1`] = 
   >
     Projects
   </h3>
+  <ProgressBar
+    margintTop={true}
+    percent={50}
+  />
   <div
     className="projects-wrapper"
   >

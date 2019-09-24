@@ -9,6 +9,10 @@ exports[`components/Pages/<Experience /> should render component when discovered
   >
     Experience
   </h3>
+  <ProgressBar
+    margintTop={true}
+    percent={50}
+  />
   <div
     className="experiences-wrapper"
   >

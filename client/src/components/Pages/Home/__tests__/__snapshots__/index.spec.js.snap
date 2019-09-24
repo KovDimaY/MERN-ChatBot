@@ -4,6 +4,9 @@ exports[`components/Pages/<Home /> should render component with all discovered 1
 <div
   className="home-page-container"
 >
+  <ProgressBar
+    percent={100}
+  />
   <div
     className="basic-info-section section row"
   >
@@ -224,6 +227,9 @@ exports[`components/Pages/<Home /> should render component with discovered but a
 <div
   className="home-page-container"
 >
+  <ProgressBar
+    percent={50}
+  />
   <div
     className="basic-info-section section row"
   >
