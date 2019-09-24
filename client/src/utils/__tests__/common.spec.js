@@ -184,43 +184,92 @@ describe('utils/common.js', () => {
     });
   });
 
-  describe('showHiddenText()', () => {
-    it('works correctly if there is no text provided', () => {
+  describe('getDiscoveryPercentage()', () => {
+    it('should calculate correctly for only booleans', () => {
       const input = fromJS({
         a: false,
-        b: fromJS({
-          c: fromJS({
-            d: true,
-            e: fromJS({
-              f: true,
-              g: fromJS({
-                k: true,
-                f: true,
-                g: fromJS({
-                  k: true,
-                  d: false,
-                  e: fromJS({
-                    f: true,
-                    g: fromJS({
-                      k: false,
-                      f: true,
-                      g: fromJS({
-                        k: true,
-                        l: false,
-                      }),
-                    }),
-                  }),
-                }),
-              }),
-            }),
-          }),
-          m: true,
-        }),
+        b: true,
+        c: false,
       });
+      const expeceted = { discovered: 1, total: 3 };
 
       const result = getDiscoveryPercentage(input);
 
-      expect(result).toEqual(50);
+      expect(result).toEqual(expeceted);
+    });
+
+    it('should calculate correctly for only objects', () => {
+      const input = fromJS({
+        a: fromJS({
+          aa: false,
+          bb: true,
+          cc: true,
+        }),
+        b: fromJS({
+          aa: false,
+          bb: true,
+          cc: false,
+          dd: false,
+        }),
+      });
+      const expeceted = { discovered: 3, total: 7 };
+
+      const result = getDiscoveryPercentage(input);
+
+      expect(result).toEqual(expeceted);
+    });
+
+    it('should calculate correctly for mixed objects and booleans', () => {
+      const input = fromJS({
+        a: fromJS({
+          aa: false,
+          bb: false,
+          cc: true,
+        }),
+        b: fromJS({
+          aa: false,
+          bb: true,
+          cc: false,
+          dd: false,
+        }),
+        c: true,
+        d: false,
+        e: true,
+      });
+      const expeceted = { discovered: 4, total: 10 };
+
+      const result = getDiscoveryPercentage(input);
+
+      expect(result).toEqual(expeceted);
+    });
+
+    it('should calculate correctly for objects nested very deep', () => {
+      const input = fromJS({
+        a: true,
+        b: false,
+        c: fromJS({
+          aa: false,
+          bb: fromJS({
+            aaa: fromJS({
+              aaaa: false,
+              bbbb: fromJS({
+                aaaaa: false,
+                bbbbb: false,
+                ccccc: true,
+              }),
+              cccc: true,
+            }),
+            bbb: false,
+            ccc: true,
+          }),
+          cc: true,
+        }),
+      });
+      const expeceted = { discovered: 5, total: 11 };
+
+      const result = getDiscoveryPercentage(input);
+
+      expect(result).toEqual(expeceted);
     });
   });
 });
