@@ -5,17 +5,17 @@ const { educations } = require('./education');
 const { projects } = require('./projects');
 
 const fallbackPhrases = [
-  'Sorry, but I think you should check your question and ask it corrected...',
-  'Looks like something is wrong with your question, try to rephrase...',
-  'Are you sure your question is correct? Can you try to rephrase?',
-  'I am not sure I can answer this question... Is everything correct?',
+  'Are you sure you want to ask me about this?',
+  'Ok, do you have another question?',
+  'A will not answer this question, next one?',
+  'This is not a good question to ask...',
 ];
 
 const noInfoPhrases = [
-  'Sorry, I do not remember Dima telling me about this...',
-  'I do not know how to answer your question...',
-  'I am not sure I know the answer...',
-  'I think Dima did not tell me anything about this...',
+  'I do not remember Dima telling me about this...',
+  'Probably this information is not available...',
+  'I do not have information about that',
+  'You can ask Dima in person about it...',
 ];
 
 const getResponse = category => (element, field) => {

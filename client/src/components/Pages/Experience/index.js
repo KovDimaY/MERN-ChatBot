@@ -37,7 +37,7 @@ const Experience = (props) => {
       {
         props.discovered
           ? renderContent()
-          : <EmptyView section="experience" />
+          : <EmptyView section="experience" suggestion="Describe your working experience" />
       }
     </div>
   );

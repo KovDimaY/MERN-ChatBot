@@ -8,20 +8,6 @@ import {
   hobbySports,
 } from 'images';
 
-export const emptyViewDescription = [
-  'Welcome to my new personal project!!!',
-  `Ask questions as you are speaking to me and try to populate
-  the website with the info my bot will provide.`,
-  `For example, "What is your name?" sounds like a good question to start,
-  but it can be something else too, use your imagination ;)`,
-  // `Every page will have a progress bar which indicates
-  // how much info you have already recovered - so you will know
-  // where to stop asking about some particular topic.`,
-  `One more time, this project was created to learn about Chatbots
-  and to practice my full stack programming skills. I am happy at my current job and
-  I am not looking for a change.`,
-];
-
 export const aboutMeDescription = [
   `I am a very passionate software developer with a mathematical
   background who has tried working with many different languages
@@ -119,7 +105,7 @@ export const hobbies = [
       I have around 2000 different coins from different countries and this number
       is growing every year. Most of them I got while traveling or from my friends.
       I do not have some super special coins, my idea is just to collect as many
-      different coins and I can.`,
+      different coins as I can.`,
     id: 'hobby-4',
     storageName: 'numismatics',
   },

@@ -52,7 +52,7 @@ const Education = (props) => {
       {
         props.discovered
           ? renderContent()
-          : <EmptyView section="education" />
+          : <EmptyView section="education" suggestion="What education do you have?" />
       }
     </div>
   );

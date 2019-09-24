@@ -8,7 +8,7 @@ import './styles.css';
  * When at least something is discovered on the page it is going to be changed to
  * another view where some information is opened and some is hidden.
  */
-const EmptyView = ({ section, children }) => {
+const EmptyView = ({ section, children, suggestion }) => {
   const defaultDescription = (
     <React.Fragment>
       <p>
@@ -18,17 +18,12 @@ const EmptyView = ({ section, children }) => {
         For the moment you have not discovered anything regarding
         this topic. To get some info - ask the bot right question.
         When the bot gives you some related answer - the information will
-        appear on this page. Ask more questions to collect more info! Good luck!
+        appear on this page. You will have a progress bar that will help you to
+        understand how much info you have opened already.
       </p>
       <p>
-        If you are lazy and you do not want to play with the bot - here
-        you can find a link to
-        my <a href="https://www.linkedin.com/in/kovalenkodmytro/" target="_blank" rel="noopener noreferrer">LinkedIn</a> profile
-        and see everything at once.
-      </p>
-      <p>
-        Do not hesitate to contact me and share your opinion about this project!
-        I will appreciate a lot any feedback even if it is negative! Thank you in advance! :)
+        For example, <b>{'"'}{suggestion}{'"'}</b> sounds like a great question to start,
+        but it can be something else too, just use your imagination ;)
       </p>
     </React.Fragment>
   );
@@ -45,6 +40,8 @@ EmptyView.propTypes = {
   section: PropTypes.string.isRequired,
   /** Custom content of the page to overwrite the default one.  */
   children: PropTypes.node,
+  /** This is an string with suggested question for the user.  */
+  suggestion: PropTypes.string.isRequired,
 };
 
 EmptyView.defaultProps = {

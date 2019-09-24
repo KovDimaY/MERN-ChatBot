@@ -35,7 +35,7 @@ const Projects = (props) => {
       {
         props.discovered
           ? renderContent()
-          : <EmptyView section="projects" />
+          : <EmptyView section="personal projects" suggestion="Tell me about your projects" />
       }
     </div>
   );
