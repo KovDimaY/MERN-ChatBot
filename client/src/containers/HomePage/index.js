@@ -11,6 +11,7 @@ import {
   selectContacts, selectAge,
   selectNationality, selectAboutMe,
   selectLanguages, selectHobbies,
+  selectDiscoveryPercent,
 } from './selectors';
 
 
@@ -26,6 +27,7 @@ export const HomePageContainer = props => (
     aboutMe={props.aboutMe}
     languages={props.languages}
     hobbies={props.hobbies}
+    discoveryPercent={props.discoveryPercent}
   />
 );
 
@@ -40,6 +42,7 @@ const mapStateToProps = createStructuredSelector({
   aboutMe: selectAboutMe(),
   languages: selectLanguages(),
   hobbies: selectHobbies(),
+  discoveryPercent: selectDiscoveryPercent(),
 });
 
 HomePageContainer.propTypes = {
@@ -53,6 +56,7 @@ HomePageContainer.propTypes = {
   aboutMe: PropTypes.bool.isRequired,
   languages: PropTypes.bool.isRequired,
   hobbies: PropTypes.object.isRequired,
+  discoveryPercent: PropTypes.number.isRequired,
 };
 
 export default connect(mapStateToProps)(HomePageContainer);

@@ -14,6 +14,7 @@ import {
 import EmptyView from '../../Common/EmptyView';
 import LanguageItem from '../../Common/LanguageItem';
 import HobbyItem from '../../Common/HobbyItem';
+import ProgressBar from '../../Common/ProgressBar';
 
 import './styles.css';
 
@@ -128,6 +129,7 @@ const Home = (props) => {
 
   const renderInfo = () => (
     <React.Fragment>
+      <ProgressBar percent={props.discoveryPercent} />
       {renderBasicInfo()}
 
       <div className="summary-section section">
@@ -173,6 +175,7 @@ Home.propTypes = {
   aboutMe: PropTypes.bool.isRequired,
   languages: PropTypes.bool.isRequired,
   hobbies: PropTypes.object.isRequired,
+  discoveryPercent: PropTypes.number.isRequired,
 };
 
 export default Home;

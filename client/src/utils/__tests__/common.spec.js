@@ -1,9 +1,12 @@
+import { fromJS } from 'immutable';
+
 import {
   getRandomElementOfArray,
   getRandomInteger,
   getAgeByBirthdate,
   getDuration,
   showHiddenText,
+  getDiscoveryPercentage,
 } from '../common';
 
 const TIMES_TO_RUN = 1000;
@@ -178,6 +181,46 @@ describe('utils/common.js', () => {
       const result = showHiddenText(input, show);
 
       expect(result).toEqual(expected);
+    });
+  });
+
+  describe('showHiddenText()', () => {
+    it('works correctly if there is no text provided', () => {
+      const input = fromJS({
+        a: false,
+        b: fromJS({
+          c: fromJS({
+            d: true,
+            e: fromJS({
+              f: true,
+              g: fromJS({
+                k: true,
+                f: true,
+                g: fromJS({
+                  k: true,
+                  d: false,
+                  e: fromJS({
+                    f: true,
+                    g: fromJS({
+                      k: false,
+                      f: true,
+                      g: fromJS({
+                        k: true,
+                        l: false,
+                      }),
+                    }),
+                  }),
+                }),
+              }),
+            }),
+          }),
+          m: true,
+        }),
+      });
+
+      const result = getDiscoveryPercentage(input);
+
+      expect(result).toEqual(50);
     });
   });
 });
