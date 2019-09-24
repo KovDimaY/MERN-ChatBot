@@ -1,7 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+/* eslint-disable react/no-unused-prop-types */
+
 import ExperienceItem from '../../Common/ExperienceItem';
+import ProgressBar from '../../Common/ProgressBar';
 import EmptyView from '../../Common/EmptyView';
 
 import { experiences } from './constants';
@@ -22,6 +25,7 @@ const Experience = (props) => {
   const renderContent = () => (
     <React.Fragment>
       <h3 className="experiences-section-title">Experience</h3>
+      <ProgressBar percent={props.discoveryPercent} margintTop />
       <div className="experiences-wrapper">
         {renderExperiences()}
       </div>
@@ -41,6 +45,7 @@ const Experience = (props) => {
 
 Experience.propTypes = {
   discovered: PropTypes.bool.isRequired,
+  discoveryPercent: PropTypes.number.isRequired,
 };
 
 export default Experience;

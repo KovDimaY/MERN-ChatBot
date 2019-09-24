@@ -5,6 +5,10 @@
   cursor: help;
 }
 
+.progress-bar-container.decrease-margin {
+  margin-top: -25px;
+}
+
 .progress-bar-container .react-sweet-progress {
   height: 30px;
 }
@@ -29,3 +33,24 @@
   position: absolute;
   top: 0;
 }
+
+@media (max-width: 992px) {
+  .progress-bar-container.decrease-margin {
+    margin-top: 0px;
+  }
+}
+
+@media (max-width: 600px) {
+  .progress-bar-container .tooltip {
+    display: block;
+  }
+
+  .progress-bar-container .react-sweet-progress-symbol {
+    display: flex;
+  }
+
+  .progress-bar-container.decrease-margin {
+    margin-top: 20px;
+  }
+}
+

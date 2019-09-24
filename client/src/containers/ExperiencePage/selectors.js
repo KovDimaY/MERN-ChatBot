@@ -1,4 +1,5 @@
 import { createSelector } from 'reselect';
+import { getDiscoveryPercentage } from 'utils/common';
 
 const selectExperiencePageDomain = () => state => state.get('experiencePageDomain');
 
@@ -32,6 +33,15 @@ const selectIcicle = () => createSelector(
   experiencePageDomain => experiencePageDomain.get('icicle').toJS(),
 );
 
+const selectDiscoveryPercent = () => createSelector(
+  selectExperiencePageDomain(),
+  (experiencePageDomain) => {
+    const { discovered, total } = getDiscoveryPercentage(experiencePageDomain);
+
+    return Math.round((discovered * 100) / total);
+  },
+);
+
 export {
   selectDiscovered,
   selectCornerjob,
@@ -39,4 +49,5 @@ export {
   selectEnixan,
   selectMbas,
   selectIcicle,
+  selectDiscoveryPercent,
 };
