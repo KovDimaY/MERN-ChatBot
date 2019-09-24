@@ -1,4 +1,5 @@
 import { createSelector } from 'reselect';
+import { getDiscoveryPercentage } from 'utils/common';
 
 const selectHomePageDomain = () => state => state.get('homePageDomain');
 
@@ -52,6 +53,15 @@ const selectHobbies = () => createSelector(
   homePageDomain => homePageDomain.get('hobbies').toJS(),
 );
 
+const selectDiscoveryPercent = () => createSelector(
+  selectHomePageDomain(),
+  (homePageDomain) => {
+    const { discovered, total } = getDiscoveryPercentage(homePageDomain);
+
+    return Math.round((discovered * 100) / total);
+  },
+);
+
 export {
   selectDiscovered,
   selectName,
@@ -63,4 +73,5 @@ export {
   selectAboutMe,
   selectLanguages,
   selectHobbies,
+  selectDiscoveryPercent,
 };

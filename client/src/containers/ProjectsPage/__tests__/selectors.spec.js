@@ -7,7 +7,12 @@ import {
   selectChat,
   selectMemory,
   selectKovdimay,
+  selectDiscoveryPercent,
 } from '../selectors';
+
+jest.mock('utils/common', () => ({
+  getDiscoveryPercentage: () => ({ discovered: 5, total: 10 }),
+}));
 
 describe('containers/ProjectsPage/selectors', () => {
   describe('selectDiscovered', () => {
@@ -73,6 +78,17 @@ describe('containers/ProjectsPage/selectors', () => {
       const mockedState = fromJS({ projectsPageDomain });
 
       expect(selector(mockedState)).toEqual(kovdimay);
+    });
+  });
+
+  describe('selectDiscoveryPercent', () => {
+    it('should select discovery persentage', () => {
+      const selector = selectDiscoveryPercent();
+      const whatever = { whatever: 'whatever' };
+      const projectsPageDomain = fromJS({ whatever });
+      const mockedState = fromJS({ projectsPageDomain });
+
+      expect(selector(mockedState)).toEqual(50);
     });
   });
 });

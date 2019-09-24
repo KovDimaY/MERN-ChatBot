@@ -11,7 +11,12 @@ import {
   selectAboutMe,
   selectLanguages,
   selectHobbies,
+  selectDiscoveryPercent,
 } from '../selectors';
+
+jest.mock('utils/common', () => ({
+  getDiscoveryPercentage: () => ({ discovered: 5, total: 10 }),
+}));
 
 describe('containers/HomePage/selectors', () => {
   describe('selectDiscovered', () => {
@@ -121,6 +126,17 @@ describe('containers/HomePage/selectors', () => {
       const mockedState = fromJS({ homePageDomain });
 
       expect(selector(mockedState)).toEqual(hobbies);
+    });
+  });
+
+  describe('selectDiscoveryPercent', () => {
+    it('should select discovery persentage', () => {
+      const selector = selectDiscoveryPercent();
+      const whatever = { whatever: 'whatever' };
+      const homePageDomain = fromJS({ whatever });
+      const mockedState = fromJS({ homePageDomain });
+
+      expect(selector(mockedState)).toEqual(50);
     });
   });
 });

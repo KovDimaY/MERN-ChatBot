@@ -12,7 +12,8 @@
       "ProjectItem",
       "CardItem",
       "DotsAnimation",
-      "EmptyView"
+      "EmptyView",
+      "ProgressBar"
     ]
   },
   {

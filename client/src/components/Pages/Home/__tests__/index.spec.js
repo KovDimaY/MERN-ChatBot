@@ -4,6 +4,7 @@ import { create } from 'react-test-renderer';
 import Home from '../../Home';
 
 jest.mock('components/Common/EmptyView', () => 'EmptyView');
+jest.mock('components/Common/ProgressBar', () => 'ProgressBar');
 jest.mock('components/Common/LanguageItem', () => 'LanguageItem');
 jest.mock('components/Common/HobbyItem', () => 'HobbyItem');
 jest.mock('utils/common', () => ({
@@ -25,6 +26,7 @@ describe('components/Pages/<Home />', () => {
   it('should render component with discovered but all hidden', () => {
     const props = {
       discovered: true,
+      discoveryPercent: 50,
       hobbies: {},
     };
     const tree = create(mockComponent(props)).toJSON();
@@ -35,6 +37,7 @@ describe('components/Pages/<Home />', () => {
   it('should render component with all discovered', () => {
     const props = {
       discovered: true,
+      discoveryPercent: 100,
       name: true,
       position: true,
       location: true,

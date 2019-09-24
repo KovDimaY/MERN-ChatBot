@@ -440,6 +440,63 @@
     font-size: 10px;
   }
 }
+.progress-bar-container {
+  position: relative;
+  padding-top: 20px;
+  margin: 20px 0;
+  cursor: help;
+}
+
+.progress-bar-container.decrease-margin {
+  margin-top: -25px;
+}
+
+.progress-bar-container .react-sweet-progress {
+  height: 30px;
+}
+
+.progress-bar-container:hover .tooltip {
+  display: block;
+}
+
+.progress-bar-container:hover .react-sweet-progress-symbol {
+  display: flex;
+}
+
+.progress-bar-container .react-sweet-progress-symbol {
+  display: none;
+  width: auto;
+  height: auto;
+  font-size: 30px;
+}
+
+.progress-bar-container .tooltip {
+  display: none;
+  position: absolute;
+  top: 0;
+}
+
+@media (max-width: 992px) {
+  .progress-bar-container.decrease-margin {
+    margin-top: 0px;
+  }
+}
+
+@media (max-width: 600px) {
+  .progress-bar-container .tooltip {
+    display: block;
+  }
+
+  .progress-bar-container .react-sweet-progress-symbol {
+    display: flex;
+  }
+
+  .progress-bar-container.decrease-margin {
+    margin-top: 20px;
+  }
+}
+
+
 .project-item-container {
   margin: 20px 0;
   display: flex;

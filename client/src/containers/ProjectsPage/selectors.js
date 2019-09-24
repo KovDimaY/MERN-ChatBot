@@ -1,4 +1,5 @@
 import { createSelector } from 'reselect';
+import { getDiscoveryPercentage } from 'utils/common';
 
 const selectProjectsPageDomain = () => state => state.get('projectsPageDomain');
 
@@ -32,6 +33,15 @@ const selectKovdimay = () => createSelector(
   projectsPageDomain => projectsPageDomain.get('kovdimay').toJS(),
 );
 
+const selectDiscoveryPercent = () => createSelector(
+  selectProjectsPageDomain(),
+  (projectsPageDomain) => {
+    const { discovered, total } = getDiscoveryPercentage(projectsPageDomain);
+
+    return Math.round((discovered * 100) / total);
+  },
+);
+
 export {
   selectDiscovered,
   selectTrips,
@@ -39,4 +49,5 @@ export {
   selectChat,
   selectMemory,
   selectKovdimay,
+  selectDiscoveryPercent,
 };

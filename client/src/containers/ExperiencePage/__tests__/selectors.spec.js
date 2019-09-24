@@ -7,7 +7,12 @@ import {
   selectEnixan,
   selectMbas,
   selectIcicle,
+  selectDiscoveryPercent,
 } from '../selectors';
+
+jest.mock('utils/common', () => ({
+  getDiscoveryPercentage: () => ({ discovered: 5, total: 10 }),
+}));
 
 describe('containers/ExperiencePage/selectors', () => {
   describe('selectDiscovered', () => {
@@ -73,6 +78,17 @@ describe('containers/ExperiencePage/selectors', () => {
       const mockedState = fromJS({ experiencePageDomain });
 
       expect(selector(mockedState)).toEqual(icicle);
+    });
+  });
+
+  describe('selectDiscoveryPercent', () => {
+    it('should select discovery persentage', () => {
+      const selector = selectDiscoveryPercent();
+      const whatever = { whatever: 'whatever' };
+      const experiencePageDomain = fromJS({ whatever });
+      const mockedState = fromJS({ experiencePageDomain });
+
+      expect(selector(mockedState)).toEqual(50);
     });
   });
 });

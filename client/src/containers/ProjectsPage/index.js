@@ -9,6 +9,7 @@ import {
   selectDiscovered, selectTrips,
   selectCharts, selectChat,
   selectMemory, selectKovdimay,
+  selectDiscoveryPercent,
 } from './selectors';
 
 
@@ -20,6 +21,7 @@ export const ProjectsPageContainer = props => (
     chat={props.chat}
     memory={props.memory}
     kovdimay={props.kovdimay}
+    discoveryPercent={props.discoveryPercent}
   />
 );
 
@@ -30,6 +32,7 @@ const mapStateToProps = createStructuredSelector({
   chat: selectChat(),
   memory: selectMemory(),
   kovdimay: selectKovdimay(),
+  discoveryPercent: selectDiscoveryPercent(),
 });
 
 ProjectsPageContainer.propTypes = {
@@ -39,6 +42,7 @@ ProjectsPageContainer.propTypes = {
   chat: PropTypes.object.isRequired,
   memory: PropTypes.object.isRequired,
   kovdimay: PropTypes.object.isRequired,
+  discoveryPercent: PropTypes.number.isRequired,
 };
 
 export default connect(mapStateToProps)(ProjectsPageContainer);
