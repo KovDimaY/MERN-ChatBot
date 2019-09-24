@@ -37,3 +37,24 @@ export const getDuration = (start, end) => {
 export const showHiddenText = (input = '', show) => (
   show ? input : input.split('').map(char => !/[\s]/.test(char) ? '?' : char).join('')
 );
+
+export const getDiscoveryPercentage = (input, result = { discovered: 0, total: 0 }) => {
+  if (input && input.toJS) {
+    return getDiscoveryPercentage(input.toJS(), result);
+  }
+
+  if (typeof input === 'object') {
+    const keys = Object.keys(input);
+
+    keys.forEach((key) => {
+      getDiscoveryPercentage(input[key], result);
+    });
+
+    return result;
+  }
+
+  result.discovered += input ? 1 : 0; // eslint-disable-line no-param-reassign
+  result.total += 1; // eslint-disable-line no-param-reassign
+
+  return result;
+};
