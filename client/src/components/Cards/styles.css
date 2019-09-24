@@ -3,6 +3,10 @@
   overflow-y: scroll;
 }
 
+.cards-containter .cards-scrollable-wrapper {
+  display: flex;
+}
+
 .cards-containter .card-containter {
   display: inline-block;
   width: 200px;

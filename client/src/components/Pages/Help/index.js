@@ -43,6 +43,12 @@ const HelpPage = () => {
         many different ways of asking about these topics. So you are welcome
         try different variations to see how flexible it is.
       </p>
+      <p>
+        If you are lazy and you do not want to play with the bot - here
+        you can find a link to
+        my <a href="https://www.linkedin.com/in/kovalenkodmytro/" target="_blank" rel="noopener noreferrer">LinkedIn</a> profile
+        and see everything at once.
+      </p>
       <p className="text">
         Remember, <b>your feedback is very important</b> to me! If you see that
         my bot answers in a weird way to a simple question, or if you think

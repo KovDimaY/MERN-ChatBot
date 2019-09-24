@@ -6,7 +6,6 @@ import PropTypes from 'prop-types';
 import { getAgeByBirthdate, showHiddenText } from 'utils/common';
 import { myProfilePicture } from 'images';
 import {
-  emptyViewDescription,
   aboutMeDescription,
   languages, hobbies,
 } from './constants';
@@ -153,13 +152,25 @@ const Home = (props) => {
     </React.Fragment>
   );
 
+  const renderEmptyView = () => (
+    <EmptyView section="home">
+      <p>Welcome to my new personal project!</p>
+      <p>
+        Ask questions as you are speaking to me and try to populate
+        the website with the info my bot will provide. Every page will
+        have a progress bar which indicates how much info you have already
+        recovered - so you will know where to stop asking about some particular topic.
+      </p>
+      <p>
+        For example, <b>{'"'}What is your name?{'"'}</b> sounds like a good question to start,
+        but it can be something else too, just use your imagination ;)
+      </p>
+    </EmptyView>
+  );
+
   return (
     <div className="home-page-container">
-      {
-        props.discovered
-          ? renderInfo()
-          : <EmptyView section="home">{renderText(emptyViewDescription)}</EmptyView>
-      }
+      { props.discovered ? renderInfo() : renderEmptyView() }
     </div>
   );
 };
