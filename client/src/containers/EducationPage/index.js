@@ -8,6 +8,7 @@ import EducationPage from 'components/Pages/Education';
 import {
   selectDiscovered, selectCertificates,
   selectMaster, selectBachelor,
+  selectDiscoveryPercent,
 } from './selectors';
 
 
@@ -17,6 +18,7 @@ export const EducationPageContainer = props => (
     certificates={props.certificates}
     bachelor={props.bachelor}
     master={props.master}
+    discoveryPercent={props.discoveryPercent}
   />
 );
 
@@ -25,7 +27,7 @@ const mapStateToProps = createStructuredSelector({
   certificates: selectCertificates(),
   bachelor: selectBachelor(),
   master: selectMaster(),
-
+  discoveryPercent: selectDiscoveryPercent(),
 });
 
 EducationPageContainer.propTypes = {
@@ -33,6 +35,7 @@ EducationPageContainer.propTypes = {
   certificates: PropTypes.bool.isRequired,
   bachelor: PropTypes.object.isRequired,
   master: PropTypes.object.isRequired,
+  discoveryPercent: PropTypes.number.isRequired,
 };
 
 export default connect(mapStateToProps)(EducationPageContainer);

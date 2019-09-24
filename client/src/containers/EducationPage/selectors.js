@@ -1,4 +1,5 @@
 import { createSelector } from 'reselect';
+import { getDiscoveryPercentage } from 'utils/common';
 
 const selectEducationPageDomain = () => state => state.get('educationPageDomain');
 
@@ -22,9 +23,19 @@ const selectBachelor = () => createSelector(
   educationPageDomain => educationPageDomain.get('bachelor').toJS(),
 );
 
+const selectDiscoveryPercent = () => createSelector(
+  selectEducationPageDomain(),
+  (educationPageDomain) => {
+    const { discovered, total } = getDiscoveryPercentage(educationPageDomain);
+
+    return Math.round((discovered * 100) / total);
+  },
+);
+
 export {
   selectDiscovered,
   selectCertificates,
   selectMaster,
   selectBachelor,
+  selectDiscoveryPercent,
 };

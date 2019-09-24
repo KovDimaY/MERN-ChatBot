@@ -1,7 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+/* eslint-disable react/no-unused-prop-types */
+
 import EmptyView from '../../Common/EmptyView';
+import ProgressBar from '../../Common/ProgressBar';
 import EducationItem from '../../Common/EducationItem';
 import CertificationItem from '../../Common/CertificationItem';
 
@@ -33,6 +36,7 @@ const Education = (props) => {
   const renderContent = () => (
     <React.Fragment>
       <h3 className="education-section-title">Education</h3>
+      <ProgressBar percent={props.discoveryPercent} margintTop />
       <div className="educations-wrapper">
         { renderEducations() }
       </div>
@@ -57,6 +61,7 @@ const Education = (props) => {
 Education.propTypes = {
   discovered: PropTypes.bool.isRequired,
   certificates: PropTypes.bool.isRequired,
+  discoveryPercent: PropTypes.number.isRequired,
 };
 
 export default Education;

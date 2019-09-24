@@ -9,6 +9,7 @@ import {
   selectDiscovered, selectCornerjob,
   selectBigfinite, selectEnixan,
   selectMbas, selectIcicle,
+  selectDiscoveryPercent,
 } from './selectors';
 
 
@@ -20,6 +21,7 @@ export const ExperiencePageContainer = props => (
     enixan={props.enixan}
     mbas={props.mbas}
     icicle={props.icicle}
+    discoveryPercent={props.discoveryPercent}
   />
 );
 
@@ -30,7 +32,7 @@ const mapStateToProps = createStructuredSelector({
   enixan: selectEnixan(),
   mbas: selectMbas(),
   icicle: selectIcicle(),
-
+  discoveryPercent: selectDiscoveryPercent(),
 });
 
 ExperiencePageContainer.propTypes = {
@@ -40,6 +42,7 @@ ExperiencePageContainer.propTypes = {
   enixan: PropTypes.object.isRequired,
   mbas: PropTypes.object.isRequired,
   icicle: PropTypes.object.isRequired,
+  discoveryPercent: PropTypes.number.isRequired,
 };
 
 export default connect(mapStateToProps)(ExperiencePageContainer);
