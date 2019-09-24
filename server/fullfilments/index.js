@@ -1,5 +1,4 @@
 const { getRandomElement } = require('../utils/helpers');
-
 const { experiences } = require('./experience');
 const { educations } = require('./education');
 const { projects } = require('./projects');

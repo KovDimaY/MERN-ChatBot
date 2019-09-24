@@ -1,5 +1,4 @@
 const { saveDemand } = require('../utils/helpers');
-
 const { getResponse } = require('../fullfilments');
 
 const handleExperienceFullfilment = item => (agentItem) => {

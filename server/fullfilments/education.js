@@ -1,8 +1,8 @@
 const master = {
   time: [
-    'I have been studying for master from September 2009 to May 2013',
-    'I started my master degree in September 2009 and finished it in May 2013',
-    'I got my master degree in May 2013',
+    'I have been studying for master from September 2013 to May 2015',
+    'I started my master degree in September 2013 and finished it in May 2015',
+    'I got my master degree in May 2015',
   ],
   topic: [
     'I have a master degree in Mathematics',

@@ -42,9 +42,7 @@ const HelpPage = () => {
         have to ask exactly the same questions. My bot should understand
         many different ways of asking about these topics. So you are welcome
         try different variations to see how flexible it is.
-      </p>
-      <p>
-        If you are lazy and you do not want to play with the bot - here
+        And if you are lazy and you do not want to play with the bot - here
         you can find a link to
         my <a href="https://www.linkedin.com/in/kovalenkodmytro/" target="_blank" rel="noopener noreferrer">LinkedIn</a> profile
         and see everything at once.
