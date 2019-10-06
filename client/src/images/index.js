@@ -23,6 +23,7 @@ import experienceCornerjob from './experience-cornerjob.png';
 
 import educationKNU from './education-KNU.jpg';
 
+import UC_6A6O2NT7 from './certifications/UC-6A6O2NT7.jpg';
 import UC_R7UXWZ3C from './certifications/UC-R7UXWZ3C.jpg';
 import UC_LAVISYK1 from './certifications/UC-LAVISYK1.jpg';
 import UC_DNGQKOB0 from './certifications/UC-DNGQKOB0.jpg';
@@ -86,6 +87,7 @@ export {
   experienceBigfinite,
   experienceCornerjob,
   educationKNU,
+  UC_6A6O2NT7,
   UC_R7UXWZ3C,
   UC_LAVISYK1,
   UC_DNGQKOB0,
