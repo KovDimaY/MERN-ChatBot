@@ -465,12 +465,7 @@
   display: block;
 }
 
-.progress-bar-container:hover .react-sweet-progress-symbol {
-  display: flex;
-}
-
 .progress-bar-container .react-sweet-progress-symbol {
-  display: none;
   width: auto;
   height: auto;
   font-size: 30px;
@@ -491,10 +486,6 @@
 @media (max-width: 600px) {
   .progress-bar-container .tooltip {
     display: block;
-  }
-
-  .progress-bar-container .react-sweet-progress-symbol {
-    display: flex;
   }
 
   .progress-bar-container.decrease-margin {
