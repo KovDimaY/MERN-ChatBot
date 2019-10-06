@@ -34,7 +34,7 @@ import {
   FGPJG6A7U4,
   C_7M84NLE5D5TW,
   ZJ27G8KF97HT,
-  UC_6A6O2NT7
+  UC_6A6O2NT7,
 } from 'images';
 
 export const educations = [
