@@ -1,0 +1,73 @@
+.not-found-container {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.not-found-container .link {
+  margin-top: 25px;
+}
+
+.not-found-container .title {
+  font-family: Pixel;
+  font-size: 64px;
+}
+
+.not-found-container .tilt {
+  width: fit-content;
+  transform-style: preserve-3d;
+  margin: auto;
+}
+
+.not-found-container .image {
+  width: 800px;
+  height: 516px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.not-found-container .image.computer {
+  position: relative;
+  background-image: url('../../../images/404-computer.png');
+}
+
+.not-found-container .image.robot {
+  position: absolute;
+  background-image: url('../../../images/404-robot.png');
+  transform: translateZ(25px);
+}
+
+.not-found-container .image.text {
+  position: absolute;
+  background-image: url('../../../images/404-text.png');
+  transform: translateZ(50px);
+}
+
+@media (max-width: 1200px) {
+  .not-found-container .title {
+    font-size: 48px;
+  }
+
+  .not-found-container .image {
+    width: 400px;
+    height: 258px;
+  }
+
+  .not-found-container .image.robot {
+    transform: translateZ(15px);
+  }
+}
+
+@media (max-width: 600px) {
+  .not-found-container .title {
+    font-size: 32px;
+  }
+
+  .not-found-container .image {
+    width: 200px;
+    height: 129px;
+  }
+
+  .not-found-container .image.text {
+    transform: translateZ(25px);
+  }
+}
