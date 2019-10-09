@@ -9,36 +9,42 @@ exports[`components/<App /> should render component 1`] = `
       path="/"
     />
     <Layout>
-      <Route
-        component={[Function]}
-        exact={true}
-        path="/home"
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        path="/experience"
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        path="/education"
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        path="/projects"
-      />
-      <Route
-        component="Feedback"
-        exact={true}
-        path="/feedback"
-      />
-      <Route
-        component="Help"
-        exact={true}
-        path="/help"
-      />
+      <Switch>
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/home"
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/experience"
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/education"
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/projects"
+        />
+        <Route
+          component="Feedback"
+          exact={true}
+          path="/feedback"
+        />
+        <Route
+          component="Help"
+          exact={true}
+          path="/help"
+        />
+        <Route
+          component="NotFound"
+          path="*"
+        />
+      </Switch>
     </Layout>
   </Switch>
 </BrowserRouter>
