@@ -12,6 +12,7 @@ export class Chatbot extends Component {
 
     this.state = {
       currentQuery: '',
+      isTyping: false,
     };
   }
 
@@ -54,31 +55,39 @@ export class Chatbot extends Component {
     return null;
   }
 
-  renderChatbot(show, messages) {
-    if (show) {
-      return (
-        <div className="chatbot" onSubmit={this.handleSubmit}>
-          <div className="messages">
-            { this.renderMessages(messages) }
+  renderTyping() {
+    if (!this.props.isTyping) return null;
 
-            <div ref={(element) => { this.messagesEnd = element; }} />
-          </div>
-          <form className="chatbot-input-wrapper">
-            <input
-              className="chatbot-input"
-              type="text"
-              placeholder="Enter your message..."
-              value={this.state.currentQuery}
-              onChange={this.handleInput}
-            />
-            <button className="btn waves-effect waves-light blue" type="submit" name="send-message">
-              <i className="material-icons">send</i>
-            </button>
-          </form>
+    return (
+      <p>Is typing...</p>
+    );
+  }
+
+  renderChatbot(show, messages) {
+    if (!show) return null;
+
+    return (
+      <div className="chatbot" onSubmit={this.handleSubmit}>
+        <div className="messages">
+          { this.renderMessages(messages) }
+          { this.renderTyping() }
+
+          <div ref={(element) => { this.messagesEnd = element; }} />
         </div>
-      );
-    }
-    return null;
+        <form className="chatbot-input-wrapper">
+          <input
+            className="chatbot-input"
+            type="text"
+            placeholder="Enter your message..."
+            value={this.state.currentQuery}
+            onChange={this.handleInput}
+          />
+          <button className="btn waves-effect waves-light blue" type="submit" name="send-message">
+            <i className="material-icons">send</i>
+          </button>
+        </form>
+      </div>
+    );
   }
 
   render() {

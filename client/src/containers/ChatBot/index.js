@@ -23,6 +23,7 @@ export class ChatbotContainer extends Component {
 
     this.state = {
       messages: [],
+      isTyping: false,
       show: true,
       visitedRoutes: [currentLocation],
     };
@@ -44,7 +45,7 @@ export class ChatbotContainer extends Component {
     const { pathname } = nextProps.location;
 
     if (VALID_ROUTES.includes(pathname) && !visitedRoutes.includes(pathname)) {
-      await this.delayExecution(500);
+      await this.delayExecution(1000);
       const event = `${pathname.substring(1, pathname.length)}-visited`;
 
       this.dfEventQuery(event);
@@ -109,7 +110,7 @@ export class ChatbotContainer extends Component {
     this.setState({ show: false });
   }
 
-  dfTextQuery = (query) => {
+  dfTextQuery = async (query) => {
     const userMessage = {
       type: 'text',
       author: 'user',
@@ -119,6 +120,10 @@ export class ChatbotContainer extends Component {
 
     this.setState({ messages: [...this.state.messages, userMessage] });
 
+    await this.delayExecution(500);
+    this.setState({ isTyping: true });
+
+    await this.delayExecution(1000);
     this.makeRequest(Config.api.dfTextQuery, query);
   }
 
@@ -134,6 +139,8 @@ export class ChatbotContainer extends Component {
       const params = structjson.structProtoToJson(res.data.parameters);
 
       checkDiscovery(intent, params, this.props.dispatch);
+      this.setState({ isTyping: false });
+      await this.delayExecution(500);
       this.saveBotAnswers(res.data.fulfillmentMessages);
     } catch (error) {
       this.handleRequestError();
@@ -153,12 +160,13 @@ export class ChatbotContainer extends Component {
   }
 
   render() {
-    const { messages, show } = this.state;
+    const { messages, show, isTyping } = this.state;
 
     return (
       <ChatBot
         messages={messages}
         show={show}
+        isTyping={isTyping}
         onToggleShow={this.changeShowMessages}
         onSubmitMessage={this.handleSubmit}
         onReply={this.handleReply}
