@@ -67,11 +67,7 @@
     height: 129px;
   }
 
-  .not-found-container .image.text {
+  .not-found-container .image.robot {
     transform: translateZ(15px);
-  }
-
-  .not-found-container .image.text {
-    transform: translateZ(25px);
   }
 }
