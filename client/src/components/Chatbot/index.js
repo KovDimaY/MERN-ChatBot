@@ -12,7 +12,6 @@ export class Chatbot extends Component {
 
     this.state = {
       currentQuery: '',
-      isTyping: false,
     };
   }
 
@@ -59,7 +58,11 @@ export class Chatbot extends Component {
     if (!this.props.isTyping) return null;
 
     return (
-      <p>Is typing...</p>
+      <div className="fake-typing">
+        <div className="dot" />
+        <div className="dot" />
+        <div className="dot" />
+      </div>
     );
   }
 
@@ -110,6 +113,7 @@ export class Chatbot extends Component {
 
 Chatbot.propTypes = {
   show: PropTypes.bool.isRequired,
+  isTyping: PropTypes.bool.isRequired,
   onToggleShow: PropTypes.func.isRequired,
   onSubmitMessage: PropTypes.func.isRequired,
   onReply: PropTypes.func.isRequired,

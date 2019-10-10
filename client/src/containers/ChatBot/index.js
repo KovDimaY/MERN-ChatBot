@@ -53,6 +53,10 @@ export class ChatbotContainer extends Component {
     }
   }
 
+  getBotRandomDelay = () => (
+    1000 + Math.floor(Math.random() * 3000)
+  )
+
   getBotMessage = (msg) => {
     switch (msg.message) {
       case 'text':
@@ -105,7 +109,12 @@ export class ChatbotContainer extends Component {
       msg: 'I am having troubles, I need to terminate. I\'ll be back.',
     };
 
+    await this.delayExecution(500);
+    this.setState({ isTyping: true });
+
+    await this.delayExecution(this.getBotRandomDelay());
     this.setState({ messages: [...this.state.messages, botMessage] });
+
     await this.delayExecution(2000);
     this.setState({ show: false });
   }
@@ -123,7 +132,7 @@ export class ChatbotContainer extends Component {
     await this.delayExecution(500);
     this.setState({ isTyping: true });
 
-    await this.delayExecution(1000);
+    await this.delayExecution(this.getBotRandomDelay());
     this.makeRequest(Config.api.dfTextQuery, query);
   }
 
