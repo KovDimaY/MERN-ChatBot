@@ -53,7 +53,7 @@ describe('containers/<ChatbotContainer />', () => {
       instance.dfEventQuery = dfEventQuery;
       instance.componentWillReceiveProps(nextProps);
 
-      await expect(delayExecution).toHaveBeenCalledWith(500);
+      await expect(delayExecution).toHaveBeenCalledWith(1000);
       expect(dfEventQuery).toHaveBeenCalledWith('experience-visited');
       expect(setState).toHaveBeenCalledWith(newState);
     });
@@ -204,9 +204,16 @@ describe('containers/<ChatbotContainer />', () => {
     instance.state = { messages };
     instance.setState = setState;
     instance.delayExecution = delayExecution;
+    instance.getBotRandomDelay = () => 1000;
+
     instance.handleRequestError();
 
+    await expect(delayExecution).toHaveBeenCalledWith(500);
+    expect(setState).toHaveBeenCalledWith({ isTyping: true });
+
+    await expect(delayExecution).toHaveBeenCalledWith(1000);
     expect(setState).toHaveBeenCalledWith({ messages: expected });
+
     await expect(delayExecution).toHaveBeenCalledWith(2000);
     expect(setState).toHaveBeenCalledWith({ show: false });
   });
@@ -273,7 +280,8 @@ describe('containers/<ChatbotContainer />', () => {
   });
 
   describe('dfTextQuery()', () => {
-    it('should call makeRequest', () => {
+    it('should call makeRequest', async () => {
+      const delayExecution = jest.fn();
       const setState = jest.fn();
       const makeRequest = jest.fn();
       const query = 'query';
@@ -290,17 +298,26 @@ describe('containers/<ChatbotContainer />', () => {
 
       instance.state = { messages };
       instance.setState = setState;
+      instance.delayExecution = delayExecution;
       instance.makeRequest = makeRequest;
+      instance.getBotRandomDelay = () => 1000;
 
       instance.dfTextQuery(query);
 
       expect(setState).toHaveBeenCalledWith({ messages: newMessages });
+
+      await expect(delayExecution).toHaveBeenCalledWith(500);
+      expect(setState).toHaveBeenCalledWith({ isTyping: true });
+
+      await expect(delayExecution).toHaveBeenCalledWith(1000);
       expect(makeRequest).toHaveBeenCalledWith(Config.api.dfTextQuery, query);
     });
   });
 
   describe('makeRequest()', () => {
     it('should call saveBotAnswers when everything is ok', async () => {
+      const delayExecution = jest.fn();
+      const setState = jest.fn();
       const saveBotAnswers = jest.fn();
       const handleRequestError = jest.fn();
       const query = 'query';
@@ -316,8 +333,12 @@ describe('containers/<ChatbotContainer />', () => {
 
       instance.saveBotAnswers = saveBotAnswers;
       instance.handleRequestError = handleRequestError;
+      instance.setState = setState;
+      instance.delayExecution = delayExecution;
       await instance.makeRequest('url', query);
 
+      expect(setState).toHaveBeenCalledWith({ isTyping: false });
+      await expect(delayExecution).toHaveBeenCalledWith(500);
       expect(checkDiscovery).toHaveBeenCalledWith('displayName', 'parameters', 'dispatch');
       expect(saveBotAnswers).toHaveBeenCalledWith('fulfillmentMessages');
       expect(handleRequestError).not.toHaveBeenCalled();

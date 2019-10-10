@@ -149,6 +149,7 @@ export class ChatbotContainer extends Component {
 
       checkDiscovery(intent, params, this.props.dispatch);
       this.setState({ isTyping: false });
+
       await this.delayExecution(500);
       this.saveBotAnswers(res.data.fulfillmentMessages);
     } catch (error) {
