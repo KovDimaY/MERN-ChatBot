@@ -66,13 +66,13 @@ const HelpPage = () => {
       <p className="text">
         As this is a learning project, I want you to access easily to all the
         hidden places of the project, even if normally users should not access them.
-        Im my case, they are: 404 page and documentations in
-        Sorybook and Styleguidist. It is something internal but maybe someone of you will like to
-        check this pages too, so here you have the links:
+        In my case, they are: 404 page and documentations in
+        Sorybook and Styleguidist. This is something internal but maybe someone of you will want to
+        check these pages too, so here you have the links:
       </p>
       { renderLinks() }
       <p className="text">
-        Alos, if you are completely stuck and you have no idea what question
+        Also, if you are completely stuck and you have no idea what question
         to ask in order to open some data you want to get - here you can
         see the list of examples for all the questions that you need to
         open 100% of the information on all the pages. As you can see,
