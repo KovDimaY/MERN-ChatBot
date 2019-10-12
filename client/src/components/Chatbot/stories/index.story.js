@@ -17,6 +17,7 @@ storiesOf('Chatbot', module)
         onToggleShow={action('onToggleShow actioned')}
         onSubmitMessage={action('onSubmitMessage actioned')}
         onReply={action('onReply actioned')}
+        isTyping={boolean('Is typing', false)}
       />
     </div>
   ))
@@ -27,6 +28,7 @@ storiesOf('Chatbot', module)
         onToggleShow={action('onToggleShow actioned')}
         onSubmitMessage={action('onSubmitMessage actioned')}
         onReply={action('onReply actioned')}
+        isTyping={boolean('Is typing', false)}
       />
     </div>
   ))
@@ -38,6 +40,19 @@ storiesOf('Chatbot', module)
         onSubmitMessage={action('onSubmitMessage actioned')}
         onReply={action('onReply actioned')}
         messages={object('Messages', textMessages)}
+        isTyping={boolean('Is typing', false)}
+      />
+    </div>
+  ))
+  .add('With messages and typing', () => (
+    <div style={{ padding: paddingSize }}>
+      <Chatbot
+        show={boolean('Show', true)}
+        onToggleShow={action('onToggleShow actioned')}
+        onSubmitMessage={action('onSubmitMessage actioned')}
+        onReply={action('onReply actioned')}
+        messages={object('Messages', textMessages)}
+        isTyping={boolean('Is typing', true)}
       />
     </div>
   ))
@@ -49,6 +64,7 @@ storiesOf('Chatbot', module)
         onSubmitMessage={action('onSubmitMessage actioned')}
         onReply={action('onReply actioned')}
         messages={object('Messages', quickRepliesMessages)}
+        isTyping={boolean('Is typing', false)}
       />
     </div>
   ))
@@ -60,6 +76,7 @@ storiesOf('Chatbot', module)
         onSubmitMessage={action('onSubmitMessage actioned')}
         onReply={action('onReply actioned')}
         messages={object('Messages', cardsMessages)}
+        isTyping={boolean('Is typing', false)}
       />
     </div>
   ));

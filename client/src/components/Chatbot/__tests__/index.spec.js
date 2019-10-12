@@ -28,6 +28,17 @@ describe('components/<Chatbot />', () => {
     expect(tree).toMatchSnapshot();
   });
 
+  it('should render component with isTyping', () => {
+    const props = {
+      ...defaultProps,
+      show: true,
+      isTyping: true,
+    };
+    const tree = create(mockComponent(props)).toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
+
   it('should render component without messages', () => {
     const tree = create(mockComponent(defaultProps)).toJSON();
 
