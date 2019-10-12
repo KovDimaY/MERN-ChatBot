@@ -3,6 +3,8 @@ import { create } from 'react-test-renderer';
 
 import Help from '../../Help';
 
+jest.mock('react-router-dom', () => ({ Link: 'Link' }));
+
 const mockComponent = props => (
   <Help {...props} />
 );
