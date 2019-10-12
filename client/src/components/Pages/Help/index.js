@@ -1,5 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
+import { STORYBOOK, STYLEGUIDE, NOT_FOUND } from 'constants/routes';
 import { questions } from './questions';
 
 import './styles.css';
@@ -26,11 +28,51 @@ const HelpPage = () => {
     ))
   );
 
+  const renderLinks = () => (
+    <ul className="shortcut-links-wrapper">
+      <li>
+        <a
+          className="waves-effect waves-light btn-large light-blue lighten-1"
+          href={STORYBOOK}
+        >
+          <i className="material-icons left">book</i>
+          Storybook
+        </a>
+      </li>
+      <li>
+        <a
+          className="waves-effect waves-light btn-large purple lighten-1"
+          href={STYLEGUIDE}
+        >
+          <i className="material-icons left">widgets</i>
+          Styleguidist
+        </a>
+      </li>
+      <li>
+        <Link
+          className="waves-effect waves-light btn-large teal lighten-1"
+          to={NOT_FOUND}
+        >
+          <i className="material-icons left">location_off</i>
+          404 page
+        </Link>
+      </li>
+    </ul>
+  );
+
   return (
     <div className="help-page-container">
       <h3 className="help-section-title">Help</h3>
       <p className="text">
-        If you are completely stuck and you have no idea what question
+        As this is a learning project, I want you to access easily to all the
+        hidden places of the project, even if normally users should not access them.
+        Im my case, they are: 404 page and documentations in
+        Sorybook and Styleguidist. It is something internal but maybe someone of you will like to
+        check this pages too, so here you have the links:
+      </p>
+      { renderLinks() }
+      <p className="text">
+        Alos, if you are completely stuck and you have no idea what question
         to ask in order to open some data you want to get - here you can
         see the list of examples for all the questions that you need to
         open 100% of the information on all the pages. As you can see,
