@@ -12,7 +12,55 @@ exports[`components/Pages/<Help /> should render component with no feedbacks 1`]
   <p
     className="text"
   >
-    If you are completely stuck and you have no idea what question to ask in order to open some data you want to get - here you can see the list of examples for all the questions that you need to open 100% of the information on all the pages. As you can see, it is pretty straightforward and simple to open all the data and you do not need to ask a lot.
+    As this is a learning project, I want you to access easily to all the hidden places of the project, even if normally users should not access them. In my case, they are: 404 page and documentations in Sorybook and Styleguidist. This is something internal but maybe someone of you will want to check these pages too, so here you have the links:
+  </p>
+  <ul
+    className="shortcut-links-wrapper"
+  >
+    <li>
+      <a
+        className="waves-effect waves-light btn-large light-blue lighten-1"
+        href="/docs/storybook"
+      >
+        <i
+          className="material-icons left"
+        >
+          book
+        </i>
+        Storybook
+      </a>
+    </li>
+    <li>
+      <a
+        className="waves-effect waves-light btn-large purple lighten-1"
+        href="/docs/styleguide"
+      >
+        <i
+          className="material-icons left"
+        >
+          widgets
+        </i>
+        Styleguidist
+      </a>
+    </li>
+    <li>
+      <Link
+        className="waves-effect waves-light btn-large teal lighten-1"
+        to="/not-found"
+      >
+        <i
+          className="material-icons left"
+        >
+          location_off
+        </i>
+        404 page
+      </Link>
+    </li>
+  </ul>
+  <p
+    className="text"
+  >
+    Also, if you are completely stuck and you have no idea what question to ask in order to open some data you want to get - here you can see the list of examples for all the questions that you need to open 100% of the information on all the pages. As you can see, it is pretty straightforward and simple to open all the data and you do not need to ask a lot.
   </p>
   <p
     className="text"
