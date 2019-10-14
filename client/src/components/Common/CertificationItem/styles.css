@@ -5,13 +5,8 @@
   cursor: pointer;
 }
 
-.certification-container .image:hover {
-  transform: scale(1.03);
+.certification-container .tilt .image:hover {
   box-shadow: 0px 0px 25px rgba(0,0,0,0.2);
-}
-
-.certification-container .image-wrapper:hover + .title {
-  transform: scale(1.05);
 }
 
 .certification-container .title {
