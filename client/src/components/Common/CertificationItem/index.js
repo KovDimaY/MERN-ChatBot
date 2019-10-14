@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import Tilt from 'react-tilt';
+
 import { showHiddenText } from 'utils/common';
 import { hiddenImage } from 'images';
 
@@ -22,16 +24,16 @@ const CertificationItem = ({
   const renderLink = () => {
     if (discovered) {
       return (
-        <a href={url} className="image-wrapper" target="_blank" rel="noopener noreferrer">
-          <img className="image" src={image} alt="certificate" />
-        </a>
+        <Tilt className="tilt" options={{ max: 20, scale: 1.05 }}>
+          <a href={url} className="image-wrapper" target="_blank" rel="noopener noreferrer">
+            <img className="image" src={image} alt="certificate" />
+          </a>
+        </Tilt>
       );
     }
 
     return (
-      <div className="image-wrapper">
-        <img className="image" src={hiddenImage} alt="certificate" />
-      </div>
+      <img className="image" src={hiddenImage} alt="certificate" />
     );
   };
 
