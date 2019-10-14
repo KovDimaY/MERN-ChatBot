@@ -4,18 +4,28 @@ exports[`components/Common/<CertificationItem /> should render component with re
 <div
   className="certification-container"
 >
-  <a
-    className="image-wrapper"
-    href="url"
-    rel="noopener noreferrer"
-    target="_blank"
+  <Tilt
+    className="tilt"
+    options={
+      Object {
+        "max": 20,
+        "scale": 1.05,
+      }
+    }
   >
-    <img
-      alt="certificate"
-      className="image"
-      src="image"
-    />
-  </a>
+    <a
+      className="image-wrapper"
+      href="url"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      <img
+        alt="certificate"
+        className="image"
+        src="image"
+      />
+    </a>
+  </Tilt>
   <div
     className="title"
   >
@@ -28,15 +38,11 @@ exports[`components/Common/<CertificationItem /> should render component with re
 <div
   className="certification-container"
 >
-  <div
-    className="image-wrapper"
-  >
-    <img
-      alt="certificate"
-      className="image"
-      src="test-file-stub"
-    />
-  </div>
+  <img
+    alt="certificate"
+    className="image"
+    src="test-file-stub"
+  />
   <div
     className="title"
   >
