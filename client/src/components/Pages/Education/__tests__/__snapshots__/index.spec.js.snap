@@ -175,6 +175,14 @@ exports[`components/Pages/<Education /> should render component discovered 1`] =
       url="https://www.udemy.com/certificate/UC-OH7XPMOP/"
     />
     <CertificationItem
+      date="2019-10-19"
+      image="test-file-stub"
+      license="UC-D9STAKO7"
+      school="Udemy"
+      title="Creative CSS Animations, Transitions And Transforms"
+      url="https://www.udemy.com/certificate/UC-D9STAKO7/"
+    />
+    <CertificationItem
       date="2017-06-18"
       image="test-file-stub"
       license="GH93LKLL72BR"

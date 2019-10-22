@@ -29,6 +29,7 @@ import UC_LAVISYK1 from './certifications/UC-LAVISYK1.jpg';
 import UC_DNGQKOB0 from './certifications/UC-DNGQKOB0.jpg';
 import UC_B6BARC8V from './certifications/UC-B6BARC8V.jpg';
 import UC_BQ81OBOU from './certifications/UC-BQ81OBOU.jpg';
+import UC_D9STAKO7 from './certifications/UC-D9STAKO7.jpg';
 import C_11467555 from './certifications/11467555.jpg';
 import UC_H1HUC3GV from './certifications/UC-H1HUC3GV.jpg';
 import UC_AVLNUEII from './certifications/UC-AVLNUEII.jpg';
@@ -93,6 +94,7 @@ export {
   UC_DNGQKOB0,
   UC_B6BARC8V,
   UC_BQ81OBOU,
+  UC_D9STAKO7,
   C_11467555,
   UC_H1HUC3GV,
   UC_AVLNUEII,

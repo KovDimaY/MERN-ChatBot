@@ -10,6 +10,7 @@ import {
   UC_AVLNUEII,
   UC_0FOZNHTE,
   UC_OH7XPMOP,
+  UC_D9STAKO7,
   GH93LKLL72BR,
   QYHRQW9NWKE9,
   AFGWZT2CB22S,
@@ -185,6 +186,14 @@ export const certificates = [
     license: 'UC-OH7XPMOP',
     image: UC_OH7XPMOP,
     url: 'https://www.udemy.com/certificate/UC-OH7XPMOP/',
+  },
+  {
+    title: 'Creative CSS Animations, Transitions And Transforms',
+    school: 'Udemy',
+    date: '2019-10-19',
+    license: 'UC-D9STAKO7',
+    image: UC_D9STAKO7,
+    url: 'https://www.udemy.com/certificate/UC-D9STAKO7/',
   },
   {
     title: 'Graph Search, Shortest Paths, and Data Structures',
