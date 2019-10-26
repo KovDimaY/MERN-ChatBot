@@ -100,6 +100,14 @@ export const educations = [
 
 export const certificates = [
   {
+    title: 'Creative CSS Animations, Transitions And Transforms',
+    school: 'Udemy',
+    date: '2019-10-19',
+    license: 'UC-D9STAKO7',
+    image: UC_D9STAKO7,
+    url: 'https://www.udemy.com/certificate/UC-D9STAKO7/',
+  },
+  {
     title: 'Create Chatbot for Website with React and Node.js',
     school: 'Udemy',
     date: '2019-10-06',
@@ -186,14 +194,6 @@ export const certificates = [
     license: 'UC-OH7XPMOP',
     image: UC_OH7XPMOP,
     url: 'https://www.udemy.com/certificate/UC-OH7XPMOP/',
-  },
-  {
-    title: 'Creative CSS Animations, Transitions And Transforms',
-    school: 'Udemy',
-    date: '2019-10-19',
-    license: 'UC-D9STAKO7',
-    image: UC_D9STAKO7,
-    url: 'https://www.udemy.com/certificate/UC-D9STAKO7/',
   },
   {
     title: 'Graph Search, Shortest Paths, and Data Structures',

@@ -87,6 +87,14 @@ exports[`components/Pages/<Education /> should render component discovered 1`] =
     className="certifications-wrapper"
   >
     <CertificationItem
+      date="2019-10-19"
+      image="test-file-stub"
+      license="UC-D9STAKO7"
+      school="Udemy"
+      title="Creative CSS Animations, Transitions And Transforms"
+      url="https://www.udemy.com/certificate/UC-D9STAKO7/"
+    />
+    <CertificationItem
       date="2019-10-06"
       image="test-file-stub"
       license="UC-6A6O2NT7"
@@ -173,14 +181,6 @@ exports[`components/Pages/<Education /> should render component discovered 1`] =
       school="Udemy"
       title="Test Automation with Katalon Studio"
       url="https://www.udemy.com/certificate/UC-OH7XPMOP/"
-    />
-    <CertificationItem
-      date="2019-10-19"
-      image="test-file-stub"
-      license="UC-D9STAKO7"
-      school="Udemy"
-      title="Creative CSS Animations, Transitions And Transforms"
-      url="https://www.udemy.com/certificate/UC-D9STAKO7/"
     />
     <CertificationItem
       date="2017-06-18"
