@@ -16,7 +16,7 @@
     "build-styleguide": "styleguidist build"
   },
   "dependencies": {
-    "axios": "0.18.0",
+    "axios": "0.18.1",
     "http-proxy-middleware": "0.19.1",
     "immutable": "4.0.0-rc.12",
     "lodash.debounce": "4.0.8",
