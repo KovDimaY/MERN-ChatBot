@@ -153,6 +153,36 @@
   margin-right: 25px;
   font-size: 3rem;
 }
+.chatbot-container .fake-typing {
+  align-items: center;
+  display: flex;
+  height: 45px;
+  margin-left: 25px;
+}
+.chatbot-container .fake-typing .dot {
+  background-color: #90949c;
+}
+.chatbot-container .fake-typing .dot {
+  -webkit-animation: TypingAnimation 1.5s infinite ease-in-out;
+          animation: TypingAnimation 1.5s infinite ease-in-out;
+  border-radius: 100%;
+  display: inline-block;
+  height: 7px;
+  margin-right: 4px;
+  width: 7px;
+}
+.chatbot-container .fake-typing .dot:nth-child(1){
+  -webkit-animation-delay:200ms;
+          animation-delay:200ms;
+}
+.chatbot-container .fake-typing .dot:nth-child(2){
+  -webkit-animation-delay:300ms;
+          animation-delay:300ms;
+}
+.chatbot-container .fake-typing .dot:nth-child(3){
+  -webkit-animation-delay:400ms;
+          animation-delay:400ms;
+}
 
 @media (max-width: 600px) {
   .chatbot-container {
@@ -160,6 +190,20 @@
     left: unset;
   }
 }
+
+@-webkit-keyframes TypingAnimation {
+  0% { -webkit-transform:translateY(0px); transform:translateY(0px) }
+  28% { -webkit-transform:translateY(-10px); transform:translateY(-10px) }
+  44% { -webkit-transform:translateY(0px); transform:translateY(0px) }
+}
+
+@keyframes TypingAnimation {
+  0% { -webkit-transform:translateY(0px); transform:translateY(0px) }
+  28% { -webkit-transform:translateY(-10px); transform:translateY(-10px) }
+  44% { -webkit-transform:translateY(0px); transform:translateY(0px) }
+}
+
+
 .certification-container .image {
   width: 100%;
   border-radius: 5px;
@@ -167,15 +211,8 @@
   cursor: pointer;
 }
 
-.certification-container .image:hover {
-  -webkit-transform: scale(1.03);
-          transform: scale(1.03);
+.certification-container .tilt .image:hover {
   box-shadow: 0px 0px 25px rgba(0,0,0,0.2);
-}
-
-.certification-container .image-wrapper:hover + .title {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
 }
 
 .certification-container .title {
@@ -465,12 +502,7 @@
   display: block;
 }
 
-.progress-bar-container:hover .react-sweet-progress-symbol {
-  display: flex;
-}
-
 .progress-bar-container .react-sweet-progress-symbol {
-  display: none;
   width: auto;
   height: auto;
   font-size: 30px;
@@ -491,10 +523,6 @@
 @media (max-width: 600px) {
   .progress-bar-container .tooltip {
     display: block;
-  }
-
-  .progress-bar-container .react-sweet-progress-symbol {
-    display: flex;
   }
 
   .progress-bar-container.decrease-margin {

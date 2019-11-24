@@ -87,6 +87,22 @@ exports[`components/Pages/<Education /> should render component discovered 1`] =
     className="certifications-wrapper"
   >
     <CertificationItem
+      date="2019-10-19"
+      image="test-file-stub"
+      license="UC-D9STAKO7"
+      school="Udemy"
+      title="Creative CSS Animations, Transitions And Transforms"
+      url="https://www.udemy.com/certificate/UC-D9STAKO7/"
+    />
+    <CertificationItem
+      date="2019-10-06"
+      image="test-file-stub"
+      license="UC-6A6O2NT7"
+      school="Udemy"
+      title="Create Chatbot for Website with React and Node.js"
+      url="https://www.udemy.com/certificate/UC-6A6O2NT7/"
+    />
+    <CertificationItem
       date="2018-10-14"
       image="test-file-stub"
       license="UC-R7UXWZ3C"
@@ -99,7 +115,7 @@ exports[`components/Pages/<Education /> should render component discovered 1`] =
       image="test-file-stub"
       license="UC-LAVISYK1"
       school="Udemy"
-      title="Master Jenkins CI For DevOps and Developers"
+      title="Master Jenkins CI for DevOps and Developers"
       url="https://www.udemy.com/certificate/UC-LAVISYK1/"
     />
     <CertificationItem

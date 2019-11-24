@@ -17,6 +17,7 @@ import Projects from 'containers/ProjectsPage';
 import Disclaimer from '../Pages/Disclaimer';
 import Feedback from '../Pages/Feedback';
 import Help from '../Pages/Help';
+import NotFound from '../Pages/404';
 
 export const HomeAdapted = () => <Home />;
 export const ExperienceAdapted = () => <Experience />;
@@ -28,12 +29,15 @@ const App = () => (
     <Switch>
       <Route path={INIT} exact component={Disclaimer} />
       <Layout>
-        <Route path={HOME} exact component={HomeAdapted} />
-        <Route path={EXPERIENCE} exact component={ExperienceAdapted} />
-        <Route path={EDUCATION} exact component={EducationAdapted} />
-        <Route path={PROJECTS} exact component={ProjectsAdapted} />
-        <Route path={FEEDBACK} exact component={Feedback} />
-        <Route path={HELP} exact component={Help} />
+        <Switch>
+          <Route path={HOME} exact component={HomeAdapted} />
+          <Route path={EXPERIENCE} exact component={ExperienceAdapted} />
+          <Route path={EDUCATION} exact component={EducationAdapted} />
+          <Route path={PROJECTS} exact component={ProjectsAdapted} />
+          <Route path={FEEDBACK} exact component={Feedback} />
+          <Route path={HELP} exact component={Help} />
+          <Route path="*" component={NotFound} />
+        </Switch>
       </Layout>
     </Switch>
   </BrowserRouter>

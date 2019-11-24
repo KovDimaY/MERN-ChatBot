@@ -3,6 +3,8 @@ import { create } from 'react-test-renderer';
 
 import CertificationItem from '../../CertificationItem';
 
+jest.mock('react-tilt', () => 'Tilt');
+
 const mockComponent = props => (
   <CertificationItem {...props} />
 );

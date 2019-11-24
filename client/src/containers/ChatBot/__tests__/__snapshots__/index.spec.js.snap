@@ -2,6 +2,7 @@
 
 exports[`containers/<ChatbotContainer /> should render component 1`] = `
 <ChatBot
+  isTyping={false}
   messages={Array []}
   onReply={[Function]}
   onSubmitMessage={[Function]}

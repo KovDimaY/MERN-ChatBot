@@ -10,6 +10,7 @@ import {
   UC_AVLNUEII,
   UC_0FOZNHTE,
   UC_OH7XPMOP,
+  UC_D9STAKO7,
   GH93LKLL72BR,
   QYHRQW9NWKE9,
   AFGWZT2CB22S,
@@ -34,6 +35,7 @@ import {
   FGPJG6A7U4,
   C_7M84NLE5D5TW,
   ZJ27G8KF97HT,
+  UC_6A6O2NT7,
 } from 'images';
 
 export const educations = [
@@ -98,6 +100,22 @@ export const educations = [
 
 export const certificates = [
   {
+    title: 'Creative CSS Animations, Transitions And Transforms',
+    school: 'Udemy',
+    date: '2019-10-19',
+    license: 'UC-D9STAKO7',
+    image: UC_D9STAKO7,
+    url: 'https://www.udemy.com/certificate/UC-D9STAKO7/',
+  },
+  {
+    title: 'Create Chatbot for Website with React and Node.js',
+    school: 'Udemy',
+    date: '2019-10-06',
+    license: 'UC-6A6O2NT7',
+    image: UC_6A6O2NT7,
+    url: 'https://www.udemy.com/certificate/UC-6A6O2NT7/',
+  },
+  {
     title: 'The Complete Developers Guide to MongoDB',
     school: 'Udemy',
     date: '2018-10-14',
@@ -106,7 +124,7 @@ export const certificates = [
     url: 'https://www.udemy.com/certificate/UC-R7UXWZ3C/',
   },
   {
-    title: 'Master Jenkins CI For DevOps and Developers',
+    title: 'Master Jenkins CI for DevOps and Developers',
     school: 'Udemy',
     date: '2018-09-30',
     license: 'UC-LAVISYK1',

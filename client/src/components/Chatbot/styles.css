@@ -41,6 +41,32 @@
   margin-right: 25px;
   font-size: 3rem;
 }
+.chatbot-container .fake-typing {
+  align-items: center;
+  display: flex;
+  height: 45px;
+  margin-left: 25px;
+}
+.chatbot-container .fake-typing .dot {
+  background-color: #90949c;
+}
+.chatbot-container .fake-typing .dot {
+  animation: TypingAnimation 1.5s infinite ease-in-out;
+  border-radius: 100%;
+  display: inline-block;
+  height: 7px;
+  margin-right: 4px;
+  width: 7px;
+}
+.chatbot-container .fake-typing .dot:nth-child(1){
+  animation-delay:200ms;
+}
+.chatbot-container .fake-typing .dot:nth-child(2){
+  animation-delay:300ms;
+}
+.chatbot-container .fake-typing .dot:nth-child(3){
+  animation-delay:400ms;
+}
 
 @media (max-width: 600px) {
   .chatbot-container {
@@ -48,3 +74,10 @@
     left: unset;
   }
 }
+
+@keyframes TypingAnimation {
+  0% { transform:translateY(0px) }
+  28% { transform:translateY(-10px) }
+  44% { transform:translateY(0px) }
+}
+
