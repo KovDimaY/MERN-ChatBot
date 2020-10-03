@@ -49,15 +49,16 @@ export class ChatbotContainer extends Component {
       const event = `${pathname.substring(1, pathname.length)}-visited`;
 
       this.dfEventQuery(event);
-      this.setState({ visitedRoutes: [...visitedRoutes, pathname], show: true });
+      this.setState({
+        visitedRoutes: [...visitedRoutes, pathname],
+        show: true,
+      });
     }
   }
 
-  getBotRandomDelay = () => (
-    1000 + Math.floor(Math.random() * 3000)
-  )
+  getBotRandomDelay = () => 1000 + Math.floor(Math.random() * 3000);
 
-  getBotMessage = (msg) => {
+  getBotMessage = msg => {
     switch (msg.message) {
       case 'text':
         return {
@@ -67,7 +68,9 @@ export class ChatbotContainer extends Component {
           msg: msg.text.text[0],
         };
       case 'payload': {
-        const payload = structjson.structProtoToJson(msg.payload.fields.data.structValue);
+        const payload = structjson.structProtoToJson(
+          msg.payload.fields.data.structValue
+        );
 
         return {
           type: 'payload',
@@ -79,7 +82,7 @@ export class ChatbotContainer extends Component {
       default:
         return 'Something went wrong...';
     }
-  }
+  };
 
   saveBotAnswers(messages) {
     const newMessages = messages.map(this.getBotMessage);
@@ -87,26 +90,25 @@ export class ChatbotContainer extends Component {
     this.setState({ messages: [...this.state.messages, ...newMessages] });
   }
 
-  delayExecution = milliseconds => (
-    new Promise((resolve) => {
+  delayExecution = milliseconds =>
+    new Promise(resolve => {
       setTimeout(resolve, milliseconds);
-    })
-  );
+    });
 
   changeShowMessages = () => {
     this.setState({ show: !this.state.show });
-  }
+  };
 
-  handleSubmit = (query) => {
+  handleSubmit = query => {
     if (query) this.dfTextQuery(query);
-  }
+  };
 
   async handleRequestError() {
     const botMessage = {
       type: 'text',
       author: 'bot',
       id: uuid(),
-      msg: 'I am having troubles, I need to terminate. I\'ll be back.',
+      msg: "I am having troubles, I need to terminate. I'll be back.",
     };
 
     await this.delayExecution(500);
@@ -119,7 +121,7 @@ export class ChatbotContainer extends Component {
     this.setState({ show: false });
   }
 
-  dfTextQuery = async (query) => {
+  dfTextQuery = async query => {
     const userMessage = {
       type: 'text',
       author: 'user',
@@ -134,11 +136,11 @@ export class ChatbotContainer extends Component {
 
     await this.delayExecution(this.getBotRandomDelay());
     this.makeRequest(Config.api.dfTextQuery, query);
-  }
+  };
 
-  dfEventQuery = (query) => {
+  dfEventQuery = query => {
     this.makeRequest(Config.api.dfEventQuery, query);
-  }
+  };
 
   makeRequest = async (url, query) => {
     try {
@@ -155,7 +157,7 @@ export class ChatbotContainer extends Component {
     } catch (error) {
       this.handleRequestError();
     }
-  }
+  };
 
   handleReply = (type, value) => {
     if (value) {
@@ -167,7 +169,7 @@ export class ChatbotContainer extends Component {
           this.dfTextQuery(value);
       }
     }
-  }
+  };
 
   render() {
     const { messages, show, isTyping } = this.state;

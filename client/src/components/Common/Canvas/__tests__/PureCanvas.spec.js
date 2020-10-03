@@ -4,9 +4,7 @@ import { mount } from 'enzyme';
 
 import PureCanvas from '../PureCanvas';
 
-const mockComponent = props => (
-  <PureCanvas {...props} />
-);
+const mockComponent = props => <PureCanvas {...props} />;
 
 describe('components/Common/Canvas/<PureCanvas />', () => {
   it('should render component', () => {

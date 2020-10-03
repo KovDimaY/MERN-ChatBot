@@ -3,9 +3,7 @@ import { create } from 'react-test-renderer';
 
 import ProjectItem from '../../ProjectItem';
 
-const mockComponent = props => (
-  <ProjectItem {...props} />
-);
+const mockComponent = props => <ProjectItem {...props} />;
 
 describe('components/Common/<ProjectItem />', () => {
   it('should render component with required props', () => {

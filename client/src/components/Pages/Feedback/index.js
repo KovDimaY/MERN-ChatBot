@@ -20,19 +20,24 @@ class Feedback extends Component {
     return nextState.feedbacks.length !== this.state.feedbacks.length;
   }
 
-  handleResponse = (result) => {
+  handleResponse = result => {
     this.setState({ feedbacks: result.reverse() });
-  }
+  };
 
   renderFeedbackItem = item => (
-    <div className={`card blue-grey darken-${getRandomInteger(1, 3)}`} key={item._id}>
+    <div
+      className={`card blue-grey darken-${getRandomInteger(1, 3)}`}
+      key={item._id}
+    >
       <div className="card-content white-text">
         <div className="card-title-custom">{item.name}</div>
-        <p className="card-date">{moment(item.date).format('H:mm - MMMM Do, YYYY')}</p>
+        <p className="card-date">
+          {moment(item.date).format('H:mm - MMMM Do, YYYY')}
+        </p>
         <p className="card-comment">{item.feedback}</p>
       </div>
     </div>
-  )
+  );
 
   render() {
     const { feedbacks } = this.state;

@@ -7,9 +7,9 @@ import '../public/css/icons.css';
 const requireAll = require.context('../src', true, /story\.js$/);
 
 function loadStories() {
-  requireAll.keys().forEach(requireAll)
+  requireAll.keys().forEach(requireAll);
 }
 
 addDecorator(withInfo);
 configure(loadStories, module);
-addParameters({ viewport: {}});
+addParameters({ viewport: {} });

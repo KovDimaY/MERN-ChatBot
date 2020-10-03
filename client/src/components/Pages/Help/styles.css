@@ -54,7 +54,7 @@
 }
 
 .help-page-container .question-item:before {
-  content: ' - '
+  content: ' - ';
 }
 
 .help-page-container .question-item:last-child {

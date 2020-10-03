@@ -34,7 +34,6 @@ const education = {
     'When did you get your [master, bachelor]?',
     'What [roles, activities] did you have while getting your [master, bachelor]?',
     'What additional education do you have?',
-
   ],
 };
 
@@ -47,9 +46,4 @@ const projects = {
   ],
 };
 
-export const questions = [
-  homepage,
-  experience,
-  education,
-  projects,
-];
+export const questions = [homepage, experience, education, projects];

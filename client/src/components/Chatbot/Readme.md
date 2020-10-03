@@ -35,7 +35,7 @@ const { textMessages } = require('./stories/mockData');
   onSubmitMessage={() => {}}
   onReply={() => {}}
   messages={textMessages}
-/>
+/>;
 ```
 
 - With quick reply messages
@@ -49,7 +49,7 @@ const { quickRepliesMessages } = require('./stories/mockData');
   onSubmitMessage={() => {}}
   onReply={() => {}}
   messages={quickRepliesMessages}
-/>
+/>;
 ```
 
 - With cards message
@@ -63,5 +63,5 @@ const { cardsMessages } = require('./stories/mockData');
   onSubmitMessage={() => {}}
   onReply={() => {}}
   messages={cardsMessages}
-/>
+/>;
 ```

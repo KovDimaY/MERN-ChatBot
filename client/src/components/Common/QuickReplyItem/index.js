@@ -57,11 +57,7 @@ class QuickReplyItem extends Component {
   }
 
   render() {
-    return (
-      <div className="quick-reply-containter">
-        { this.renderItem() }
-      </div>
-    );
+    return <div className="quick-reply-containter">{this.renderItem()}</div>;
   }
 }
 

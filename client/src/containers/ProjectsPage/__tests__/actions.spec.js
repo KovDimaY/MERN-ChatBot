@@ -1,9 +1,6 @@
 import { actionTypes as at } from '../constants';
 
-import {
-  discoverProjectsPageInit,
-  discoverProjectsPageInfo,
-} from '../actions';
+import { discoverProjectsPageInit, discoverProjectsPageInfo } from '../actions';
 
 describe('containers/ProjectsPage/actions', () => {
   describe('discoverProjectsPageInit', () => {

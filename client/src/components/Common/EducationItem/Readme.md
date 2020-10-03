@@ -23,9 +23,8 @@ const { educations } = require('components/Pages/Education/constants');
     start={educations[0].start}
     finish={educations[0].finish}
   />
-</>
+</>;
 ```
-
 
 Everything discovered
 
@@ -58,5 +57,5 @@ const { educations } = require('components/Pages/Education/constants');
     start={educations[1].start}
     finish={educations[1].finish}
   />
-</>
+</>;
 ```

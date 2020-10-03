@@ -3,9 +3,7 @@ import { create } from 'react-test-renderer';
 
 import CardItem from '../../CardItem';
 
-const mockComponent = props => (
-  <CardItem {...props} />
-);
+const mockComponent = props => <CardItem {...props} />;
 
 describe('components/Common/<CardItem />', () => {
   it('should render component', () => {

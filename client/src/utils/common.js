@@ -1,11 +1,13 @@
 import moment from 'moment';
 
-export const getRandomElementOfArray = array => array[Math.floor(Math.random() * array.length)];
+export const getRandomElementOfArray = array =>
+  array[Math.floor(Math.random() * array.length)];
 
-export const getRandomInteger = (min, max) => Math.floor(min + (Math.random() * ((max - min) + 1)));
+export const getRandomInteger = (min, max) =>
+  Math.floor(min + Math.random() * (max - min + 1));
 
 // dateString should have a YYYY-MM-DD format (1992-05-20)
-export const getAgeByBirthdate = (dateString) => {
+export const getAgeByBirthdate = dateString => {
   const birthday = new Date(dateString);
   const lifeTime = Date.now() - birthday.getTime();
   const ageDate = new Date(lifeTime);
@@ -34,11 +36,18 @@ export const getDuration = (start, end) => {
   return 'Less than a month';
 };
 
-export const showHiddenText = (input = '', show) => (
-  show ? input : input.split('').map(char => !/[\s]/.test(char) ? '?' : char).join('')
-);
+export const showHiddenText = (input = '', show) =>
+  show
+    ? input
+    : input
+        .split('')
+        .map(char => (!/[\s]/.test(char) ? '?' : char))
+        .join('');
 
-export const getDiscoveryPercentage = (input, result = { discovered: 0, total: 0 }) => {
+export const getDiscoveryPercentage = (
+  input,
+  result = { discovered: 0, total: 0 }
+) => {
   if (input && input.toJS) {
     return getDiscoveryPercentage(input.toJS(), result);
   }
@@ -46,7 +55,7 @@ export const getDiscoveryPercentage = (input, result = { discovered: 0, total: 0
   if (typeof input === 'object') {
     const keys = Object.keys(input);
 
-    keys.forEach((key) => {
+    keys.forEach(key => {
       getDiscoveryPercentage(input[key], result);
     });
 

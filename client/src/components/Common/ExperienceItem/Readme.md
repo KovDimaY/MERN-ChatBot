@@ -40,7 +40,7 @@ const { experiences } = require('components/Pages/Experience/constants');
     start={experiences[2].start}
     finish={experiences[2].finish}
   />
-</>
+</>;
 ```
 
 Everything discovered
@@ -95,5 +95,5 @@ const { experiences } = require('components/Pages/Experience/constants');
     start={experiences[3].start}
     finish={experiences[3].finish}
   />
-</>
+</>;
 ```

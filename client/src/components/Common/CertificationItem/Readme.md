@@ -9,7 +9,7 @@ const { UC_B6BARC8V } = require('images');
   title="This text will be hidden until user discovers it"
   image={UC_B6BARC8V}
   url="This url will not be clickable untill user discovers it"
-/>
+/>;
 ```
 
 - Udemy Certificate
@@ -22,7 +22,7 @@ const { UC_B6BARC8V } = require('images');
   image={UC_B6BARC8V}
   url="https://www.udemy.com/certificate/UC-B6BARC8V/"
   discovered
-/>
+/>;
 ```
 
 - Codecademy Certificate
@@ -35,7 +35,7 @@ const { C_11467555 } = require('images');
   image={C_11467555}
   url="https://www.credential.net/e524eujo"
   discovered
-/>
+/>;
 ```
 
 - Coursera Sertificate
@@ -48,5 +48,5 @@ const { GH93LKLL72BR } = require('images');
   image={GH93LKLL72BR}
   url="https://www.coursera.org/account/accomplishments/certificate/GH93LKLL72BR"
   discovered
-/>
+/>;
 ```

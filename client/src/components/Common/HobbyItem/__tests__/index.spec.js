@@ -4,12 +4,10 @@ import { create } from 'react-test-renderer';
 import HobbyItem from '../../HobbyItem';
 
 jest.mock('utils/common', () => ({
-  showHiddenText: jest.fn((text, param) => param ? text : '***'),
+  showHiddenText: jest.fn((text, param) => (param ? text : '***')),
 }));
 
-const mockComponent = props => (
-  <HobbyItem {...props} />
-);
+const mockComponent = props => <HobbyItem {...props} />;
 
 describe('components/Common/<HobbyItem />', () => {
   it('should render component with no discovered and no discoveredDetails', () => {

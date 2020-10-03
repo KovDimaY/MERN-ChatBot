@@ -1,6 +1,5 @@
 EmptyView examples
 
-
 ```js
-<EmptyView section="Experience" suggestion="Are you happy?"/>
+<EmptyView section="Experience" suggestion="Are you happy?" />
 ```

@@ -5,12 +5,10 @@ import EducationItem from '../../EducationItem';
 
 jest.mock('utils/common', () => ({
   getDuration: jest.fn(() => 'getDuration mocked result'),
-  showHiddenText: jest.fn((text, show) => show ? text : '***'),
+  showHiddenText: jest.fn((text, show) => (show ? text : '***')),
 }));
 
-const mockComponent = props => (
-  <EducationItem {...props} />
-);
+const mockComponent = props => <EducationItem {...props} />;
 
 describe('components/Common/<EducationItem />', () => {
   it('should render component with required props not discovered', () => {

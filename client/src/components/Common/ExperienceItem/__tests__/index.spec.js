@@ -5,12 +5,10 @@ import ExperienceItem from '../../ExperienceItem';
 
 jest.mock('utils/common', () => ({
   getDuration: jest.fn(() => 'getDuration mocked result'),
-  showHiddenText: jest.fn((text, show) => show ? text : '***'),
+  showHiddenText: jest.fn((text, show) => (show ? text : '***')),
 }));
 
-const mockComponent = props => (
-  <ExperienceItem {...props} />
-);
+const mockComponent = props => <ExperienceItem {...props} />;
 
 describe('components/Common/<ExperienceItem />', () => {
   it('should render component with basic data discovered', () => {
@@ -46,7 +44,11 @@ describe('components/Common/<ExperienceItem />', () => {
       start: 'start',
       finish: 'finish',
       tools: ['tools1', 'tools2'],
-      responsibilities: ['responsibilities1', 'responsibilities2', 'responsibilities3'],
+      responsibilities: [
+        'responsibilities1',
+        'responsibilities2',
+        'responsibilities3',
+      ],
       discovered: {
         responsibilities: true,
         technologies: true,
@@ -71,7 +73,11 @@ describe('components/Common/<ExperienceItem />', () => {
       start: 'start',
       finish: 'finish',
       tools: ['tools1', 'tools2'],
-      responsibilities: ['responsibilities1', 'responsibilities2', 'responsibilities3'],
+      responsibilities: [
+        'responsibilities1',
+        'responsibilities2',
+        'responsibilities3',
+      ],
       discovered: {
         responsibilities: false,
         technologies: false,

@@ -8,14 +8,16 @@ class Canvas extends Component {
     this.props.draw(this.ctx);
   }
 
-  saveContext = (ctx) => {
+  saveContext = ctx => {
     this.ctx = ctx;
-  }
+  };
 
   render() {
     const { width, height } = this.props;
 
-    return <PureCanvas contextRef={this.saveContext} width={width} height={height} />;
+    return (
+      <PureCanvas contextRef={this.saveContext} width={width} height={height} />
+    );
   }
 }
 

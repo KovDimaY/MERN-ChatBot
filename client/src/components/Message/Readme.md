@@ -24,7 +24,7 @@ const { data } = require('./stories/mockData');
       onReply={() => {}}
     />
   </div>
-</div>
+</div>;
 ```
 
 - Text message from the user
@@ -51,7 +51,7 @@ const { data } = require('./stories/mockData');
       onReply={() => {}}
     />
   </div>
-</div>
+</div>;
 ```
 
 - Cards message from the bot
@@ -78,7 +78,7 @@ const { data } = require('./stories/mockData');
       onReply={() => {}}
     />
   </div>
-</div>
+</div>;
 ```
 
 - Quick reply message from the bot
@@ -105,7 +105,7 @@ const { data } = require('./stories/mockData');
       onReply={() => {}}
     />
   </div>
-</div>
+</div>;
 ```
 
 - Quick reply message from the bot
@@ -132,5 +132,5 @@ const { data } = require('./stories/mockData');
       onReply={() => {}}
     />
   </div>
-</div>
+</div>;
 ```

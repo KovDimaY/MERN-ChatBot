@@ -35,9 +35,7 @@ export default (state = initialState, action) => {
         .set('discovered', true)
         .set(
           action.payload.section,
-          state
-            .get(action.payload.section)
-            .set(action.payload.data, true),
+          state.get(action.payload.section).set(action.payload.data, true)
         );
     }
     default:

@@ -25,18 +25,14 @@ export const initialState = fromJS({
 export default (state = initialState, action) => {
   switch (action.type) {
     case at.DISCOVER_SIMPLE_ELEMENT: {
-      return state
-        .set('discovered', true)
-        .set(action.payload, true);
+      return state.set('discovered', true).set(action.payload, true);
     }
     case at.DISCOVER_HOBBIES_ELEMENT: {
       return state
         .set('discovered', true)
         .set(
           'hobbies',
-          state.get('hobbies')
-            .set('discovered', true)
-            .set(action.payload, true),
+          state.get('hobbies').set('discovered', true).set(action.payload, true)
         );
     }
     default:

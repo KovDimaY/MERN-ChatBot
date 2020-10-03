@@ -15,16 +15,24 @@ import './styles.css';
  * is available for the user.
  */
 const HobbyItem = ({
-  image, name, description, discovered, discoveredDetails,
+  image,
+  name,
+  description,
+  discovered,
+  discoveredDetails,
 }) => (
   <div className="hobby-container row valign-wrapper">
     <div className="col s12 m3 visual">
-      <h5 className="name">{ showHiddenText(name, discovered)}</h5>
-      <img src={discovered ? image : hiddenImage} alt="icon" className="image" />
+      <h5 className="name">{showHiddenText(name, discovered)}</h5>
+      <img
+        src={discovered ? image : hiddenImage}
+        alt="icon"
+        className="image"
+      />
     </div>
     <div className="col s12 m9">
       <p className="description">
-        { showHiddenText(description, discoveredDetails) }
+        {showHiddenText(description, discoveredDetails)}
       </p>
     </div>
   </div>
