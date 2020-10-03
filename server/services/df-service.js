@@ -1,8 +1,11 @@
 const dialogflow = require('dialogflow');
 const structjson = require('../utils/structjson');
 const {
-  googleProjectID, dialogFlowSessionID, dialogFlowSessionLanguageCode,
-  googleClientEmail, googlePrivateKey,
+  googleProjectID,
+  dialogFlowSessionID,
+  dialogFlowSessionLanguageCode,
+  googleClientEmail,
+  googlePrivateKey,
 } = require('../config/keys');
 
 const { Feedback } = require('../models/Feedback');
@@ -18,7 +21,10 @@ const sessionClient = new dialogflow.SessionsClient({ projectID, credentials });
 module.exports = {
   textQuery: async (query, userID, params = {}) => {
     const self = module.exports;
-    const sessionPath = sessionClient.sessionPath(googleProjectID, dialogFlowSessionID + userID);
+    const sessionPath = sessionClient.sessionPath(
+      googleProjectID,
+      dialogFlowSessionID + userID
+    );
     const request = {
       session: sessionPath,
       queryInput: {
@@ -40,7 +46,10 @@ module.exports = {
   },
   eventQuery: async (event, userID, params = {}) => {
     const self = module.exports;
-    const sessionPath = sessionClient.sessionPath(googleProjectID, dialogFlowSessionID + userID);
+    const sessionPath = sessionClient.sessionPath(
+      googleProjectID,
+      dialogFlowSessionID + userID
+    );
     const request = {
       session: sessionPath,
       queryInput: {
@@ -56,7 +65,7 @@ module.exports = {
 
     return result;
   },
-  handleRequest: async (request) => {
+  handleRequest: async request => {
     const self = module.exports;
 
     try {
@@ -79,7 +88,7 @@ module.exports = {
       return error;
     }
   },
-  saveToDatabase: async (data) => {
+  saveToDatabase: async data => {
     const feedback = new Feedback({
       name: data.name.stringValue,
       feedback: data.feedback.stringValue,

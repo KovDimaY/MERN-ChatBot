@@ -8,8 +8,7 @@ const {
   handleProjectFullfilment,
 } = require('./handlers');
 
-
-module.exports = (app) => {
+module.exports = app => {
   app.post('/api/df/textQuery', async (req, res) => {
     const result = await dfService.textQuery(req.body.query, req.body.params);
 
@@ -35,19 +34,43 @@ module.exports = (app) => {
     const agent = new WebhookClient({ request: req, response: res });
     const intentMap = new Map();
 
-    intentMap.set('experience-position', handleExperienceFullfilment('position'));
-    intentMap.set('experience-duration', handleExperienceFullfilment('duration'));
-    intentMap.set('experience-description', handleExperienceFullfilment('description'));
-    intentMap.set('experience-technologies', handleExperienceFullfilment('technologies'));
-    intentMap.set('experience-responsibilities', handleExperienceFullfilment('responsibilities'));
+    intentMap.set(
+      'experience-position',
+      handleExperienceFullfilment('position')
+    );
+    intentMap.set(
+      'experience-duration',
+      handleExperienceFullfilment('duration')
+    );
+    intentMap.set(
+      'experience-description',
+      handleExperienceFullfilment('description')
+    );
+    intentMap.set(
+      'experience-technologies',
+      handleExperienceFullfilment('technologies')
+    );
+    intentMap.set(
+      'experience-responsibilities',
+      handleExperienceFullfilment('responsibilities')
+    );
 
     intentMap.set('education-time', handleEducationFullfilment('time'));
     intentMap.set('education-topic', handleEducationFullfilment('topic'));
-    intentMap.set('education-description', handleEducationFullfilment('description'));
-    intentMap.set('education-activities', handleEducationFullfilment('activities'));
+    intentMap.set(
+      'education-description',
+      handleEducationFullfilment('description')
+    );
+    intentMap.set(
+      'education-activities',
+      handleEducationFullfilment('activities')
+    );
 
     intentMap.set('projects-tools', handleProjectFullfilment('tools'));
-    intentMap.set('projects-description', handleProjectFullfilment('description'));
+    intentMap.set(
+      'projects-description',
+      handleProjectFullfilment('description')
+    );
 
     agent.handleRequest(intentMap);
   });
