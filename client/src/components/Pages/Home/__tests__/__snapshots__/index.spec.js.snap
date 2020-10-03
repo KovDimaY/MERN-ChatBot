@@ -444,13 +444,15 @@ exports[`components/Pages/<Home /> should render component with empty props 1`] 
       Ask questions as you are speaking to me and try to populate the website with the info my bot will provide. Every page will have a progress bar which indicates how much info you have already recovered - so you will know where to stop asking about some particular topic.
     </p>
     <p>
-      For example, 
+      For example,
+       
       <b>
         "
         What is your name?
         "
       </b>
-       sounds like a good question to start, but it can be something else too, just use your imagination ;)
+       
+      sounds like a good question to start, but it can be something else too, just use your imagination ;)
     </p>
   </EmptyView>
 </div>

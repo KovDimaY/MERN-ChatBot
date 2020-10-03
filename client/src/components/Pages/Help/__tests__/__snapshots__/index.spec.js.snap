@@ -65,7 +65,8 @@ exports[`components/Pages/<Help /> should render component with no feedbacks 1`]
   <p
     className="text"
   >
-    Notice, that these questions are only examples and you do not have to ask exactly the same questions. My bot should understand many different ways of asking about these topics. So you are welcome try different variations to see how flexible it is. And if you are lazy and you do not want to play with the bot - here you can find a link to my 
+    Notice, that these questions are only examples and you do not have to ask exactly the same questions. My bot should understand many different ways of asking about these topics. So you are welcome try different variations to see how flexible it is. And if you are lazy and you do not want to play with the bot - here you can find a link to my
+     
     <a
       href="https://www.linkedin.com/in/kovalenkodmytro/"
       rel="noopener noreferrer"
@@ -73,7 +74,8 @@ exports[`components/Pages/<Help /> should render component with no feedbacks 1`]
     >
       LinkedIn
     </a>
-     profile and see everything at once.
+     
+    profile and see everything at once.
   </p>
   <p
     className="text"
