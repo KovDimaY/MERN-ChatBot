@@ -5,9 +5,7 @@ import { HomePageContainer } from '../../HomePage';
 
 jest.mock('components/Pages/Home', () => 'Home');
 
-const mockComponent = props => (
-  <HomePageContainer {...props} />
-);
+const mockComponent = props => <HomePageContainer {...props} />;
 
 describe('containers/<HomePage />', () => {
   it('should render component', () => {

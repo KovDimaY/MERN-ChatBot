@@ -75,42 +75,53 @@ export const cardsMessages = [
     id: '3725e67a-2ffd-448b-b4f3-71985f4b13f0',
     type: 'payload',
     msg: {
-      message: 'I have many different projects, but these ones I am the most proud of:',
+      message:
+        'I have many different projects, but these ones I am the most proud of:',
       type: 'cards',
       value: [
         {
           id: 1,
           title: 'TripReviewer',
-          image: 'https://user-images.githubusercontent.com/26466644/47854355-d4100580-dde1-11e8-8a1e-f52084168b82.png',
-          description: 'This is a simple blog about traveling written with MERN stack, using JWT and Firebase.',
+          image:
+            'https://user-images.githubusercontent.com/26466644/47854355-d4100580-dde1-11e8-8a1e-f52084168b82.png',
+          description:
+            'This is a simple blog about traveling written with MERN stack, using JWT and Firebase.',
           link: 'https://github.com/KovDimaY/Trip-Reviewer',
         },
         {
           id: 2,
           title: 'SimpleChat',
-          image: 'https://user-images.githubusercontent.com/26466644/46696500-91a83e00-cc12-11e8-9574-8e73ed0588d9.png',
-          description: 'This is a simple chat with a support of different rooms written with NodeJS and Socket.IO.',
+          image:
+            'https://user-images.githubusercontent.com/26466644/46696500-91a83e00-cc12-11e8-9574-8e73ed0588d9.png',
+          description:
+            'This is a simple chat with a support of different rooms written with NodeJS and Socket.IO.',
           link: 'https://github.com/KovDimaY/SimpleChat-Socket.io',
         },
         {
           id: 3,
           title: 'React-Highcharts',
-          image: 'https://user-images.githubusercontent.com/26466644/31556335-e6b3d980-b044-11e7-8707-249399c11a3d.png',
-          description: 'A project to learn and practice React.js and to integrate Highcharts as react components.',
+          image:
+            'https://user-images.githubusercontent.com/26466644/31556335-e6b3d980-b044-11e7-8707-249399c11a3d.png',
+          description:
+            'A project to learn and practice React.js and to integrate Highcharts as react components.',
           link: 'https://github.com/KovDimaY/React-Highcharts',
         },
         {
           id: 4,
           title: 'Memory Game',
-          image: 'https://user-images.githubusercontent.com/26466644/38465018-135d6174-3b17-11e8-851e-109c2e65e14f.png',
-          description: 'A classical Memory Game created with pure Javascript and Local Storage usage.',
+          image:
+            'https://user-images.githubusercontent.com/26466644/38465018-135d6174-3b17-11e8-851e-109c2e65e14f.png',
+          description:
+            'A classical Memory Game created with pure Javascript and Local Storage usage.',
           link: 'https://github.com/KovDimaY/Memory-Game',
         },
         {
           id: 5,
           title: 'KovDimaY',
-          image: 'https://user-images.githubusercontent.com/26466644/56865042-d5557000-69c9-11e9-9c29-4d9afad40c6d.png',
-          description: 'A project to practice my skills in programming and game design, and also to satisfy my passion to create.',
+          image:
+            'https://user-images.githubusercontent.com/26466644/56865042-d5557000-69c9-11e9-9c29-4d9afad40c6d.png',
+          description:
+            'A project to practice my skills in programming and game design, and also to satisfy my passion to create.',
           link: 'http://kovalenkody.wixsite.com/kovdimay',
         },
       ],

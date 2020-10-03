@@ -6,9 +6,7 @@ import Message from '../../Message';
 jest.mock('../../Cards', () => 'Cards');
 jest.mock('../../QuickReplies', () => 'QuickReplies');
 
-const mockComponent = props => (
-  <Message {...props} />
-);
+const mockComponent = props => <Message {...props} />;
 
 describe('components/<Message />', () => {
   it('should render component of type text from user', () => {

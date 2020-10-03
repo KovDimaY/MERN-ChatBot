@@ -5,10 +5,7 @@ import PropTypes from 'prop-types';
 
 import { getAgeByBirthdate, showHiddenText } from 'utils/common';
 import { myProfilePicture } from 'images';
-import {
-  aboutMeDescription,
-  languages, hobbies,
-} from './constants';
+import { aboutMeDescription, languages, hobbies } from './constants';
 
 import EmptyView from '../../Common/EmptyView';
 import LanguageItem from '../../Common/LanguageItem';
@@ -17,18 +14,16 @@ import ProgressBar from '../../Common/ProgressBar';
 
 import './styles.css';
 
-const Home = (props) => {
-  const renderText = (array, show = true) => (
-    array.map(item => <p key={item}>{showHiddenText(item, show)}</p>)
-  );
+const Home = props => {
+  const renderText = (array, show = true) =>
+    array.map(item => <p key={item}>{showHiddenText(item, show)}</p>);
 
-  const renderLanguages = () => (
+  const renderLanguages = () =>
     languages.map(item => (
       <LanguageItem {...item} key={item.id} discovered={props.languages} />
-    ))
-  );
+    ));
 
-  const renderHobbies = () => (
+  const renderHobbies = () =>
     hobbies.map(item => (
       <HobbyItem
         {...item}
@@ -36,8 +31,7 @@ const Home = (props) => {
         discovered={props.hobbies.discovered}
         discoveredDetails={props.hobbies[item.storageName]}
       />
-    ))
-  );
+    ));
 
   const renderName = () => {
     if (props.name) {
@@ -46,7 +40,7 @@ const Home = (props) => {
 
     return (
       <React.Fragment>
-        <strong>Name: </strong> { showHiddenText('Dmytro', false) }
+        <strong>Name: </strong> {showHiddenText('Dmytro', false)}
       </React.Fragment>
     );
   };
@@ -58,7 +52,7 @@ const Home = (props) => {
 
     return (
       <React.Fragment>
-        <strong>Profession: </strong> { showHiddenText('JS Developer', false) }
+        <strong>Profession: </strong> {showHiddenText('JS Developer', false)}
       </React.Fragment>
     );
   };
@@ -66,7 +60,11 @@ const Home = (props) => {
   const renderLocation = () => {
     if (props.location) {
       return (
-        <a href="https://www.google.es/maps?q=41.382207,2.140318" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://www.google.es/maps?q=41.382207,2.140318"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Sants Estació, Barcelona, Spain
         </a>
       );
@@ -74,7 +72,8 @@ const Home = (props) => {
 
     return (
       <React.Fragment>
-        <strong>Location: </strong> { showHiddenText('Sants Estacio, Barcelona', false) }
+        <strong>Location: </strong>{' '}
+        {showHiddenText('Sants Estacio, Barcelona', false)}
       </React.Fragment>
     );
   };
@@ -83,9 +82,12 @@ const Home = (props) => {
     if (props.contacts) {
       return (
         <React.Fragment>
-          Contact me in
-          {' '}
-          <a href="https://www.linkedin.com/in/kovalenkodmytro/" target="_blank" rel="noopener noreferrer">
+          Contact me in{' '}
+          <a
+            href="https://www.linkedin.com/in/kovalenkodmytro/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             LinkedIn
           </a>
         </React.Fragment>
@@ -101,26 +103,23 @@ const Home = (props) => {
         <img src={myProfilePicture} alt="Me" className="my-profile-photo" />
       </div>
       <div className="right-column col s12 m6">
-        <h4 className="name-lastname">
-          { renderName() }
-        </h4>
-        <p className="job-title">
-          { renderPosition() }
-        </p>
-        <p className="location">
-          { renderLocation() }
-        </p>
+        <h4 className="name-lastname">{renderName()}</h4>
+        <p className="job-title">{renderPosition()}</p>
+        <p className="location">{renderLocation()}</p>
         <p>
           <strong>Contact info: </strong>
-          { renderContactInfo() }
+          {renderContactInfo()}
         </p>
         <p>
           <strong>Age: </strong>
-          { showHiddenText(`${getAgeByBirthdate('1992-05-20')} years old`, props.age) }
+          {showHiddenText(
+            `${getAgeByBirthdate('1992-05-20')} years old`,
+            props.age
+          )}
         </p>
         <p>
           <strong>Nationality: </strong>
-          { showHiddenText('Ukraine', props.nationality) }
+          {showHiddenText('Ukraine', props.nationality)}
         </p>
       </div>
     </div>
@@ -133,21 +132,17 @@ const Home = (props) => {
 
       <div className="summary-section section">
         <h3 className="section-title">About me:</h3>
-        { renderText(aboutMeDescription, props.aboutMe) }
+        {renderText(aboutMeDescription, props.aboutMe)}
       </div>
 
       <div className="languages-section section">
         <h3 className="section-title">Languages I speak:</h3>
-        <div className="languages-wrapper row">
-          { renderLanguages() }
-        </div>
+        <div className="languages-wrapper row">{renderLanguages()}</div>
       </div>
 
       <div className="hobbies-section section">
         <h3 className="section-title">My hobbies:</h3>
-        <div className="hobbies-wrapper">
-          { renderHobbies() }
-        </div>
+        <div className="hobbies-wrapper">{renderHobbies()}</div>
       </div>
     </React.Fragment>
   );
@@ -156,21 +151,25 @@ const Home = (props) => {
     <EmptyView section="home">
       <p>Welcome to my new personal project!</p>
       <p>
-        Ask questions as you are speaking to me and try to populate
-        the website with the info my bot will provide. Every page will
-        have a progress bar which indicates how much info you have already
-        recovered - so you will know where to stop asking about some particular topic.
+        Ask questions as you are speaking to me and try to populate the website
+        with the info my bot will provide. Every page will have a progress bar
+        which indicates how much info you have already recovered - so you will
+        know where to stop asking about some particular topic.
       </p>
       <p>
-        For example, <b>{'"'}What is your name?{'"'}</b> sounds like a good question to start,
-        but it can be something else too, just use your imagination ;)
+        For example,{' '}
+        <b>
+          {'"'}What is your name?{'"'}
+        </b>{' '}
+        sounds like a good question to start, but it can be something else too,
+        just use your imagination ;)
       </p>
     </EmptyView>
   );
 
   return (
     <div className="home-page-container">
-      { props.discovered ? renderInfo() : renderEmptyView() }
+      {props.discovered ? renderInfo() : renderEmptyView()}
     </div>
   );
 };

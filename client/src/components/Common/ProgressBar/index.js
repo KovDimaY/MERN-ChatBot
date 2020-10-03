@@ -37,7 +37,7 @@ const colors = {
  * this component has different colors and icons.
  */
 const ProgressBar = ({ percent, margintTop }) => {
-  const getColorBasedOnProgress = (progress) => {
+  const getColorBasedOnProgress = progress => {
     switch (true) {
       case progress < 25:
         return { active: colors[25] };
@@ -51,15 +51,14 @@ const ProgressBar = ({ percent, margintTop }) => {
   };
 
   if (percent < 100) {
-    const className = `progress-bar-container${margintTop ? ' decrease-margin' : ''}`;
+    const className = `progress-bar-container${
+      margintTop ? ' decrease-margin' : ''
+    }`;
 
     return (
       <div className={className}>
         <span className="tooltip">Discovery progress: {percent}%</span>
-        <Progress
-          percent={percent}
-          theme={getColorBasedOnProgress(percent)}
-        />
+        <Progress percent={percent} theme={getColorBasedOnProgress(percent)} />
       </div>
     );
   }

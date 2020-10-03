@@ -4,12 +4,10 @@ import { create } from 'react-test-renderer';
 import LanguageItem from '../../LanguageItem';
 
 jest.mock('utils/common', () => ({
-  showHiddenText: jest.fn((text, param) => param ? text : '***'),
+  showHiddenText: jest.fn((text, param) => (param ? text : '***')),
 }));
 
-const mockComponent = props => (
-  <LanguageItem {...props} />
-);
+const mockComponent = props => <LanguageItem {...props} />;
 
 describe('components/Common/<LanguageItem />', () => {
   it('should render component with no discovered', () => {

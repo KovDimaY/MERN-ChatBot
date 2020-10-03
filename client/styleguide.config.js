@@ -10,12 +10,9 @@ function getSections() {
   return schema.map(({ name, subfolders, components }) => ({
     name,
     components() {
-      return components.map(componentName => (
-        resolve(
-          `src/components${subfolders || ''}`,
-          componentName,
-          'index.js',
-        )));
+      return components.map(componentName =>
+        resolve(`src/components${subfolders || ''}`, componentName, 'index.js')
+      );
     },
   }));
 }

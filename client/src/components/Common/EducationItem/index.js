@@ -17,9 +17,17 @@ import './styles.css';
  * from the user. All the other information is available.
  */
 const EducationItem = ({
-  image, schoolName, schoolLink, topic,
-  degree, start, finish, discovered,
-  location, description, activities,
+  image,
+  schoolName,
+  schoolLink,
+  topic,
+  degree,
+  start,
+  finish,
+  discovered,
+  location,
+  description,
+  activities,
 }) => {
   const renderActivities = () => {
     if (activities && activities.length) {
@@ -27,13 +35,9 @@ const EducationItem = ({
         <div className="activities">
           <div className="activities-label">Roles and activities:</div>
           <ul>
-            {
-              activities.map(item => (
-                <li key={item}>
-                  { showHiddenText(item, discovered.activities) }
-                </li>
-              ))
-            }
+            {activities.map(item => (
+              <li key={item}>{showHiddenText(item, discovered.activities)}</li>
+            ))}
           </ul>
         </div>
       );
@@ -49,7 +53,9 @@ const EducationItem = ({
     if (discovered.time) {
       return (
         <div className="dates-wrapper">
-          <span className="dates">{startDate} - {finishDate}</span>
+          <span className="dates">
+            {startDate} - {finishDate}
+          </span>
           <span className="duration">({duration})</span>
         </div>
       );
@@ -69,7 +75,12 @@ const EducationItem = ({
       <div className="degree">
         {showHiddenText(topic, discovered.topic)}, {degree}
       </div>
-      <a href={schoolLink} className="school" target="_blank" rel="noopener noreferrer">
+      <a
+        href={schoolLink}
+        className="school"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         {schoolName}
       </a>
     </div>
@@ -83,11 +94,11 @@ const EducationItem = ({
         </a>
       </div>
       <div className="col s12 m9">
-        { renderTitle() }
-        { renderDates() }
+        {renderTitle()}
+        {renderDates()}
         <p className="location">{location}</p>
         <p className="description">{description}</p>
-        { renderActivities() }
+        {renderActivities()}
       </div>
     </div>
   );

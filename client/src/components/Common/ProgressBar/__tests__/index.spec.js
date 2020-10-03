@@ -5,9 +5,7 @@ import ProgressBar from '../../ProgressBar';
 
 jest.mock('react-sweet-progress', () => ({ Progress: 'Progress' }));
 
-const mockComponent = props => (
-  <ProgressBar {...props} />
-);
+const mockComponent = props => <ProgressBar {...props} />;
 
 describe('components/Common/<ProgressBar />', () => {
   it('should render component with 15 percents', () => {

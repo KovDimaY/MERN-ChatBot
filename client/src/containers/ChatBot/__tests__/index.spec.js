@@ -18,9 +18,7 @@ jest.mock('../check-discovery', () => ({
   checkDiscovery: jest.fn(),
 }));
 
-const mockComponent = props => (
-  <ChatbotContainer {...props} />
-);
+const mockComponent = props => <ChatbotContainer {...props} />;
 
 const props = {
   location: {},
@@ -44,7 +42,10 @@ describe('containers/<ChatbotContainer />', () => {
       const nextProps = {
         location: { pathname },
       };
-      const newState = { visitedRoutes: [...visitedRoutes, pathname], show: true };
+      const newState = {
+        visitedRoutes: [...visitedRoutes, pathname],
+        show: true,
+      };
       const instance = mount(mockComponent(props)).instance();
 
       instance.state = { visitedRoutes };
@@ -67,7 +68,10 @@ describe('containers/<ChatbotContainer />', () => {
       const nextProps = {
         location: { pathname },
       };
-      const newState = { visitedRoutes: [...visitedRoutes, pathname], show: true };
+      const newState = {
+        visitedRoutes: [...visitedRoutes, pathname],
+        show: true,
+      };
       const instance = mount(mockComponent(props)).instance();
 
       instance.state = { visitedRoutes };
@@ -195,7 +199,7 @@ describe('containers/<ChatbotContainer />', () => {
       type: 'text',
       author: 'bot',
       id: 'uuid()',
-      msg: 'I am having troubles, I need to terminate. I\'ll be back.',
+      msg: "I am having troubles, I need to terminate. I'll be back.",
     };
     const messages = ['old'];
     const expected = ['old', botMessage];
@@ -339,7 +343,11 @@ describe('containers/<ChatbotContainer />', () => {
 
       expect(setState).toHaveBeenCalledWith({ isTyping: false });
       await expect(delayExecution).toHaveBeenCalledWith(500);
-      expect(checkDiscovery).toHaveBeenCalledWith('displayName', 'parameters', 'dispatch');
+      expect(checkDiscovery).toHaveBeenCalledWith(
+        'displayName',
+        'parameters',
+        'dispatch'
+      );
       expect(saveBotAnswers).toHaveBeenCalledWith('fulfillmentMessages');
       expect(handleRequestError).not.toHaveBeenCalled();
     });

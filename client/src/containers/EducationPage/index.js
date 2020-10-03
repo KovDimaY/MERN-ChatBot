@@ -6,11 +6,12 @@ import { createStructuredSelector } from 'reselect';
 import EducationPage from 'components/Pages/Education';
 
 import {
-  selectDiscovered, selectCertificates,
-  selectMaster, selectBachelor,
+  selectDiscovered,
+  selectCertificates,
+  selectMaster,
+  selectBachelor,
   selectDiscoveryPercent,
 } from './selectors';
-
 
 export const EducationPageContainer = props => (
   <EducationPage

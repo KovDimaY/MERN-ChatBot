@@ -7,9 +7,7 @@ jest.mock('components/Common/EmptyView', () => 'EmptyView');
 jest.mock('components/Common/ProgressBar', () => 'ProgressBar');
 jest.mock('components/Common/ExperienceItem', () => 'ExperienceItem');
 
-const mockComponent = props => (
-  <Experience {...props} />
-);
+const mockComponent = props => <Experience {...props} />;
 
 describe('components/Pages/<Experience />', () => {
   it('should render component when not discovered', () => {

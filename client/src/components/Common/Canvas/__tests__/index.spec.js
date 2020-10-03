@@ -6,9 +6,7 @@ import Canvas from '../../Canvas';
 
 jest.mock('../../Canvas/PureCanvas', () => 'PureCanvas');
 
-const mockComponent = props => (
-  <Canvas {...props} />
-);
+const mockComponent = props => <Canvas {...props} />;
 
 describe('components/Common/<Canvas />', () => {
   it('should render component', () => {

@@ -2,9 +2,13 @@ import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import {
-  INIT, HOME, EXPERIENCE,
-  EDUCATION, PROJECTS,
-  FEEDBACK, HELP,
+  INIT,
+  HOME,
+  EXPERIENCE,
+  EDUCATION,
+  PROJECTS,
+  FEEDBACK,
+  HELP,
 } from 'constants/routes';
 
 import Layout from 'hoc/layout';

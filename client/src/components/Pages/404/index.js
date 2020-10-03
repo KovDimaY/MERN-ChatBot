@@ -15,9 +15,7 @@ const NotFound = () => (
         <div className="image text" />
       </div>
     </Tilt>
-    <h3 className="title">
-      {'It looks like you\'re lost...'}
-    </h3>
+    <h3 className="title">{"It looks like you're lost..."}</h3>
     <Link
       className="link waves-effect waves-light btn-large red accent-2"
       to={HOME}

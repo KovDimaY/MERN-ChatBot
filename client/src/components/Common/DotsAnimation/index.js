@@ -30,7 +30,7 @@ class DotsAnimation extends Component {
       dots.push({
         x: Math.random() * props.width,
         y: Math.random() * props.height,
-        radius: (Math.random() * this.radius) + 1,
+        radius: Math.random() * this.radius + 1,
         vx: Math.floor(Math.random() * this.maxSpeed * 2) - this.maxSpeed,
         vy: Math.floor(Math.random() * this.maxSpeed * 2) - this.maxSpeed,
       });
@@ -54,60 +54,60 @@ class DotsAnimation extends Component {
     document.removeEventListener('mousemove', this.handleMouseMove);
   }
 
-  getOptimalNumberOfDots = (width) => {
+  getOptimalNumberOfDots = width => {
     if (width < 500) {
       return 50;
     } else if (width < 1200) {
       return 100;
     }
     return 150;
-  }
+  };
 
   distance = (a, b) => {
     const xs = b.x - a.x;
     const ys = b.y - a.y;
 
-    return Math.sqrt((xs * xs) + (ys * ys));
-  }
+    return Math.sqrt(xs * xs + ys * ys);
+  };
 
   updateAnimationState = () => {
     const { dots } = this.state;
     const { width, height } = this.props;
 
-    const newDots = dots.map((dot) => {
-      const newX = dot.x + (dot.vx / this.FPS);
-      const newY = dot.y + (dot.vy / this.FPS);
+    const newDots = dots.map(dot => {
+      const newX = dot.x + dot.vx / this.FPS;
+      const newY = dot.y + dot.vy / this.FPS;
 
       return {
         ...dot,
         x: newX > width ? width : newX,
         y: newY > height ? height : newY,
-        vx: (newX < 0 || newX > width) ? -dot.vx : dot.vx,
-        vy: (newY < 0 || newY > height) ? -dot.vy : dot.vy,
+        vx: newX < 0 || newX > width ? -dot.vx : dot.vx,
+        vy: newY < 0 || newY > height ? -dot.vy : dot.vy,
       };
     });
 
     this.setState({ dots: newDots });
     this.rAF = requestAnimationFrame(this.updateAnimationState);
-  }
+  };
 
-  handleMouseMove = (event) => {
+  handleMouseMove = event => {
     this.setState({
       mouse: {
         x: event.clientX,
         y: event.clientY,
       },
     });
-  }
+  };
 
-  handleDraw = (ctx) => {
+  handleDraw = ctx => {
     const { dots, mouse } = this.state;
     const { width, height } = this.props;
 
     ctx.clearRect(0, 0, width, height);
     ctx.globalCompositeOperation = 'lighter';
 
-    dots.forEach((dot) => {
+    dots.forEach(dot => {
       ctx.fillStyle = this.color;
       ctx.beginPath();
       ctx.arc(dot.x, dot.y, dot.radius, 0, 2 * Math.PI);
@@ -118,13 +118,13 @@ class DotsAnimation extends Component {
 
     ctx.beginPath();
 
-    dots.forEach((dot1) => {
+    dots.forEach(dot1 => {
       ctx.moveTo(dot1.x, dot1.y);
       if (this.distance(mouse, dot1) < this.minMouseDistance) {
         ctx.lineTo(mouse.x, mouse.y);
       }
 
-      dots.forEach((dot2) => {
+      dots.forEach(dot2 => {
         if (this.distance(dot1, dot2) < this.minMouseDistance) {
           ctx.lineTo(dot2.x, dot2.y);
         }
@@ -134,14 +134,12 @@ class DotsAnimation extends Component {
     ctx.lineWidth = 0.05;
     ctx.strokeStyle = this.color;
     ctx.stroke();
-  }
+  };
 
   render() {
     const { width, height } = this.props;
 
-    return (
-      <Canvas draw={this.handleDraw} width={width} height={height} />
-    );
+    return <Canvas draw={this.handleDraw} width={width} height={height} />;
   }
 }
 

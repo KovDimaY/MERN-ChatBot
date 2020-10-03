@@ -8,9 +8,7 @@ jest.mock('components/Common/ProgressBar', () => 'ProgressBar');
 jest.mock('components/Common/EducationItem', () => 'EducationItem');
 jest.mock('components/Common/CertificationItem', () => 'CertificationItem');
 
-const mockComponent = props => (
-  <Education {...props} />
-);
+const mockComponent = props => <Education {...props} />;
 
 describe('components/Pages/<Education />', () => {
   it('should render component not discovered', () => {

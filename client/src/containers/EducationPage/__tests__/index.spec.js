@@ -5,9 +5,7 @@ import { EducationPageContainer } from '../../EducationPage';
 
 jest.mock('components/Pages/Education', () => 'EducationPage');
 
-const mockComponent = props => (
-  <EducationPageContainer {...props} />
-);
+const mockComponent = props => <EducationPageContainer {...props} />;
 
 describe('containers/<EducationPage />', () => {
   it('should render component', () => {

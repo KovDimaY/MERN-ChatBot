@@ -9,19 +9,24 @@ class PureCanvas extends Component {
     return false;
   }
 
-  getRef = (node) => {
+  getRef = node => {
     if (node) {
       this.props.contextRef(node.getContext('2d'));
     }
 
     return null;
-  }
+  };
 
   render() {
     const { width, height } = this.props;
 
     return (
-      <canvas className="pure-canvas" width={width} height={height} ref={this.getRef} />
+      <canvas
+        className="pure-canvas"
+        width={width}
+        height={height}
+        ref={this.getRef}
+      />
     );
   }
 }

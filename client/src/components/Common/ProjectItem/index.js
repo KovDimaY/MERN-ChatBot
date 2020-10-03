@@ -15,22 +15,16 @@ import './styles.css';
  * Some part of the information can be hidden for the user if it is not yet
  * discovered. In this case the info will be replaced by question marks.
  */
-const ProjectItem = ({
-  image, name, url,
-  description, tools,
-  discovered,
-}) => {
+const ProjectItem = ({ image, name, url, description, tools, discovered }) => {
   const renderTools = () => {
     if (tools && tools.length) {
       return (
         <div className="tools">
           <div className="tools-label">Technologies:</div>
           <div>
-            {
-              tools
-                .map(item => showHiddenText(item, discovered.tools))
-                .join(' | ')
-            }
+            {tools
+              .map(item => showHiddenText(item, discovered.tools))
+              .join(' | ')}
           </div>
         </div>
       );
@@ -41,21 +35,31 @@ const ProjectItem = ({
   return (
     <div className="project-item-container row">
       <div className="col s12 l4 visual valign-wrapper">
-        <a href={url} className="screenshot-wrapper" target="_blank" rel="noopener noreferrer">
+        <a
+          href={url}
+          className="screenshot-wrapper"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img src={image} alt="screenshot" className="image" />
         </a>
       </div>
       <div className="col s12 l8">
         <div className="title">
           <div className="project-name">{name}</div>
-          <a href={url} className="project-link" target="_blank" rel="noopener noreferrer">
+          <a
+            href={url}
+            className="project-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             See project
           </a>
         </div>
         <p className="description">
-          { showHiddenText(description, discovered.description) }
+          {showHiddenText(description, discovered.description)}
         </p>
-        { renderTools() }
+        {renderTools()}
       </div>
     </div>
   );
@@ -74,7 +78,7 @@ ProjectItem.propTypes = {
   tools: PropTypes.array,
   /** An object that defines which part of the item is visible for the user.
    * By default everything is discovered if nothing else provided.
-  */
+   */
   discovered: PropTypes.object,
 };
 

@@ -4,9 +4,7 @@ import { mount } from 'enzyme';
 
 import QuickReply from '../../QuickReplyItem';
 
-const mockComponent = props => (
-  <QuickReply {...props} />
-);
+const mockComponent = props => <QuickReply {...props} />;
 
 describe('components/Common/<QuickReplyItem />', () => {
   it('should render component with type link', () => {
