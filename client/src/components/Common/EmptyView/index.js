@@ -13,28 +13,19 @@ const EmptyView = ({ section, children, suggestion }) => {
     <React.Fragment>
       <p>This section is dedicated to the information about my {section}.</p>
       <p>
-        For the moment you have not discovered anything regarding this topic. To
-        get some info - ask the bot right question. When the bot gives you some
-        related answer - the information will appear on this page. You will have
-        a progress bar that will help you to understand how much info you have
-        opened already.
+        For the moment you have not discovered anything regarding this topic. To get some info - ask
+        the bot right question. When the bot gives you some related answer - the information will
+        appear on this page. You will have a progress bar that will help you to understand how much
+        info you have opened already.
       </p>
       <p>
-        For example,{' '}
-        <b>
-          {'"'}
-          {suggestion}
-          {'"'}
-        </b>{' '}
-        sounds like a great question to start, but it can be something else too,
-        just use your imagination ;)
+        For example, <b>&quot;{suggestion}&quot;</b> sounds like a great question to start, but it
+        can be something else too, just use your imagination ;)
       </p>
     </React.Fragment>
   );
 
-  return (
-    <div className="empty-view-container">{children || defaultDescription}</div>
-  );
+  return <div className="empty-view-container">{children || defaultDescription}</div>;
 };
 
 EmptyView.propTypes = {

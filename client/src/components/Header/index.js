@@ -61,10 +61,7 @@ class Header extends Component {
         </li>
         {this.renderNavigation(true)}
       </ul>
-      <div
-        data-target="nav-mobile"
-        className="sidenav-trigger hide-on-large-only"
-      >
+      <div data-target="nav-mobile" className="sidenav-trigger hide-on-large-only">
         <i className="large material-icons">menu</i>
       </div>
     </React.Fragment>
@@ -78,9 +75,7 @@ class Header extends Component {
             CV-Bot
           </Link>
 
-          <ul className="right hide-on-med-and-down">
-            {this.renderNavigation(false)}
-          </ul>
+          <ul className="right hide-on-med-and-down">{this.renderNavigation(false)}</ul>
 
           {this.renderMobileMenu()}
         </div>

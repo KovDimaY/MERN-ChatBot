@@ -44,13 +44,7 @@ export class Chatbot extends Component {
   renderMessages(messages) {
     if (messages && messages.length) {
       return messages.map(({ type, msg, author, id }) => (
-        <Message
-          type={type}
-          msg={msg}
-          author={author}
-          key={id}
-          onReply={this.props.onReply}
-        />
+        <Message type={type} msg={msg} author={author} key={id} onReply={this.props.onReply} />
       ));
     }
 
@@ -92,11 +86,7 @@ export class Chatbot extends Component {
             value={this.state.currentQuery}
             onChange={this.handleInput}
           />
-          <button
-            className="btn waves-effect waves-light blue"
-            type="submit"
-            name="send-message"
-          >
+          <button className="btn waves-effect waves-light blue" type="submit" name="send-message">
             <i className="material-icons">send</i>
           </button>
         </form>
@@ -108,9 +98,7 @@ export class Chatbot extends Component {
     const { messages, show, onToggleShow } = this.props;
 
     return (
-      <div
-        className={`container chatbot-container ${this.getContainerClass()}`}
-      >
+      <div className={`container chatbot-container ${this.getContainerClass()}`}>
         <div className="collapse-header blue" onClick={onToggleShow}>
           <div className="nav-wrapper">
             <div className="brand-logo">Messages</div>

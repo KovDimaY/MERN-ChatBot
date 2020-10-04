@@ -12,10 +12,7 @@ storiesOf('QuickReplies', module)
   .addDecorator(withKnobs)
   .add('No width limit', () => (
     <div style={{ padding: paddingSize }}>
-      <QuickReplies
-        data={object('Data', data)}
-        onReply={action('onReply actioned')}
-      />
+      <QuickReplies data={object('Data', data)} onReply={action('onReply actioned')} />
     </div>
   ))
   .add('Real life example', () => (
@@ -26,9 +23,6 @@ storiesOf('QuickReplies', module)
         border: '1px solid black',
       }}
     >
-      <QuickReplies
-        data={object('Data', data)}
-        onReply={action('onReply actioned')}
-      />
+      <QuickReplies data={object('Data', data)} onReply={action('onReply actioned')} />
     </div>
   ));

@@ -17,8 +17,7 @@ export const data = [
       value: [
         {
           title: 'First card',
-          image:
-            'https://secure.i.telegraph.co.uk/multimedia/archive/03013/selfie02_3013424b.jpg',
+          image: 'https://secure.i.telegraph.co.uk/multimedia/archive/03013/selfie02_3013424b.jpg',
           description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id ante odio.',
           link:
@@ -35,8 +34,7 @@ export const data = [
         },
         {
           title: 'Third card',
-          image:
-            'https://cdn.images.express.co.uk/img/dynamic/1/590x/ghost-696974.jpg',
+          image: 'https://cdn.images.express.co.uk/img/dynamic/1/590x/ghost-696974.jpg',
           description:
             'Phasellus pellentesque nisi eu ex tempor sodales. In molestie suscipit magna, lobortis venenatis purus dignissim non.',
           link:
@@ -54,8 +52,7 @@ export const data = [
         {
           type: 'link',
           text: 'This is a link',
-          value:
-            'https://secure.i.telegraph.co.uk/multimedia/archive/03013/selfie02_3013424b.jpg',
+          value: 'https://secure.i.telegraph.co.uk/multimedia/archive/03013/selfie02_3013424b.jpg',
         },
         {
           type: 'text',

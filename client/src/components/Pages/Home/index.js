@@ -19,9 +19,7 @@ const Home = props => {
     array.map(item => <p key={item}>{showHiddenText(item, show)}</p>);
 
   const renderLanguages = () =>
-    languages.map(item => (
-      <LanguageItem {...item} key={item.id} discovered={props.languages} />
-    ));
+    languages.map(item => <LanguageItem {...item} key={item.id} discovered={props.languages} />);
 
   const renderHobbies = () =>
     hobbies.map(item => (
@@ -72,8 +70,7 @@ const Home = props => {
 
     return (
       <React.Fragment>
-        <strong>Location: </strong>{' '}
-        {showHiddenText('Sants Estacio, Barcelona', false)}
+        <strong>Location: </strong> {showHiddenText('Sants Estacio, Barcelona', false)}
       </React.Fragment>
     );
   };
@@ -82,7 +79,7 @@ const Home = props => {
     if (props.contacts) {
       return (
         <React.Fragment>
-          Contact me in{' '}
+          Contact me in&nbsp;
           <a
             href="https://www.linkedin.com/in/kovalenkodmytro/"
             target="_blank"
@@ -112,10 +109,7 @@ const Home = props => {
         </p>
         <p>
           <strong>Age: </strong>
-          {showHiddenText(
-            `${getAgeByBirthdate('1992-05-20')} years old`,
-            props.age
-          )}
+          {showHiddenText(`${getAgeByBirthdate('1992-05-20')} years old`, props.age)}
         </p>
         <p>
           <strong>Nationality: </strong>
@@ -151,26 +145,19 @@ const Home = props => {
     <EmptyView section="home">
       <p>Welcome to my new personal project!</p>
       <p>
-        Ask questions as you are speaking to me and try to populate the website
-        with the info my bot will provide. Every page will have a progress bar
-        which indicates how much info you have already recovered - so you will
-        know where to stop asking about some particular topic.
+        Ask questions as you are speaking to me and try to populate the website with the info my bot
+        will provide. Every page will have a progress bar which indicates how much info you have
+        already recovered - so you will know where to stop asking about some particular topic.
       </p>
       <p>
-        For example,{' '}
-        <b>
-          {'"'}What is your name?{'"'}
-        </b>{' '}
-        sounds like a good question to start, but it can be something else too,
-        just use your imagination ;)
+        For example, <b>&quot;What is your name?&quot;</b> sounds like a good question to start, but
+        it can be something else too, just use your imagination ;)
       </p>
     </EmptyView>
   );
 
   return (
-    <div className="home-page-container">
-      {props.discovered ? renderInfo() : renderEmptyView()}
-    </div>
+    <div className="home-page-container">{props.discovered ? renderInfo() : renderEmptyView()}</div>
   );
 };
 

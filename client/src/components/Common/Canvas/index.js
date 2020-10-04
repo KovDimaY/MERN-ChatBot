@@ -15,9 +15,7 @@ class Canvas extends Component {
   render() {
     const { width, height } = this.props;
 
-    return (
-      <PureCanvas contextRef={this.saveContext} width={width} height={height} />
-    );
+    return <PureCanvas contextRef={this.saveContext} width={width} height={height} />;
   }
 }
 

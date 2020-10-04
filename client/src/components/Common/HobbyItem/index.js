@@ -14,26 +14,14 @@ import './styles.css';
  * element is completelly hidden. If one of them is true - some part of the card
  * is available for the user.
  */
-const HobbyItem = ({
-  image,
-  name,
-  description,
-  discovered,
-  discoveredDetails,
-}) => (
+const HobbyItem = ({ image, name, description, discovered, discoveredDetails }) => (
   <div className="hobby-container row valign-wrapper">
     <div className="col s12 m3 visual">
       <h5 className="name">{showHiddenText(name, discovered)}</h5>
-      <img
-        src={discovered ? image : hiddenImage}
-        alt="icon"
-        className="image"
-      />
+      <img src={discovered ? image : hiddenImage} alt="icon" className="image" />
     </div>
     <div className="col s12 m9">
-      <p className="description">
-        {showHiddenText(description, discoveredDetails)}
-      </p>
+      <p className="description">{showHiddenText(description, discoveredDetails)}</p>
     </div>
   </div>
 );

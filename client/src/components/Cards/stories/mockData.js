@@ -1,7 +1,6 @@
 export const cardItemData = {
   title: 'Title of the card',
-  image:
-    'https://secure.i.telegraph.co.uk/multimedia/archive/03013/selfie02_3013424b.jpg',
+  image: 'https://secure.i.telegraph.co.uk/multimedia/archive/03013/selfie02_3013424b.jpg',
   description:
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id ante odio. Suspendisse tempor dui quam, vitae venenatis ante consequat eget. Nullam felis diam, tincidunt quis congue a, pellentesque vitae ante.',
   link:
@@ -13,8 +12,7 @@ export const cardsData = {
     {
       id: 1,
       title: 'First card',
-      image:
-        'https://secure.i.telegraph.co.uk/multimedia/archive/03013/selfie02_3013424b.jpg',
+      image: 'https://secure.i.telegraph.co.uk/multimedia/archive/03013/selfie02_3013424b.jpg',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id ante odio. Suspendisse tempor dui quam, vitae venenatis ante consequat eget. Nullam felis diam, tincidunt quis congue a, pellentesque vitae ante.',
       link:
@@ -33,8 +31,7 @@ export const cardsData = {
     {
       id: 3,
       title: 'Third card',
-      image:
-        'https://cdn.images.express.co.uk/img/dynamic/1/590x/ghost-696974.jpg',
+      image: 'https://cdn.images.express.co.uk/img/dynamic/1/590x/ghost-696974.jpg',
       description:
         'Phasellus pellentesque nisi eu ex tempor sodales. In molestie suscipit magna, lobortis venenatis purus dignissim non. Maecenas at quam elit. Nam malesuada, urna sed pretium rhoncus, dui magna cursus felis, sit amet vulputate odio ante id diam.',
       link:

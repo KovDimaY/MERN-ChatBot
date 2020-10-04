@@ -20,9 +20,7 @@ storiesOf('Message', module)
         />
       </div>
       <h5>Real life scenario:</h5>
-      <div
-        style={{ margin: '25px', maxWidth: '450px', border: '1px solid black' }}
-      >
+      <div style={{ margin: '25px', maxWidth: '450px', border: '1px solid black' }}>
         <Message
           type={data[0].type}
           author={data[0].author}
@@ -44,9 +42,7 @@ storiesOf('Message', module)
         />
       </div>
       <h5>Real life scenario:</h5>
-      <div
-        style={{ margin: '25px', maxWidth: '450px', border: '1px solid black' }}
-      >
+      <div style={{ margin: '25px', maxWidth: '450px', border: '1px solid black' }}>
         <Message
           type={data[1].type}
           author={data[1].author}
@@ -68,9 +64,7 @@ storiesOf('Message', module)
         />
       </div>
       <h5>Real life scenario:</h5>
-      <div
-        style={{ margin: '25px', maxWidth: '450px', border: '1px solid black' }}
-      >
+      <div style={{ margin: '25px', maxWidth: '450px', border: '1px solid black' }}>
         <Message
           type={data[2].type}
           author={data[2].author}
@@ -92,9 +86,7 @@ storiesOf('Message', module)
         />
       </div>
       <h5>Real life scenario:</h5>
-      <div
-        style={{ margin: '25px', maxWidth: '450px', border: '1px solid black' }}
-      >
+      <div style={{ margin: '25px', maxWidth: '450px', border: '1px solid black' }}>
         <Message
           type={data[3].type}
           author={data[3].author}
@@ -116,9 +108,7 @@ storiesOf('Message', module)
         />
       </div>
       <h5>Real life scenario:</h5>
-      <div
-        style={{ margin: '25px', maxWidth: '450px', border: '1px solid black' }}
-      >
+      <div style={{ margin: '25px', maxWidth: '450px', border: '1px solid black' }}>
         <Message
           type={data[4].type}
           author={data[4].author}

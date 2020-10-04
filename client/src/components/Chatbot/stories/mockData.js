@@ -75,8 +75,7 @@ export const cardsMessages = [
     id: '3725e67a-2ffd-448b-b4f3-71985f4b13f0',
     type: 'payload',
     msg: {
-      message:
-        'I have many different projects, but these ones I am the most proud of:',
+      message: 'I have many different projects, but these ones I am the most proud of:',
       type: 'cards',
       value: [
         {

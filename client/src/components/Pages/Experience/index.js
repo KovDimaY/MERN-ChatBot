@@ -14,11 +14,7 @@ import './styles.css';
 const Experience = props => {
   const renderExperiences = () =>
     experiences.map(item => (
-      <ExperienceItem
-        key={item.id}
-        discovered={props[item.nameInStore]}
-        {...item}
-      />
+      <ExperienceItem key={item.id} discovered={props[item.nameInStore]} {...item} />
     ));
 
   const renderContent = () => (
@@ -34,10 +30,7 @@ const Experience = props => {
       {props.discovered ? (
         renderContent()
       ) : (
-        <EmptyView
-          section="experience"
-          suggestion="Describe your working experience"
-        />
+        <EmptyView section="experience" suggestion="Describe your working experience" />
       )}
     </div>
   );

@@ -25,15 +25,10 @@ class Feedback extends Component {
   };
 
   renderFeedbackItem = item => (
-    <div
-      className={`card blue-grey darken-${getRandomInteger(1, 3)}`}
-      key={item._id}
-    >
+    <div className={`card blue-grey darken-${getRandomInteger(1, 3)}`} key={item._id}>
       <div className="card-content white-text">
         <div className="card-title-custom">{item.name}</div>
-        <p className="card-date">
-          {moment(item.date).format('H:mm - MMMM Do, YYYY')}
-        </p>
+        <p className="card-date">{moment(item.date).format('H:mm - MMMM Do, YYYY')}</p>
         <p className="card-comment">{item.feedback}</p>
       </div>
     </div>

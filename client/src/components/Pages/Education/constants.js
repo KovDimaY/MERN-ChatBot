@@ -201,18 +201,15 @@ export const certificates = [
     date: '2017-06-18',
     license: 'GH93LKLL72BR',
     image: GH93LKLL72BR,
-    url:
-      'https://www.coursera.org/account/accomplishments/certificate/GH93LKLL72BR',
+    url: 'https://www.coursera.org/account/accomplishments/certificate/GH93LKLL72BR',
   },
   {
-    title:
-      'Divide and Conquer, Sorting and Searching, and Randomized Algorithms',
+    title: 'Divide and Conquer, Sorting and Searching, and Randomized Algorithms',
     school: 'Stanford University',
     date: '2017-05-05',
     license: 'QYHRQW9NWKE9',
     image: QYHRQW9NWKE9,
-    url:
-      'https://www.coursera.org/account/accomplishments/certificate/QYHRQW9NWKE9',
+    url: 'https://www.coursera.org/account/accomplishments/certificate/QYHRQW9NWKE9',
   },
   {
     title: 'Game Development for Modern Platforms',
@@ -220,8 +217,7 @@ export const certificates = [
     date: '2016-07-12',
     license: 'AFGWZT2CB22S',
     image: AFGWZT2CB22S,
-    url:
-      'https://www.coursera.org/account/accomplishments/certificate/AFGWZT2CB22S',
+    url: 'https://www.coursera.org/account/accomplishments/certificate/AFGWZT2CB22S',
   },
   {
     title: 'World Design for Video Games',
@@ -229,8 +225,7 @@ export const certificates = [
     date: '2016-11-29',
     license: 'Z4Q9VTM8AZ8P',
     image: Z4Q9VTM8AZ8P,
-    url:
-      'https://www.coursera.org/account/accomplishments/certificate/Z4Q9VTM8AZ8P',
+    url: 'https://www.coursera.org/account/accomplishments/certificate/Z4Q9VTM8AZ8P',
   },
   {
     title: 'Gamification',
@@ -238,8 +233,7 @@ export const certificates = [
     date: '2016-10-20',
     license: 'US429DPCXALK',
     image: US429DPCXALK,
-    url:
-      'https://www.coursera.org/account/accomplishments/certificate/US429DPCXALK',
+    url: 'https://www.coursera.org/account/accomplishments/certificate/US429DPCXALK',
   },
   {
     title: 'Serious Gaming',
@@ -247,8 +241,7 @@ export const certificates = [
     date: '2016-08-06',
     license: 'MQ6U87EN8FJU',
     image: MQ6U87EN8FJU,
-    url:
-      'https://www.coursera.org/account/accomplishments/certificate/MQ6U87EN8FJU',
+    url: 'https://www.coursera.org/account/accomplishments/certificate/MQ6U87EN8FJU',
   },
   {
     title: 'Introduction to Marketing',
@@ -256,8 +249,7 @@ export const certificates = [
     date: '2016-07-27',
     license: 'RTSCG3HHW68L',
     image: RTSCG3HHW68L,
-    url:
-      'https://www.coursera.org/account/accomplishments/certificate/RTSCG3HHW68L',
+    url: 'https://www.coursera.org/account/accomplishments/certificate/RTSCG3HHW68L',
   },
   {
     title: 'Story and Narrative Development for Video Games',
@@ -265,8 +257,7 @@ export const certificates = [
     date: '2016-06-19',
     license: 'GRYLEUQ5XCE4',
     image: GRYLEUQ5XCE4,
-    url:
-      'https://www.coursera.org/account/accomplishments/certificate/GRYLEUQ5XCE4',
+    url: 'https://www.coursera.org/account/accomplishments/certificate/GRYLEUQ5XCE4',
   },
   {
     title: 'Business of Games and Entrepreneurship',
@@ -274,8 +265,7 @@ export const certificates = [
     date: '2016-02-15',
     license: 'S9BBM5RGGSQF',
     image: S9BBM5RGGSQF,
-    url:
-      'https://www.coursera.org/account/accomplishments/certificate/S9BBM5RGGSQF',
+    url: 'https://www.coursera.org/account/accomplishments/certificate/S9BBM5RGGSQF',
   },
   {
     title: 'Principles of Game Design',
@@ -283,8 +273,7 @@ export const certificates = [
     date: '2015-11-18',
     license: 'TPGE89S44JYY',
     image: TPGE89S44JYY,
-    url:
-      'https://www.coursera.org/account/accomplishments/certificate/TPGE89S44JYY',
+    url: 'https://www.coursera.org/account/accomplishments/certificate/TPGE89S44JYY',
   },
   {
     title: 'Programming and the Web for Beginners',
@@ -292,8 +281,7 @@ export const certificates = [
     date: '2015-11-18',
     license: 'Z7RJCJRBY8TP',
     image: Z7RJCJRBY8TP,
-    url:
-      'https://www.coursera.org/account/accomplishments/certificate/Z7RJCJRBY8TP',
+    url: 'https://www.coursera.org/account/accomplishments/certificate/Z7RJCJRBY8TP',
   },
   {
     title: 'Introduction to Game Design',
@@ -301,8 +289,7 @@ export const certificates = [
     date: '2015-10-21',
     license: 'NGVHAJRPTPN6',
     image: NGVHAJRPTPN6,
-    url:
-      'https://www.coursera.org/account/accomplishments/certificate/NGVHAJRPTPN6',
+    url: 'https://www.coursera.org/account/accomplishments/certificate/NGVHAJRPTPN6',
   },
   {
     title: 'Introduction to Game Design',
@@ -310,8 +297,7 @@ export const certificates = [
     date: '2015-10-23',
     license: 'Z59CZM88MUWA',
     image: Z59CZM88MUWA,
-    url:
-      'https://www.coursera.org/account/accomplishments/certificate/Z59CZM88MUWA',
+    url: 'https://www.coursera.org/account/accomplishments/certificate/Z59CZM88MUWA',
   },
   {
     title: 'Introduction to Finance',
@@ -319,8 +305,7 @@ export const certificates = [
     date: '2015-09-22',
     license: 'AUK4VB65JL',
     image: AUK4VB65JL,
-    url:
-      'https://www.coursera.org/account/accomplishments/certificate/AUK4VB65JL',
+    url: 'https://www.coursera.org/account/accomplishments/certificate/AUK4VB65JL',
   },
   {
     title: 'Algorithmic Thinking I',
@@ -328,8 +313,7 @@ export const certificates = [
     date: '2015-10-07',
     license: 'P4BDJZHA6B',
     image: P4BDJZHA6B,
-    url:
-      'https://www.coursera.org/account/accomplishments/certificate/P4BDJZHA6B',
+    url: 'https://www.coursera.org/account/accomplishments/certificate/P4BDJZHA6B',
   },
   {
     title: 'Principles of Computing I',
@@ -337,8 +321,7 @@ export const certificates = [
     date: '2015-07-17',
     license: 'HKX3G4FFBV',
     image: HKX3G4FFBV,
-    url:
-      'https://www.coursera.org/account/accomplishments/certificate/HKX3G4FFBV',
+    url: 'https://www.coursera.org/account/accomplishments/certificate/HKX3G4FFBV',
   },
   {
     title: 'An Introduction to Interactive Programming in Python II',
@@ -346,8 +329,7 @@ export const certificates = [
     date: '2015-05-12',
     license: '25YXEW6ZTG',
     image: C_25YXEW6ZTG,
-    url:
-      'https://www.coursera.org/account/accomplishments/certificate/25YXEW6ZTG',
+    url: 'https://www.coursera.org/account/accomplishments/certificate/25YXEW6ZTG',
   },
   {
     title: 'Beginning Game Programming with C#',
@@ -355,8 +337,7 @@ export const certificates = [
     date: '2015-05-25',
     license: 'TDX8U42RFD',
     image: TDX8U42RFD,
-    url:
-      'https://www.coursera.org/account/accomplishments/certificate/TDX8U42RFD',
+    url: 'https://www.coursera.org/account/accomplishments/certificate/TDX8U42RFD',
   },
   {
     title: 'Effective Problem-Solving and Decision-Making',
@@ -364,8 +345,7 @@ export const certificates = [
     date: '2015-05-03',
     license: '4GLJ6PWR3PPL',
     image: C_4GLJ6PWR3PPL,
-    url:
-      'https://www.coursera.org/account/accomplishments/certificate/4GLJ6PWR3PPL',
+    url: 'https://www.coursera.org/account/accomplishments/certificate/4GLJ6PWR3PPL',
   },
   {
     title: 'Probability',
@@ -373,8 +353,7 @@ export const certificates = [
     date: '2015-05-02',
     license: '36Y7SM5XLJ',
     image: C_36Y7SM5XLJ,
-    url:
-      'https://www.coursera.org/account/accomplishments/certificate/36Y7SM5XLJ',
+    url: 'https://www.coursera.org/account/accomplishments/certificate/36Y7SM5XLJ',
   },
   {
     title: 'Successful Negotiation: Essential Strategies and Skills',
@@ -382,8 +361,7 @@ export const certificates = [
     date: '2015-05-08',
     license: 'D79YE6ATRBAK',
     image: D79YE6ATRBAK,
-    url:
-      'https://www.coursera.org/account/accomplishments/certificate/D79YE6ATRBAK',
+    url: 'https://www.coursera.org/account/accomplishments/certificate/D79YE6ATRBAK',
   },
   {
     title: 'An Introduction to Interactive Programming in Python I',
@@ -391,8 +369,7 @@ export const certificates = [
     date: '2015-04-03',
     license: 'FGPJG6A7U4',
     image: FGPJG6A7U4,
-    url:
-      'https://www.coursera.org/account/accomplishments/certificate/FGPJG6A7U4',
+    url: 'https://www.coursera.org/account/accomplishments/certificate/FGPJG6A7U4',
   },
   {
     title: 'Project Management: The Basics for Success',
@@ -400,17 +377,14 @@ export const certificates = [
     date: '2015-04-22',
     license: '7M84NLE5D5TW',
     image: C_7M84NLE5D5TW,
-    url:
-      'https://www.coursera.org/account/accomplishments/certificate/7M84NLE5D5TW',
+    url: 'https://www.coursera.org/account/accomplishments/certificate/7M84NLE5D5TW',
   },
   {
-    title:
-      'Work Smarter, Not Harder: Time Management for Personal & Professional Productivity',
+    title: 'Work Smarter, Not Harder: Time Management for Personal & Professional Productivity',
     school: 'University of California, Irvine Extension',
     date: '2015-04-09',
     license: 'ZJ27G8KF97HT',
     image: ZJ27G8KF97HT,
-    url:
-      'https://www.coursera.org/account/accomplishments/certificate/ZJ27G8KF97HT',
+    url: 'https://www.coursera.org/account/accomplishments/certificate/ZJ27G8KF97HT',
   },
 ];

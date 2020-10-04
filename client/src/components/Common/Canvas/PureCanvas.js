@@ -20,14 +20,7 @@ class PureCanvas extends Component {
   render() {
     const { width, height } = this.props;
 
-    return (
-      <canvas
-        className="pure-canvas"
-        width={width}
-        height={height}
-        ref={this.getRef}
-      />
-    );
+    return <canvas className="pure-canvas" width={width} height={height} ref={this.getRef} />;
   }
 }
 

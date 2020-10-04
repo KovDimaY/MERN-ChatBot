@@ -19,11 +19,7 @@ const Message = props => {
 
   const renderAvatar = src => (
     <div className="col s2 avatar-wrapper">
-      <img
-        src={src}
-        alt="avatar"
-        className="circle responsive-img user-avatar"
-      />
+      <img src={src} alt="avatar" className="circle responsive-img user-avatar" />
     </div>
   );
 

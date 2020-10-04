@@ -51,9 +51,7 @@ const ProgressBar = ({ percent, margintTop }) => {
   };
 
   if (percent < 100) {
-    const className = `progress-bar-container${
-      margintTop ? ' decrease-margin' : ''
-    }`;
+    const className = `progress-bar-container${margintTop ? ' decrease-margin' : ''}`;
 
     return (
       <div className={className}>

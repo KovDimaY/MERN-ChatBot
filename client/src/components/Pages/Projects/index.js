@@ -18,11 +18,7 @@ const Projects = props => {
       <ProgressBar percent={props.discoveryPercent} margintTop />
       <div className="projects-wrapper">
         {projects.map(item => (
-          <ProjectItem
-            key={item.id}
-            discovered={props[item.nameInStore]}
-            {...item}
-          />
+          <ProjectItem key={item.id} discovered={props[item.nameInStore]} {...item} />
         ))}
       </div>
     </React.Fragment>
@@ -33,10 +29,7 @@ const Projects = props => {
       {props.discovered ? (
         renderContent()
       ) : (
-        <EmptyView
-          section="personal projects"
-          suggestion="Tell me about your projects"
-        />
+        <EmptyView section="personal projects" suggestion="Tell me about your projects" />
       )}
     </div>
   );

@@ -3,24 +3,14 @@ Chatbot examples
 - Without messages closed
 
 ```js
-<Chatbot
-  show={false}
-  onToggleShow={() => {}}
-  onSubmitMessage={() => {}}
-  onReply={() => {}}
-/>
+<Chatbot show={false} onToggleShow={() => {}} onSubmitMessage={() => {}} onReply={() => {}} />
 ```
 
 - Without messages opened
 
 ```js
 <div style={{ position: 'relative' }}>
-  <Chatbot
-    show
-    onToggleShow={() => {}}
-    onSubmitMessage={() => {}}
-    onReply={() => {}}
-  />
+  <Chatbot show onToggleShow={() => {}} onSubmitMessage={() => {}} onReply={() => {}} />
 </div>
 ```
 

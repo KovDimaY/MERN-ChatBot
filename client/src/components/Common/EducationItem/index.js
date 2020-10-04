@@ -75,12 +75,7 @@ const EducationItem = ({
       <div className="degree">
         {showHiddenText(topic, discovered.topic)}, {degree}
       </div>
-      <a
-        href={schoolLink}
-        className="school"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <a href={schoolLink} className="school" target="_blank" rel="noopener noreferrer">
         {schoolName}
       </a>
     </div>

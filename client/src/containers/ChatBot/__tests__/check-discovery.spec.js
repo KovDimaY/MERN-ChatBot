@@ -88,10 +88,7 @@ describe('containers/Chatbot/check-discovery.js', () => {
         checkDiscovery(intent, params, dispatch);
 
         expect(dispatch).toHaveBeenCalled();
-        expect(discoverExperiencePageInfo).toHaveBeenCalledWith(
-          'test',
-          'something'
-        );
+        expect(discoverExperiencePageInfo).toHaveBeenCalledWith('test', 'something');
       });
 
       it('should not discover anything if there is no experience param', () => {
@@ -137,10 +134,7 @@ describe('containers/Chatbot/check-discovery.js', () => {
         checkDiscovery(intent, params, dispatch);
 
         expect(dispatch).toHaveBeenCalled();
-        expect(discoverEducationPageInfo).toHaveBeenCalledWith(
-          'test',
-          'something'
-        );
+        expect(discoverEducationPageInfo).toHaveBeenCalledWith('test', 'something');
       });
 
       it('should not discover anything if there is no education param', () => {
@@ -175,10 +169,7 @@ describe('containers/Chatbot/check-discovery.js', () => {
         checkDiscovery(intent, params, dispatch);
 
         expect(dispatch).toHaveBeenCalled();
-        expect(discoverProjectsPageInfo).toHaveBeenCalledWith(
-          'test',
-          'something'
-        );
+        expect(discoverProjectsPageInfo).toHaveBeenCalledWith('test', 'something');
       });
 
       it('should not discover anything if there is no projects param', () => {

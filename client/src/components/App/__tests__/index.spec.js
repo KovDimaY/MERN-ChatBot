@@ -6,12 +6,7 @@ import Experience from 'containers/ExperiencePage';
 import Education from 'containers/EducationPage';
 import Projects from 'containers/ProjectsPage';
 
-import App, {
-  HomeAdapted,
-  ExperienceAdapted,
-  EducationAdapted,
-  ProjectsAdapted,
-} from '../../App';
+import App, { HomeAdapted, ExperienceAdapted, EducationAdapted, ProjectsAdapted } from '../../App';
 
 jest.mock('containers/HomePage', () => 'Home');
 jest.mock('containers/ExperiencePage', () => 'Experience');

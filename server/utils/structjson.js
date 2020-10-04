@@ -37,11 +37,7 @@ const JSON_SIMPLE_TYPE_TO_PROTO_KIND_MAP = {
   [typeof false]: 'boolValue',
 };
 
-const JSON_SIMPLE_VALUE_KINDS = new Set([
-  'numberValue',
-  'stringValue',
-  'boolValue',
-]);
+const JSON_SIMPLE_VALUE_KINDS = new Set(['numberValue', 'stringValue', 'boolValue']);
 
 function jsonValueToProto(value) {
   const valueProto = {};

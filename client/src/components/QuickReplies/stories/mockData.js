@@ -2,8 +2,7 @@ export const quickReplyItemData = [
   {
     type: 'link',
     text: 'This is a link',
-    value:
-      'https://secure.i.telegraph.co.uk/multimedia/archive/03013/selfie02_3013424b.jpg',
+    value: 'https://secure.i.telegraph.co.uk/multimedia/archive/03013/selfie02_3013424b.jpg',
   },
   {
     type: 'text',
@@ -28,8 +27,7 @@ export const quickRepliesData = {
       id: 1,
       type: 'link',
       text: 'This is a link',
-      value:
-        'https://secure.i.telegraph.co.uk/multimedia/archive/03013/selfie02_3013424b.jpg',
+      value: 'https://secure.i.telegraph.co.uk/multimedia/archive/03013/selfie02_3013424b.jpg',
     },
     {
       id: 2,

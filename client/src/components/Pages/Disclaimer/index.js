@@ -47,14 +47,10 @@ class Disclaimer extends Component {
 
         <div className="description">
           <p>
-            I always was curious about AI and chatbots. Since a long time ago I
-            wanted to know how they work and maybe even create one myself. So
-            when I accidentally came across a course on
-            <a
-              href="https://www.udemy.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            I always was curious about AI and chatbots. Since a long time ago I wanted to know how
+            they work and maybe even create one myself. So when I accidentally came across a course
+            on
+            <a href="https://www.udemy.com" target="_blank" rel="noopener noreferrer">
               {' Udemy '}
             </a>
             by
@@ -65,25 +61,20 @@ class Disclaimer extends Component {
             >
               {' Jana Bergant '}
             </a>
-            I immediately realized that it is my chance to accomplish my old
-            childhood dream. So I have finished the course and I liked it a lot!
-            I definitelly recommend her courses to everyone who wants to learn
-            about chatbots.
+            I immediately realized that it is my chance to accomplish my old childhood dream. So I
+            have finished the course and I liked it a lot! I definitelly recommend her courses to
+            everyone who wants to learn about chatbots.
           </p>
 
           <p>
-            Collecting all the knowledge I learned from the course, I came up
-            with this project. I really hope you like it and, as always, I would
-            be very happy to get some feedback from you! Have a nice time
-            playing with it!
+            Collecting all the knowledge I learned from the course, I came up with this project. I
+            really hope you like it and, as always, I would be very happy to get some feedback from
+            you! Have a nice time playing with it!
           </p>
         </div>
 
         <div className="gohome-button">
-          <Link
-            className="waves-effect waves-light btn-large red accent-2"
-            to={HOME}
-          >
+          <Link className="waves-effect waves-light btn-large red accent-2" to={HOME}>
             <i className="material-icons left">android</i>Go to ChatBot
           </Link>
         </div>

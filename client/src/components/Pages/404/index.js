@@ -16,10 +16,7 @@ const NotFound = () => (
       </div>
     </Tilt>
     <h3 className="title">{"It looks like you're lost..."}</h3>
-    <Link
-      className="link waves-effect waves-light btn-large red accent-2"
-      to={HOME}
-    >
+    <Link className="link waves-effect waves-light btn-large red accent-2" to={HOME}>
       Go Home
     </Link>
   </div>
