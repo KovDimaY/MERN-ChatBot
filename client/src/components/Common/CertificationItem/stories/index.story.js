@@ -12,15 +12,9 @@ storiesOf('Common/CertificationItem', module)
   .add('Not discovered', () => (
     <div style={{ maxWidth: '600px', padding: paddingSize }}>
       <CertificationItem
-        title={text(
-          'Title',
-          'This text will be hidden until user discovers it'
-        )}
+        title={text('Title', 'This text will be hidden until user discovers it')}
         image={UC_B6BARC8V}
-        url={text(
-          'URL',
-          'This url will not be clickable untill user discovers it'
-        )}
+        url={text('URL', 'This url will not be clickable untill user discovers it')}
         discovered={boolean('Discovered', false)}
       />
     </div>
@@ -48,10 +42,7 @@ storiesOf('Common/CertificationItem', module)
   .add('Coursera Sertificate', () => (
     <div style={{ maxWidth: '600px', padding: paddingSize }}>
       <CertificationItem
-        title={text(
-          'Title',
-          'Graph Search, Shortest Paths, and Data Structures'
-        )}
+        title={text('Title', 'Graph Search, Shortest Paths, and Data Structures')}
         image={GH93LKLL72BR}
         url={text(
           'URL',

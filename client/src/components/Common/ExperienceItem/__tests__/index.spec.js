@@ -44,11 +44,7 @@ describe('components/Common/<ExperienceItem />', () => {
       start: 'start',
       finish: 'finish',
       tools: ['tools1', 'tools2'],
-      responsibilities: [
-        'responsibilities1',
-        'responsibilities2',
-        'responsibilities3',
-      ],
+      responsibilities: ['responsibilities1', 'responsibilities2', 'responsibilities3'],
       discovered: {
         responsibilities: true,
         technologies: true,
@@ -73,11 +69,7 @@ describe('components/Common/<ExperienceItem />', () => {
       start: 'start',
       finish: 'finish',
       tools: ['tools1', 'tools2'],
-      responsibilities: [
-        'responsibilities1',
-        'responsibilities2',
-        'responsibilities3',
-      ],
+      responsibilities: ['responsibilities1', 'responsibilities2', 'responsibilities3'],
       discovered: {
         responsibilities: false,
         technologies: false,

@@ -1,8 +1,7 @@
 import { createSelector } from 'reselect';
 import { getDiscoveryPercentage } from 'utils/common';
 
-const selectEducationPageDomain = () => state =>
-  state.get('educationPageDomain');
+const selectEducationPageDomain = () => state => state.get('educationPageDomain');
 
 const selectDiscovered = () =>
   createSelector(selectEducationPageDomain(), educationPageDomain =>

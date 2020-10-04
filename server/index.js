@@ -22,15 +22,11 @@ if (process.env.NODE_ENV === 'production') {
   app.use(express.static('client/build'));
 
   app.get('/docs/storybook', (req, res) => {
-    res.sendFile(
-      path.resolve(__dirname, '../client', 'storybook-static', 'index.html')
-    );
+    res.sendFile(path.resolve(__dirname, '../client', 'storybook-static', 'index.html'));
   });
 
   app.get('/docs/styleguide', (req, res) => {
-    res.sendFile(
-      path.resolve(__dirname, '../client', 'styleguide', 'index.html')
-    );
+    res.sendFile(path.resolve(__dirname, '../client', 'styleguide', 'index.html'));
   });
 
   app.get('/*', (req, res) => {

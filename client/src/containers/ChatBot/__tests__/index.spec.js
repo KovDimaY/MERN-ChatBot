@@ -343,11 +343,7 @@ describe('containers/<ChatbotContainer />', () => {
 
       expect(setState).toHaveBeenCalledWith({ isTyping: false });
       await expect(delayExecution).toHaveBeenCalledWith(500);
-      expect(checkDiscovery).toHaveBeenCalledWith(
-        'displayName',
-        'parameters',
-        'dispatch'
-      );
+      expect(checkDiscovery).toHaveBeenCalledWith('displayName', 'parameters', 'dispatch');
       expect(saveBotAnswers).toHaveBeenCalledWith('fulfillmentMessages');
       expect(handleRequestError).not.toHaveBeenCalled();
     });

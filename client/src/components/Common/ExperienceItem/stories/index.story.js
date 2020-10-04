@@ -44,10 +44,7 @@ storiesOf('Common/ExperienceItem', module)
         companyLink={text('Company link', experiences[2].companyLink)}
         position={text('Position', experiences[2].position)}
         description={text('Description', experiences[2].description)}
-        responsibilities={array(
-          'Responsibilities',
-          experiences[2].responsibilities
-        )}
+        responsibilities={array('Responsibilities', experiences[2].responsibilities)}
         location={text('Location', experiences[2].location)}
         start={date('Start date', experiences[2].start)}
         finish={date('Finish date', experiences[2].finish)}
@@ -109,10 +106,7 @@ storiesOf('Common/ExperienceItem', module)
         companyLink={text('Company link', experiences[2].companyLink)}
         position={text('Position', experiences[2].position)}
         description={text('Description', experiences[2].description)}
-        responsibilities={array(
-          'Responsibilities',
-          experiences[2].responsibilities
-        )}
+        responsibilities={array('Responsibilities', experiences[2].responsibilities)}
         location={text('Location', experiences[2].location)}
         start={date('Start date', experiences[2].start)}
         finish={date('Finish date', experiences[2].finish)}
@@ -133,10 +127,7 @@ storiesOf('Common/ExperienceItem', module)
         companyLink={text('Company link', experiences[3].companyLink)}
         position={text('Position', experiences[3].position)}
         description={text('Description', experiences[3].description)}
-        responsibilities={array(
-          'Responsibilities',
-          experiences[3].responsibilities
-        )}
+        responsibilities={array('Responsibilities', experiences[3].responsibilities)}
         location={text('Location', experiences[3].location)}
         start={date('Start date', experiences[3].start)}
         finish={date('Finish date', experiences[3].finish)}

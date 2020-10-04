@@ -15,20 +15,12 @@ import './styles.css';
 const Education = props => {
   const renderEducations = () =>
     educations.map(item => (
-      <EducationItem
-        key={item.id}
-        discovered={props[item.nameInStore]}
-        {...item}
-      />
+      <EducationItem key={item.id} discovered={props[item.nameInStore]} {...item} />
     ));
 
   const renderCertifications = () =>
     certificates.map(item => (
-      <CertificationItem
-        key={item.license}
-        discovered={props.certificates}
-        {...item}
-      />
+      <CertificationItem key={item.license} discovered={props.certificates} {...item} />
     ));
 
   const renderContent = () => (
@@ -46,10 +38,7 @@ const Education = props => {
       {props.discovered ? (
         renderContent()
       ) : (
-        <EmptyView
-          section="education"
-          suggestion="What education do you have?"
-        />
+        <EmptyView section="education" suggestion="What education do you have?" />
       )}
     </div>
   );

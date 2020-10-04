@@ -37,9 +37,7 @@ const ExperienceItem = ({
           <div className="responsibilities-label">Main responsibilities:</div>
           <ul>
             {responsibilities.map(item => (
-              <li key={item}>
-                {showHiddenText(item, discovered.responsibilities)}
-              </li>
+              <li key={item}>{showHiddenText(item, discovered.responsibilities)}</li>
             ))}
           </ul>
         </div>
@@ -53,11 +51,7 @@ const ExperienceItem = ({
       return (
         <div className="tools">
           <div className="tools-label">Technologies: </div>
-          <div>
-            {tools
-              .map(item => showHiddenText(item, discovered.technologies))
-              .join(' | ')}
-          </div>
+          <div>{tools.map(item => showHiddenText(item, discovered.technologies)).join(' | ')}</div>
         </div>
       );
     }
@@ -91,16 +85,9 @@ const ExperienceItem = ({
 
   const renderTitle = () => (
     <div className="title">
-      <span className="position">
-        {showHiddenText(position, discovered.position)}
-      </span>
+      <span className="position">{showHiddenText(position, discovered.position)}</span>
       <span className="connector">in</span>
-      <a
-        href={companyLink}
-        className="company"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <a href={companyLink} className="company" target="_blank" rel="noopener noreferrer">
         {companyName}
       </a>
     </div>
@@ -117,9 +104,7 @@ const ExperienceItem = ({
         {renderTitle()}
         {renderDates()}
         <div className="location">{location}</div>
-        <p className="description">
-          {showHiddenText(description, discovered.description)}
-        </p>
+        <p className="description">{showHiddenText(description, discovered.description)}</p>
         {renderResponsibilities()}
         {renderTools()}
       </div>

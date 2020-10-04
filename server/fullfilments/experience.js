@@ -4,11 +4,7 @@ const cornerjob = {
     'I started in June 2018 and still working here',
     'I am working here more than 1 year already',
   ],
-  position: [
-    'Full Stack Developer',
-    'Full Stack Web Developer',
-    'Javascript Full Stack Developer',
-  ],
+  position: ['Full Stack Developer', 'Full Stack Web Developer', 'Javascript Full Stack Developer'],
   technologies: [
     'Typical Node/React stack with AWS architecture',
     'React/Redux, Node, AWS and Docker, Symfony and Jest',
@@ -28,11 +24,7 @@ const bigfinite = {
     'April 2017 - June 2018',
     'I worked there about 1 year',
   ],
-  position: [
-    'Frontend Developer',
-    'Frontend Web Developer',
-    'Javascript Frontend Developer',
-  ],
+  position: ['Frontend Developer', 'Frontend Web Developer', 'Javascript Frontend Developer'],
   technologies: [
     'React with Highcharts, at some parts a bit of jQuery',
     'React/Redux, Node, AWS, jQuery and Highcharts',
@@ -51,11 +43,7 @@ const enixan = {
     'September 2015 - July 2016',
     'I worked there almost 1 year',
   ],
-  position: [
-    'I was a Game Designer',
-    'Match-3 Game Designer',
-    'Free2Play Game Designer',
-  ],
+  position: ['I was a Game Designer', 'Match-3 Game Designer', 'Free2Play Game Designer'],
   responsibilities: [
     'I was developing the concept of games',
     'I was developing the setting and narrative of games',
@@ -77,11 +65,7 @@ const icicle = {
     'May 2012 - September 2012',
     'I worked there only 3 months',
   ],
-  position: [
-    'Cannery Worker',
-    'I was a Cannery Worker',
-    'Worker of the Cannery',
-  ],
+  position: ['Cannery Worker', 'I was a Cannery Worker', 'Worker of the Cannery'],
   description: [
     'Work&Travel studens exchange program',
     'It helped me to improve my English and teamwork skills',
@@ -95,20 +79,14 @@ const mbas = {
     'January 2013 - May 2015',
     'I worked there more than 2 years',
   ],
-  position: [
-    'Math Consultant',
-    'I was a Math Consultant',
-    'Teacher of Mathematics',
-  ],
+  position: ['Math Consultant', 'I was a Math Consultant', 'Teacher of Mathematics'],
   responsibilities: [
     'I was giving individual lessons and group (4-9 students) lectures',
     'I was giving online lessons via Skype',
     'I was developing schemes of work, lesson plans and study materials',
     'I was organizing and running educational events',
   ],
-  description: [
-    'Teaching people how to prepare for the quantitative part of the GMAT/GRE',
-  ],
+  description: ['Teaching people how to prepare for the quantitative part of the GMAT/GRE'],
 };
 
 const experiences = {

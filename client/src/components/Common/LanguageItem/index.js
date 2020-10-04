@@ -15,11 +15,7 @@ import './styles.css';
  */
 const LanguageItem = ({ image, name, level, discovered }) => (
   <div className="language-container col s6 m3">
-    <img
-      src={discovered ? image : hiddenImage}
-      alt="flag"
-      className="country-flag"
-    />
+    <img src={discovered ? image : hiddenImage} alt="flag" className="country-flag" />
     <div className="name">{showHiddenText(name, discovered)}</div>
     <div className="level">{showHiddenText(level, discovered)}</div>
   </div>

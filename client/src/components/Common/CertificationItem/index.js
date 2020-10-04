@@ -23,12 +23,7 @@ const CertificationItem = ({ title, image, url, discovered }) => {
     if (discovered) {
       return (
         <Tilt className="tilt" options={{ max: 20, scale: 1.05 }}>
-          <a
-            href={url}
-            className="image-wrapper"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href={url} className="image-wrapper" target="_blank" rel="noopener noreferrer">
             <img className="image" src={image} alt="certificate" />
           </a>
         </Tilt>

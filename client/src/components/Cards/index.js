@@ -15,10 +15,7 @@ const Cards = ({ data }) => {
   if (data && data.value && data.value.length) {
     return (
       <div className="cards-containter">
-        <div
-          className="cards-scrollable-wrapper"
-          style={{ width: 220 * data.value.length }}
-        >
+        <div className="cards-scrollable-wrapper" style={{ width: 220 * data.value.length }}>
           {data.value.map(item => (
             <CardItem
               title={item.title}

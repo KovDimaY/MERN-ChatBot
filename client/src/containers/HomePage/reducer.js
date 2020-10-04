@@ -30,10 +30,7 @@ export default (state = initialState, action) => {
     case at.DISCOVER_HOBBIES_ELEMENT: {
       return state
         .set('discovered', true)
-        .set(
-          'hobbies',
-          state.get('hobbies').set('discovered', true).set(action.payload, true)
-        );
+        .set('hobbies', state.get('hobbies').set('discovered', true).set(action.payload, true));
     }
     default:
       return state;

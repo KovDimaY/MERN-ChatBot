@@ -68,9 +68,7 @@ export class ChatbotContainer extends Component {
           msg: msg.text.text[0],
         };
       case 'payload': {
-        const payload = structjson.structProtoToJson(
-          msg.payload.fields.data.structValue
-        );
+        const payload = structjson.structProtoToJson(msg.payload.fields.data.structValue);
 
         return {
           type: 'payload',

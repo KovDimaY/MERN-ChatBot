@@ -21,11 +21,7 @@ const ProjectItem = ({ image, name, url, description, tools, discovered }) => {
       return (
         <div className="tools">
           <div className="tools-label">Technologies:</div>
-          <div>
-            {tools
-              .map(item => showHiddenText(item, discovered.tools))
-              .join(' | ')}
-          </div>
+          <div>{tools.map(item => showHiddenText(item, discovered.tools)).join(' | ')}</div>
         </div>
       );
     }
@@ -35,30 +31,18 @@ const ProjectItem = ({ image, name, url, description, tools, discovered }) => {
   return (
     <div className="project-item-container row">
       <div className="col s12 l4 visual valign-wrapper">
-        <a
-          href={url}
-          className="screenshot-wrapper"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a href={url} className="screenshot-wrapper" target="_blank" rel="noopener noreferrer">
           <img src={image} alt="screenshot" className="image" />
         </a>
       </div>
       <div className="col s12 l8">
         <div className="title">
           <div className="project-name">{name}</div>
-          <a
-            href={url}
-            className="project-link"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href={url} className="project-link" target="_blank" rel="noopener noreferrer">
             See project
           </a>
         </div>
-        <p className="description">
-          {showHiddenText(description, discovered.description)}
-        </p>
+        <p className="description">{showHiddenText(description, discovered.description)}</p>
         {renderTools()}
       </div>
     </div>

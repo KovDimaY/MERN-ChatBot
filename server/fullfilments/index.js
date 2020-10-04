@@ -27,9 +27,7 @@ const getResponse = category => (element, field) => {
 
     const answers = categories[category][element][field];
 
-    return answers
-      ? getRandomElement(answers)
-      : getRandomElement(noInfoPhrases);
+    return answers ? getRandomElement(answers) : getRandomElement(noInfoPhrases);
   }
 
   return getRandomElement(fallbackPhrases);

@@ -14,17 +14,13 @@ storiesOf('Welcome Story', module).add('MERN Chatbot', () => (
     <h4>MERN Chatbot Storybook</h4>
 
     <p>
-      This is the UI documentation of components for my presonal project{' '}
-      {renderLink(
-        'https://github.com/KovDimaY/MERN-ChatBot/issues',
-        'MERN Chatbot Storybook'
-      )}
+      This is the UI documentation of components for my presonal project&nbsp;
+      {renderLink('https://github.com/KovDimaY/MERN-ChatBot/issues', 'MERN Chatbot Storybook')}
     </p>
 
     <p style={{ marginTop: marginSize }}>
-      I have connected many{' '}
-      {renderLink('https://storybook.js.org/addons/', 'addons')} to the project,
-      so you can enjoy all the variaty of the features like:
+      I have connected many {renderLink('https://storybook.js.org/addons/', 'addons')} to the
+      project, so you can enjoy all the variaty of the features like:
     </p>
 
     <ul style={{ paddingLeft: paddingSize }}>
@@ -53,8 +49,7 @@ storiesOf('Welcome Story', module).add('MERN Chatbot', () => (
         )
       </li>
       <li style={{ listStyleType: 'disc' }}>
-        Changing the viewport to see how the component looks like on different
-        devices (
+        Changing the viewport to see how the component looks like on different devices (
         {renderLink(
           'https://github.com/storybooks/storybook/tree/master/addons/viewport',
           'addon-viewport'
@@ -72,21 +67,19 @@ storiesOf('Welcome Story', module).add('MERN Chatbot', () => (
     </ul>
 
     <p style={{ marginTop: marginSize }}>
-      Components of this documentation are organized in the same way as they are
-      organized in the file structure of the code.
+      Components of this documentation are organized in the same way as they are organized in the
+      file structure of the code.
     </p>
 
     <p style={{ marginTop: marginSize }}>
-      In this documentation you will find{' '}
-      <b>all the atomic visual components</b> that are used in the project. But
-      I did not include complex composite components (like Pages) or operational
-      components that exist to bring logic (like wrappers or HOCs) and do not
-      have a clear visual representation.
+      In this documentation you will find <b>all the atomic visual components</b> that are used in
+      the project. But I did not include complex composite components (like Pages) or operational
+      components that exist to bring logic (like wrappers or HOCs) and do not have a clear visual
+      representation.
     </p>
 
     <p style={{ marginTop: marginSize }}>
-      Thanks in advance for your feedback! Hope you find this project useful and
-      interesting.
+      Thanks in advance for your feedback! Hope you find this project useful and interesting.
     </p>
 
     <img
