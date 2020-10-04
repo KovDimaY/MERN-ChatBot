@@ -29,13 +29,11 @@ storiesOf('Common/EmptyView', module)
           <li>Another li tag</li>
           <li>And the last li tag</li>
         </ul>
-
         Also you can style everything as you want:
         <br />
         <span style={{ color: 'red' }}>Very </span>
         <span style={{ color: 'green' }}>colorful </span>
         <span style={{ color: 'blue' }}>text</span>
-
         <h1>Enjoy! :)</h1>
       </EmptyView>
     </div>

@@ -1,9 +1,6 @@
 import { actionTypes as at } from '../constants';
 
-import {
-  discoverExperiencePageInit,
-  discoverExperiencePageInfo,
-} from '../actions';
+import { discoverExperiencePageInit, discoverExperiencePageInfo } from '../actions';
 
 describe('containers/ExperiencePage/actions', () => {
   describe('discoverExperiencePageInit', () => {

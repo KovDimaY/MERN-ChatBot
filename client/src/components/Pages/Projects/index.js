@@ -11,32 +11,26 @@ import { projects } from './constants';
 
 import './styles.css';
 
-const Projects = (props) => {
+const Projects = props => {
   const renderContent = () => (
     <React.Fragment>
       <h3 className="projects-section-title">Projects</h3>
       <ProgressBar percent={props.discoveryPercent} margintTop />
       <div className="projects-wrapper">
-        {
-          projects.map(item => (
-            <ProjectItem
-              key={item.id}
-              discovered={props[item.nameInStore]}
-              {...item}
-            />
-          ))
-        }
+        {projects.map(item => (
+          <ProjectItem key={item.id} discovered={props[item.nameInStore]} {...item} />
+        ))}
       </div>
     </React.Fragment>
   );
 
   return (
     <div className="projects-section-container">
-      {
-        props.discovered
-          ? renderContent()
-          : <EmptyView section="personal projects" suggestion="Tell me about your projects" />
-      }
+      {props.discovered ? (
+        renderContent()
+      ) : (
+        <EmptyView section="personal projects" suggestion="Tell me about your projects" />
+      )}
     </div>
   );
 };

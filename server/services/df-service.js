@@ -1,8 +1,11 @@
 const dialogflow = require('dialogflow');
 const structjson = require('../utils/structjson');
 const {
-  googleProjectID, dialogFlowSessionID, dialogFlowSessionLanguageCode,
-  googleClientEmail, googlePrivateKey,
+  googleProjectID,
+  dialogFlowSessionID,
+  dialogFlowSessionLanguageCode,
+  googleClientEmail,
+  googlePrivateKey,
 } = require('../config/keys');
 
 const { Feedback } = require('../models/Feedback');
@@ -56,7 +59,7 @@ module.exports = {
 
     return result;
   },
-  handleRequest: async (request) => {
+  handleRequest: async request => {
     const self = module.exports;
 
     try {
@@ -79,7 +82,7 @@ module.exports = {
       return error;
     }
   },
-  saveToDatabase: async (data) => {
+  saveToDatabase: async data => {
     const feedback = new Feedback({
       name: data.name.stringValue,
       feedback: data.feedback.stringValue,

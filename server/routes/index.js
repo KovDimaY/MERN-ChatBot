@@ -8,8 +8,7 @@ const {
   handleProjectFullfilment,
 } = require('./handlers');
 
-
-module.exports = (app) => {
+module.exports = app => {
   app.post('/api/df/textQuery', async (req, res) => {
     const result = await dfService.textQuery(req.body.query, req.body.params);
 

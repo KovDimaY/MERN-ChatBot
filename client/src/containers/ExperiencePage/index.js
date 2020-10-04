@@ -6,12 +6,14 @@ import { createStructuredSelector } from 'reselect';
 import ExperiencePage from 'components/Pages/Experience';
 
 import {
-  selectDiscovered, selectCornerjob,
-  selectBigfinite, selectEnixan,
-  selectMbas, selectIcicle,
+  selectDiscovered,
+  selectCornerjob,
+  selectBigfinite,
+  selectEnixan,
+  selectMbas,
+  selectIcicle,
   selectDiscoveryPercent,
 } from './selectors';
-
 
 export const ExperiencePageContainer = props => (
   <ExperiencePage

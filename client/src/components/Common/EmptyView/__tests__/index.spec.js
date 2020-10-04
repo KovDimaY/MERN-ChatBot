@@ -5,7 +5,7 @@ import EmptyView from '../../EmptyView';
 
 describe('components/Common/<EmptyView />', () => {
   it('should render component without children', () => {
-    const mockComponent = <EmptyView section="test" />;
+    const mockComponent = <EmptyView section="test" suggestion="test-suggestion" />;
     const tree = create(mockComponent).toJSON();
 
     expect(tree).toMatchSnapshot();

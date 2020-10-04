@@ -4,9 +4,8 @@ import { storiesOf } from '@storybook/react';
 
 import Header from '..';
 
-storiesOf('Header', module)
-  .add('Default', () => (
-    <BrowserRouter>
-      <Header />
-    </BrowserRouter>
-  ));
+storiesOf('Header', module).add('Default', () => (
+  <BrowserRouter>
+    <Header />
+  </BrowserRouter>
+));

@@ -9,10 +9,7 @@ jest.mock('utils/common', () => ({
   getRandomInteger: jest.fn(() => 2),
 }));
 
-
-const mockComponent = props => (
-  <Feedback {...props} />
-);
+const mockComponent = props => <Feedback {...props} />;
 
 describe('components/Pages/<Feedback />', () => {
   global.fetch = jest.fn(() => new Promise(resolve => resolve()));
@@ -24,16 +21,18 @@ describe('components/Pages/<Feedback />', () => {
   });
 
   it('should render component with feedbacks', () => {
-    const feedbacks = [{
-      name: 'name1',
-      date: 'date1',
-      feedback: 'feedback1',
-    },
-    {
-      name: 'name2',
-      date: 'date2',
-      feedback: 'feedback2',
-    }];
+    const feedbacks = [
+      {
+        name: 'name1',
+        date: 'date1',
+        feedback: 'feedback1',
+      },
+      {
+        name: 'name2',
+        date: 'date2',
+        feedback: 'feedback2',
+      },
+    ];
     const component = create(mockComponent());
     component.getInstance().setState({ feedbacks });
 

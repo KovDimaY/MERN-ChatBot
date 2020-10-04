@@ -24,27 +24,31 @@ class Header extends Component {
 
   renderNavigation = withIcon => (
     <React.Fragment>
-      {
-        NavElements.map(({
-          label, url, icon, id,
-        }) => (
-          <li key={id}>
-            <Link to={url}>{withIcon && <i className="material-icons">{icon}</i>} {label}</Link>
-          </li>
-        ))
-      }
+      {NavElements.map(({ label, url, icon, id }) => (
+        <li key={id}>
+          <Link to={url}>
+            {withIcon && <i className="material-icons">{icon}</i>} {label}
+          </Link>
+        </li>
+      ))}
       <li>
         <Link to={HELP}>
           <i className="material-icons">help_outline</i>
-          { withIcon && 'Help' }
+          {withIcon && 'Help'}
         </Link>
       </li>
     </React.Fragment>
-  )
+  );
 
   renderMobileMenu = () => (
     <React.Fragment>
-      <ul id="nav-mobile" className="sidenav" ref={(element) => { this.sidenavRef = element; }}>
+      <ul
+        id="nav-mobile"
+        className="sidenav"
+        ref={element => {
+          this.sidenavRef = element;
+        }}
+      >
         <li>
           <div className="user-view">
             <div className="background">
@@ -61,17 +65,17 @@ class Header extends Component {
         <i className="large material-icons">menu</i>
       </div>
     </React.Fragment>
-  )
+  );
 
   render() {
     return (
       <nav className="header-container">
         <div className="nav-wrapper">
-          <Link to={HOME} className="brand-logo">CV-Bot</Link>
+          <Link to={HOME} className="brand-logo">
+            CV-Bot
+          </Link>
 
-          <ul className="right hide-on-med-and-down">
-            {this.renderNavigation(false)}
-          </ul>
+          <ul className="right hide-on-med-and-down">{this.renderNavigation(false)}</ul>
 
           {this.renderMobileMenu()}
         </div>

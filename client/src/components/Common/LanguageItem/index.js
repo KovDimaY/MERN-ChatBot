@@ -13,13 +13,11 @@ import './styles.css';
  * This component has two visual states: hidden and discovered. When the element is hidden
  * the user cannot see the flag and the text, they are replaced by question marks.
  */
-const LanguageItem = ({
-  image, name, level, discovered,
-}) => (
+const LanguageItem = ({ image, name, level, discovered }) => (
   <div className="language-container col s6 m3">
     <img src={discovered ? image : hiddenImage} alt="flag" className="country-flag" />
-    <div className="name">{ showHiddenText(name, discovered) }</div>
-    <div className="level">{ showHiddenText(level, discovered) }</div>
+    <div className="name">{showHiddenText(name, discovered)}</div>
+    <div className="level">{showHiddenText(level, discovered)}</div>
   </div>
 );
 

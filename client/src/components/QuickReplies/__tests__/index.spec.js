@@ -6,9 +6,7 @@ import QuickReplies from '../../QuickReplies';
 
 jest.mock('../../Common/QuickReplyItem', () => 'QuickReplyItem');
 
-const mockComponent = props => (
-  <QuickReplies {...props} />
-);
+const mockComponent = props => <QuickReplies {...props} />;
 
 describe('components/<QuickReplies />', () => {
   it('should render component with no data', () => {

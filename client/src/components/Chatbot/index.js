@@ -5,7 +5,6 @@ import Message from '../Message';
 
 import './styles.css';
 
-
 export class Chatbot extends Component {
   constructor(props) {
     super(props);
@@ -25,13 +24,13 @@ export class Chatbot extends Component {
     return this.props.show ? 'chat-opened' : 'chat-closed';
   }
 
-  handleInput = (event) => {
+  handleInput = event => {
     const query = event.target.value.substring(0, 200);
 
     this.setState({ currentQuery: query });
-  }
+  };
 
-  handleSubmit = (event) => {
+  handleSubmit = event => {
     event.preventDefault();
     event.stopPropagation();
     const { currentQuery } = this.state;
@@ -40,13 +39,11 @@ export class Chatbot extends Component {
       this.setState({ currentQuery: '' });
       this.props.onSubmitMessage(currentQuery);
     }
-  }
+  };
 
   renderMessages(messages) {
     if (messages && messages.length) {
-      return messages.map(({
-        type, msg, author, id,
-      }) => (
+      return messages.map(({ type, msg, author, id }) => (
         <Message type={type} msg={msg} author={author} key={id} onReply={this.props.onReply} />
       ));
     }
@@ -72,10 +69,14 @@ export class Chatbot extends Component {
     return (
       <div className="chatbot" onSubmit={this.handleSubmit}>
         <div className="messages">
-          { this.renderMessages(messages) }
-          { this.renderTyping() }
+          {this.renderMessages(messages)}
+          {this.renderTyping()}
 
-          <div ref={(element) => { this.messagesEnd = element; }} />
+          <div
+            ref={element => {
+              this.messagesEnd = element;
+            }}
+          />
         </div>
         <form className="chatbot-input-wrapper">
           <input
@@ -101,7 +102,9 @@ export class Chatbot extends Component {
         <div className="collapse-header blue" onClick={onToggleShow}>
           <div className="nav-wrapper">
             <div className="brand-logo">Messages</div>
-            <i className="large material-icons toggle-show-icon">{show ? 'arrow_drop_down' : 'arrow_drop_up'}</i>
+            <i className="large material-icons toggle-show-icon">
+              {show ? 'arrow_drop_down' : 'arrow_drop_up'}
+            </i>
           </div>
         </div>
 

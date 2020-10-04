@@ -1,8 +1,7 @@
 QuickReplyItem examples
 
-
 ```js
-const { quickReplyItemData : data } = require('./stories/mockData');
+const { quickReplyItemData: data } = require('./stories/mockData');
 
 <>
   <QuickReplyItem
@@ -33,5 +32,5 @@ const { quickReplyItemData : data } = require('./stories/mockData');
     onClick={() => {}}
     disabled
   />
-</>
+</>;
 ```

@@ -18,9 +18,7 @@ import './styles.css';
  * and the title also is hidden from the user. Also, when is not discovered,
  * the link is changed by the usual div so it does not redirect anywhere.
  */
-const CertificationItem = ({
-  title, image, url, discovered,
-}) => {
+const CertificationItem = ({ title, image, url, discovered }) => {
   const renderLink = () => {
     if (discovered) {
       return (
@@ -32,17 +30,13 @@ const CertificationItem = ({
       );
     }
 
-    return (
-      <img className="image" src={hiddenImage} alt="certificate" />
-    );
+    return <img className="image" src={hiddenImage} alt="certificate" />;
   };
 
   return (
     <div className="certification-container">
-      { renderLink() }
-      <div className="title">
-        { showHiddenText(title, discovered) }
-      </div>
+      {renderLink()}
+      <div className="title">{showHiddenText(title, discovered)}</div>
     </div>
   );
 };

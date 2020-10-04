@@ -5,9 +5,7 @@ import CertificationItem from '../../CertificationItem';
 
 jest.mock('react-tilt', () => 'Tilt');
 
-const mockComponent = props => (
-  <CertificationItem {...props} />
-);
+const mockComponent = props => <CertificationItem {...props} />;
 
 describe('components/Common/<CertificationItem />', () => {
   it('should render component with required props when not discovered', () => {

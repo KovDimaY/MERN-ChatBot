@@ -15,7 +15,13 @@ storiesOf('Cards', module)
     </div>
   ))
   .add('Real life example', () => (
-    <div style={{ margin: marginSize, maxWidth: '450px', border: '1px solid black' }}>
+    <div
+      style={{
+        margin: marginSize,
+        maxWidth: '450px',
+        border: '1px solid black',
+      }}
+    >
       <Cards data={object('Data', data)} />
     </div>
   ));

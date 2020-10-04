@@ -6,9 +6,7 @@ import DotsAnimation from '../../DotsAnimation';
 
 jest.mock('components/Common/Canvas', () => 'Canvas');
 
-const mockComponent = props => (
-  <DotsAnimation {...props} />
-);
+const mockComponent = props => <DotsAnimation {...props} />;
 
 const getContext = () => ({
   clearRect: jest.fn(),

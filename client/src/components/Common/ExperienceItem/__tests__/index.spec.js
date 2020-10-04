@@ -5,12 +5,10 @@ import ExperienceItem from '../../ExperienceItem';
 
 jest.mock('utils/common', () => ({
   getDuration: jest.fn(() => 'getDuration mocked result'),
-  showHiddenText: jest.fn((text, show) => show ? text : '***'),
+  showHiddenText: jest.fn((text, show) => (show ? text : '***')),
 }));
 
-const mockComponent = props => (
-  <ExperienceItem {...props} />
-);
+const mockComponent = props => <ExperienceItem {...props} />;
 
 describe('components/Common/<ExperienceItem />', () => {
   it('should render component with basic data discovered', () => {

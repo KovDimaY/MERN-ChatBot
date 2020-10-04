@@ -12,9 +12,7 @@ jest.mock('utils/common', () => ({
   showHiddenText: jest.fn(() => '***'),
 }));
 
-const mockComponent = props => (
-  <Home {...props} />
-);
+const mockComponent = props => <Home {...props} />;
 
 describe('components/Pages/<Home />', () => {
   it('should render component with empty props', () => {

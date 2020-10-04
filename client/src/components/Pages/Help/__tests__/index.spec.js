@@ -5,9 +5,7 @@ import Help from '../../Help';
 
 jest.mock('react-router-dom', () => ({ Link: 'Link' }));
 
-const mockComponent = props => (
-  <Help {...props} />
-);
+const mockComponent = props => <Help {...props} />;
 
 describe('components/Pages/<Help />', () => {
   it('should render component with no feedbacks', () => {

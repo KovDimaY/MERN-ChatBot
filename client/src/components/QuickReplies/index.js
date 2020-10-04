@@ -17,7 +17,7 @@ class QuickReplies extends Component {
   handleReply = (type, value) => {
     this.props.onReply(type, value);
     this.setState({ answered: true });
-  }
+  };
 
   render() {
     const { data } = this.props;
@@ -27,18 +27,16 @@ class QuickReplies extends Component {
       return (
         <div className="quick-replies-container">
           <p>{data.message}</p>
-          {
-            data.values.map(item => (
-              <QuickReplyItem
-                type={item.type}
-                text={item.text}
-                value={item.value}
-                key={item.id}
-                onClick={this.handleReply}
-                disabled={answered}
-              />
-            ))
-          }
+          {data.values.map(item => (
+            <QuickReplyItem
+              type={item.type}
+              text={item.text}
+              value={item.value}
+              key={item.id}
+              onClick={this.handleReply}
+              disabled={answered}
+            />
+          ))}
         </div>
       );
     }

@@ -18,10 +18,6 @@
   },
   {
     "name": "Global",
-    "components": [
-      "Message",
-      "Cards",
-      "QuickReplies"
-    ]
+    "components": ["Message", "Cards", "QuickReplies"]
   }
 ]

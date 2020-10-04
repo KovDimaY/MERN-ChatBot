@@ -20,9 +20,9 @@ class Feedback extends Component {
     return nextState.feedbacks.length !== this.state.feedbacks.length;
   }
 
-  handleResponse = (result) => {
+  handleResponse = result => {
     this.setState({ feedbacks: result.reverse() });
-  }
+  };
 
   renderFeedbackItem = item => (
     <div className={`card blue-grey darken-${getRandomInteger(1, 3)}`} key={item._id}>
@@ -32,7 +32,7 @@ class Feedback extends Component {
         <p className="card-comment">{item.feedback}</p>
       </div>
     </div>
-  )
+  );
 
   render() {
     const { feedbacks } = this.state;

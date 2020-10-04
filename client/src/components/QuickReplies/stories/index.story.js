@@ -16,7 +16,13 @@ storiesOf('QuickReplies', module)
     </div>
   ))
   .add('Real life example', () => (
-    <div style={{ margin: marginSize, maxWidth: '450px', border: '1px solid black' }}>
+    <div
+      style={{
+        margin: marginSize,
+        maxWidth: '450px',
+        border: '1px solid black',
+      }}
+    >
       <QuickReplies data={object('Data', data)} onReply={action('onReply actioned')} />
     </div>
   ));

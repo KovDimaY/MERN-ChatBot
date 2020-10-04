@@ -3,24 +3,14 @@ Chatbot examples
 - Without messages closed
 
 ```js
-<Chatbot
-  show={false}
-  onToggleShow={() => {}}
-  onSubmitMessage={() => {}}
-  onReply={() => {}}
-/>
+<Chatbot show={false} onToggleShow={() => {}} onSubmitMessage={() => {}} onReply={() => {}} />
 ```
 
 - Without messages opened
 
 ```js
 <div style={{ position: 'relative' }}>
-  <Chatbot
-    show
-    onToggleShow={() => {}}
-    onSubmitMessage={() => {}}
-    onReply={() => {}}
-  />
+  <Chatbot show onToggleShow={() => {}} onSubmitMessage={() => {}} onReply={() => {}} />
 </div>
 ```
 
@@ -35,7 +25,7 @@ const { textMessages } = require('./stories/mockData');
   onSubmitMessage={() => {}}
   onReply={() => {}}
   messages={textMessages}
-/>
+/>;
 ```
 
 - With quick reply messages
@@ -49,7 +39,7 @@ const { quickRepliesMessages } = require('./stories/mockData');
   onSubmitMessage={() => {}}
   onReply={() => {}}
   messages={quickRepliesMessages}
-/>
+/>;
 ```
 
 - With cards message
@@ -63,5 +53,5 @@ const { cardsMessages } = require('./stories/mockData');
   onSubmitMessage={() => {}}
   onReply={() => {}}
   messages={cardsMessages}
-/>
+/>;
 ```

@@ -14,10 +14,8 @@ import './styles.css';
  * The main task of this component is to figure out what is the type of the message
  * and how to render it, passing all the params to its children.
  */
-const Message = (props) => {
-  const {
-    author, msg, type, onReply,
-  } = props;
+const Message = props => {
+  const { author, msg, type, onReply } = props;
 
   const renderAvatar = src => (
     <div className="col s2 avatar-wrapper">
@@ -56,13 +54,11 @@ const Message = (props) => {
       <div className="col s12 m8 offset-m2 offset-l3">
         <div className="card-panel grey lighten-5 z-depth-1 small-padding">
           <div className="row valign-wrapper no-margin">
-            { author === 'bot' && renderAvatar(botAvatar) }
+            {author === 'bot' && renderAvatar(botAvatar)}
 
-            <div className={`col s10 ${author}-message`}>
-              {renderMessage()}
-            </div>
+            <div className={`col s10 ${author}-message`}>{renderMessage()}</div>
 
-            { author === 'user' && renderAvatar(userAvatar) }
+            {author === 'user' && renderAvatar(userAvatar)}
           </div>
         </div>
       </div>
@@ -82,10 +78,7 @@ Message.propTypes = {
    */
   onReply: PropTypes.func.isRequired,
   /** The content of the message. Can be just a text or an object with all the info required. */
-  msg: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-  ]).isRequired,
+  msg: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired,
 };
 
 export default Message;
