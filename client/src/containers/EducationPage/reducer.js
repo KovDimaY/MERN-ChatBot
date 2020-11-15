@@ -22,17 +22,13 @@ export default (state = initialState, action) => {
     case at.DISCOVER_EDUCATION_INIT:
       return state.set('discovered', true);
     case at.DISCOVER_EDUCATION_CERTIFICATES:
-      return state
-        .set('discovered', true)
-        .set('certificates', true);
+      return state.set('discovered', true).set('certificates', true);
     case at.DISCOVER_EDUCATION_INFO: {
       return state
         .set('discovered', true)
         .set(
           action.payload.section,
-          state
-            .get(action.payload.section)
-            .set(action.payload.data, true),
+          state.get(action.payload.section).set(action.payload.data, true)
         );
     }
     default:

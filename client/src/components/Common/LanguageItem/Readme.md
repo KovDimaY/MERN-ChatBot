@@ -6,12 +6,8 @@ Hidden element
 const { languages } = require('components/Pages/Home/constants');
 
 <>
-  <LanguageItem
-    image="image"
-    name="Whatever"
-    level="This will be hidden"
-  />
-</>
+  <LanguageItem image="image" name="Whatever" level="This will be hidden" />
+</>;
 ```
 
 Discovered elements
@@ -47,5 +43,5 @@ const { languages } = require('components/Pages/Home/constants');
     level={languages[3].level}
     discovered
   />
-</>
+</>;
 ```

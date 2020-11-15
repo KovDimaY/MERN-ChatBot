@@ -28,7 +28,7 @@ function jsonToStructProto(json) {
     fields[k] = jsonValueToProto(json[k]);
   }
 
-  return {fields};
+  return { fields };
 }
 
 const JSON_SIMPLE_TYPE_TO_PROTO_KIND_MAP = {
@@ -37,11 +37,7 @@ const JSON_SIMPLE_TYPE_TO_PROTO_KIND_MAP = {
   [typeof false]: 'boolValue',
 };
 
-const JSON_SIMPLE_VALUE_KINDS = new Set([
-  'numberValue',
-  'stringValue',
-  'boolValue',
-]);
+const JSON_SIMPLE_VALUE_KINDS = new Set(['numberValue', 'stringValue', 'boolValue']);
 
 function jsonValueToProto(value) {
   const valueProto = {};
@@ -51,7 +47,7 @@ function jsonValueToProto(value) {
     valueProto.nullValue = 'NULL_VALUE';
   } else if (value instanceof Array) {
     valueProto.kind = 'listValue';
-    valueProto.listValue = {values: value.map(jsonValueToProto)};
+    valueProto.listValue = { values: value.map(jsonValueToProto) };
   } else if (typeof value === 'object') {
     valueProto.kind = 'structValue';
     valueProto.structValue = jsonToStructProto(value);

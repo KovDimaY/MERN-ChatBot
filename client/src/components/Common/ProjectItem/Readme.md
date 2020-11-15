@@ -17,9 +17,8 @@ const { projects } = require('components/Pages/Projects/constants');
     tools={projects[0].tools}
     url={projects[0].url}
   />
-</>
+</>;
 ```
-
 
 Everything discovered
 
@@ -66,5 +65,5 @@ const { projects } = require('components/Pages/Projects/constants');
     tools={projects[4].tools}
     url={projects[4].url}
   />
-</>
+</>;
 ```

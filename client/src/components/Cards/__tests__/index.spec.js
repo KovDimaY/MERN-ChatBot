@@ -5,9 +5,7 @@ import Cards from '../../Cards';
 
 jest.mock('../../Common/CardItem', () => 'CardItem');
 
-const mockComponent = props => (
-  <Cards {...props} />
-);
+const mockComponent = props => <Cards {...props} />;
 
 describe('components/<Cards />', () => {
   it('should render component with no data', () => {

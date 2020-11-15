@@ -6,12 +6,8 @@ Completelly hidden element
 const { hobbies } = require('components/Pages/Home/constants');
 
 <>
-  <HobbyItem
-    image={hobbies[0].image}
-    name={hobbies[0].name}
-    description={hobbies[0].description}
-  />
-</>
+  <HobbyItem image={hobbies[0].image} name={hobbies[0].name} description={hobbies[0].description} />
+</>;
 ```
 
 Partially hidden element
@@ -26,7 +22,7 @@ const { hobbies } = require('components/Pages/Home/constants');
     description={hobbies[0].description}
     discovered
   />
-</>
+</>;
 ```
 
 Discovered elements
@@ -74,5 +70,5 @@ const { hobbies } = require('components/Pages/Home/constants');
     discovered
     discoveredDetails
   />
-</>
+</>;
 ```

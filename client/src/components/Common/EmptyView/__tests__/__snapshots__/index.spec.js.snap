@@ -24,6 +24,7 @@ exports[`components/Common/<EmptyView /> should render component without childre
     For example, 
     <b>
       "
+      test-suggestion
       "
     </b>
      sounds like a great question to start, but it can be something else too, just use your imagination ;)

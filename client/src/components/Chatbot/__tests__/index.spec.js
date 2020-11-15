@@ -6,9 +6,7 @@ import { Chatbot } from '../../Chatbot';
 
 jest.mock('../../Message', () => 'Message');
 
-const mockComponent = props => (
-  <Chatbot {...props} />
-);
+const mockComponent = props => <Chatbot {...props} />;
 
 const defaultProps = {
   show: true,

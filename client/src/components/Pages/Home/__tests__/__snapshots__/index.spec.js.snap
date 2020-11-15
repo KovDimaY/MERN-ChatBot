@@ -47,8 +47,7 @@ exports[`components/Pages/<Home /> should render component with all discovered 1
         <strong>
           Contact info: 
         </strong>
-        Contact me in
-         
+        Contact me in 
         <a
           href="https://www.linkedin.com/in/kovalenkodmytro/"
           rel="noopener noreferrer"
@@ -446,9 +445,7 @@ exports[`components/Pages/<Home /> should render component with empty props 1`] 
     <p>
       For example, 
       <b>
-        "
-        What is your name?
-        "
+        "What is your name?"
       </b>
        sounds like a good question to start, but it can be something else too, just use your imagination ;)
     </p>

@@ -9,14 +9,14 @@ import './styles.css';
  * For example, when the user asks about all the projects I have done,
  * these projects can be listed in the answer of the bot as a set of card items.
  */
-const CardItem = ({
-  title, image, description, link,
-}) => {
+const CardItem = ({ title, image, description, link }) => {
   const renderLink = () => {
     if (link) {
       return (
         <div className="card-action">
-          <a href={link} target="_blank" rel="noopener noreferrer">View</a>
+          <a href={link} target="_blank" rel="noopener noreferrer">
+            View
+          </a>
         </div>
       );
     }

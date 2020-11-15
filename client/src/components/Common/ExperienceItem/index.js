@@ -18,9 +18,17 @@ import './styles.css';
  * discovered. In this case the info will be replaced by question marks.
  */
 const ExperienceItem = ({
-  image, companyName, companyLink,
-  position, start, finish, discovered,
-  location, description, responsibilities, tools,
+  image,
+  companyName,
+  companyLink,
+  position,
+  start,
+  finish,
+  discovered,
+  location,
+  description,
+  responsibilities,
+  tools,
 }) => {
   const renderResponsibilities = () => {
     if (responsibilities && responsibilities.length) {
@@ -28,13 +36,9 @@ const ExperienceItem = ({
         <div className="responsibilities">
           <div className="responsibilities-label">Main responsibilities:</div>
           <ul>
-            {
-              responsibilities.map(item => (
-                <li key={item}>
-                  {showHiddenText(item, discovered.responsibilities)}
-                </li>
-              ))
-            }
+            {responsibilities.map(item => (
+              <li key={item}>{showHiddenText(item, discovered.responsibilities)}</li>
+            ))}
           </ul>
         </div>
       );
@@ -47,13 +51,7 @@ const ExperienceItem = ({
       return (
         <div className="tools">
           <div className="tools-label">Technologies: </div>
-          <div>
-            {
-              tools
-                .map(item => showHiddenText(item, discovered.technologies))
-                .join(' | ')
-            }
-          </div>
+          <div>{tools.map(item => showHiddenText(item, discovered.technologies)).join(' | ')}</div>
         </div>
       );
     }
@@ -68,7 +66,9 @@ const ExperienceItem = ({
 
       return (
         <div className="dates-wrapper">
-          <span className="dates">{startDate} - {finishDate}</span>
+          <span className="dates">
+            {startDate} - {finishDate}
+          </span>
           <span className="duration">({duration})</span>
         </div>
       );
@@ -85,9 +85,7 @@ const ExperienceItem = ({
 
   const renderTitle = () => (
     <div className="title">
-      <span className="position">
-        {showHiddenText(position, discovered.position)}
-      </span>
+      <span className="position">{showHiddenText(position, discovered.position)}</span>
       <span className="connector">in</span>
       <a href={companyLink} className="company" target="_blank" rel="noopener noreferrer">
         {companyName}
@@ -103,14 +101,12 @@ const ExperienceItem = ({
         </a>
       </div>
       <div className="col s12 m9">
-        { renderTitle() }
-        { renderDates() }
+        {renderTitle()}
+        {renderDates()}
         <div className="location">{location}</div>
-        <p className="description">
-          {showHiddenText(description, discovered.description)}
-        </p>
-        { renderResponsibilities() }
-        { renderTools() }
+        <p className="description">{showHiddenText(description, discovered.description)}</p>
+        {renderResponsibilities()}
+        {renderTools()}
       </div>
     </div>
   );
@@ -139,7 +135,7 @@ ExperienceItem.propTypes = {
   responsibilities: PropTypes.array,
   /** An object that defines which part of the item is visible for the user.
    * By default everything is discovered if nothing else provided.
-  */
+   */
   discovered: PropTypes.object,
 };
 

@@ -1,6 +1,8 @@
 import {
-  flagES, flagRU,
-  flagUA, flagUS,
+  flagES,
+  flagRU,
+  flagUA,
+  flagUS,
   hobbyNumismatics,
   hobbyPhotography,
   hobbyProgramming,

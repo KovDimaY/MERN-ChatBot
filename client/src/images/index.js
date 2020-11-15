@@ -66,7 +66,6 @@ import projectReactHighcharts from './project-reactHighcharts.png';
 import projectSimpleChat from './project-simpleChat.png';
 import projectTravelStories from './project-travelStories.png';
 
-
 export {
   background,
   botAvatar,

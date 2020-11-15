@@ -9,9 +9,7 @@ jest.mock('materialize-css', () => ({
   Sidenav: { init: param => param },
 }));
 
-const mockComponent = props => (
-  <Header {...props} />
-);
+const mockComponent = props => <Header {...props} />;
 
 describe('components/<Header />', () => {
   it('should render component', () => {

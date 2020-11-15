@@ -19,9 +19,7 @@ import {
   discoverProjectsPageInfo,
 } from 'containers/ProjectsPage/actions';
 
-import {
-  checkDiscovery,
-} from '../check-discovery';
+import { checkDiscovery } from '../check-discovery';
 
 jest.mock('containers/HomePage/actions', () => ({
   discoverHomePageSimpleElement: jest.fn(),

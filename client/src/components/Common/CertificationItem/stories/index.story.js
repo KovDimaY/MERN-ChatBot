@@ -44,9 +44,11 @@ storiesOf('Common/CertificationItem', module)
       <CertificationItem
         title={text('Title', 'Graph Search, Shortest Paths, and Data Structures')}
         image={GH93LKLL72BR}
-        url={text('URL', 'https://www.coursera.org/account/accomplishments/certificate/GH93LKLL72BR')}
+        url={text(
+          'URL',
+          'https://www.coursera.org/account/accomplishments/certificate/GH93LKLL72BR'
+        )}
         discovered={boolean('Discovered', true)}
       />
     </div>
   ));
-

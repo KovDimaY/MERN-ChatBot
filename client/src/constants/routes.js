@@ -9,6 +9,4 @@ export const STORYBOOK = '/docs/storybook';
 export const STYLEGUIDE = '/docs/styleguide';
 export const NOT_FOUND = '/not-found';
 
-export const VALID_ROUTES = [
-  EXPERIENCE, EDUCATION, PROJECTS, FEEDBACK,
-];
+export const VALID_ROUTES = [EXPERIENCE, EDUCATION, PROJECTS, FEEDBACK];

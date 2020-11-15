@@ -1,7 +1,4 @@
-import {
-  EXPERIENCE, EDUCATION,
-  PROJECTS, FEEDBACK,
-} from 'constants/routes';
+import { EXPERIENCE, EDUCATION, PROJECTS, FEEDBACK } from 'constants/routes';
 
 export default [
   {

@@ -15,23 +15,13 @@ import './styles.css';
  * Some part of the information can be hidden for the user if it is not yet
  * discovered. In this case the info will be replaced by question marks.
  */
-const ProjectItem = ({
-  image, name, url,
-  description, tools,
-  discovered,
-}) => {
+const ProjectItem = ({ image, name, url, description, tools, discovered }) => {
   const renderTools = () => {
     if (tools && tools.length) {
       return (
         <div className="tools">
           <div className="tools-label">Technologies:</div>
-          <div>
-            {
-              tools
-                .map(item => showHiddenText(item, discovered.tools))
-                .join(' | ')
-            }
-          </div>
+          <div>{tools.map(item => showHiddenText(item, discovered.tools)).join(' | ')}</div>
         </div>
       );
     }
@@ -52,10 +42,8 @@ const ProjectItem = ({
             See project
           </a>
         </div>
-        <p className="description">
-          { showHiddenText(description, discovered.description) }
-        </p>
-        { renderTools() }
+        <p className="description">{showHiddenText(description, discovered.description)}</p>
+        {renderTools()}
       </div>
     </div>
   );
@@ -74,7 +62,7 @@ ProjectItem.propTypes = {
   tools: PropTypes.array,
   /** An object that defines which part of the item is visible for the user.
    * By default everything is discovered if nothing else provided.
-  */
+   */
   discovered: PropTypes.object,
 };
 

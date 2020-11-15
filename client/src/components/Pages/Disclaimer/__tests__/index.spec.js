@@ -7,9 +7,7 @@ import Disclaimer from '../../Disclaimer';
 jest.mock('react-router-dom', () => ({ Link: 'Link' }));
 jest.mock('components/Common/DotsAnimation', () => 'Animation');
 
-const mockComponent = props => (
-  <Disclaimer {...props} />
-);
+const mockComponent = props => <Disclaimer {...props} />;
 
 describe('components/Pages/<Disclaimer />', () => {
   it('should render component', () => {

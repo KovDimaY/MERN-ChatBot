@@ -12,5 +12,5 @@ const { quickRepliesData } = require('./stories/mockData');
   <div style={{ margin: '25px', maxWidth: '450px', border: '1px solid black' }}>
     <QuickReplies data={quickRepliesData} onReply={() => {}} />
   </div>
-</div>
+</div>;
 ```

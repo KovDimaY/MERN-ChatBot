@@ -1,9 +1,6 @@
 import { actionTypes as at } from '../constants';
 
-import {
-  discoverHomePageSimpleElement,
-  discoverHomePageHobbiesElement,
-} from '../actions';
+import { discoverHomePageSimpleElement, discoverHomePageHobbiesElement } from '../actions';
 
 describe('containers/HomePage/actions', () => {
   describe('discoverHomePageSimpleElement', () => {

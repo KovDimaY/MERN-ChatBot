@@ -6,12 +6,14 @@ import { createStructuredSelector } from 'reselect';
 import ProjectsPage from 'components/Pages/Projects';
 
 import {
-  selectDiscovered, selectTrips,
-  selectCharts, selectChat,
-  selectMemory, selectKovdimay,
+  selectDiscovered,
+  selectTrips,
+  selectCharts,
+  selectChat,
+  selectMemory,
+  selectKovdimay,
   selectDiscoveryPercent,
 } from './selectors';
-
 
 export const ProjectsPageContainer = props => (
   <ProjectsPage

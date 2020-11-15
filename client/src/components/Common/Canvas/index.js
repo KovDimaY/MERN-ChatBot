@@ -8,9 +8,9 @@ class Canvas extends Component {
     this.props.draw(this.ctx);
   }
 
-  saveContext = (ctx) => {
+  saveContext = ctx => {
     this.ctx = ctx;
-  }
+  };
 
   render() {
     const { width, height } = this.props;

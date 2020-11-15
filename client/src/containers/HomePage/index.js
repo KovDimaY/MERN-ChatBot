@@ -6,14 +6,18 @@ import { createStructuredSelector } from 'reselect';
 import HomePage from 'components/Pages/Home';
 
 import {
-  selectDiscovered, selectName,
-  selectPosition, selectLocation,
-  selectContacts, selectAge,
-  selectNationality, selectAboutMe,
-  selectLanguages, selectHobbies,
+  selectDiscovered,
+  selectName,
+  selectPosition,
+  selectLocation,
+  selectContacts,
+  selectAge,
+  selectNationality,
+  selectAboutMe,
+  selectLanguages,
+  selectHobbies,
   selectDiscoveryPercent,
 } from './selectors';
-
 
 export const HomePageContainer = props => (
   <HomePage

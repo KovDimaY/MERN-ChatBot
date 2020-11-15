@@ -31,7 +31,7 @@ storiesOf('Common/EducationItem', module)
       />
     </div>
   ))
-  .add('Master\'s degree', () => (
+  .add("Master's degree", () => (
     <div style={{ padding: paddingSize }}>
       <EducationItem
         discovered={object('Discovered fields', {
@@ -52,7 +52,7 @@ storiesOf('Common/EducationItem', module)
       />
     </div>
   ))
-  .add('Bachelor\'s degree', () => (
+  .add("Bachelor's degree", () => (
     <div style={{ padding: paddingSize }}>
       <EducationItem
         discovered={object('Discovered fields', {
