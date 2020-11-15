@@ -22,11 +22,11 @@ module.exports = app => {
   });
 
   app.get('/api/feedbacks', (req, res) => {
-    Feedback.find({}, (err, document) => {
+    Feedback.find({}, (err, documents) => {
       if (err) {
         return res.status(400).send(err);
       }
-      return res.status(200).send(document);
+      return res.status(200).send(documents.sort((a, b) => a.date - b.date));
     });
   });
 
